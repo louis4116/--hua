@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap"); //黑體
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap"); //明體
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap"); //英文字型
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap"); //日期
+@mixin tablet() {
+  @media all and (max-width: 820px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media all and (max-width: 500px) {
+    @content;
+  }
+}
+
+//顏色
+$bigTitleColor: #65534b; //大標
+$mediumTitleColor: #534741; //小標
+$contentColor: #4d4d4d; //內文
+
+//字型
+$sans: "Noto Sans TC", sans-serif; //黑體
+$serif: "Noto Serif TC", serif; //明體
+$cor: "Cormorant Infant", serif; //英文字型
+$jost: "Jost", sans-serif; //日期
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+video,
+img {
+  display: block;
+}

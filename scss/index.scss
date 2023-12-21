@@ -1,0 +1,82 @@
+@import "_config";
+body {
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#nav {
+  position: fixed;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.805) 0%,
+    rgba(0, 0, 0, 0.629) 5%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 3vw;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav-list-ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  li {
+    color: white;
+    font-size: 0.8vw;
+    font-family: $serif;
+    font-weight: 400;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+  }
+  li:nth-child(1),
+  li:nth-child(2),
+  li:nth-child(3),
+  li:nth-child(4) {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      width: 1px;
+      height: 60%;
+      bottom: 15%;
+      right: 0;
+    }
+  }
+}
+#footer {
+  width: 100%;
+  background-color: #736357;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2rem;
+  font-size: 0.8vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  font-weight: 300;
+  span {
+    color: white;
+    font-family: $sans;
+  }
+}
+
+//主要內容開始
+.home-cut1-video {
+  overflow: hidden;
+  clip-path: ellipse(75% 60% at 50% 45%);
+  video {
+    width: 100%;
+  }
+}
