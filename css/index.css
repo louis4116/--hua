@@ -97,8 +97,8 @@ body {
 
 .home-cut1-video {
   overflow: hidden;
-  -webkit-clip-path: ellipse(75% 60% at 50% 45%);
-          clip-path: ellipse(75% 60% at 50% 45%);
+  -webkit-clip-path: ellipse(75% 60% at 50% 35%);
+          clip-path: ellipse(75% 60% at 50% 35%);
 }
 .home-cut1-video video {
   width: 100%;
