@@ -28,6 +28,7 @@ body {
 
 #nav {
   position: fixed;
+  z-index: 100;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.805) 0%, rgba(0, 0, 0, 0.629) 5%, transparent 100%);
   background-repeat: no-repeat;
   background-size: 100%;
