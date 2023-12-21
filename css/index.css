@@ -102,4 +102,6 @@ body {
 }
 .home-cut1-video video {
   width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }/*# sourceMappingURL=index.css.map */

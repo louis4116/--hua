@@ -79,5 +79,7 @@ body {
   clip-path: ellipse(75% 60% at 50% 35%);
   video {
     width: 100%;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
