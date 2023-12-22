@@ -22,8 +22,8 @@
       </div>
     </nav>
     <main id="home-main">
-      <section class="home-cut1">
-        <div class="home-cut1-video">
+      <section class="home-cut-1">
+        <div class="home-cut-1-video">
           <video
             autoplay
             loop
@@ -32,25 +32,68 @@
             src="./img/home/LOGO動態-1.mp4"
           ></video>
         </div>
+        <div class="home-cut-1-para">
+          <h1>HOME FROME HEART</h1>
+          <h2>繁樺座標•榮耀輝映</h2>
+          <p>最好的建築 ，是近觀微米之間的工藝 。</p>
+          <p class="home-cut-1-para-line"><span></span>追求極致 給你最好</p>
+        </div>
       </section>
-      <section class="cut-2">
-        <img src="./img/home/首頁-最新消息-1.png" alt="" />
+      <section class="home-cut-2">
+        <div class="home-cut-2-para">
+          <div class="home-cut-2-para-img">
+            <img src="./img/home/首頁-純icon.svg" alt="純icon" />
+          </div>
+          <h1>CRAFTING EXCELLENCE</h1>
+          <h1>LIVING IN TASTE.</h1>
+          <h3>面對事件的態度，活出品味心高度。</h3>
+          <p>在這追求速度換取利潤的時代，</p>
+          <p>
+            <span>樺輝建設秉持「數年磨一劍」的信念，</span
+            ><span>注重每個細節的要求及優質的選材，</span>
+          </p>
+          <p>
+            <span>以細膩的精工和堅定的決心，</span
+            ><span>不斷提升品質，絕不妥協。</span>
+          </p>
+        </div>
+        <div class="home-cut-2-fixed-container">
+          <div class="home-cut-2-fixed-first">
+            <div class="home-cut-2-fixed-first-image">
+              <div>
+                <!-- <img src="./img/home/旋轉背景圖.jpg" alt="" /> -->
+              </div>
+            </div>
+            <div class="home-cut-2-fixed-first-squre">
+              <div class="yo">
+                <!-- <img src="./img/home/旋轉背景圖.jpg" alt="" /> -->
+              </div>
+              <div class="home-cut-2-fixed-first-squre-wrapper">
+                <div class="home-cut-2-fixed-first-squre-1">
+                  <div class="home-cut-2-fixed-first-squre-text n-1">
+                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                  </div>
+                  <div class="home-cut-2-fixed-first-squre-text n-2">
+                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                  </div>
+                </div>
+              </div>
+              <div class="home-cut-2-fixed-first-squre-wrapper">
+                <div class="home-cut-2-fixed-first-squre-2">
+                  <div class="home-cut-2-fixed-first-squre-text n-3">
+                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                  </div>
+                  <div class="home-cut-2-fixed-first-squre-text n-4">
+                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
       </section>
-      <section class="cut-3">
-        <img src="./img/home/首頁-最新消息-1.png" alt="" />
-      </section>
-      <section class="cut-4">
-        <img src="./img/home/首頁-最新消息-1.png" alt="" />
-      </section>
-      <section class="cut-5">
-        <img src="./img/home/首頁-最新消息-1.png" alt="" />
-      </section>
-      <section class="cut-5">
-        <img src="./img/home/首頁-最新消息-1.png" alt="" />
-      </section>
-      <section class="cut-5">
-        <img src="./img/home/首頁-最新消息-1.png" alt="" />
-      </section>
+      <!-- <canvas id="canvas"></canvas> -->
     </main>
     <footer id="footer">
       <span>Copyright © 2023樺輝建設股份有限公司版權所有　</span>
@@ -58,8 +101,71 @@
       <span>TEL： 02-27928078</span>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/gsap.min.js"></script>
-    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/gsap/gsap.min.js"></script>
+    <script src="./js/gsap/ScrollTrigger.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      window.onload = () => {
+        // const canvas = document.getElementById("canvas");
+        // const ctx = canvas.getContext("2d");
+        // const test = document.querySelector(
+        //   ".home-cut-2-fixed-first-squre-wrapper"
+        // );
+        // canvas.width = window.innerWidth;
+        // canvas.height = window.innerHeight;
+        // $(window).on("resize", function () {
+        //   canvas.width = window.innerWidth;
+        //   canvas.height = window.innerHeight;
+        // });
+        // const backImage = new Image();
+        // backImage.src = "./img/home/旋轉背景圖.jpg";
+        // backImage.onload = () => {
+        //   ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
+        //   // 使用 destination-in 合成模式
+        //   ctx.globalCompositeOperation = "destination-in";
+        //   // 繪製遮罩矩形
+        //   ctx.fillRect(1920, 50, 50, 50);
+        //   // 恢復為預設的合成模式
+        //   ctx.globalCompositeOperation = "source-over";
+        // };
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".home-cut-2-fixed-first-squre-wrapper", {
+          scrollTrigger: {
+            trigger: ".home-cut-2-fixed-container ",
+            toggleActions: "restart pause resume pause",
+            start: "top top",
+            pin: true,
+            scrub: 0.2,
+          },
+          scale: "5",
+          rotation: 180,
+        });
+        // gsap.to(".yo", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2-fixed-container ",
+        //     toggleActions: "restart pause resume pause",
+        //     start: "-10% top",
+        //     end: "bottom bottom",
+        //     scrub: 0.2,
+        //   },
+        //   // scale: "1.2",
+        //   // width: "100%",
+        //   // height: "100%",
+        //   // rotation: 180,
+        // });
+        // gsap.to(".yo", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     toggleActions: "restart pause resume pause",
+        //     start: "top center",
+        //     end: "+=10000",
+        //     scrub: 3,
+        //     markers: true,
+        //   },
+        //   width: "100%",
+        //   height: "100%",
+        // });
+      };
+    </script>
   </body>
 </html>
