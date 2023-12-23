@@ -166,19 +166,33 @@ body {
 .home-cut-2-fixed-container {
   height: 345.6rem;
 }
-
+// .home-cut-2-fixed-first-image {
+//   width: 50rem;
+//   height: 50rem;
+//   -webkit-mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
+//   mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
+//   overflow: hidden;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   > img {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     top: 0;
+//   }
+// }
 .home-cut-2-fixed-first {
   height: 100%;
   position: relative;
   overflow: hidden;
-  padding-top: 10vw;
 }
 .yo {
-  width: 50rem;
-  height: 50rem;
-  -webkit-mask: url("../img/home/旋轉背景圖.jpg") no-repeat center center;
-  mask: url("../img/home/旋轉背景圖.jpg") no-repeat center center;
-  background: url("../img/home/旋轉背景圖.jpg") no-repeat center center;
+  width: 100%;
+  height: 100vh;
+  clip-path: inset(24% 38%);
+  // background: url("../img/home/首頁-bg.jpg") no-repeat center center;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -195,11 +209,19 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.good {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  margin-top: 10vw;
+  -webkit-mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
+  mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
+}
 .home-cut-2-fixed-first-squre-wrapper {
   position: absolute;
   width: 50rem;
   height: 50rem;
+  margin-top: 11.5%;
 }
 .home-cut-2-fixed-first-squre-1,
 .home-cut-2-fixed-first-squre-2 {
