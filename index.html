@@ -65,9 +65,10 @@
 
             <div class="home-cut-2-fixed-first-squre">
               <div class="yo">
-                <img src="./img/home/旋轉背景圖.jpg" alt="" />
+                <canvas id="canvas"></canvas>
+                <!-- <img class="yo-test" src="./img/home/旋轉背景圖.jpg" alt="" /> -->
+                <!-- <div class="yo-test"></div> -->
               </div>
-              <div class="good"><div></div></div>
               <div class="home-cut-2-fixed-first-squre-wrapper">
                 <div class="home-cut-2-fixed-first-squre-1">
                   <div class="home-cut-2-fixed-first-squre-text n-1">
@@ -90,10 +91,8 @@
               </div>
             </div>
           </div>
-          <div></div>
         </div>
       </section>
-      <!-- <canvas id="canvas"></canvas> -->
     </main>
     <footer id="footer">
       <span>Copyright © 2023樺輝建設股份有限公司版權所有　</span>
@@ -106,34 +105,60 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script>
       window.onload = () => {
-        // const canvas = document.getElementById("canvas");
-        // const ctx = canvas.getContext("2d");
-        // const test = document.querySelector(
-        //   ".home-cut-2-fixed-first-squre-wrapper"
-        // );
-        // canvas.width = window.innerWidth;
-        // canvas.height = window.innerHeight;
-        // $(window).on("resize", function () {
-        //   canvas.width = window.innerWidth;
-        //   canvas.height = window.innerHeight;
-        // });
-        // const backImage = new Image();
-        // backImage.src = "./img/home/旋轉背景圖.jpg";
-        // backImage.onload = () => {
-        //   ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
-        //   // 使用 destination-in 合成模式
-        //   ctx.globalCompositeOperation = "destination-in";
-        //   // 繪製遮罩矩形
-        //   ctx.fillRect(1920, 50, 50, 50);
-        //   // 恢復為預設的合成模式
-        //   ctx.globalCompositeOperation = "source-over";
-        // };
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+        const yo = document.querySelector(".yo");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        $(window).on("resize", function () {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        });
+        const rectX = (canvas.width - 300) / 2;
+        const rectY = (canvas.height - 300) / 2;
+        const backImage = new Image();
+        backImage.src = "./img/home/旋轉背景圖.jpg";
+        backImage.onload = () => {
+          // ctx.fillStyle = "black"; // 遮罩顏色
+          // ctx.fillRect(rectX, rectY, 400, 400);
+          // ctx.save(); // 保存當前狀態
+          // ctx.beginPath();
+          // ctx.rect(rectX, rectY, 400, 400); // 正方形路徑
+          // ctx.clip(); // 裁剪路徑
+          ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
+          // ctx.restore();
+          // ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
+          // // 使用 destination-in 合成模式
+          // ctx.globalCompositeOperation = "destination-in";
+          // // 繪製遮罩矩形
+          // ctx.fillRect(rectX, rectY, 400, 400);
+          // // 恢復為預設的合成模式
+          // // ctx.globalCompositeOperation = "source-over";
+        };
+        function drawMask(angle, num) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除 canvas
+          ctx.save(); // 保存當前狀態
+          ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
+          ctx.globalCompositeOperation = "destination-in";
+          ctx.translate(canvas.width / 2, canvas.height / 2); // 設置旋轉中心點
+          ctx.rotate((angle * Math.PI) / 180); // 旋轉
+          ctx.fillStyle = "black"; // 遮罩顏色
+          ctx.fillRect(
+            -150 * 10 * num,
+            -150 * 10 * num,
+            300 * num * 10,
+            300 * num * 10
+          ); // 繪製遮罩
+          ctx.restore(); // 恢復原始狀態
+        }
+
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(".home-cut-2-fixed-first-squre-wrapper", {
           scrollTrigger: {
             trigger: ".home-cut-2-fixed-container ",
             toggleActions: "restart pause resume pause",
             start: "top top",
+            end: "bottom bottom",
             pin: true,
             scrub: 0.2,
           },
@@ -147,33 +172,25 @@
             start: "top top",
             scrub: 0.2,
           },
-          clipPath: "inset(0% 0%)",
+          // clipPath: "100% 100vh",
+          // rotation: 30,
         });
-        // gsap.to(".yo", {
-        //   scrollTrigger: {
-        //     trigger: ".home-cut-2-fixed-container ",
-        //     toggleActions: "restart pause resume pause",
-        //     start: "-10% top",
-        //     end: "bottom bottom",
-        //     scrub: 0.2,
-        //   },
-        //   // scale: "1.2",
-        //   // width: "100%",
-        //   // height: "100%",
-        //   // rotation: 180,
-        // });
-        // gsap.to(".yo", {
-        //   scrollTrigger: {
-        //     trigger: ".home-cut-2",
-        //     toggleActions: "restart pause resume pause",
-        //     start: "top center",
-        //     end: "+=10000",
-        //     scrub: 3,
-        //     markers: true,
-        //   },
-        //   width: "100%",
-        //   height: "100%",
-        // });
+
+        gsap.to(".yo", {
+          scrollTrigger: {
+            trigger: ".home-cut-2-fixed-container ",
+            toggleActions: "restart pause resume pause",
+            start: "-10% top",
+            end: "bottom bottom",
+            onUpdate: (self) => {
+              console.log(self);
+              const progress = self.progress; // 取得滾動進度 (0 到 1 之間的值)
+              const angle = 100 * progress; // 計算遮罩旋轉的角度 (0 到 360 度)
+              drawMask(angle, progress); // 更新遮罩
+            },
+            scrub: 0.2,
+          },
+        });
       };
     </script>
   </body>

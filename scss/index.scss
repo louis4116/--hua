@@ -164,7 +164,7 @@ body {
 }
 
 .home-cut-2-fixed-container {
-  height: 345.6rem;
+  height: 365rem;
 }
 // .home-cut-2-fixed-first-image {
 //   width: 50rem;
@@ -184,27 +184,56 @@ body {
 //   }
 // }
 .home-cut-2-fixed-first {
-  height: 100%;
+  height: 365rem;
   position: relative;
   overflow: hidden;
 }
 .yo {
   width: 100%;
   height: 100vh;
-  clip-path: inset(24% 38%);
-  // background: url("../img/home/首頁-bg.jpg") no-repeat center center;
+
+  // background: url("../img/home/旋轉背景圖.jpg") no-repeat center center;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  > img {
-    position: absolute;
+  position: relative;
+  // clip-path: 50rem 50rem;
+  // clip-path: polygon(
+  //   38% 38%,
+  //   /* 右上角的 x 和 y */ 62% 38%,
+  //   /* 右上角的 x 和 y + 24% */ 62% 62%,
+  //   /* 右下角的 x 和 y + 24% */ 38% 62% /* 左下角的 x 和 y + 24% */
+  // );
+  .yo-test {
+    width: 100%;
+    height: 100%;
+    top: 0;
     left: 0;
-
-    // background-size: 100%;
-    // background-image: url("./img/home/旋轉背景圖.jpg");
+    // z-index: 2;
+    // mask: url("../img/home/Frame 1.svg") no-repeat center center;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   background: url("../img/home/首頁-bg.jpg") no-repeat center center;
+    // }
   }
+  .yo-other-test {
+    // background: url("../img/home/首頁-bg.jpg") no-repeat center center;
+    // clip-path: inset(24% 38% round 10px);
+  }
+  // > img {
+  //   width: 100%;
+  //   height: 100%;
+  // background-size: 100%;
+  // background-image: url("./img/home/旋轉背景圖.jpg");
+  // }
 }
+
 .home-cut-2-fixed-first-squre {
   display: flex;
   justify-content: center;
@@ -217,11 +246,20 @@ body {
   -webkit-mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
   mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
 }
+.good-test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  // z-index: 1;
+}
 .home-cut-2-fixed-first-squre-wrapper {
   position: absolute;
   width: 50rem;
   height: 50rem;
   margin-top: 11.5%;
+  z-index: 5;
 }
 .home-cut-2-fixed-first-squre-1,
 .home-cut-2-fixed-first-squre-2 {
@@ -257,8 +295,6 @@ body {
   transform-origin: top left;
 }
 canvas {
-  z-index: 200;
-  position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
