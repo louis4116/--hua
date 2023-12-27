@@ -399,7 +399,6 @@ body {
   height: 30vw;
   margin-top: 11.5%;
   z-index: 5;
-  transform: rotate(20deg);
 }
 @media all and (max-width: 500px) {
   .home-cut-2-fixed-first-squre-wrapper {
