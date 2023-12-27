@@ -444,6 +444,7 @@
         //   // scale: "5",
         //   // rotation: 180,
         // });
+        let test = $(".home-cut-2-fixed-first-squre-2").offset().left;
         gsap.to(".home-cut-2-fixed-first-squre-wrapper", {
           scrollTrigger: {
             trigger: ".home-cut-2-fixed-container",
@@ -451,6 +452,9 @@
             start: "top top",
             pin: true,
             scrub: 0.2,
+            onUpdate: () => {
+              console.log(test);
+            },
           },
           scale: "0.8",
           rotation: 40,
