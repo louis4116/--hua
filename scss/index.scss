@@ -68,7 +68,7 @@ body {
 }
 .home-cut-1-video {
   overflow: hidden;
-  clip-path: ellipse(75% 60% at 50% 35%);
+  clip-path: ellipse(95% 56% at 50% 44%);
   video {
     width: 100%;
     min-width: 100%;
@@ -181,6 +181,8 @@ body {
   justify-content: center;
   flex-direction: column;
   letter-spacing: 1px;
+  padding-top: 12%;
+  padding-bottom: 12%;
   > h1 {
     color: $bigTitleColor;
     font-family: $cor;
@@ -237,7 +239,7 @@ body {
 
 .home-cut-2-fixed-container {
   position: relative;
-  // height: 100vw;
+
   @include mobile {
     display: flex;
     align-items: center;
@@ -246,103 +248,40 @@ body {
     height: 100vh;
   }
 }
-// .home-cut-2-fixed-first-image {
-//   width: 50rem;
-//   height: 50rem;
-//   -webkit-mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
-//   mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
-//   overflow: hidden;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   > img {
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     top: 0;
-//   }
-// }
 .home-cut-2-fixed-first {
   position: relative;
   overflow: hidden;
+
   @include mobile {
     overflow: unset;
   }
 }
 .yo {
   width: 100%;
-  // height: 100vh;
-
-  // background: url("../img/home/旋轉背景圖.jpg") no-repeat center center;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  // clip-path: 50rem 50rem;
-  // clip-path: polygon(
-  //   38% 38%,
-  //   /* 右上角的 x 和 y */ 62% 38%,
-  //   /* 右上角的 x 和 y + 24% */ 62% 62%,
-  //   /* 右下角的 x 和 y + 24% */ 38% 62% /* 左下角的 x 和 y + 24% */
-  // );
   .yo-test {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    // z-index: 2;
-    // mask: url("../img/home/Frame 1.svg") no-repeat center center;
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   bottom: 0;
-    //   right: 0;
-    //   background: url("../img/home/首頁-bg.jpg") no-repeat center center;
-    // }
   }
-  .yo-other-test {
-    // background: url("../img/home/首頁-bg.jpg") no-repeat center center;
-    // clip-path: inset(24% 38% round 10px);
-  }
-  // > img {
-  //   width: 100%;
-  //   height: 100%;
-  // background-size: 100%;
-  // background-image: url("./img/home/旋轉背景圖.jpg");
-  // }
 }
 
 .home-cut-2-fixed-first-squre {
   display: flex;
   justify-content: center;
 }
-.good {
-  position: absolute;
-  width: 60rem;
-  height: 60rem;
-  margin-top: 10vw;
-  -webkit-mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
-  mask: url("../img/home/首頁-bg.jpg") no-repeat center center;
-}
-.good-test {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  // z-index: 1;
-}
+
 .home-cut-2-fixed-first-squre-wrapper {
   position: absolute;
   width: 35vw;
   height: 35vw;
   margin-top: 8%;
   z-index: 5;
-  // transform: rotate(20deg);
   @include mobile {
     width: 50vw;
     height: 50vw;
@@ -419,6 +358,7 @@ canvas {
 .home-cut-3 {
   position: relative;
   width: 100%;
+  margin-top: 3%;
 }
 .cut-3-title {
   position: relative;
@@ -467,7 +407,7 @@ canvas {
 }
 .cut-3-carousel-swiper {
   position: relative;
-  width: 50vw;
+  width: 35vw;
   @include mobile {
     width: 75%;
   }
@@ -494,7 +434,7 @@ canvas {
 }
 .swiper-slide {
   position: relative;
-  margin-top: 33%;
+  margin-top: 30%;
   height: auto;
 
   @include mobile {
@@ -508,10 +448,10 @@ canvas {
 }
 .text-rotate {
   position: absolute;
-  margin-top: -23%;
-  left: -14%;
-  width: 10vw;
-  animation: textRotate 4s linear infinite;
+  margin-top: -26%;
+  left: -15%;
+  width: 7vw;
+  animation: textRotate 10s linear infinite;
   @include mobile {
     margin-top: 97%;
     left: -3%;
@@ -546,7 +486,7 @@ canvas {
   > h1 {
     writing-mode: vertical-lr;
     font-family: $cor;
-    font-size: 2.5vw;
+    font-size: 1.7vw;
     letter-spacing: 2px;
     line-height: 1;
     color: $bigTitleColor;
@@ -561,7 +501,7 @@ canvas {
   margin-left: 1vw;
   > p {
     color: $contentColor;
-    font-size: 1vw;
+    font-size: 0.7vw;
     line-height: 2;
     letter-spacing: 2px;
   }
@@ -578,7 +518,7 @@ canvas {
   margin-bottom: 3%;
   > .swiper-slide-para-content-title {
     color: $mediumTitleColor;
-    font-size: 1.25vw;
+    font-size: 1vw;
     letter-spacing: 2px;
   }
   > :nth-child(1),
@@ -611,8 +551,8 @@ canvas {
   background-color: #736357;
   background-position: center;
   border-radius: 50%;
-  width: 3vw;
-  padding: 3%;
+  width: 2vw;
+  padding: 4%;
   top: 80%;
   &::after {
     content: "";
@@ -628,14 +568,14 @@ canvas {
 }
 .swiper-button-prev {
   background-image: url("../img/home/輪播左箭頭.png");
-  left: 128%;
+  left: 162%;
   @include mobile {
     left: 78%;
   }
 }
 .swiper-button-next {
   background-image: url("../img/home/輪播右箭頭.png");
-  right: -43%;
+  right: -83%;
   @include mobile {
     right: 0%;
   }
@@ -651,7 +591,6 @@ canvas {
   overflow: hidden;
 }
 .cut-4-pin-left,
-.cut-4-pin-center,
 .cut-4-pin-right {
   // display: flex;
   flex-direction: column;
@@ -661,9 +600,13 @@ canvas {
   }
 }
 .cut-4-pin-center {
+  flex-direction: column;
   margin-left: 1%;
   margin-right: 1%;
   width: 104%;
+  > :nth-child(1) ~ img {
+    padding-top: 10%;
+  }
 }
 .cut-4-pin-left {
   transform: translateY(-70vw);
