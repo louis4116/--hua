@@ -395,9 +395,9 @@ body {
 
 .home-cut-2-fixed-first-squre-wrapper {
   position: absolute;
-  width: 30vw;
-  height: 30vw;
-  margin-top: 11.5%;
+  width: 35vw;
+  height: 35vw;
+  margin-top: 8%;
   z-index: 5;
 }
 @media all and (max-width: 500px) {
@@ -410,8 +410,8 @@ body {
 .home-cut-2-fixed-first-squre-1,
 .home-cut-2-fixed-first-squre-2 {
   position: relative;
-  width: 30vw;
-  height: 30vw;
+  width: 35vw;
+  height: 35vw;
 }
 @media all and (max-width: 500px) {
   .home-cut-2-fixed-first-squre-1,
@@ -428,7 +428,7 @@ body {
   width: 100%;
 }
 .home-cut-2-fixed-first-squre-text > p {
-  font-size: 2.5vw;
+  font-size: 4.5vw;
 }
 @media all and (max-width: 500px) {
   .home-cut-2-fixed-first-squre-text p {
@@ -437,22 +437,22 @@ body {
 }
 
 .n-1 {
-  transform: translateY(-2.5vw);
+  transform: translateY(-4.5vw);
 }
 
 .n-2 {
   bottom: 0;
-  transform: rotate(180deg) translateY(-2.5vw);
+  transform: rotate(180deg) translateY(-4.5vw);
 }
 
 .n-3 {
-  transform: translateY(100%) translateX(2.5vw) rotate(90deg);
+  transform: translateY(100%) translateX(4.5vw) rotate(90deg);
   bottom: 0;
   transform-origin: top right;
 }
 
 .n-4 {
-  transform: translateY(100%) translateX(-2.5vw) rotate(-90deg);
+  transform: translateY(100%) translateX(-4.5vw) rotate(-90deg);
   bottom: 0;
   transform-origin: top left;
 }

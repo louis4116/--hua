@@ -104,20 +104,28 @@
               <div class="home-cut-2-fixed-first-squre-wrapper">
                 <div class="home-cut-2-fixed-first-squre-1">
                   <div class="home-cut-2-fixed-first-squre-text n-1">
-                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                    <p>
+                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                    </p>
                   </div>
                   <div class="home-cut-2-fixed-first-squre-text n-2">
-                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                    <p>
+                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="home-cut-2-fixed-first-squre-wrapper">
                 <div class="home-cut-2-fixed-first-squre-2">
                   <div class="home-cut-2-fixed-first-squre-text n-3">
-                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                    <p>
+                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                    </p>
                   </div>
                   <div class="home-cut-2-fixed-first-squre-text n-4">
-                    <p>HUI CONSTRUCTION CO.,LTD HUA HUI</p>
+                    <p class="n-4-p">
+                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                    </p>
                   </div>
                 </div>
               </div>
@@ -377,6 +385,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/9.0.0/decimal.min.js"></script>
     <script src="./js/gsap/gsap.min.js"></script>
     <script src="./js/gsap/ScrollTrigger.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
@@ -385,48 +394,162 @@
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
         const yo = document.querySelector(".yo");
-        // canvas.width = window.innerWidth;
-        // canvas.height = window.innerHeight;
+        const squreX = $(".home-cut-2-fixed-first-squre-1").offset().left;
+        const squreY = $(".home-cut-2-fixed-first-squre-1").offset().top;
+        const squreW = $(".home-cut-2-fixed-first-squre-1").width();
+        const squreH = $(".home-cut-2-fixed-first-squre-1").height();
+        const textT = $(".home-cut-2-para").offset().top;
+        const textH = $(".home-cut-2-para").height();
+        const pL = $(".n-4-p").offset().left;
+        const pH = $(".n-4-p").height();
+
+        const squreDis = squreY - (textT + textH);
+        const squreW2 = (squreW - squreW * 0.6) / 2;
+        const squreH2 = (squreH - squreW * 0.6) / 2;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         $(window).on("resize", function () {
-          // canvas.width = window.innerWidth;
-          // canvas.height = window.innerHeight;
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
         });
         const rectX = (canvas.width - 400) / 2;
         const rectY = (canvas.height - 600) / 2;
-        // const backImage = new Image();
-        // backImage.src = "./img/home/旋轉背景圖.jpg";
-        // backImage.onload = () => {
-        //   ctx.fillStyle = "black"; // 遮罩顏色
-        //   ctx.fillRect(rectX, rectY, 400, 400);
-        //   ctx.save(); // 保存當前狀態
-        //   ctx.beginPath();
-        //   ctx.rect(rectX, rectY, 400, 400); // 正方形路徑
-        //   ctx.clip(); // 裁剪路徑
-        //   ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
-        //   ctx.restore();
-        //   ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
-        //   // 使用 destination-in 合成模式
-        //   ctx.globalCompositeOperation = "destination-in";
-        //   // 繪製遮罩矩形
-        //   ctx.fillRect(rectX, rectY, 400, 400);
-        //   // 恢復為預設的合成模式
-        //   ctx.globalCompositeOperation = "source-over";
-        // };
-        function drawMask(angle, num) {
+        const backImage = new Image();
+        backImage.src = "./img/home/旋轉背景圖.jpg";
+        backImage.onload = () => {
+          // 遮罩顏色;
+          // ctx.fillRect(
+          //   pH + pL + squreW2,
+          //   squreDis + squreH2,
+          //   squreW * 0.6,
+          //   squreH * 0.6
+          // );
+          ctx.fillStyle = "rgb(193,175,155)";
+          ctx.save(); // 保存當前狀態
+          ctx.beginPath();
+          ctx.roundRect(
+            pH + pL + squreW2,
+            squreDis + squreH2,
+            squreW * 0.6,
+            squreH * 0.6,
+            20
+          ); // 正方形路徑
+          ctx.clip(); // 裁剪路徑
+          ctx.closePath();
+          ctx.fill();
+          ctx.globalCompositeOperation = "source-in";
+          ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
+          ctx.restore();
+          // 使用 destination-in 合成模式
+          // 繪製遮罩矩形
+          // ctx.fillRect(squreX, squreDis, squreW, squreH);
+          // 恢復為預設的合成模式
+          ctx.globalCompositeOperation = "source-over";
+
+          // ctx.fillStyle = "black"; // 遮罩顏色
+          // ctx.save(); // 保存當前狀態
+          // // ctx.beginPath();
+          // ctx.globalCompositeOperation = "destination-in";
+          // ctx.roundRect(
+          //   pH + pL + squreW2,
+          //   squreDis + squreH2,
+          //   squreW * 0.6,
+          //   squreH * 0.6,
+          //   20
+          // );
+          // ctx.clip(); // 裁剪路徑
+          // // ctx.closePath();
+          // ctx.fillRect(
+          //   pH + pL + squreW2,
+          //   squreDis + squreH2,
+          //   squreW * 0.6,
+          //   squreH * 0.6
+          // ); // 正方形路徑
+          // // ctx.closePath();
+          // ctx.fill();
+          // ctx.restore();
+          // ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
+          // // ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
+          // ctx.globalCompositeOperation = "source-over";
+          //   // 使用 destination-in 合成模式
+          //   // 繪製遮罩矩形
+
+          //   // 恢復為預設的合成模式
+        };
+        function drawMask(scaleRes, scaleprogress, angle) {
           ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除 canvas
           ctx.save(); // 保存當前狀態
-          ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
-          ctx.globalCompositeOperation = "destination-in";
-          ctx.translate(canvas.width / 2, canvas.height / 2); // 設置旋轉中心點
-          ctx.rotate((angle * Math.PI) / 180); // 旋轉
-          ctx.fillStyle = "black"; // 遮罩顏色
-          ctx.fillRect(
-            -150 * num * 10,
-            -150 * num * 10,
-            300 * num * 10,
-            300 * num * 10
-          ); // 繪製遮罩
-          ctx.restore(); // 恢復原始狀態
+          // ctx.translate(canvas.width / 2, canvas.height / 2); // 設置旋轉中心點
+          // ctx.rotate((angle * Math.PI) / 180); // 旋轉
+          ctx.translate(pH + pL + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為畫布中心
+          ctx.rotate((angle * Math.PI) / 180);
+          ctx.fillStyle = "rgb(193,175,155)";
+          ctx.beginPath();
+          ctx.roundRect(
+            (-squreW * 0.6 * scaleRes) / 2,
+            (-squreH * 0.6 * scaleRes) / 2,
+            squreW * 0.6 * scaleRes,
+            squreH * 0.6 * scaleRes,
+            20
+          ); // 正方形路徑
+          ctx.clip(); // 裁剪路徑
+          ctx.closePath();
+          ctx.fill();
+          ctx.restore();
+          ctx.globalCompositeOperation = "source-in";
+          ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
+          // 使用 destination-in 合成模式
+          // 繪製遮罩矩形
+          // ctx.fillRect(squreX, squreDis, squreW, squreH);
+          // 恢復為預設的合成模式
+          ctx.globalCompositeOperation = "source-over";
+
+          // console.log(scaleprogress);
+          // console.log(scaleRes);
+          // ctx.save(); // 保存當前狀態
+          // ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
+          // ctx.globalCompositeOperation = "destination-in";
+          // ctx.beginPath();
+          // ctx.translate(canvas.width / 2, canvas.height / 2); // 設置旋轉中心點
+          // ctx.rotate((angle * Math.PI) / 180); // 旋轉
+          // ctx.roundRect(
+          //   pH + pL + squreW2 * (1 + scaleprogress),
+          //   squreDis + squreH2 * (1 + scaleprogress),
+          //   squreW * 0.6 * scaleRes,
+          //   squreH * 0.6 * scaleRes,
+          //   20
+          // ); // 正方形路徑
+          // ctx.closePath();
+          // ctx.fillStyle = "black"; // 遮罩顏色
+          // ctx.fillRect(
+          //   pH + pL + squreW2 * (1 + scaleprogress),
+          //   squreDis + squreH2 * (1 + scaleprogress),
+          //   squreW * 0.6 * scaleRes,
+          //   squreH * 0.6 * scaleRes
+          // );
+
+          // ctx.fillRect(
+          //   -150 * num * 10,
+          //   -150 * num * 10,
+          //   300 * num * 10,
+          //   300 * num * 10
+          // ); // 繪製遮罩
+          // ctx.globalCompositeOperation = "source-over";
+          // ctx.restore(); // 恢復原始狀態
+          // ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除 canvas
+          // ctx.save(); // 保存當前狀態
+          // ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height);
+          // ctx.globalCompositeOperation = "destination-in";
+          // ctx.translate(canvas.width / 2, canvas.height / 2); // 設置旋轉中心點
+          // ctx.rotate((angle * Math.PI) / 180); // 旋轉
+          // ctx.fillStyle = "black"; // 遮罩顏色
+          // ctx.fillRect(
+          //   -150 * num * 10,
+          //   -150 * num * 10,
+          //   300 * num * 10,
+          //   300 * num * 10
+          // ); // 繪製遮罩
+          // ctx.restore(); // 恢復原始狀態
         }
 
         gsap.registerPlugin(ScrollTrigger);
@@ -444,7 +567,7 @@
         //   // scale: "5",
         //   // rotation: 180,
         // });
-        let test = $(".home-cut-2-fixed-first-squre-2").offset().left;
+
         gsap.to(".home-cut-2-fixed-first-squre-wrapper", {
           scrollTrigger: {
             trigger: ".home-cut-2-fixed-container",
@@ -452,11 +575,16 @@
             start: "top top",
             pin: true,
             scrub: 0.2,
-            onUpdate: () => {
-              console.log(test);
+            onUpdate: (self) => {
+              let scaleVal = 0.9;
+              let progress = self.progress;
+              let angle = 7 * progress;
+              let scaleprogress = Number(((1 - 0.9) * progress).toFixed(3));
+              let scaleRes = 1 - scaleprogress;
+              drawMask(scaleRes, scaleprogress, angle);
             },
           },
-          scale: "0.8",
+          scale: "0.9",
           rotation: 40,
         });
 
