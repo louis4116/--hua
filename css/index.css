@@ -517,7 +517,7 @@ canvas {
 .cut-3-base {
   font-family: "Cormorant Infant", serif;
   font-size: 9vw;
-  opacity: 0.1;
+  opacity: 0;
   font-weight: 400;
 }
 @media all and (max-width: 500px) {
@@ -531,13 +531,16 @@ canvas {
   text-align: center;
 }
 .cut-3-title-content > h3 {
-  font-weight: 300;
+  font-weight: 600;
   font-size: 2.25vw;
+  font-family: "Cormorant Infant", serif;
+  opacity: 0;
 }
 .cut-3-title-content > h4 {
   font-size: 1.25vw;
   margin-top: 0.5vw;
   font-family: "Noto Serif TC", serif;
+  opacity: 0;
 }
 @media all and (max-width: 500px) {
   .cut-3-title-content > h3 {
@@ -901,8 +904,9 @@ canvas {
   text-align: center;
 }
 .cut-5-title-content h3 {
-  font-weight: 300;
+  font-weight: 600;
   font-size: 2.25vw;
+  font-family: "Cormorant Infant", serif;
 }
 .cut-5-title-content h4 {
   font-size: 1.25vw;

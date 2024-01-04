@@ -34,17 +34,11 @@
           ></video>
         </div>
         <div class="home-cut-1-para">
-          <h1>HOME FROME HEART</h1>
+          <h1>HOME FROM HEART</h1>
           <h2>繁樺座標•榮耀輝映</h2>
           <p>最好的建築 ，是近觀微米之間的工藝 。</p>
           <p class="home-cut-1-para-line"><span></span>追求極致 給你最好</p>
         </div>
-        <!-- <div class="drops drops-1 ph">
-          <img src="./img/home/模糊icon.png" alt="模糊icon" />
-        </div>
-        <div class="drops drops-5 ph">
-          <img src="./img/home/4號.png" alt="4" />
-        </div> -->
       </section>
       <section class="home-cut-2">
         <div class="drops drops-1">
@@ -700,7 +694,39 @@
           ease: "linear",
         });
         //第三cut
-        let cut3Swiper = new Swiper(".cut-3-carousel-swiper", {
+        const cut3Tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".home-cut-3",
+            toggleActions: "play none none none",
+            start: "25% bottom",
+            once: true,
+          },
+        });
+        cut3Tl
+          .to(".cut-3-title-content>h3", {
+            ease: "linear",
+            opacity: 1,
+            duration: "1.75",
+          })
+          .to(
+            ".cut-3-title-content>h4",
+            {
+              ease: "linear",
+              opacity: 1,
+              duration: "1.75",
+            },
+            "<+0.5"
+          )
+          .to(
+            ".cut-3-base",
+            {
+              ease: "linear",
+              opacity: "0.1",
+              duration: "1.75",
+            },
+            "<+0.5"
+          );
+        new Swiper(".cut-3-carousel-swiper", {
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
