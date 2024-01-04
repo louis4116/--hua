@@ -356,7 +356,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
   }
 }
 
@@ -680,7 +679,7 @@ canvas {
 .swiper-slide-para > h1 {
   writing-mode: vertical-lr;
   font-family: "Cormorant Infant", serif;
-  font-size: 1.7vw;
+  font-size: 2vw;
   letter-spacing: 2px;
   line-height: 0.8;
   color: #65534b;
@@ -697,7 +696,7 @@ canvas {
 .swiper-slide-para-content > p {
   color: #4d4d4d;
   font-family: "Microsoft JhengHei";
-  font-size: 0.7vw;
+  font-size: 0.9vw;
   line-height: 2;
   letter-spacing: 2px;
 }
@@ -718,12 +717,12 @@ canvas {
 .swiper-slide-para-content-top > .swiper-slide-para-content-title {
   color: #534741;
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.2vw;
   letter-spacing: 2px;
 }
 .swiper-slide-para-content-top > :nth-child(1),
 .swiper-slide-para-content-top > :nth-child(3) {
-  height: 1vw;
+  height: 1.2vw;
   width: 1px;
   background-color: #534741;
 }
@@ -939,7 +938,7 @@ canvas {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 25vw;
+  width: 27vw;
   margin-right: 2%;
   margin-left: 2%;
 }
@@ -988,7 +987,7 @@ canvas {
   color: #4d4d4d;
   font-family: "Microsoft JhengHei";
   font-weight: 400;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   margin-top: 3%;
   line-height: 2;
   letter-spacing: 2px;

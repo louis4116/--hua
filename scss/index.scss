@@ -253,7 +253,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
   }
 }
 .home-cut-2-fixed-first {
@@ -550,7 +549,7 @@ canvas {
   > h1 {
     writing-mode: vertical-lr;
     font-family: $cor;
-    font-size: 1.7vw;
+    font-size: 2vw;
     letter-spacing: 2px;
     line-height: 0.8;
     color: $bigTitleColor;
@@ -566,7 +565,7 @@ canvas {
   > p {
     color: $contentColor;
     font-family: $micro;
-    font-size: 0.7vw;
+    font-size: 0.9vw;
     line-height: 2;
     letter-spacing: 2px;
   }
@@ -584,12 +583,12 @@ canvas {
   > .swiper-slide-para-content-title {
     color: $mediumTitleColor;
     font-family: $serif;
-    font-size: 1vw;
+    font-size: 1.2vw;
     letter-spacing: 2px;
   }
   > :nth-child(1),
   > :nth-child(3) {
-    height: 1vw;
+    height: 1.2vw;
     width: 1px;
     background-color: $mediumTitleColor;
   }
@@ -788,7 +787,7 @@ canvas {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 25vw;
+  width: 27vw;
   margin-right: 2%;
   margin-left: 2%;
   @include mobile {
@@ -830,7 +829,7 @@ canvas {
   color: $contentColor;
   font-family: $micro;
   font-weight: 400;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   margin-top: 3%;
   line-height: 2;
   letter-spacing: 2px;
