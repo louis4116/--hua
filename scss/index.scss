@@ -461,6 +461,11 @@ canvas {
 }
 .swiper-img {
   position: relative;
+  > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 .swiper-img-mask {
   position: absolute;
@@ -480,6 +485,9 @@ canvas {
   .swiper-slide-active {
     opacity: 1 !important;
     > .swiper-img {
+      > a {
+        z-index: 5;
+      }
       > .swiper-img-mask {
         opacity: 0;
       }
