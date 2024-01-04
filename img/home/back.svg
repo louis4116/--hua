@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.25 52.46">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .06em;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .75px;
+      }
+
+      .cls-3 {
+        letter-spacing: .07em;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-family: CormorantInfant-Bold, 'Cormorant Infant';
+        font-size: 18px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <text class="cls-4" transform="translate(17.62) rotate(90)"><tspan class="cls-3" x="0" y="0">B</tspan><tspan class="cls-1" x="12.06" y="0">A</tspan><tspan class="cls-3" x="26.08" y="0">CK</tspan></text>
+    <polyline class="cls-2" points="10.3 52.46 10.3 1.14 .3 13.96"/>
+  </g>
+</svg>

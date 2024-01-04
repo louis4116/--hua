@@ -95,7 +95,6 @@ cut2MaskSmall
       let scaleRes = 0.9 + scaleprogress;
       let img;
       if (scaleRes >= 4) {
-        console.log("成功");
         img = img2;
       } else if (scaleRes >= 3) {
         img = img3;

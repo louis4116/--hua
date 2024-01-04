@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 74">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: CormorantInfant-Medium, 'Cormorant Infant';
+        font-size: 4.94px;
+        font-weight: 500;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: CormorantInfant-SemiBold, 'Cormorant Infant';
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: .03em;
+      }
+
+      .cls-3 {
+        fill: #736357;
+        opacity: .8;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <g>
+      <g>
+        <circle class="cls-3" cx="37" cy="37" r="37"/>
+        <text class="cls-1" transform="translate(36.94 8.94) rotate(3.67)"><tspan x="0" y="0">H</tspan></text>
+        <text class="cls-1" transform="translate(41.92 9.37) rotate(13.89)"><tspan x="0" y="0">U</tspan></text>
+        <text class="cls-1" transform="translate(46.77 10.69) rotate(23.98)"><tspan x="0" y="0">A</tspan></text>
+        <text class="cls-1" transform="translate(51.06 12.71) rotate(33.96)"><tspan x="0" y="0">H</tspan></text>
+        <text class="cls-1" transform="translate(55.15 15.6) rotate(44.15)"><tspan x="0" y="0">U</tspan></text>
+        <text class="cls-1" transform="translate(58.62 19.19) rotate(52.18)"><tspan x="0" y="0">I</tspan></text>
+        <text class="cls-1" transform="translate(60.39 21.6) rotate(57.77)"><tspan x="0" y="0"> </tspan></text>
+        <text class="cls-1" transform="translate(61.69 23.67) rotate(65.06)"><tspan x="0" y="0">C</tspan></text>
+        <text class="cls-1" transform="translate(63.55 27.88) rotate(74.95)"><tspan x="0" y="0">O</tspan></text>
+        <text class="cls-1" transform="translate(64.74 32.78) rotate(85.1)"><tspan x="0" y="0">N</tspan></text>
+        <text class="cls-1" transform="translate(65.02 37.66) rotate(93.81)"><tspan x="0" y="0">S</tspan></text>
+        <text class="cls-1" transform="translate(64.71 41.36) rotate(102.1)"><tspan x="0" y="0">T</tspan></text>
+        <text class="cls-1" transform="translate(63.69 45.66) rotate(111.43)"><tspan x="0" y="0">R</tspan></text>
+        <text class="cls-1" transform="translate(62.04 49.69) rotate(120.77)"><tspan x="0" y="0">U</tspan></text>
+        <text class="cls-1" transform="translate(59.38 53.91) rotate(130.56)"><tspan x="0" y="0">C</tspan></text>
+        <text class="cls-1" transform="translate(56.27 57.37) rotate(139.78)"><tspan x="0" y="0">T</tspan></text>
+        <text class="cls-1" transform="translate(52.81 60.13) rotate(147.3)"><tspan x="0" y="0">I</tspan></text>
+        <text class="cls-1" transform="translate(50.32 61.71) rotate(155.5)"><tspan x="0" y="0">O</tspan></text>
+        <text class="cls-1" transform="translate(45.7 63.68) rotate(165.66)"><tspan x="0" y="0">N</tspan></text>
+        <text class="cls-1" transform="translate(40.92 64.73) rotate(173.21)"><tspan x="0" y="0"> </tspan></text>
+        <text class="cls-1" transform="translate(38.52 65.03) rotate(-179.07)"><tspan x="0" y="0">H</tspan></text>
+        <text class="cls-1" transform="translate(33.5 64.85) rotate(-169.06)"><tspan x="0" y="0">U</tspan></text>
+        <text class="cls-1" transform="translate(28.64 63.79) rotate(-159.1)"><tspan x="0" y="0">A</tspan></text>
+        <text class="cls-1" transform="translate(24.24 62) rotate(-149.06)"><tspan x="0" y="0">H</tspan></text>
+        <text class="cls-1" transform="translate(20 59.33) rotate(-138.85)"><tspan x="0" y="0">U</tspan></text>
+        <text class="cls-1" transform="translate(16.31 55.89) rotate(-130.73)"><tspan x="0" y="0">I</tspan></text>
+        <text class="cls-1" transform="translate(14.45 53.61) rotate(-125.25)"><tspan x="0" y="0"> </tspan></text>
+        <text class="cls-1" transform="translate(13.05 51.61) rotate(-117.99)"><tspan x="0" y="0">C</tspan></text>
+        <text class="cls-1" transform="translate(10.96 47.47) rotate(-108.03)"><tspan x="0" y="0">O</tspan></text>
+        <text class="cls-1" transform="translate(9.51 42.66) rotate(-97.88)"><tspan x="0" y="0">N</tspan></text>
+        <text class="cls-1" transform="translate(8.98 37.82) rotate(-89.07)"><tspan x="0" y="0">S</tspan></text>
+        <text class="cls-1" transform="translate(9.11 34.07) rotate(-80.86)"><tspan x="0" y="0">T</tspan></text>
+        <text class="cls-1" transform="translate(9.9 29.74) rotate(-71.57)"><tspan x="0" y="0">R</tspan></text>
+        <text class="cls-1" transform="translate(11.34 25.61) rotate(-62.18)"><tspan x="0" y="0">U</tspan></text>
+        <text class="cls-1" transform="translate(13.78 21.25) rotate(-52.35)"><tspan x="0" y="0">C</tspan></text>
+        <text class="cls-1" transform="translate(16.69 17.66) rotate(-43.21)"><tspan x="0" y="0">T</tspan></text>
+        <text class="cls-1" transform="translate(20.02 14.72) rotate(-35.67)"><tspan x="0" y="0">I</tspan></text>
+        <text class="cls-1" transform="translate(22.39 13.03) rotate(-27.55)"><tspan x="0" y="0">O</tspan></text>
+        <text class="cls-1" transform="translate(26.91 10.81) rotate(-17.36)"><tspan x="0" y="0">N</tspan></text>
+      </g>
+      <text class="cls-2" transform="translate(16.67 41.24)"><tspan x="0" y="0">VIEW</tspan></text>
+    </g>
+  </g>
+</svg>

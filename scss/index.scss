@@ -70,6 +70,7 @@ body {
 //主要內容開始
 .home-cut-1 {
   position: relative;
+  z-index: 5;
 }
 .home-cut-1-video {
   overflow: hidden;
@@ -135,7 +136,7 @@ body {
   right: -13%;
   top: -5%;
   width: 30vw;
-  z-index: -1;
+  z-index: 1;
   @include mobile {
     top: -6%;
     width: 26vw;
@@ -161,7 +162,7 @@ body {
   }
 }
 .drops-4 {
-  right: 19%;
+  right: 12%;
   top: 0.5%;
   width: 10vw;
   @include mobile {
@@ -642,22 +643,25 @@ canvas {
   justify-content: center;
   overflow: hidden;
   cursor: none;
+  transition: all 1s;
 }
 .cut-4-a {
   position: absolute;
 }
 .cut-4-to-top {
-  position: sticky;
-  background-color: white;
+  background-image: url("../img/home/back.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
   color: black;
-  width: 40px;
-  height: 40px;
+  width: 1.8vw;
+  height: 3.2vw;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: auto;
   opacity: 1;
-  top: 150px;
   z-index: 99;
   left: 50%;
   cursor: pointer;
@@ -872,12 +876,12 @@ canvas {
 }
 .view {
   position: fixed;
-  width: 6vw;
-  height: 6vw;
+  width: 5vw;
+  height: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px;
+  padding: 10px;
   border-radius: 100%;
   backdrop-filter: blur(5px);
   background-color: #736356;
