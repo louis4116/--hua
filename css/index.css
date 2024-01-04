@@ -59,7 +59,7 @@ img {
 }
 #footer span {
   color: white;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Microsoft JhengHei";
 }
 @media all and (max-width: 500px) {
   #footer {
@@ -184,7 +184,7 @@ body {
   margin-bottom: 4%;
 }
 .home-cut-1-para p {
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Microsoft JhengHei";
   font-weight: 200;
 }
 .home-cut-1-para p:nth-child(3) {
@@ -305,7 +305,7 @@ body {
 }
 .home-cut-2-para > p {
   color: #4d4d4d;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Microsoft JhengHei";
   font-size: 1vw;
   margin-bottom: 0.75%;
 }
@@ -423,9 +423,11 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  line-height: 1.2;
 }
 .home-cut-2-fixed-first-squre-text > p {
-  font-size: 4.5vw;
+  font-size: 3.7vw;
+  letter-spacing: 2px;
 }
 @media all and (max-width: 500px) {
   .home-cut-2-fixed-first-squre-text p {
@@ -441,29 +443,29 @@ body {
 
 @keyframes loopText {
   0% {
-    transform: translateX(-210%);
+    transform: translateX(-179%);
   }
   100% {
     transform: translateX(0%);
   }
 }
 .n-1 {
-  transform: translateY(-4.5vw);
+  transform: translateY(-4vw);
 }
 
 .n-2 {
   bottom: 0;
-  transform: rotate(180deg) translateY(-4.5vw);
+  transform: rotate(180deg) translateY(-4vw);
 }
 
 .n-3 {
-  transform: translateY(100%) translateX(4.5vw) rotate(90deg);
+  transform: translateY(100%) translateX(4vw) rotate(90deg);
   bottom: 0;
   transform-origin: top right;
 }
 
 .n-4 {
-  transform: translateY(100%) translateX(-4.5vw) rotate(-90deg);
+  transform: translateY(100%) translateX(-4vw) rotate(-90deg);
   bottom: 0;
   transform-origin: top left;
 }
@@ -513,8 +515,9 @@ canvas {
 }
 
 .cut-3-base {
+  font-family: "Cormorant Infant", serif;
   font-size: 9vw;
-  opacity: 0.2;
+  opacity: 0.1;
   font-weight: 400;
 }
 @media all and (max-width: 500px) {
@@ -534,6 +537,7 @@ canvas {
 .cut-3-title-content > h4 {
   font-size: 1.25vw;
   margin-top: 0.5vw;
+  font-family: "Noto Serif TC", serif;
 }
 @media all and (max-width: 500px) {
   .cut-3-title-content > h3 {
@@ -681,6 +685,7 @@ canvas {
 }
 .swiper-slide-para-content > p {
   color: #4d4d4d;
+  font-family: "Microsoft JhengHei";
   font-size: 0.7vw;
   line-height: 2;
   letter-spacing: 2px;
@@ -701,6 +706,7 @@ canvas {
 }
 .swiper-slide-para-content-top > .swiper-slide-para-content-title {
   color: #534741;
+  font-family: "Noto Serif TC", serif;
   font-size: 1vw;
   letter-spacing: 2px;
 }
@@ -871,8 +877,9 @@ canvas {
 }
 
 .cut-5-base {
+  font-family: "Cormorant Infant", serif;
   font-size: 9vw;
-  opacity: 0.2;
+  opacity: 0.1;
   font-weight: 400;
 }
 @media all and (max-width: 500px) {
@@ -967,7 +974,7 @@ canvas {
 
 .cut-5-news-card-para {
   color: #4d4d4d;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Microsoft JhengHei";
   font-weight: 400;
   font-size: 0.8vw;
   margin-top: 3%;

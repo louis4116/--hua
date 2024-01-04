@@ -11,8 +11,8 @@ const pL = $(".n-4-p").offset().left;
 const pH = $(".n-4-p").height();
 
 const squreDis = squreY - (textT + textH);
-const squreW2 = (squreW - squreW * 0.8) / 2;
-const squreH2 = (squreH - squreW * 0.8) / 2;
+const squreW2 = (squreW - squreW * 0.6) / 2;
+const squreH2 = (squreH - squreW * 0.6) / 2;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 $(window).on("resize", function () {
@@ -28,10 +28,11 @@ backImage.onload = () => {
   ctx.beginPath();
   // ctx.roundRect(pH + pL + squreW2, 0, squreW * 0.6, squreH * 0.6, 20); // 正方形路徑
   ctx.roundRect(
-    squreX + squreW2,
-    squreDis + squreH2, //少home-cut-2-para的margin
-    squreW * 0.8,
-    squreH * 0.8,
+    pH + pL + squreW2,
+    // squreX + squreW2,
+    squreDis + squreH2,
+    squreW * 0.6,
+    squreH * 0.6,
     20
   ); // 正方形路徑
   ctx.clip(); // 裁剪路徑
@@ -68,10 +69,12 @@ let img1 = new Image();
 let img2 = new Image();
 let img3 = new Image();
 let img4 = new Image();
-img1.src = "./img/home/旋轉背景圖.jpg";
-img2.src = "./img/home/big01.jpg";
-img3.src = "./img/home/big02.jpg";
-img4.src = "./img/home/big03.jpg";
+let img5 = new Image();
+img1.src = "./img/home/旋轉背景圖.webp";
+img2.src = "./img/home/big01.webp";
+img3.src = "./img/home/big02.webp";
+img4.src = "./img/home/big03.webp";
+img5.src = "./img/home/big04.webp";
 cut2MaskSmall
   .to(".home-cut-2-fixed-first-squre-wrapper", {
     onUpdate: function () {
@@ -94,11 +97,13 @@ cut2MaskSmall
       let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3));
       let scaleRes = 0.9 + scaleprogress;
       let img;
-      if (scaleRes >= 4) {
+      if (scaleRes >= 4.5) {
+        img = img5;
+      } else if (scaleRes >= 4 && scaleRes < 4.5) {
         img = img2;
-      } else if (scaleRes >= 3) {
+      } else if (scaleRes >= 3.25 && scaleRes < 4) {
         img = img3;
-      } else if (scaleRes >= 2) {
+      } else if (scaleRes >= 2.5 && scaleRes < 3.25) {
         img = img4;
       } else {
         img = img1;
@@ -114,15 +119,15 @@ function drawMask(scaleRes, scaleprogress, angle, img) {
 
   ctx.save(); // 保存當前狀態
 
-  ctx.translate(squreX + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為正方形中心
+  ctx.translate(pH + pL + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為正方形中心
   ctx.rotate((angle * Math.PI) / 180);
   ctx.fillStyle = "rgb(193,175,155)";
   ctx.beginPath();
   ctx.roundRect(
-    (-squreW * 0.8 * scaleRes) / 2,
-    (-squreH * 0.8 * scaleRes) / 2,
-    squreW * 0.8 * scaleRes,
-    squreH * 0.8 * scaleRes,
+    (-squreW * 0.6 * scaleRes) / 2,
+    (-squreH * 0.6 * scaleRes) / 2,
+    squreW * 0.6 * scaleRes,
+    squreH * 0.6 * scaleRes,
     20
   ); // 正方形路徑
   ctx.clip(); // 裁剪路徑

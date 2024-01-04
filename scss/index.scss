@@ -100,7 +100,7 @@ body {
     margin-bottom: 4%;
   }
   p {
-    font-family: $sans;
+    font-family: $micro;
     font-weight: 200;
   }
   p:nth-child(3) {
@@ -205,7 +205,7 @@ body {
   }
   > p {
     color: $contentColor;
-    font-family: $sans;
+    font-family: $micro;
     font-size: 1vw;
     margin-bottom: 0.75%;
   }
@@ -310,9 +310,10 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-
+  line-height: 1.2;
   > p {
-    font-size: 4.5vw;
+    font-size: 3.7vw;
+    letter-spacing: 2px;
   }
   @include mobile {
     p {
@@ -327,26 +328,26 @@ body {
 }
 @keyframes loopText {
   0% {
-    transform: translateX(-210%);
+    transform: translateX(-179%);
   }
   100% {
     transform: translateX(0%);
   }
 }
 .n-1 {
-  transform: translateY(-4.5vw);
+  transform: translateY(-4vw);
 }
 .n-2 {
   bottom: 0;
-  transform: rotate(180deg) translateY(-4.5vw);
+  transform: rotate(180deg) translateY(-4vw);
 }
 .n-3 {
-  transform: translateY(100%) translateX(4.5vw) rotate(90deg);
+  transform: translateY(100%) translateX(4vw) rotate(90deg);
   bottom: 0;
   transform-origin: top right;
 }
 .n-4 {
-  transform: translateY(100%) translateX(-4.5vw) rotate(-90deg);
+  transform: translateY(100%) translateX(-4vw) rotate(-90deg);
   bottom: 0;
   transform-origin: top left;
 }
@@ -392,8 +393,9 @@ canvas {
   color: $bigTitleColor;
 }
 .cut-3-base {
+  font-family: $cor;
   font-size: 9vw;
-  opacity: 0.2;
+  opacity: 0.1;
   font-weight: 400;
   @include mobile {
     font-size: 14vw;
@@ -409,6 +411,7 @@ canvas {
   > h4 {
     font-size: 1.25vw;
     margin-top: 0.5vw;
+    font-family: $serif;
   }
   @include mobile {
     > h3 {
@@ -551,6 +554,7 @@ canvas {
   margin-left: 1vw;
   > p {
     color: $contentColor;
+    font-family: $micro;
     font-size: 0.7vw;
     line-height: 2;
     letter-spacing: 2px;
@@ -568,6 +572,7 @@ canvas {
   margin-bottom: 3%;
   > .swiper-slide-para-content-title {
     color: $mediumTitleColor;
+    font-family: $serif;
     font-size: 1vw;
     letter-spacing: 2px;
   }
@@ -727,8 +732,9 @@ canvas {
   }
 }
 .cut-5-base {
+  font-family: $cor;
   font-size: 9vw;
-  opacity: 0.2;
+  opacity: 0.1;
   font-weight: 400;
   @include mobile {
     font-size: 14vw;
@@ -810,7 +816,7 @@ canvas {
 }
 .cut-5-news-card-para {
   color: $contentColor;
-  font-family: $sans;
+  font-family: $micro;
   font-weight: 400;
   font-size: 0.8vw;
   margin-top: 3%;
