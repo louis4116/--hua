@@ -116,7 +116,6 @@ cut2PicBigger.to(".yo", { y: "20%", scale: "1.5", ease: "linear" });
 cut2MaskSmall.add(cut2PicBigger, "<-0.5");
 function drawMask(scaleRes, angle, img) {
   ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除 canvas
-  console.log(scaleRes);
   ctx.save(); // 保存當前狀態
 
   ctx.translate(pH + pL + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為正方形中心
