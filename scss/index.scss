@@ -42,7 +42,7 @@ body {
   list-style: none;
   li {
     color: white;
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     font-family: $serif;
     font-weight: 400;
     padding-left: 2.5rem;
@@ -542,7 +542,6 @@ canvas {
 
 .swiper-slide-para {
   display: flex;
-  align-items: center;
   margin-top: 19%;
   opacity: 0;
   transition: 1.5s;
