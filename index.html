@@ -878,13 +878,13 @@
           $(".cut-5-news-card-img").css("cursor", "none");
           gsap.to(".view", { x: x - 40, y: y - 40, duration: 0.1 });
         }
-        cut5Img.on("mouseover mousemove", function (event) {
+        cut5Img.on(" mousemove", function (event) {
           getMousePos(event);
         });
         cut5Img.on("mouseout", function () {
           gsap.to(".view", { scale: 0 });
         });
-        cut4Pin.on("mouseover mousemove", function (event) {
+        cut4Pin.on("mousemove", function (event) {
           getMousePos(event);
         });
         cut4Pin.on("mouseout", function () {

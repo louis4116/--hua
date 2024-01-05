@@ -717,8 +717,9 @@ canvas {
 .swiper-slide-para-content-top > .swiper-slide-para-content-title {
   color: #534741;
   font-family: "Noto Serif TC", serif;
-  font-size: 1.2vw;
+  font-size: 1.25vw;
   letter-spacing: 2px;
+  font-weight: 500;
 }
 .swiper-slide-para-content-top > :nth-child(1),
 .swiper-slide-para-content-top > :nth-child(3) {
