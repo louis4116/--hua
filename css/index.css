@@ -516,7 +516,7 @@ canvas {
 .cut-3-base {
   font-family: "Cormorant Infant", serif;
   font-size: 9vw;
-  opacity: 0;
+  opacity: 0.1;
   font-weight: 400;
 }
 @media all and (max-width: 500px) {
@@ -533,13 +533,11 @@ canvas {
   font-weight: 600;
   font-size: 2.25vw;
   font-family: "Cormorant Infant", serif;
-  opacity: 0;
 }
 .cut-3-title-content > h4 {
   font-size: 1.25vw;
   margin-top: 0.5vw;
   font-family: "Noto Serif TC", serif;
-  opacity: 0;
 }
 @media all and (max-width: 500px) {
   .cut-3-title-content > h3 {
@@ -583,9 +581,6 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .swiper-slide > .swiper-img {
-    width: 85%;
   }
 }
 
@@ -645,8 +640,8 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .text-rotate {
-    margin-top: 97%;
-    left: -3%;
+    margin-top: 111%;
+    left: -14%;
     width: 22vw;
   }
 }
@@ -811,6 +806,10 @@ canvas {
   position: absolute;
 }
 
+.fancybox-content {
+  padding: 0px;
+}
+
 .cut-4-to-top {
   background-image: url("../img/home/back.svg");
   background-size: 100%;
@@ -818,7 +817,7 @@ canvas {
   background-repeat: no-repeat;
   position: absolute;
   color: black;
-  width: 1.8vw;
+  width: 1.5vw;
   height: 3.2vw;
   display: flex;
   justify-content: center;
@@ -1078,4 +1077,21 @@ canvas {
 }
 .view > img {
   animation: textRotate 10s linear infinite;
+}
+
+.fancybox-content {
+  background-color: transparent;
+}
+
+.fancybox-content > img {
+  display: block !important;
+}
+
+.fancybox-close-small {
+  background-color: #736356;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  padding: 6px;
+  color: white;
 }/*# sourceMappingURL=index.css.map */

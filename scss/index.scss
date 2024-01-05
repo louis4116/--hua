@@ -394,7 +394,7 @@ canvas {
 .cut-3-base {
   font-family: $cor;
   font-size: 9vw;
-  opacity: 0;
+  opacity: 0.1;
   font-weight: 400;
   @include mobile {
     font-size: 14vw;
@@ -407,13 +407,11 @@ canvas {
     font-weight: 600;
     font-size: 2.25vw;
     font-family: $cor;
-    opacity: 0;
   }
   > h4 {
     font-size: 1.25vw;
     margin-top: 0.5vw;
     font-family: $serif;
-    opacity: 0;
   }
   @include mobile {
     > h3 {
@@ -456,9 +454,6 @@ canvas {
     display: flex;
     flex-direction: column;
     align-items: center;
-    > .swiper-img {
-      width: 85%;
-    }
   }
 }
 .swiper-img {
@@ -516,8 +511,8 @@ canvas {
   opacity: 0;
   transition: all 1s;
   @include mobile {
-    margin-top: 97%;
-    left: -3%;
+    margin-top: 111%;
+    left: -14%;
     width: 22vw;
   }
 }
@@ -664,6 +659,9 @@ canvas {
 .cut-4-a {
   position: absolute;
 }
+.fancybox-content {
+  padding: 0px;
+}
 .cut-4-to-top {
   background-image: url("../img/home/back.svg");
   background-size: 100%;
@@ -671,7 +669,7 @@ canvas {
   background-repeat: no-repeat;
   position: absolute;
   color: black;
-  width: 1.8vw;
+  width: 1.5vw;
   height: 3.2vw;
   display: flex;
   justify-content: center;
@@ -916,4 +914,17 @@ canvas {
   > img {
     animation: textRotate 10s linear infinite;
   }
+}
+.fancybox-content {
+  background-color: transparent;
+}
+.fancybox-content > img {
+  display: block !important;
+}
+.fancybox-close-small {
+  background-color: #736356;
+}
+.fancybox-slide--html .fancybox-close-small {
+  padding: 6px;
+  color: white;
 }

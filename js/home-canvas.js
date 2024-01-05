@@ -21,43 +21,6 @@ $(window).on("resize", function () {
 });
 const backImage = new Image();
 backImage.src = "./img/home/旋轉背景圖.jpg";
-backImage.onload = () => {
-  // 遮罩顏色;
-  ctx.fillStyle = "rgb(193,175,155)";
-  ctx.save(); // 保存當前狀態
-  ctx.beginPath();
-  // ctx.roundRect(pH + pL + squreW2, 0, squreW * 0.6, squreH * 0.6, 20); // 正方形路徑
-  ctx.roundRect(
-    pH + pL + squreW2,
-    // squreX + squreW2,
-    squreDis + squreH2,
-    squreW * 0.6,
-    squreH * 0.6,
-    20
-  ); // 正方形路徑
-  ctx.clip(); // 裁剪路徑
-  ctx.closePath();
-  ctx.fill();
-  ctx.globalCompositeOperation = "source-in";
-  ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
-  ctx.restore();
-  ctx.globalCompositeOperation = "source-over";
-};
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollSmoother);
-//第二cut
-
-const cut2MaskSmall = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".home-cut-2-fixed-container",
-    toggleActions: "play none none reverse",
-    start: "top top",
-    end: "bottom+=250% bottom",
-    pin: true,
-    scrub: 0.2,
-  },
-});
 let img1 = new Image();
 let img2 = new Image();
 let img3 = new Image();
@@ -69,40 +32,17 @@ img3.src = "./img/home/big02.webp";
 img4.src = "./img/home/big03.webp";
 img5.src = "./img/home/big04.webp";
 
-cut2MaskSmall
-  .to(".home-cut-2-fixed-first-squre-wrapper", {
-    onUpdate: function () {
-      let progress = this.progress();
-      let angle = 5 * progress;
-      let scaleprogress = Number(((1 - 0.9) * progress).toFixed(3));
-      let scaleRes = 1 - scaleprogress;
+const cut2MaskSmall = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".home-cut-2-fixed-container",
+    toggleActions: "play none none reverse",
+    start: "top top",
+    end: "bottom+=250% bottom",
+    pin: true,
+    scrub: 0.2,
+  },
+});
 
-      drawMask(scaleRes, angle, img1);
-    },
-    scale: "0.9",
-    rotation: 50,
-  })
-  .to(".home-cut-2-fixed-first-squre-wrapper", {
-    onUpdate: function () {
-      let progress = this.progress();
-      let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3));
-      let scaleRes = 0.9 + scaleprogress;
-      let img;
-      if (scaleRes >= 4.5) {
-        img = img5;
-      } else if (scaleRes >= 4 && scaleRes < 4.5) {
-        img = img2;
-      } else if (scaleRes >= 3.25 && scaleRes < 4) {
-        img = img3;
-      } else if (scaleRes >= 2.5 && scaleRes < 3.25) {
-        img = img4;
-      } else {
-        img = img1;
-      }
-      drawMask(scaleRes, 5, img);
-    },
-    scale: "4",
-  });
 const cut2PicBigger = gsap.timeline({
   scrollTrigger: {
     trigger: ".home-cut-3",
@@ -112,8 +52,136 @@ const cut2PicBigger = gsap.timeline({
     scrub: 0.2,
   },
 });
-cut2PicBigger.to(".yo", { y: "20%", scale: "1.5", ease: "linear" });
-cut2MaskSmall.add(cut2PicBigger, "<-0.5");
+const windowWidth = window.innerWidth;
+if (windowWidth > 500) {
+  backImage.onload = () => {
+    // 遮罩顏色;
+    ctx.fillStyle = "rgb(193,175,155)";
+    ctx.save(); // 保存當前狀態
+    ctx.beginPath();
+    // ctx.roundRect(pH + pL + squreW2, 0, squreW * 0.6, squreH * 0.6, 20); // 正方形路徑
+    ctx.roundRect(
+      pH + pL + squreW2,
+      // squreX + squreW2,
+      squreDis + squreH2,
+      squreW * 0.6,
+      squreH * 0.6,
+      20
+    ); // 正方形路徑
+    ctx.clip(); // 裁剪路徑
+    ctx.closePath();
+    ctx.fill();
+    ctx.globalCompositeOperation = "source-in";
+    ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
+    ctx.restore();
+    ctx.globalCompositeOperation = "source-over";
+  };
+  cut2MaskSmall
+    .to(".home-cut-2-fixed-first-squre-wrapper", {
+      onUpdate: function () {
+        let progress = this.progress();
+        let angle = 5 * progress;
+        let scaleprogress = Number(((1 - 0.9) * progress).toFixed(3));
+        let scaleRes = 1 - scaleprogress;
+
+        drawMask(scaleRes, angle, img1);
+      },
+      scale: "0.9",
+      rotation: 50,
+    })
+    .to(".home-cut-2-fixed-first-squre-wrapper", {
+      onUpdate: function () {
+        let progress = this.progress();
+        let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3));
+        let scaleRes = 0.9 + scaleprogress;
+        let img;
+        if (scaleRes >= 4.75 && scaleRes < 5.5) {
+          img = img5;
+        } else if (scaleRes >= 4 && scaleRes < 4.75) {
+          img = img2;
+        } else if (scaleRes >= 3.25 && scaleRes < 4) {
+          img = img3;
+        } else if (scaleRes >= 2.5 && scaleRes < 3.25) {
+          img = img4;
+        } else if (scaleRes >= 1.5 && scaleRes < 2.5) {
+          img = img1;
+        } else {
+          img = img1;
+        }
+        console.log(scaleRes);
+        drawMask(scaleRes, 5, img);
+      },
+      scale: "4",
+    });
+
+  cut2PicBigger.to(".yo", { y: "20%", scale: "1.5", ease: "linear" });
+  cut2MaskSmall.add(cut2PicBigger, "<-0.5");
+} else {
+  backImage.onload = () => {
+    // 遮罩顏色;
+    // ctx.fillStyle = "rgb(193,175,155)";
+    // ctx.save(); // 保存當前狀態
+    // ctx.beginPath();
+    // // ctx.roundRect(pH + pL + squreW2, 0, squreW * 0.6, squreH * 0.6, 20); // 正方形路徑
+    // ctx.roundRect(
+    //   pH + pL + squreW2,
+    //   // squreX + squreW2,
+    //   squreDis + squreH2,
+    //   squreW * 0.6,
+    //   squreH * 0.6,
+    //   20
+    // ); // 正方形路徑
+    // ctx.clip(); // 裁剪路徑
+    // ctx.closePath();
+    // ctx.fill();
+    // ctx.globalCompositeOperation = "source-in";
+    ctx.drawImage(backImage, 0, 0, canvas.width, canvas.height); // 繪製圖片
+    // ctx.restore();
+    // ctx.globalCompositeOperation = "source-over";
+  };
+  // cut2MaskSmall
+  //   .to(".home-cut-2-fixed-first-squre-wrapper", {
+  //     onUpdate: function () {
+  //       let progress = this.progress();
+  //       let angle = 5 * progress;
+  //       let scaleprogress = Number(((1 - 0.9) * progress).toFixed(3));
+  //       let scaleRes = 1 - scaleprogress;
+
+  //       drawMask(scaleRes, angle, img1);
+  //     },
+  //     scale: "0.9",
+  //     rotation: 50,
+  //   })
+  //   .to(".home-cut-2-fixed-first-squre-wrapper", {
+  //     onUpdate: function () {
+  //       let progress = this.progress();
+  //       let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3));
+  //       let scaleRes = 0.9 + scaleprogress;
+  //       let img;
+  //       if (scaleRes >= 4.5) {
+  //         img = img5;
+  //       } else if (scaleRes >= 4 && scaleRes < 4.5) {
+  //         img = img2;
+  //       } else if (scaleRes >= 3.25 && scaleRes < 4) {
+  //         img = img3;
+  //       } else if (scaleRes >= 2.5 && scaleRes < 3.25) {
+  //         img = img4;
+  //       } else {
+  //         img = img1;
+  //       }
+  //       drawMask(scaleRes, 5, img);
+  //     },
+  //     scale: "4",
+  //   });
+
+  // cut2PicBigger.to(".yo", { y: "20%", scale: "1.5", ease: "linear" });
+  // cut2MaskSmall.add(cut2PicBigger, "<-0.5");
+}
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollSmoother);
+//第二cut
+
 function drawMask(scaleRes, angle, img) {
   ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除 canvas
   ctx.save(); // 保存當前狀態
