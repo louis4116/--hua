@@ -867,6 +867,8 @@
 
         //第五cut以及彈跳視窗
         $(".fancybox-pic").fancybox();
+        const cut4PosY = $(".home-cut-4").offset().top;
+        const viewPosY = $(".view").offset().top;
 
         const cut5Img = $(".cut-5-news-card-img>img");
         const cut4Pin = $(".cut-4-pin");
@@ -886,9 +888,15 @@
         });
         cut4Pin.on("mousemove", function (event) {
           getMousePos(event);
+          console.log($(".view").offset().top);
         });
         cut4Pin.on("mouseout", function () {
           gsap.to(".view", { scale: 0 });
+        });
+        $(window).on("scroll", function () {
+          // if (cut4PosY >= viewPosY) {
+          //   gsap.to(".view", { scale: 0 });
+          // }
         });
         // if (document.body.scrollTop > 0) {
         //   window.scrollTo(0, -1);

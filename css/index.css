@@ -972,9 +972,9 @@ canvas {
 
 .cut-5-news-card-title {
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.25vw;
   font-family: "Noto Serif TC", serif;
-  font-weight: 600;
+  font-weight: 500;
   color: #65534b;
   margin-top: 1%;
 }
