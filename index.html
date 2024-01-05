@@ -617,6 +617,7 @@
     <script src="./js/gsap.min.js"></script>
     <script src="./js/ScrollToPlugin.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/ScrollSmoother.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/home-canvas.js"></script>
@@ -867,12 +868,11 @@
 
         //第五cut以及彈跳視窗
         $(".fancybox-pic").fancybox();
-        const cut4PosY = $(".home-cut-4").offset().top;
-        const viewPosY = $(".view").offset().top;
 
         const cut5Img = $(".cut-5-news-card-img>img");
         const cut4Pin = $(".cut-4-pin");
         const cut4fancy = $(".fancybox-pic");
+
         function getMousePos(event) {
           const x = event.clientX;
           const y = event.clientY;
@@ -880,34 +880,31 @@
           $(".cut-5-news-card-img").css("cursor", "none");
           gsap.to(".view", { x: x - 40, y: y - 40, duration: 0.1 });
         }
+
         cut5Img.on(" mousemove", function (event) {
           getMousePos(event);
         });
+
         cut5Img.on("mouseout", function () {
           gsap.to(".view", { scale: 0 });
         });
+
         cut4Pin.on("mousemove", function (event) {
           getMousePos(event);
-          console.log($(".view").offset().top);
         });
+
         cut4Pin.on("mouseout", function () {
           gsap.to(".view", { scale: 0 });
         });
+
+        const cut4PosY = $(".home-cut-4").offset().top;
         $(window).on("scroll", function () {
-          // if (cut4PosY >= viewPosY) {
-          //   gsap.to(".view", { scale: 0 });
-          // }
+          let viewPosY = $(".view").offset().top;
+          if (cut4PosY >= viewPosY) {
+            gsap.to(".view", { scale: 0 });
+          }
         });
-        // if (document.body.scrollTop > 0) {
-        //   window.scrollTo(0, -1);
-        //   document.body.scrollTop = 0;
-        // }
-        // window.scrollTo(0, -1);
-        // document.body.scrollTop = 0;
       };
-      // window.onbeforeunload = function () {
-      //   window.scrollTo(0, 0);
-      // };
     </script>
   </body>
 </html>

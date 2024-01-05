@@ -45,6 +45,7 @@ backImage.onload = () => {
 };
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollSmoother);
 //第二cut
 
 const cut2MaskSmall = gsap.timeline({
@@ -55,14 +56,6 @@ const cut2MaskSmall = gsap.timeline({
     end: "bottom+=250% bottom",
     pin: true,
     scrub: 0.2,
-    onUpdate: (self) => {
-      // let scaleVal = 0.9;
-      // let progress = self.progress;
-      // let angle = 5 * progress;
-      // let scaleprogress = Number(((1 - 0.9) * progress).toFixed(3));
-      // let scaleRes = 1 - scaleprogress;
-      // drawMask(scaleRes, scaleprogress, angle);
-    },
   },
 });
 let img1 = new Image();
@@ -75,24 +68,22 @@ img2.src = "./img/home/big01.webp";
 img3.src = "./img/home/big02.webp";
 img4.src = "./img/home/big03.webp";
 img5.src = "./img/home/big04.webp";
+
 cut2MaskSmall
   .to(".home-cut-2-fixed-first-squre-wrapper", {
     onUpdate: function () {
-      let scaleVal = 0.9;
       let progress = this.progress();
       let angle = 5 * progress;
       let scaleprogress = Number(((1 - 0.9) * progress).toFixed(3));
       let scaleRes = 1 - scaleprogress;
 
-      drawMask(scaleRes, scaleprogress, angle);
-      // console.log(this.progress());
+      drawMask(scaleRes, angle, img1);
     },
     scale: "0.9",
     rotation: 50,
   })
   .to(".home-cut-2-fixed-first-squre-wrapper", {
     onUpdate: function () {
-      let scaleVal = 5;
       let progress = this.progress();
       let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3));
       let scaleRes = 0.9 + scaleprogress;
@@ -108,15 +99,24 @@ cut2MaskSmall
       } else {
         img = img1;
       }
-      // console.log(scaleprogress);
-      drawMask(scaleRes, progress, 5, img);
-      // console.log(this.progress());
+      drawMask(scaleRes, 5, img);
     },
     scale: "4",
   });
-function drawMask(scaleRes, scaleprogress, angle, img) {
+const cut2PicBigger = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".home-cut-3",
+    toggleActions: "play none none reverse",
+    start: "-50% bottom",
+    end: "bottom bottom",
+    scrub: 0.2,
+  },
+});
+cut2PicBigger.to(".yo", { y: "20%", scale: "1.5", ease: "linear" });
+cut2MaskSmall.add(cut2PicBigger, "<-0.5");
+function drawMask(scaleRes, angle, img) {
   ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除 canvas
-
+  console.log(scaleRes);
   ctx.save(); // 保存當前狀態
 
   ctx.translate(pH + pL + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為正方形中心
