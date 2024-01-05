@@ -712,6 +712,7 @@ canvas {
   display: flex;
   align-items: center;
   margin-bottom: 3%;
+  line-height: 1;
 }
 .swiper-slide-para-content-top > .swiper-slide-para-content-title {
   color: #534741;
