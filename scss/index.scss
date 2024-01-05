@@ -446,10 +446,11 @@ canvas {
   opacity: 0 !important;
 }
 .swiper-slide {
-  margin-top: 5%;
+  margin-top: 23%;
   margin-bottom: 23%;
   height: auto;
   position: relative;
+  transition: all 1s;
   @include mobile {
     display: flex;
     flex-direction: column;
@@ -458,6 +459,7 @@ canvas {
 }
 .swiper-img {
   position: relative;
+
   > a {
     position: absolute;
     width: 100%;
@@ -475,12 +477,15 @@ canvas {
   display: flex;
   .swiper-slide-prev {
     opacity: 1 !important;
+    transition: all 1s;
     .text-rotate {
       opacity: 1;
     }
   }
   .swiper-slide-active {
     opacity: 1 !important;
+    transform: translateY(-15%) !important;
+    transition: all 1s;
     > .swiper-img {
       > a {
         z-index: 5;
@@ -496,6 +501,8 @@ canvas {
 
   .swiper-slide-next {
     opacity: 1 !important;
+    transform: translateY(-20%) !important;
+    transition: all 1s;
     .text-rotate {
       opacity: 1;
     }

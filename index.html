@@ -966,17 +966,9 @@
           breakpoints: {
             0: {},
             900: {},
-            1900: {},
-          },
-          effect: "creative",
-          creativeEffect: {
-            prev: {
-              translate: ["-150%", "10%", 0],
+            1600: {
+              spaceBetween: 300,
             },
-            next: {
-              translate: ["150%", "-10%", 0],
-            },
-            limitProgress: 1,
           },
           on: {
             slideChange: function (swiper) {
@@ -993,6 +985,49 @@
             },
           },
         });
+        // new Swiper(".cut-3-carousel-swiper", {
+        //   navigation: {
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        //   },
+        //   // autoplay: {
+        //   //   delay: 6000,
+        //   // },
+        //   slidesPerView: 1.25,
+        //   spaceBetween: 50,
+        //   loop: true,
+        //   centeredSlides: true,
+        //   speed: 1000,
+        //   breakpoints: {
+        //     0: {},
+        //     900: {},
+        //     1900: {},
+        //   },
+        //   effect: "creative",
+        //   creativeEffect: {
+        //     prev: {
+        //       translate: ["-150%", "10%", 0],
+        //     },
+        //     next: {
+        //       translate: ["150%", "-10%", 0],
+        //     },
+        //     limitProgress: 1,
+        //   },
+        //   on: {
+        //     slideChange: function (swiper) {
+        //       const active = this.activeIndex;
+        //       const nextIndex = this.activeIndex + 2;
+        //       $(".swiper-slide-para").removeClass("para-show");
+        //       $(".swiper-slide")
+        //         .eq(active)
+        //         .find(".swiper-slide-para")
+        //         .addClass("para-show");
+        //       const currentSlide = this.slides[active];
+        //       const currentAttr = currentSlide.getAttribute("data-name");
+        //       changeImg(currentAttr);
+        //     },
+        //   },
+        // });
         function changeImg(currentAttr) {
           if (!currentAttr) return;
           //找對應的陣列
