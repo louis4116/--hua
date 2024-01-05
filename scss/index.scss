@@ -381,6 +381,10 @@ canvas {
   width: 100%;
   margin-top: 3%;
   overflow: hidden;
+  height: 100vh;
+  @include mobile {
+    height: auto;
+  }
 }
 .cut-3-title {
   position: relative;
@@ -432,6 +436,7 @@ canvas {
 .cut-3-carousel-swiper {
   position: relative;
   width: 25vw;
+  // margin-top: 11%;
   @include mobile {
     width: 75%;
   }
@@ -446,11 +451,11 @@ canvas {
   opacity: 0 !important;
 }
 .swiper-slide {
-  margin-top: 23%;
-  margin-bottom: 23%;
+  margin-top: 40%;
+  margin-bottom: 5%;
   height: auto;
   position: relative;
-  transition: all 1s;
+  // transition: all 1s;
   @include mobile {
     display: flex;
     flex-direction: column;
@@ -477,6 +482,7 @@ canvas {
   display: flex;
   .swiper-slide-prev {
     opacity: 1 !important;
+    transform: translateY(-15%) !important;
     transition: all 1s;
     .text-rotate {
       opacity: 1;
@@ -484,7 +490,7 @@ canvas {
   }
   .swiper-slide-active {
     opacity: 1 !important;
-    transform: translateY(-15%) !important;
+    transform: translateY(-25%) !important;
     transition: all 1s;
     > .swiper-img {
       > a {
@@ -501,7 +507,7 @@ canvas {
 
   .swiper-slide-next {
     opacity: 1 !important;
-    transform: translateY(-20%) !important;
+    transform: translateY(-35%) !important;
     transition: all 1s;
     .text-rotate {
       opacity: 1;
@@ -511,7 +517,7 @@ canvas {
 
 .text-rotate {
   position: absolute;
-  margin-top: -26%;
+  margin-top: -31%;
   left: -15%;
   width: 8vw;
   animation: textRotate 10s linear infinite;
@@ -651,6 +657,7 @@ canvas {
 //第四cut
 .home-cut-4 {
   position: relative;
+  margin-top: 1%;
 }
 .fancybox-pic > img {
   cursor: none;

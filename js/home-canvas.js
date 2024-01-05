@@ -26,11 +26,13 @@ let img2 = new Image();
 let img3 = new Image();
 let img4 = new Image();
 let img5 = new Image();
+let img6 = new Image();
 img1.src = "./img/home/旋轉背景圖.webp";
 img2.src = "./img/home/big01.webp";
 img3.src = "./img/home/big02.webp";
 img4.src = "./img/home/big03.webp";
 img5.src = "./img/home/big04.webp";
+img6.src = "./img/home/big05.webp";
 
 const cut2MaskSmall = gsap.timeline({
   scrollTrigger: {
@@ -95,16 +97,16 @@ if (windowWidth > 500) {
         let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3));
         let scaleRes = 0.9 + scaleprogress;
         let img;
-        if (scaleRes >= 4.75 && scaleRes < 5.5) {
+        if (scaleRes >= 5) {
           img = img5;
-        } else if (scaleRes >= 4 && scaleRes < 4.75) {
-          img = img2;
-        } else if (scaleRes >= 3.25 && scaleRes < 4) {
+        } else if (scaleRes >= 4.25 && scaleRes < 5) {
+          img = img6;
+        } else if (scaleRes >= 3.25 && scaleRes < 4.25) {
           img = img3;
         } else if (scaleRes >= 2.5 && scaleRes < 3.25) {
           img = img4;
         } else if (scaleRes >= 1.5 && scaleRes < 2.5) {
-          img = img1;
+          img = img2;
         } else {
           img = img1;
         }

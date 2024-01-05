@@ -501,6 +501,12 @@ canvas {
   width: 100%;
   margin-top: 3%;
   overflow: hidden;
+  height: 100vh;
+}
+@media all and (max-width: 500px) {
+  .home-cut-3 {
+    height: auto;
+  }
 }
 
 .cut-3-title {
@@ -571,11 +577,10 @@ canvas {
 }
 
 .swiper-slide {
-  margin-top: 23%;
-  margin-bottom: 23%;
+  margin-top: 40%;
+  margin-bottom: 5%;
   height: auto;
   position: relative;
-  transition: all 1s;
 }
 @media all and (max-width: 500px) {
   .swiper-slide {
@@ -607,6 +612,7 @@ canvas {
 }
 .swiper-wrapper .swiper-slide-prev {
   opacity: 1 !important;
+  transform: translateY(-15%) !important;
   transition: all 1s;
 }
 .swiper-wrapper .swiper-slide-prev .text-rotate {
@@ -614,7 +620,7 @@ canvas {
 }
 .swiper-wrapper .swiper-slide-active {
   opacity: 1 !important;
-  transform: translateY(-15%) !important;
+  transform: translateY(-25%) !important;
   transition: all 1s;
 }
 .swiper-wrapper .swiper-slide-active > .swiper-img > a {
@@ -628,7 +634,7 @@ canvas {
 }
 .swiper-wrapper .swiper-slide-next {
   opacity: 1 !important;
-  transform: translateY(-20%) !important;
+  transform: translateY(-35%) !important;
   transition: all 1s;
 }
 .swiper-wrapper .swiper-slide-next .text-rotate {
@@ -637,7 +643,7 @@ canvas {
 
 .text-rotate {
   position: absolute;
-  margin-top: -26%;
+  margin-top: -31%;
   left: -15%;
   width: 8vw;
   animation: textRotate 10s linear infinite;
@@ -793,6 +799,7 @@ canvas {
 
 .home-cut-4 {
   position: relative;
+  margin-top: 1%;
 }
 
 .fancybox-pic > img {
