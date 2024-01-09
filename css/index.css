@@ -1029,7 +1029,7 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .cut-4-pin-left {
-    transform: translateY(-36%);
+    transform: translateY(-130vw);
     margin-left: 1%;
   }
 }
