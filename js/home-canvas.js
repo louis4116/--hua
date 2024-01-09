@@ -83,7 +83,7 @@ const cut2PicBigger = gsap.timeline({
 
 if (windowWidth <= 500) {
   //第一次繪圖
-  backImage.onload = () => {
+  backImage.onload = function () {
     // 遮罩顏色;
     ctx.fillStyle = "rgb(193,175,155)";
     ctx.save(); // 保存當前狀態
@@ -144,7 +144,7 @@ if (windowWidth <= 500) {
   cut2MaskSmall.add(cut2PicBigger, "<-0.5");
 } else {
   //第一次繪圖
-  backImage.onload = () => {
+  backImage.onload = function () {
     // 遮罩顏色;
     ctx.fillStyle = "rgb(193,175,155)";
     ctx.save(); // 保存當前狀態
