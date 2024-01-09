@@ -897,372 +897,370 @@
     <script src="./js/home-canvas.js"></script>
     <script src="./js/home-carsoul.js"></script>
     <script>
-      window.onload = () => {
-        //滾輪向上與向下的不同動畫
-        let lastScrollTop = 0;
-        $(window).on("scroll", function (e) {
-          let st = $(this).scrollTop();
-          if (st > lastScrollTop) {
-            $(".loopText").css("animation-direction", "normal");
-          } else if (st < lastScrollTop) {
-            $(".loopText").css("animation-direction", "reverse");
-          }
-
-          lastScrollTop = st;
-        });
-        const navHeight = $("#nav").outerHeight();
-        const navList = $(".nav-list");
-        $(".cut-4-to-top").css("top", `${navHeight}px`);
-        if (window.innerWidth <= 500) {
-          $(".nav-hamb-icon").on("click", function (e) {
-            e.preventDefault();
-            $(".nav-list-ul").slideToggle(500);
-          });
-          $(".cut-4-pin-right").remove();
-        } else {
-          $(".ph").remove();
+      //滾輪向上與向下的不同動畫
+      let lastScrollTop = 0;
+      $(window).on("scroll", function (e) {
+        let st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+          $(".loopText").css("animation-direction", "normal");
+        } else if (st < lastScrollTop) {
+          $(".loopText").css("animation-direction", "reverse");
         }
 
-        //補足圖片數量👇
-        const copyContent = JSON.parse(JSON.stringify(homeCarsoulImg));
-        let lack = 0;
-        let lackAverage = 0;
-        let smallLength = 0;
-        copyContent.forEach((el, i) => {
-          smallLength = el.small.length;
-          if (smallLength < 19) {
-            lack = 18 - smallLength;
-            //無條件進入，所以圖片數量可能會大於原本所需
-            lackAverage = Math.ceil(18 / lack);
-          }
-          el.fancy = Array(lackAverage).fill(el.fancy).flat();
-          el.small = Array(lackAverage).fill(el.small).flat();
+        lastScrollTop = st;
+      });
+      const navHeight = $("#nav").outerHeight();
+      const navList = $(".nav-list");
+      $(".cut-4-to-top").css("top", `${navHeight}px`);
+      if (window.innerWidth <= 500) {
+        $(".nav-hamb-icon").on("click", function (e) {
+          e.preventDefault();
+          $(".nav-list-ul").slideToggle(500);
         });
-        //補足圖片數量☝️
+        $(".cut-4-pin-right").remove();
+      } else {
+        $(".ph").remove();
+      }
 
-        //icon落下動畫👇
-        gsap.to(".drops-1", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          y: "7.5vw",
-          ease: "linear",
-        });
-        gsap.to(".drops-4", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          y: "30vw",
-          ease: "linear",
-        });
-        gsap.to(".drops-5", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          y: "15vw",
-          ease: "linear",
-        });
-        gsap.to(".drops-3", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          y: "40vw",
-          ease: "linear",
-        });
-        gsap.to(".drops-2", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          ease: "linear",
-          y: "10vw",
-        });
-        //icon落下動畫☝️
+      //補足圖片數量👇
+      const copyContent = JSON.parse(JSON.stringify(homeCarsoulImg));
+      let lack = 0;
+      let lackAverage = 0;
+      let smallLength = 0;
+      copyContent.forEach((el, i) => {
+        smallLength = el.small.length;
+        if (smallLength < 19) {
+          lack = 18 - smallLength;
+          //無條件進入，所以圖片數量可能會大於原本所需
+          lackAverage = Math.ceil(18 / lack);
+        }
+        el.fancy = Array(lackAverage).fill(el.fancy).flat();
+        el.small = Array(lackAverage).fill(el.small).flat();
+      });
+      //補足圖片數量☝️
 
-        //第三cut
-        const cut3Tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".home-cut-3",
-            toggleActions: "play none none none",
-            start: "25% bottom",
-            once: true,
-          },
-        });
-        cut3Tl
-          .from(".cut-3-base", {
+      //icon落下動畫👇
+      gsap.to(".drops-1", {
+        scrollTrigger: {
+          trigger: ".home-cut-2",
+          toggleActions: "play none none reverse",
+          start: "top bottom",
+          end: "center bottom",
+          scrub: 1,
+        },
+        y: "7.5vw",
+        ease: "linear",
+      });
+      gsap.to(".drops-4", {
+        scrollTrigger: {
+          trigger: ".home-cut-2",
+          toggleActions: "play none none reverse",
+          start: "top bottom",
+          end: "center bottom",
+          scrub: 1,
+        },
+        y: "30vw",
+        ease: "linear",
+      });
+      gsap.to(".drops-5", {
+        scrollTrigger: {
+          trigger: ".home-cut-2",
+          toggleActions: "play none none reverse",
+          start: "top bottom",
+          end: "center bottom",
+          scrub: 1,
+        },
+        y: "15vw",
+        ease: "linear",
+      });
+      gsap.to(".drops-3", {
+        scrollTrigger: {
+          trigger: ".home-cut-2",
+          toggleActions: "play none none reverse",
+          start: "top bottom",
+          end: "center bottom",
+          scrub: 1,
+        },
+        y: "40vw",
+        ease: "linear",
+      });
+      gsap.to(".drops-2", {
+        scrollTrigger: {
+          trigger: ".home-cut-2",
+          toggleActions: "play none none reverse",
+          start: "top bottom",
+          end: "center bottom",
+          scrub: 1,
+        },
+        ease: "linear",
+        y: "10vw",
+      });
+      //icon落下動畫☝️
+
+      //第三cut
+      const cut3Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".home-cut-3",
+          toggleActions: "play none none none",
+          start: "25% bottom",
+          once: true,
+        },
+      });
+      cut3Tl
+        .from(".cut-3-base", {
+          ease: "linear",
+          filter: "blur(10px)",
+          opacity: "1",
+          duration: "1.75",
+        })
+        .from(
+          ".cut-3-title-content>h3",
+          {
             ease: "linear",
-            filter: "blur(10px)",
-            opacity: "1",
-            duration: "1.75",
-          })
-          .from(
-            ".cut-3-title-content>h3",
-            {
-              ease: "linear",
-              opacity: 0,
-              y: "40%",
-              duration: "1.25",
-            },
-            "<+1.25"
-          )
-          .from(
-            ".cut-3-title-content>h4",
-            {
-              ease: "linear",
-              opacity: 0,
-              y: "40%",
-              duration: "1.25",
-            },
-            "<+0.5"
-          );
+            opacity: 0,
+            y: "40%",
+            duration: "1.25",
+          },
+          "<+1.25"
+        )
+        .from(
+          ".cut-3-title-content>h4",
+          {
+            ease: "linear",
+            opacity: 0,
+            y: "40%",
+            duration: "1.25",
+          },
+          "<+0.5"
+        );
 
-        //輪播設定👇
-        new Swiper(".cut-3-carousel-swiper", {
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+      //輪播設定👇
+      new Swiper(".cut-3-carousel-swiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        // autoplay: {
+        //   delay: 6000,
+        // },
+        slidesPerView: 1.25,
+        spaceBetween: 50,
+        loop: true,
+        centeredSlides: true,
+        speed: 1000,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 75,
           },
-          // autoplay: {
-          //   delay: 6000,
-          // },
-          slidesPerView: 1.25,
-          spaceBetween: 50,
-          loop: true,
-          centeredSlides: true,
-          speed: 1000,
-          breakpoints: {
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 75,
-            },
-            900: {
-              spaceBetween: 300,
-            },
-            1200: {
-              spaceBetween: 300,
-            },
+          900: {
+            spaceBetween: 300,
           },
-          on: {
-            slideChange: function (swiper) {
-              const active = this.activeIndex;
-              const nextIndex = this.activeIndex + 2;
-              $(".swiper-slide-para").removeClass("para-show");
-              $(".swiper-slide")
-                .eq(active)
-                .find(".swiper-slide-para")
-                .addClass("para-show");
-              const currentSlide = this.slides[active];
-              const currentAttr = currentSlide.getAttribute("data-name");
-              changeImg(currentAttr);
-            },
+          1200: {
+            spaceBetween: 300,
           },
-        });
-        //輪播設定☝️
+        },
+        on: {
+          slideChange: function (swiper) {
+            const active = this.activeIndex;
+            const nextIndex = this.activeIndex + 2;
+            $(".swiper-slide-para").removeClass("para-show");
+            $(".swiper-slide")
+              .eq(active)
+              .find(".swiper-slide-para")
+              .addClass("para-show");
+            const currentSlide = this.slides[active];
+            const currentAttr = currentSlide.getAttribute("data-name");
+            changeImg(currentAttr);
+          },
+        },
+      });
+      //輪播設定☝️
 
-        //圖片替換👇
-        function changeImg(currentAttr) {
-          if (!currentAttr) return;
-          //找對應的陣列
-          const findName = copyContent.filter(
-            (item) => item.name === currentAttr
-          );
-          //陣列轉物件
-          const homeImgObg = findName.reduce((acc, cur) => {
-            acc = cur;
-            return acc;
-          }, {});
-          const carsoulFancy = $(".cut-4-fancybox-pic");
-          const carsoulSmall = $(".cut-4-pin-img-small");
-          //數量最大只到18
-          if (window.innerWidth <= 500) {
-            //手機板
-            for (let i = 0; i < 18; i++) {
-              if (i <= 8) {
-                carsoulSmall.eq(i).attr("src", homeImgObg.small[i % 9]);
-                carsoulFancy.eq(i).attr("src", homeImgObg.fancy[i % 9]);
-              } else if (i > 8 && i <= 17) {
-                carsoulSmall.eq(i).attr("src", homeImgObg.small[(i % 9) + 9]);
-                carsoulFancy.eq(i).attr("src", homeImgObg.fancy[(i % 9) + 9]);
-              }
+      //圖片替換👇
+      function changeImg(currentAttr) {
+        if (!currentAttr) return;
+        //找對應的陣列
+        const findName = copyContent.filter(
+          (item) => item.name === currentAttr
+        );
+        //陣列轉物件
+        const homeImgObg = findName.reduce((acc, cur) => {
+          acc = cur;
+          return acc;
+        }, {});
+        const carsoulFancy = $(".cut-4-fancybox-pic");
+        const carsoulSmall = $(".cut-4-pin-img-small");
+        //數量最大只到18
+        if (window.innerWidth <= 500) {
+          //手機板
+          for (let i = 0; i < 18; i++) {
+            if (i <= 8) {
+              carsoulSmall.eq(i).attr("src", homeImgObg.small[i % 9]);
+              carsoulFancy.eq(i).attr("src", homeImgObg.fancy[i % 9]);
+            } else if (i > 8 && i <= 17) {
+              carsoulSmall.eq(i).attr("src", homeImgObg.small[(i % 9) + 9]);
+              carsoulFancy.eq(i).attr("src", homeImgObg.fancy[(i % 9) + 9]);
             }
-          } else {
-            //電腦版
-            for (let i = 0; i < 18; i++) {
-              if (i <= 5) {
-                carsoulSmall.eq(i).attr("src", homeImgObg.small[i % 3]);
-                carsoulFancy.eq(i).attr("src", homeImgObg.fancy[i % 3]);
-              } else if (i > 5 && i <= 11) {
-                carsoulSmall.eq(i).attr("src", homeImgObg.small[(i % 3) + 3]);
-                carsoulFancy.eq(i).attr("src", homeImgObg.fancy[(i % 3) + 3]);
-              } else if (i > 11 && i <= 17) {
-                carsoulSmall.eq(i).attr("src", homeImgObg.small[(i % 3) + 6]);
-                carsoulFancy.eq(i).attr("src", homeImgObg.fancy[(i % 3) + 6]);
-              }
+          }
+        } else {
+          //電腦版
+          for (let i = 0; i < 18; i++) {
+            if (i <= 5) {
+              carsoulSmall.eq(i).attr("src", homeImgObg.small[i % 3]);
+              carsoulFancy.eq(i).attr("src", homeImgObg.fancy[i % 3]);
+            } else if (i > 5 && i <= 11) {
+              carsoulSmall.eq(i).attr("src", homeImgObg.small[(i % 3) + 3]);
+              carsoulFancy.eq(i).attr("src", homeImgObg.fancy[(i % 3) + 3]);
+            } else if (i > 11 && i <= 17) {
+              carsoulSmall.eq(i).attr("src", homeImgObg.small[(i % 3) + 6]);
+              carsoulFancy.eq(i).attr("src", homeImgObg.fancy[(i % 3) + 6]);
             }
           }
         }
-        //圖片替換☝️
+      }
+      //圖片替換☝️
 
-        // new Swiper(".cut-3-carousel-swiper", {
-        //   navigation: {
-        //     nextEl: ".swiper-button-next",
-        //     prevEl: ".swiper-button-prev",
-        //   },
-        //   // autoplay: {
-        //   //   delay: 6000,
-        //   // },
-        //   slidesPerView: 1.25,
-        //   spaceBetween: 50,
-        //   loop: true,
-        //   centeredSlides: true,
-        //   speed: 1000,
-        //   breakpoints: {
-        //     0: {},
-        //     900: {},
-        //     1900: {},
-        //   },
-        //   effect: "creative",
-        //   creativeEffect: {
-        //     prev: {
-        //       translate: ["-150%", "10%", 0],
-        //     },
-        //     next: {
-        //       translate: ["150%", "-10%", 0],
-        //     },
-        //     limitProgress: 1,
-        //   },
-        //   on: {
-        //     slideChange: function (swiper) {
-        //       const active = this.activeIndex;
-        //       const nextIndex = this.activeIndex + 2;
-        //       $(".swiper-slide-para").removeClass("para-show");
-        //       $(".swiper-slide")
-        //         .eq(active)
-        //         .find(".swiper-slide-para")
-        //         .addClass("para-show");
-        //       const currentSlide = this.slides[active];
-        //       const currentAttr = currentSlide.getAttribute("data-name");
-        //       changeImg(currentAttr);
-        //     },
-        //   },
-        // });
+      // new Swiper(".cut-3-carousel-swiper", {
+      //   navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      //   },
+      //   // autoplay: {
+      //   //   delay: 6000,
+      //   // },
+      //   slidesPerView: 1.25,
+      //   spaceBetween: 50,
+      //   loop: true,
+      //   centeredSlides: true,
+      //   speed: 1000,
+      //   breakpoints: {
+      //     0: {},
+      //     900: {},
+      //     1900: {},
+      //   },
+      //   effect: "creative",
+      //   creativeEffect: {
+      //     prev: {
+      //       translate: ["-150%", "10%", 0],
+      //     },
+      //     next: {
+      //       translate: ["150%", "-10%", 0],
+      //     },
+      //     limitProgress: 1,
+      //   },
+      //   on: {
+      //     slideChange: function (swiper) {
+      //       const active = this.activeIndex;
+      //       const nextIndex = this.activeIndex + 2;
+      //       $(".swiper-slide-para").removeClass("para-show");
+      //       $(".swiper-slide")
+      //         .eq(active)
+      //         .find(".swiper-slide-para")
+      //         .addClass("para-show");
+      //       const currentSlide = this.slides[active];
+      //       const currentAttr = currentSlide.getAttribute("data-name");
+      //       changeImg(currentAttr);
+      //     },
+      //   },
+      // });
 
-        //第四cut
-        let cut4ImgY;
-        let cut4imgStart;
-        if (window.innerWidth <= 500) {
-          cut4ImgY = "translateY(45%)";
-          cut4imgStart = "top top";
-        } else {
-          cut4ImgY = "translateY(100vw)";
-          cut4imgStart = "top top";
-        }
-        gsap.to(".cut-4-pin-left", {
-          scrollTrigger: {
-            trigger: ".home-cut-4",
-            toggleActions: "restart none restart none ",
-            start: cut4imgStart,
-            end: "bottom bottom",
-            scrub: 0.1,
-          },
-          ease: "linear",
-          transform: cut4ImgY,
+      //第四cut
+      let cut4ImgY;
+      let cut4imgStart;
+      if (window.innerWidth <= 500) {
+        cut4ImgY = "translateY(45%)";
+        cut4imgStart = "top top";
+      } else {
+        cut4ImgY = "translateY(100vw)";
+        cut4imgStart = "top top";
+      }
+      gsap.to(".cut-4-pin-left", {
+        scrollTrigger: {
+          trigger: ".home-cut-4",
+          toggleActions: "restart none restart none ",
+          start: cut4imgStart,
+          end: "bottom bottom",
+          scrub: 0.1,
+        },
+        ease: "linear",
+        transform: cut4ImgY,
+      });
+      gsap.to(".cut-4-pin-right", {
+        scrollTrigger: {
+          trigger: ".home-cut-4",
+          toggleActions: "restart none restart none",
+          start: cut4imgStart,
+          end: "bottom bottom",
+          scrub: 0.1,
+        },
+
+        ease: "linear",
+        transform: cut4ImgY,
+      });
+
+      //導引至第4cut動畫及功能
+      $(".swiper-img").on("click", function (e) {
+        e.preventDefault();
+        let target = e.target;
+        let hash = target.hash;
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: hash,
+          ease: "Power1.easeInOut",
         });
-        gsap.to(".cut-4-pin-right", {
-          scrollTrigger: {
-            trigger: ".home-cut-4",
-            toggleActions: "restart none restart none",
-            start: cut4imgStart,
-            end: "bottom bottom",
-            scrub: 0.1,
-          },
+      });
+      //導引至第3cut動畫及功能
+      $(".cut-4-to-top").on("click", function (e) {
+        e.preventDefault();
+        let target = e.target;
+        let hash = target.hash;
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: hash,
+          ease: "Power1.easeInOut",
+        });
+      });
 
-          ease: "linear",
-          transform: cut4ImgY,
+      //第五cut以及滑鼠的VIEW
+      const cut5Img = $(".cut-5-news-card-img>img");
+      const cut4Pin = $(".cut-4-pin");
+      function getMousePos(event) {
+        //取得滑鼠位置功能
+        const x = event.clientX;
+        const y = event.clientY;
+        gsap.to(".view", { scale: 1 });
+        $(".cut-5-news-card-img").css("cursor", "none");
+        gsap.to(".view", { x: x - 40, y: y - 40, duration: 0.1 });
+      }
+      if (window.innerWidth <= 500) {
+        $(".view").remove();
+      } else {
+        cut5Img.on(" mousemove", function (event) {
+          getMousePos(event);
         });
 
-        //導引至第4cut動畫及功能
-        $(".swiper-img").on("click", function (e) {
-          e.preventDefault();
-          let target = e.target;
-          let hash = target.hash;
-          gsap.to(window, {
-            duration: 1,
-            scrollTo: hash,
-            ease: "Power1.easeInOut",
-          });
-        });
-        //導引至第3cut動畫及功能
-        $(".cut-4-to-top").on("click", function (e) {
-          e.preventDefault();
-          let target = e.target;
-          let hash = target.hash;
-          gsap.to(window, {
-            duration: 1,
-            scrollTo: hash,
-            ease: "Power1.easeInOut",
-          });
+        cut5Img.on("mouseout", function () {
+          gsap.to(".view", { scale: 0 });
         });
 
-        //第五cut以及滑鼠的VIEW
-        const cut5Img = $(".cut-5-news-card-img>img");
-        const cut4Pin = $(".cut-4-pin");
-        function getMousePos(event) {
-          //取得滑鼠位置功能
-          const x = event.clientX;
-          const y = event.clientY;
-          gsap.to(".view", { scale: 1 });
-          $(".cut-5-news-card-img").css("cursor", "none");
-          gsap.to(".view", { x: x - 40, y: y - 40, duration: 0.1 });
-        }
-        if (window.innerWidth <= 500) {
-          $(".view").remove();
-        } else {
-          cut5Img.on(" mousemove", function (event) {
-            getMousePos(event);
-          });
+        cut4Pin.on("mousemove", function (event) {
+          getMousePos(event);
+        });
 
-          cut5Img.on("mouseout", function () {
+        cut4Pin.on("mouseout", function () {
+          gsap.to(".view", { scale: 0 });
+        });
+
+        const cut4PosY = $(".home-cut-4").offset().top;
+        $(window).on("scroll", function () {
+          //視窗滾動時，如果滑鼠小於第4cut的高度 就會縮小至無
+          let viewPosY = $(".view").offset().top;
+          if (cut4PosY >= viewPosY) {
             gsap.to(".view", { scale: 0 });
-          });
-
-          cut4Pin.on("mousemove", function (event) {
-            getMousePos(event);
-          });
-
-          cut4Pin.on("mouseout", function () {
-            gsap.to(".view", { scale: 0 });
-          });
-
-          const cut4PosY = $(".home-cut-4").offset().top;
-          $(window).on("scroll", function () {
-            //視窗滾動時，如果滑鼠小於第4cut的高度 就會縮小至無
-            let viewPosY = $(".view").offset().top;
-            if (cut4PosY >= viewPosY) {
-              gsap.to(".view", { scale: 0 });
-            }
-          });
-        }
-      };
+          }
+        });
+      }
     </script>
   </body>
 </html>
