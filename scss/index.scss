@@ -137,7 +137,7 @@ body {
     min-height: 100%;
   }
   @include mobile {
-    clip-path: none;
+    clip-path: ellipse(140% 55% at 50% 45%);
     video {
       height: 100vh;
       object-fit: cover;
@@ -214,12 +214,12 @@ body {
   z-index: -1;
 }
 .drops-1 {
-  right: -13%;
+  right: -13vw;
   top: -5%;
   width: 30vw;
   z-index: 1;
   @include mobile {
-    top: -1%;
+    top: -12vw;
     width: 31vw;
   }
 }
@@ -228,8 +228,8 @@ body {
   top: 7%;
   width: 25vw;
   @include mobile {
-    left: -8%;
-    top: 13%;
+    left: -8vw;
+    top: 107vw;
     width: 28vw;
   }
 }
@@ -237,8 +237,8 @@ body {
   left: 15%;
   top: 6%;
   @include mobile {
-    left: 22%;
-    top: 14%;
+    left: 22vw;
+    top: 104vw;
     width: 16vw;
   }
 }
@@ -247,8 +247,8 @@ body {
   top: 0.5%;
   width: 10vw;
   @include mobile {
-    right: 13%;
-    top: 0%;
+    right: 12vw;
+    top: 0vw;
     width: 14vw;
   }
 }
@@ -257,8 +257,8 @@ body {
   top: 12%;
   width: 10vw;
   @include mobile {
-    right: 12%;
-    top: 13%;
+    right: 12vw;
+    top: 103vw;
     width: 20vw;
   }
 }
@@ -352,12 +352,6 @@ body {
   justify-content: center;
   position: relative;
   z-index: 5;
-  .yo-test {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
 }
 
 .home-cut-2-fixed-first-squre {
@@ -371,7 +365,7 @@ body {
   height: 35vw;
   margin-top: 8%;
   @include mobile {
-    width: 50vw;
+    width: 100%;
     height: 100vh;
     margin-top: 0%;
     display: flex;
@@ -380,7 +374,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    left: 25%;
+    left: 0;
   }
 }
 .home-cut-2-fixed-first-squre-1,
@@ -410,9 +404,11 @@ body {
   }
 }
 .loopText {
+  font-family: $cor;
   color: $bigTitleColor;
   animation: loopText 16s linear infinite;
   animation-play-state: running;
+  font-weight: 600;
 }
 @keyframes loopText {
   0% {
@@ -457,11 +453,11 @@ canvas {
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 100vh;
+  // height: 100vh;
   pointer-events: none;
-  transform: translateZ(0);
   @include mobile {
-    height: auto;
+    // height: auto;
+    transform: translateZ(0);
   }
 }
 
@@ -473,10 +469,12 @@ canvas {
   height: 100vh;
   padding-top: 3%;
   padding-bottom: 3%;
+  margin-bottom: 3%;
   @include mobile {
     height: auto;
     padding-top: 15%;
     padding-bottom: 11%;
+    margin-bottom: 0%;
   }
 }
 .title {
@@ -844,7 +842,7 @@ canvas {
 .cut-4-pin-left {
   transform: translateY(-70vw);
   @include mobile {
-    transform: translateY(-130vw);
+    transform: translateY(-36%);
     margin-left: 1%;
   }
 }
