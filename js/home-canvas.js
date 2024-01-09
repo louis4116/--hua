@@ -89,14 +89,14 @@ if (windowWidth <= 500) {
     ctx.save(); // 保存當前狀態
     ctx.beginPath();
     // ctx.roundRect(pH + pL + squreW2, 0, squreW * 0.6, squreH * 0.6, 20); // 正方形路徑
-    ctx.roundRect(
-      // pH + pL + squreW2,
-      squreX + squreW2Phone,
-      canvas.height / 2 + (-squreH * 0.7) / 2,
-      squreW * 0.7,
-      squreH * 0.7,
-      20
-    ); // 正方形路徑
+    // ctx.roundRect(
+    //   // pH + pL + squreW2,
+    //   squreX + squreW2Phone,
+    //   canvas.height / 2 + (-squreH * 0.7) / 2,
+    //   squreW * 0.7,
+    //   squreH * 0.7,
+    //   20
+    // ); // 正方形路徑
     ctx.clip(); // 裁剪路徑
     ctx.closePath();
     ctx.fill();
