@@ -232,10 +232,10 @@ if (windowWidth <= 500) {
 function drawMask(scaleRes, angle, img) {
   ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除 canvas
   ctx.save(); // 保存當前狀態
-  if (windowWidth > 500) {
-    ctx.translate(pH + pL + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為正方形中心
-  } else {
+  if (windowWidth <= 500) {
     ctx.translate(squreX + squreW / 2, squreFH / 2); // 將旋轉中心設為正方形中心
+  } else {
+    ctx.translate(pH + pL + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為正方形中心
   }
   ctx.rotate((angle * Math.PI) / 180);
   ctx.fillStyle = "rgb(193,175,155)"; //填色
