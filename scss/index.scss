@@ -137,7 +137,7 @@ body {
     min-height: 100%;
   }
   @include mobile {
-    clip-path: ellipse(140% 55% at 50% 45%);
+    clip-path: none;
     video {
       height: 100vh;
       object-fit: cover;
