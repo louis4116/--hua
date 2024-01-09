@@ -189,7 +189,7 @@ if (windowWidth <= 500) {
     ctx.globalCompositeOperation = "source-over";
   };
   cut2MaskSmall
-    .to(".home-cut-2-fixed-first-squre-wrapper", {
+    .to(".fixed-squre", {
       onUpdate: function () {
         let progress = this.progress();
         let angle = 5 * progress;
@@ -201,7 +201,7 @@ if (windowWidth <= 500) {
       scale: "0.9",
       rotation: 50,
     })
-    .to(".home-cut-2-fixed-first-squre-wrapper", {
+    .to(".fixed-squre", {
       onUpdate: function () {
         let progress = this.progress();
         let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3)); //四捨五入至第三位
