@@ -626,11 +626,13 @@ canvas {
   height: 100vh;
   padding-top: 3%;
   padding-bottom: 3%;
-  margin-bottom: 5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
 }
 @media all and (max-width: 1500px) {
   .home-cut-3 {
-    margin-bottom: 3%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
   }
 }
 @media all and (max-width: 500px) {
@@ -639,6 +641,7 @@ canvas {
     padding-top: 15%;
     padding-bottom: 11%;
     margin-bottom: 0%;
+    margin-top: 0%;
   }
 }
 
