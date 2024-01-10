@@ -147,6 +147,7 @@ img {
     border: none;
     background-color: transparent;
     z-index: 99;
+    pointer-events: auto;
     > span {
       width: 100%;
       height: 1px;

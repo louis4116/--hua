@@ -129,6 +129,7 @@ img {
     border: none;
     background-color: transparent;
     z-index: 99;
+    pointer-events: auto;
   }
   .nav-hamb-icon > span {
     width: 100%;
