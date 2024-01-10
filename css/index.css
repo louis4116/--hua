@@ -632,7 +632,7 @@ canvas {
 @media all and (max-width: 1500px) {
   .home-cut-3 {
     margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    margin-bottom: 5%;
   }
 }
 @media all and (max-width: 500px) {
