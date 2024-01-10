@@ -1260,6 +1260,29 @@
           }
         });
       }
+      [
+        CDATA[
+          /*處理分享到 Line 的連結*/
+          $("a").each(function () {
+            var href = this.href;
+
+            // http 網址才處理
+            if (href.indexOf("http") != 0 || href.indexOf("//") < 0) {
+              return;
+            }
+
+            // 網址沒有參數 ? 時, 直接加參數
+            if (href.indexOf("?") < 0) {
+              href += "?openExternalBrowser=1";
+            } else {
+              // 網址有參數 ? 時, 用 & 加參數
+              href += "&openExternalBrowser=1";
+            }
+
+            this.href = href;
+          })
+        ],
+      ];
     </script>
   </body>
 </html>
