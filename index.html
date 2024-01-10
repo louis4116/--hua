@@ -1085,7 +1085,7 @@
         breakpoints: {
           0: {
             slidesPerView: 1,
-            spaceBetween: 75,
+            spaceBetween: 90,
           },
           900: {
             spaceBetween: 200,
@@ -1206,10 +1206,12 @@
       let cut4ImgY;
       let cut4imgStart;
       if (window.innerWidth <= 500) {
-        cut4ImgY = "translateY(160vw)";
+        // cut4ImgY = "translateY(48%)";
+        cut4ImgY = "42%";
         cut4imgStart = "top top";
       } else {
-        cut4ImgY = "translateY(100vw)";
+        // cut4ImgY = "translateY(100vw)";
+        cut4ImgY = "80%";
         cut4imgStart = "top top";
       }
       gsap.to(".cut-4-pin-left", {
@@ -1221,7 +1223,7 @@
           scrub: 0.1,
         },
         ease: "linear",
-        transform: cut4ImgY,
+        y: cut4ImgY,
       });
       gsap.to(".cut-4-pin-right", {
         scrollTrigger: {
@@ -1233,7 +1235,7 @@
         },
 
         ease: "linear",
-        transform: cut4ImgY,
+        y: cut4ImgY,
       });
 
       //導引至第4cut動畫及功能
