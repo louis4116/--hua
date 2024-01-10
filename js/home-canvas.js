@@ -18,8 +18,8 @@ $(window).on("load", function () {
   const squreDis = squreY - (textT + textH);
   const squreW2 = (squreW - squreW * 0.6) / 2;
   const squreH2 = (squreH - squreW * 0.6) / 2;
-  const squreW2Phone = (squreW - squreW * 0.7) / 2;
-  const squreH2Phone = (squreH - squreW * 0.7) / 2;
+  const squreW2Phone = (squreW - squreW * 0.8) / 2;
+  const squreH2Phone = (squreH - squreW * 0.8) / 2;
   // console.log(squreY);
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -103,9 +103,9 @@ $(window).on("load", function () {
       roundRect(
         ctx,
         squreX + squreW2Phone,
-        squreFH / 2 - (squreW * 0.7) / 2,
-        squreW * 0.7,
-        squreH * 0.7,
+        squreFH / 2 - (squreW * 0.8) / 2,
+        squreW * 0.8,
+        squreH * 0.8,
         20
       );
       ctx.fill();

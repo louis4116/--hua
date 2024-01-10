@@ -241,14 +241,6 @@ body {
   z-index: 6;
 }
 
-.preload_number {
-  width: 100%;
-  height: 100vh;
-}
-.preload_number > .preload_number-number {
-  font-size: 25vw;
-}
-
 .home-cut-1 {
   position: relative;
   z-index: 5;
@@ -562,8 +554,8 @@ body {
 @media all and (max-width: 500px) {
   .home-cut-2-fixed-first-squre-1,
   .home-cut-2-fixed-first-squre-2 {
-    width: 50vw;
-    height: 50vw;
+    width: 60vw;
+    height: 60vw;
   }
 }
 
@@ -913,7 +905,7 @@ canvas {
     margin-left: 2vw;
   }
   .swiper-slide-para-content > p {
-    font-size: 3.75vw;
+    font-size: 3.5vw;
   }
 }
 
@@ -1166,7 +1158,7 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .cut-5-news-card {
-    width: 85%;
+    width: 90%;
     margin-top: 6%;
   }
 }

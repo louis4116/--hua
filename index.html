@@ -9,8 +9,8 @@
   </head>
   <body>
     <!-- <div class="preload_number-container">
-      <div class="preload_number-number"></div>
-      <div class="preload_number-bottom"></div>
+      <div class="preload_number-number">1992</div>
+      <div class="preload_number-bottom">HUA HUI CONSTRUCTION CO.,LTD</div>
     </div> -->
     <nav id="nav">
       <div class="nav-icon">
@@ -902,6 +902,7 @@
     <script>
       $(window).on("load", function () {
         // const preloadNum = document.querySelector(".preload_number-number");
+
         // function animateValue(obj, end, start, duration) {
         //   let startTimestamp = null;
         //   const step = (timestamp) => {
@@ -920,8 +921,33 @@
 
         //   window.requestAnimationFrame(step);
         // }
+        // let preloaderTl = gsap.timeline();
+        // preloaderTl
+        //   .to(".preload_number-number", {
+        //     y: 0,
+        //     opacity: 1,
+        //     duration: 1.5,
+        //   })
+        //   .to(
+        //     ".preload_number-bottom",
+        //     {
+        //       opacity: 1,
+        //       duration: 1.5,
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .add(
+        //     gsap.delayedCall(0.25, function () {
+        //       animateValue(preloadNum, 2024, 1992, 2800);
+        //     })
+        //   )
+        //   .to(
+        //     ".preload_number-container",
+        //     { height: "0vh", duration: "1.5" },
+        //     "<+3.5"
+        //   )
+        //   .to("body", { overflow: "auto" }, "<+1.5");
 
-        // animateValue(preloadNum, 2024, 1992, 2800);
         const navIcon = $(".nav-icon");
         const navIconH = navIcon.innerHeight();
 
