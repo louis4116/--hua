@@ -128,7 +128,6 @@ img {
     flex-direction: column;
     border: none;
     background-color: transparent;
-    z-index: 99;
     pointer-events: auto;
   }
   .nav-hamb-icon > span {
@@ -155,10 +154,12 @@ img {
   display: flex;
   align-items: center;
   list-style: none;
+  pointer-events: none;
 }
 .nav-list-ul > div {
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 .nav-list-ul li {
   color: white;
@@ -169,6 +170,7 @@ img {
   padding-right: 2.5rem;
   letter-spacing: 0.4rem;
   cursor: pointer;
+  pointer-events: auto;
 }
 .nav-list-ul li:nth-child(1),
 .nav-list-ul li:nth-child(2),
