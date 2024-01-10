@@ -4,6 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap"); //日期
 @import url("https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"); //swiper css
 
+@mixin laptop() {
+  @media all and (max-width: 1500px) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media all and (max-width: 820px) {
     @content;
@@ -74,6 +80,9 @@ img {
   span {
     color: white;
     font-family: $micro;
+  }
+  @include laptop {
+    margin-top: 5%;
   }
   @include mobile {
     flex-direction: column;

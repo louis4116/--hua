@@ -1033,15 +1033,50 @@
           "<+0.5"
         );
 
+      const cut5Tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".home-cut-5",
+          toggleActions: "play none none none",
+          start: "25% bottom",
+          once: true,
+        },
+      });
+      cut5Tl
+        .from(".cut-5-base", {
+          ease: "linear",
+          filter: "blur(10px)",
+          opacity: "1",
+          duration: "1.75",
+        })
+        .from(
+          ".cut-5-title-content>h3",
+          {
+            ease: "linear",
+            opacity: 0,
+            y: "40%",
+            duration: "1.25",
+          },
+          "<+1.25"
+        )
+        .from(
+          ".cut-5-title-content>h4",
+          {
+            ease: "linear",
+            opacity: 0,
+            y: "40%",
+            duration: "1.25",
+          },
+          "<+0.5"
+        );
       //輪播設定👇
       new Swiper(".cut-3-carousel-swiper", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        // autoplay: {
-        //   delay: 6000,
-        // },
+        autoplay: {
+          delay: 6000,
+        },
         slidesPerView: 1.25,
         spaceBetween: 50,
         loop: true,
@@ -1053,9 +1088,12 @@
             spaceBetween: 75,
           },
           900: {
-            spaceBetween: 300,
+            spaceBetween: 200,
           },
-          1200: {
+          1400: {
+            spaceBetween: 200,
+          },
+          1800: {
             spaceBetween: 300,
           },
         },
@@ -1220,7 +1258,7 @@
           ease: "Power1.easeInOut",
         });
       });
-
+      console.log(window.ScrollToPlugin.version);
       //第五cut以及滑鼠的VIEW
       const cut5Img = $(".cut-5-news-card-img>img");
       const cut4Pin = $(".cut-4-pin");

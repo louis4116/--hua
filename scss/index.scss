@@ -136,6 +136,12 @@ body {
     min-width: 100%;
     min-height: 100%;
   }
+  @include laptop {
+    video {
+      height: 113vh;
+      object-fit: cover;
+    }
+  }
   @include mobile {
     clip-path: ellipse(140% 55% at 50% 45%);
     video {
@@ -208,6 +214,9 @@ body {
   position: relative;
   overflow: hidden;
   margin-top: -7%;
+  @include laptop {
+    margin-top: -9%;
+  }
 }
 .drops {
   position: absolute;
@@ -364,6 +373,9 @@ body {
   width: 35vw;
   height: 35vw;
   margin-top: 8%;
+  @include laptop {
+    margin-top: 14%;
+  }
   @include mobile {
     width: 100%;
     height: 100vh;
@@ -468,7 +480,10 @@ canvas {
   height: 100vh;
   padding-top: 3%;
   padding-bottom: 3%;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
+  @include laptop {
+    margin-bottom: 3%;
+  }
   @include mobile {
     height: auto;
     padding-top: 15%;
@@ -484,6 +499,9 @@ canvas {
   justify-content: center;
   letter-spacing: 3px;
   color: $bigTitleColor;
+  @include mobile {
+    margin-top: 5%;
+  }
 }
 .base {
   font-family: $cor;
@@ -526,16 +544,14 @@ canvas {
 .cut-3-carousel-swiper {
   position: relative;
   width: 25vw;
-  // margin-top: 11%;
+  @include laptop {
+    width: 30vw;
+  }
   @include mobile {
     width: 75%;
   }
 }
 
-.swiper-backface-hidden .swiper-slide {
-  // transform: translateY(-27%);
-  // transition: 1s ease;
-}
 .swiper-creative .swiper-slide {
   overflow: unset;
   opacity: 0 !important;
@@ -623,6 +639,9 @@ canvas {
   animation: textRotate 10s linear infinite;
   opacity: 0;
   filter: brightness(0.5);
+  @include laptop {
+    margin-top: -25%;
+  }
   @include mobile {
     margin-top: 117%;
     left: -9%;
@@ -732,9 +751,14 @@ canvas {
   &::after {
     content: "";
   }
+  @include laptop {
+    width: 2vw;
+    padding: 6%;
+    background-size: 50%;
+  }
   @include mobile {
-    width: 6vw;
-    height: 6vw;
+    width: 7vw;
+    height: 7vw;
     padding: 3%;
     top: 0%;
     margin-top: 155%;
@@ -744,6 +768,9 @@ canvas {
 .swiper-button-prev {
   background-image: url("../img/home/輪播左箭頭.png");
   left: 176%;
+  @include laptop {
+    left: 170%;
+  }
   @include mobile {
     left: 75%;
   }
@@ -751,8 +778,11 @@ canvas {
 .swiper-button-next {
   background-image: url("../img/home/輪播右箭頭.png");
   right: -107%;
+  @include laptop {
+    right: -100%;
+  }
   @include mobile {
-    right: 5%;
+    right: 2%;
   }
 }
 //第四cut
@@ -801,6 +831,9 @@ canvas {
   left: 50%;
   cursor: pointer;
   text-decoration: none;
+  @include laptop {
+    width: 2vw;
+  }
   @include mobile {
     width: 6.5vw;
     height: 11vw;
