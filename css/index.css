@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css");
 *,
 ::after,
@@ -83,24 +84,6 @@ img {
   }
 }
 
-body {
-  background-image: url("../img/home/首頁-bg.jpg");
-  background-repeat: repeat;
-  background-size: 100%;
-}
-
-:root {
-  --cut3top: 0;
-}
-
-.z0 {
-  z-index: 0;
-}
-
-.z6 {
-  z-index: 6;
-}
-
 #nav {
   position: fixed;
   z-index: 100;
@@ -127,6 +110,10 @@ body {
   }
 }
 
+.nav-icon {
+  z-index: 99;
+}
+
 .nav-hamb-icon {
   display: none;
 }
@@ -141,6 +128,7 @@ body {
     flex-direction: column;
     border: none;
     background-color: transparent;
+    z-index: 99;
   }
   .nav-hamb-icon > span {
     width: 100%;
@@ -227,6 +215,32 @@ body {
   }
 }
 
+body {
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+:root {
+  --cut3top: 0;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.z6 {
+  z-index: 6;
+}
+
+.preload_number {
+  width: 100%;
+  height: 100vh;
+}
+.preload_number > .preload_number-number {
+  font-size: 25vw;
+}
+
 .home-cut-1 {
   position: relative;
   z-index: 5;
@@ -293,17 +307,17 @@ body {
 }
 @media all and (max-width: 500px) {
   .home-cut-1-para > h1 {
-    font-size: 7vw;
+    font-size: 7.5vw;
   }
   .home-cut-1-para > h2 {
-    font-size: 6vw;
+    font-size: 6.5vw;
   }
   .home-cut-1-para > p:nth-child(3) {
-    font-size: 3vw;
+    font-size: 3.5vw;
     margin-bottom: 3%;
   }
   .home-cut-1-para > p:nth-child(4) {
-    font-size: 3.1vw;
+    font-size: 3.5vw;
   }
 }
 
@@ -441,14 +455,14 @@ body {
     font-size: 6.5vw;
   }
   .home-cut-2-para > h3 {
-    font-size: 4.5vw;
+    font-size: 5vw;
     margin-bottom: 4%;
   }
   .home-cut-2-para p {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 3.75vw;
+    font-size: 3.5vw;
     line-height: 2;
     margin-bottom: 0;
   }
@@ -719,7 +733,7 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .cut-3-carousel-swiper {
-    width: 65%;
+    width: 75%;
   }
 }
 
@@ -869,7 +883,7 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .swiper-slide-para {
-    margin-top: 20%;
+    margin-top: 17%;
   }
   .swiper-slide-para > h1 {
     font-size: 6.5vw;
@@ -891,7 +905,7 @@ canvas {
     margin-left: 2vw;
   }
   .swiper-slide-para-content > p {
-    font-size: 3vw;
+    font-size: 3.75vw;
   }
 }
 
@@ -922,11 +936,11 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .swiper-slide-para-content-top > .swiper-slide-para-content-title {
-    font-size: 4.25vw;
+    font-size: 5vw;
   }
   .swiper-slide-para-content-top > :nth-child(1),
   .swiper-slide-para-content-top > :nth-child(3) {
-    height: 4.25vw;
+    height: 5vw;
     width: 1px;
   }
 }
@@ -976,7 +990,7 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .swiper-button-prev {
-    left: 70%;
+    left: 75%;
   }
 }
 
