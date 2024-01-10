@@ -462,7 +462,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: 3.5vw;
+    font-size: 3.75vw;
     line-height: 2;
     margin-bottom: 0;
   }
@@ -905,7 +905,7 @@ canvas {
     margin-left: 2vw;
   }
   .swiper-slide-para-content > p {
-    font-size: 3.5vw;
+    font-size: 3.75vw;
   }
 }
 
@@ -1208,7 +1208,7 @@ canvas {
 }
 @media all and (max-width: 500px) {
   .cut-5-news-card-para {
-    font-size: 3.5vw;
+    font-size: 3.75vw;
   }
 }
 
