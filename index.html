@@ -1069,7 +1069,7 @@
           "<+0.5"
         );
       //輪播設定👇
-      new Swiper(".cut-3-carousel-swiper", {
+      let mySwiper = new Swiper(".cut-3-carousel-swiper", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -1239,6 +1239,7 @@
       //導引至第4cut動畫及功能
       $(".swiper-img").on("click", function (e) {
         e.preventDefault();
+        mySwiper.autoplay.stop();
         let target = e.target;
         let hash = target.hash;
         gsap.to(window, {
@@ -1250,6 +1251,7 @@
       //導引至第3cut動畫及功能
       $(".cut-4-to-top").on("click", function (e) {
         e.preventDefault();
+        mySwiper.autoplay.start();
         let target = e.target;
         let hash = target.hash;
         gsap.to(window, {
@@ -1258,7 +1260,6 @@
           ease: "Power1.easeInOut",
         });
       });
-      console.log(window.ScrollToPlugin.version);
       //第五cut以及滑鼠的VIEW
       const cut5Img = $(".cut-5-news-card-img>img");
       const cut4Pin = $(".cut-4-pin");

@@ -93,7 +93,6 @@ const cut2PicBigger = gsap.timeline({
     scrub: 0.2,
   },
 });
-console.log(textT + textH);
 if (windowWidth <= 500) {
   //第一次繪圖
   backImage.onload = function () {
