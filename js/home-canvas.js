@@ -2,13 +2,11 @@ const windowWidth = window.innerWidth;
 $(window).on("load", function () {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
-  const yo = document.querySelector(".yo");
   //取得遮罩置中所需的位置
   const squreX = $(".home-cut-2-fixed-first-squre-1").offset().left;
   const squreY = $(".home-cut-2-fixed-first-squre-1").offset().top;
   const squreW = $(".home-cut-2-fixed-first-squre-1").width();
   const squreH = $(".home-cut-2-fixed-first-squre-1").height();
-  const cut1H = $(".home-cut-1").innerHeight();
   const squreFH = $(".home-cut-2-fixed-first-squre-wrapper").height();
   const textT = $(".home-cut-2-para").offset().top;
   const textH = $(".home-cut-2-para").innerHeight();
@@ -20,14 +18,9 @@ $(window).on("load", function () {
   const squreH2 = (squreH - squreW * 0.6) / 2;
   const squreW2Phone = (squreW - squreW * 0.8) / 2;
   const squreH2Phone = (squreH - squreW * 0.8) / 2;
-  // console.log(squreY);
+
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-
-  // $(window).on("resize", function () {
-  //   canvas.width = window.innerWidth;
-  //   canvas.height = window.innerHeight;
-  // });
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(ScrollSmoother);

@@ -56,7 +56,7 @@ img {
   padding-top: 1vw;
   padding-bottom: 1vw;
   font-weight: 300;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 #footer span {
   color: white;
@@ -159,12 +159,14 @@ img {
   display: flex;
   align-items: center;
   list-style: none;
-  pointer-events: none;
 }
 .nav-list-ul > div {
   display: flex;
   align-items: center;
-  pointer-events: none;
+}
+.nav-list-ul a {
+  color: white;
+  text-decoration: none;
 }
 .nav-list-ul li {
   color: white;
@@ -210,6 +212,7 @@ img {
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    pointer-events: none;
   }
   .nav-list-ul li {
     font-size: 4vw;
@@ -220,6 +223,7 @@ img {
     height: 100%;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
   }
 }
 
@@ -227,6 +231,7 @@ body {
   background-image: url("../img/home/首頁-bg.jpg");
   background-repeat: repeat;
   background-size: 100%;
+  overflow: hidden;
 }
 
 :root {
@@ -239,6 +244,68 @@ body {
 
 .z6 {
   z-index: 6;
+}
+
+.preload_number {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+}
+
+.preload_number-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+  line-height: 1.1;
+  position: relative;
+  pointer-events: none;
+}
+.preload_number-container .preload_number-img {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.preload_number-container > .preload_number-number {
+  font-size: 16vw;
+  font-family: "Nuosu SIL", sans-serif;
+  color: #aa9784;
+  z-index: 1000;
+}
+.preload_number-container > .preload_number-number span {
+  font-size: 16vw;
+  font-family: "Nuosu SIL", sans-serif;
+  color: #aa9784;
+  transform: translateY(10vw);
+  opacity: 0;
+  display: inline-block;
+}
+.preload_number-container > .preload_number-bottom {
+  color: #aa9784;
+  font-size: 2vw;
+  font-family: "Cormorant Infant", serif;
+  opacity: 0;
+  z-index: 1000;
+}
+@media all and (max-width: 500px) {
+  .preload_number-container > .preload_number-bottom {
+    font-size: 3.25vw;
+    margin-left: 2vw;
+  }
+  .preload_number-container > .preload_number-number {
+    font-size: 28vw;
+  }
+  .preload_number-container > .preload_number-number span {
+    font-size: 28vw;
+  }
 }
 
 .home-cut-1 {
@@ -374,7 +441,7 @@ body {
 @media all and (max-width: 500px) {
   .drops-2 {
     left: -8vw;
-    top: 107vw;
+    top: 80vw;
     width: 28vw;
   }
 }
@@ -405,9 +472,9 @@ body {
 }
 
 .drops-5 {
-  right: 13%;
-  top: 12%;
-  width: 10vw;
+  right: 24%;
+  top: 15%;
+  width: 7vw;
 }
 @media all and (max-width: 500px) {
   .drops-5 {
@@ -643,16 +710,17 @@ canvas {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 100vh;
-  padding-top: 3%;
+  height: 110vh;
   padding-bottom: 3%;
-  margin-top: 2.5%;
-  margin-bottom: 2.5%;
+  margin-bottom: 0%;
+  padding-top: 2.5%;
 }
 @media all and (max-width: 1500px) {
   .home-cut-3 {
     margin-top: 1.5%;
     margin-bottom: 5%;
+    padding-top: 5%;
+    height: 100vh;
   }
 }
 @media all and (max-width: 500px) {
@@ -724,7 +792,7 @@ canvas {
 
 .cut-3-carousel-swiper {
   position: relative;
-  width: 25vw;
+  width: 28vw;
 }
 @media all and (max-width: 1500px) {
   .cut-3-carousel-swiper {
@@ -743,7 +811,7 @@ canvas {
 }
 
 .swiper-slide {
-  margin-top: 40%;
+  margin-top: 30%;
   margin-bottom: 5%;
   height: auto;
   position: relative;
@@ -795,7 +863,7 @@ canvas {
 }
 .swiper-wrapper .swiper-slide-active {
   opacity: 1 !important;
-  transform: translateY(-25%) !important;
+  transform: translateY(-22%) !important;
   transition: all 1s;
 }
 @media all and (max-width: 500px) {
@@ -815,7 +883,7 @@ canvas {
 }
 .swiper-wrapper .swiper-slide-next {
   opacity: 1 !important;
-  transform: translateY(-35%) !important;
+  transform: translateY(-28%) !important;
   transition: all 1s;
 }
 @media all and (max-width: 500px) {
@@ -829,7 +897,7 @@ canvas {
 
 .text-rotate {
   position: absolute;
-  margin-top: -31%;
+  margin-top: -27%;
   left: -15%;
   width: 8vw;
   animation: textRotate 10s linear infinite;
@@ -869,7 +937,7 @@ canvas {
 
 .swiper-slide-para {
   display: flex;
-  margin-top: 20%;
+  margin-top: 17%;
   opacity: 0;
   transition: 1.5s;
 }
@@ -898,7 +966,7 @@ canvas {
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
   line-height: 2;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 @media all and (max-width: 500px) {
   .swiper-slide-para-content {

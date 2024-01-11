@@ -8,31 +8,26 @@
     <title>樺輝建設</title>
   </head>
   <body>
-    <!-- <div class="preload_number-container">
-      <div class="preload_number-number">1992</div>
-      <div class="preload_number-bottom">HUA HUI CONSTRUCTION CO.,LTD</div>
-    </div> -->
-    <nav id="nav">
-      <div class="nav-icon">
-        <img src="./img/home/樺輝icon.png" alt="樺輝icon" />
+    <div class="preload_number">
+      <div class="preload_number-container">
+        <picture>
+          <source
+            srcset="./img/home/預讀取背景圖-手機.webp"
+            media="(max-width:500px)"
+          />
+          <img
+            class="preload_number-img"
+            src="./img/home/預讀取背景.webp"
+            alt="預讀取背景"
+          />
+        </picture>
+        <div class="preload_number-number">
+          <span>1</span><span>9</span><span>9</span><span>2</span>
+        </div>
+        <div class="preload_number-bottom">HUA HUI CONSTRUCTION CO.,LTD</div>
       </div>
-      <button class="nav-hamb-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-list">
-        <ul class="nav-list-ul">
-          <div class="nav-list-ul-div">
-            <li>關於品牌</li>
-            <li>熱銷建案</li>
-            <li>經典作品</li>
-            <li>最新消息</li>
-            <li>聯絡我們</li>
-          </div>
-        </ul>
-      </div>
-    </nav>
+    </div>
+    <nav id="nav"></nav>
     <main id="home-main">
       <section class="home-cut-1">
         <div class="home-cut-1-video">
@@ -897,56 +892,66 @@
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/ScrollSmoother.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/nav.js"></script>
     <script src="./js/home-canvas.js"></script>
     <script src="./js/home-carsoul.js"></script>
     <script>
       $(window).on("load", function () {
-        // const preloadNum = document.querySelector(".preload_number-number");
+        const preloadNum = document.querySelector(".preload_number-number");
 
-        // function animateValue(obj, end, start, duration) {
-        //   let startTimestamp = null;
-        //   const step = (timestamp) => {
-        //     if (!startTimestamp) startTimestamp = timestamp;
-        //     const progress = Math.min(
-        //       (timestamp - startTimestamp) / duration,
-        //       1
-        //     );
-        //     obj.innerHTML = Math.floor(-progress * (start - end) + start);
+        function animateValue(obj, end, start, duration) {
+          let startTimestamp = null;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            console.log("startTimestamp " + startTimestamp);
+            console.log("timestamp " + timestamp);
+            const progress = Math.min(
+              (timestamp - startTimestamp) / duration,
+              1
+            );
+            obj.innerHTML = Math.floor(-progress * (start - end) + start);
 
-        //     /* Se progress è in corso proseguo l'animazione, altrimenti imposto una classe al preloader per proseguire l'animazione della parte bottom */
-        //     if (progress < 1) {
-        //       window.requestAnimationFrame(step);
-        //     }
-        //   };
+            /* Se progress è in corso proseguo l'animazione, altrimenti imposto una classe al preloader per proseguire l'animazione della parte bottom */
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          };
 
-        //   window.requestAnimationFrame(step);
-        // }
-        // let preloaderTl = gsap.timeline();
-        // preloaderTl
-        //   .to(".preload_number-number", {
-        //     y: 0,
-        //     opacity: 1,
-        //     duration: 1.5,
-        //   })
-        //   .to(
-        //     ".preload_number-bottom",
-        //     {
-        //       opacity: 1,
-        //       duration: 1.5,
-        //     },
-        //     "<+0.5"
-        //   )
-        //   .add(
-        //     gsap.delayedCall(0.25, function () {
-        //       animateValue(preloadNum, 2024, 1992, 2800);
-        //     })
-        //   )
-        //   .to(
-        //     ".preload_number-container",
-        //     { height: "0vh", duration: "1.5" },
-        //     "<+3.5"
-        //   )
-        //   .to("body", { overflow: "auto" }, "<+1.5");
+          window.requestAnimationFrame(step);
+        }
+        let preloaderTl = gsap.timeline();
+        preloaderTl
+          .to(".preload_number-number>span", {
+            y: 0,
+            opacity: 1,
+            duration: 1.25,
+            stagger: 0.08,
+          })
+          .to(
+            ".preload_number-bottom",
+            {
+              opacity: 1,
+              duration: 1.5,
+            },
+            "<+0.5"
+          )
+          .add(
+            gsap.delayedCall(0, function () {
+              animateValue(preloadNum, 2024, 1992, 1200);
+            })
+          )
+          .to(
+            ".preload_number-container",
+            { height: "0vh", y: "-30vw", duration: "2" },
+            "<+2"
+          )
+          .to("body", { overflow: "auto" }, "<+1.5")
+          .to(
+            ".preload_number-container",
+            { opacity: 0, duration: "1.5" },
+            "<-0.5"
+          )
+          .to(".preload_number", { zIndex: "-1" }, "<");
 
         const navIcon = $(".nav-icon");
         const navIconH = navIcon.innerHeight();
@@ -1003,8 +1008,19 @@
             end: "center bottom",
             scrub: 1,
           },
-          y: "7.5vw",
+          y: "15vw",
           ease: "linear",
+        });
+        gsap.to(".drops-2", {
+          scrollTrigger: {
+            trigger: ".home-cut-2",
+            toggleActions: "play none none reverse",
+            start: "top bottom",
+            end: "center bottom",
+            scrub: 1,
+          },
+          ease: "linear",
+          y: "15vw",
         });
         gsap.to(".drops-4", {
           scrollTrigger: {
@@ -1039,17 +1055,7 @@
           y: "40vw",
           ease: "linear",
         });
-        gsap.to(".drops-2", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          ease: "linear",
-          y: "10vw",
-        });
+
         //icon落下動畫☝️
 
         //第三cut
@@ -1130,9 +1136,9 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
-          // autoplay: {
-          //   delay: 6000,
-          // },
+          autoplay: {
+            delay: 6000,
+          },
           slidesPerView: 1.25,
           spaceBetween: 50,
           loop: true,
@@ -1150,7 +1156,7 @@
               spaceBetween: 200,
             },
             1800: {
-              spaceBetween: 300,
+              spaceBetween: 250,
             },
           },
           on: {
@@ -1267,7 +1273,7 @@
           cut4imgStart = "top top";
         } else {
           // cut4ImgY = "translateY(100vw)";
-          cut4ImgY = "80%";
+          cut4ImgY = "60%";
           cut4imgStart = "top top";
         }
         gsap.to(".cut-4-pin-left", {
