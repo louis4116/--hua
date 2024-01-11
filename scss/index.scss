@@ -4,6 +4,7 @@ body {
   background-repeat: repeat;
   background-size: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 :root {
@@ -22,6 +23,7 @@ body {
   position: fixed;
   z-index: 999;
 }
+
 .preload_number-container {
   width: 100%;
   height: 100%;
@@ -43,11 +45,17 @@ body {
     top: 0;
     position: absolute;
   }
-  > .preload_number-number {
+  .preload_number-img-icon {
+    position: absolute;
+    width: 35vw;
+    margin-top: 5%;
+  }
+  .preload_number-number {
     font-size: 16vw;
     font-family: $nuo;
     color: #aa9784;
     z-index: 1000;
+    margin-top: 3%;
     // transform: translateY(14vw);
     span {
       font-size: 16vw;
@@ -64,17 +72,24 @@ body {
     font-family: $cor;
     opacity: 0;
     z-index: 1000;
+    margin-top: 1%;
   }
   @include mobile {
-    > .preload_number-bottom {
+    .preload_number-bottom {
       font-size: 3.25vw;
       margin-left: 2vw;
+      margin-top: 0%;
     }
-    > .preload_number-number {
+    .preload_number-number {
       font-size: 28vw;
+      margin-top: -20%;
       span {
         font-size: 28vw;
       }
+    }
+    .preload_number-img-icon {
+      width: 60vw;
+      margin-top: -20%;
     }
   }
 }

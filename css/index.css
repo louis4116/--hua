@@ -232,6 +232,7 @@ body {
   background-repeat: repeat;
   background-size: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 :root {
@@ -274,13 +275,19 @@ body {
   top: 0;
   position: absolute;
 }
-.preload_number-container > .preload_number-number {
+.preload_number-container .preload_number-img-icon {
+  position: absolute;
+  width: 35vw;
+  margin-top: 5%;
+}
+.preload_number-container .preload_number-number {
   font-size: 16vw;
   font-family: "Nuosu SIL", sans-serif;
   color: #aa9784;
   z-index: 1000;
+  margin-top: 3%;
 }
-.preload_number-container > .preload_number-number span {
+.preload_number-container .preload_number-number span {
   font-size: 16vw;
   font-family: "Nuosu SIL", sans-serif;
   color: #aa9784;
@@ -294,17 +301,24 @@ body {
   font-family: "Cormorant Infant", serif;
   opacity: 0;
   z-index: 1000;
+  margin-top: 1%;
 }
 @media all and (max-width: 500px) {
-  .preload_number-container > .preload_number-bottom {
+  .preload_number-container .preload_number-bottom {
     font-size: 3.25vw;
     margin-left: 2vw;
+    margin-top: 0%;
   }
-  .preload_number-container > .preload_number-number {
+  .preload_number-container .preload_number-number {
+    font-size: 28vw;
+    margin-top: -20%;
+  }
+  .preload_number-container .preload_number-number span {
     font-size: 28vw;
   }
-  .preload_number-container > .preload_number-number span {
-    font-size: 28vw;
+  .preload_number-container .preload_number-img-icon {
+    width: 60vw;
+    margin-top: -20%;
   }
 }
 
