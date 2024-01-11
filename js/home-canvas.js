@@ -21,11 +21,12 @@ $(window).on("load", function () {
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-
-  window.addEventListener("resize", function () {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  });
+  if (windowWidth >= 768) {
+    window.addEventListener("resize", function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  }
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(ScrollSmoother);
