@@ -251,6 +251,7 @@ body {
   height: 100vh;
   position: fixed;
   z-index: 999;
+  transform: translateZ(0);
 }
 
 .preload_number-container {
