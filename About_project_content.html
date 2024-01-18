@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/project_content.css" />
+    <title>熱銷建案</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <main class="project-content-maim">
+      <section class="first-cut">
+        <div class="first-cut-img-container">
+          <img src="./img/熱銷建案/內頁背景-pc.webp" alt="內頁背景-pc" />
+        </div>
+        <h1 class="first-cut-h1">品世界</h1>
+      </section>
+      <section class="second-cut">
+        <div class="second-cut-container">
+          <div class="second-cut-images">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider-image">
+                <img
+                  src="./img/熱銷建案-內頁/內頁-輪播-大_結果.webp"
+                  alt="內頁-輪播-1"
+                />
+                <img
+                  class="text-rotate"
+                  src="./img/home/文字轉圈.png"
+                  alt="文字轉圈"
+                />
+              </div>
+
+              <div class="swiper-slide slider-image">
+                <img
+                  src="./img/熱銷建案-內頁/內頁-輪播-大_結果.webp"
+                  alt="內頁-輪播-2"
+                />
+                <img
+                  class="text-rotate"
+                  src="./img/home/文字轉圈.png"
+                  alt="文字轉圈"
+                />
+              </div>
+
+              <div class="swiper-slide slider-image">
+                <img
+                  src="./img/熱銷建案-內頁/內頁-輪播-大_結果.webp"
+                  alt="內頁-輪播-3"
+                />
+                <img
+                  class="text-rotate"
+                  src="./img/home/文字轉圈.png"
+                  alt="文字轉圈"
+                />
+              </div>
+            </div>
+            <div class="swiper-button swiper-button-prev">
+              <img src="./img/熱銷建案-內頁/咖啡左箭頭.svg" alt="咖啡左箭頭" />
+            </div>
+            <div class="swiper-button swiper-button-next">
+              <img src="./img/熱銷建案-內頁/咖啡右箭頭.svg" alt="咖啡右箭頭" />
+            </div>
+          </div>
+          <div class="second-cut-col">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider-image">
+                <img
+                  src="./img/熱銷建案-內頁/內頁-輪播-1_結果.webp"
+                  alt="內頁-輪播-1"
+                />
+              </div>
+
+              <div class="swiper-slide slider-image">
+                <img
+                  src="./img/熱銷建案-內頁/內頁-輪播-2_結果.webp"
+                  alt="內頁-輪播-2"
+                />
+              </div>
+
+              <div class="swiper-slide slider-image">
+                <img
+                  src="./img/熱銷建案-內頁/內頁-輪播-3_結果.webp"
+                  alt="內頁-輪播-3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <span>Copyright © 2023樺輝建設股份有限公司版權所有　</span>
+      <span>地址：台北市內湖區民權東路六段123巷28號10樓　</span>
+      <span>TEL： 02-27928078</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script>
+      window.onload = () => {
+        const sliderThumbs = new Swiper(".second-cut-col", {
+          direction: "vertical",
+          slidesPerView: 3,
+          spaceBetween: 12,
+          breakpoints: {},
+        });
+        const sliderImages = new Swiper(".second-cut-images", {
+          direction: "horizontal",
+          slidesPerView: 1,
+          spaceBetween: 32,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          thumbs: {
+            swiper: sliderThumbs,
+          },
+        });
+      };
+    </script>
+  </body>
+</html>

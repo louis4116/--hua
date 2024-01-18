@@ -1,0 +1,81 @@
+@import "_config";
+
+body {
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+//第一cut
+.first-cut {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first-cut-img-container {
+  width: 100%;
+}
+.first-cut-h1 {
+  position: absolute;
+  font-size: 3vw;
+  color: white;
+  font-family: $serif;
+  font-weight: 500;
+}
+
+//第二cut
+.second-cut {
+  position: relative;
+  margin-top: 5%;
+}
+.second-cut-container {
+  display: flex;
+  justify-content: center;
+  height: 37vw;
+}
+.second-cut-images {
+  width: 60vw;
+  overflow: hidden;
+  position: relative;
+  margin-right: 2%;
+  .swiper-slide > img {
+    height: 100%;
+  }
+  > .swiper-button {
+    position: absolute;
+  }
+}
+.second-cut-col {
+  width: 18vw;
+  overflow: hidden;
+  max-height: 100%;
+  height: 100%;
+}
+.swiper-button {
+  width: 2vw;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: unset;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: unset;
+}
+.text-rotate {
+  position: absolute;
+  width: 8vw;
+  animation: textRotate 10s linear infinite;
+  filter: brightness(0.5);
+}
+@keyframes textRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

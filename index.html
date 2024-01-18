@@ -44,7 +44,7 @@
         <div class="home-cut-1-para">
           <h1>HOME FROM HEART</h1>
           <h2>繁樺座標•榮耀輝映</h2>
-          <p>最好的建築 ，是近觀微米之間的工藝 。</p>
+          <p>最好的建築，是近觀微米之間的工藝。</p>
           <p class="home-cut-1-para-line"><span></span>追求極致 給你最好</p>
         </div>
       </section>
@@ -889,7 +889,6 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/9.0.0/decimal.min.js"></script>
     <script src="./js/gsap.min.js"></script>
     <script src="./js/ScrollToPlugin.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
@@ -900,8 +899,8 @@
     <script src="./js/home-carsoul.js"></script>
     <script>
       $(window).on("load", function () {
+        //起始跳數字動畫👇
         const preloadNum = document.querySelector(".preload_number-number");
-
         function animateValue(obj, end, start, duration) {
           let startTimestamp = null;
           const step = (timestamp) => {
@@ -913,8 +912,6 @@
               1
             );
             obj.innerHTML = Math.floor(-progress * (start - end) + start);
-
-            /* Se progress è in corso proseguo l'animazione, altrimenti imposto una classe al preloader per proseguire l'animazione della parte bottom */
             if (progress < 1) {
               window.requestAnimationFrame(step);
             }
@@ -928,7 +925,7 @@
             y: 0,
             opacity: 1,
             duration: 1.25,
-            stagger: 0.08,
+            stagger: 0.18,
           })
           .to(
             ".preload_number-bottom",
@@ -952,10 +949,10 @@
           .to(
             ".preload_number-container",
             { opacity: 0, duration: "1.5" },
-            "<-0.5"
+            "<-1.25"
           )
           .to(".preload_number", { zIndex: "-1" }, "<");
-
+        //起始跳數字動畫☝️
         const navIcon = $(".nav-icon");
         const navIconH = navIcon.innerHeight();
 
@@ -1011,7 +1008,7 @@
             end: "center bottom",
             scrub: 1,
           },
-          y: "15vw",
+          y: "50vw",
           ease: "linear",
         });
         gsap.to(".drops-2", {
@@ -1222,50 +1219,6 @@
           }
         }
         //圖片替換☝️
-
-        // new Swiper(".cut-3-carousel-swiper", {
-        //   navigation: {
-        //     nextEl: ".swiper-button-next",
-        //     prevEl: ".swiper-button-prev",
-        //   },
-        //   // autoplay: {
-        //   //   delay: 6000,
-        //   // },
-        //   slidesPerView: 1.25,
-        //   spaceBetween: 50,
-        //   loop: true,
-        //   centeredSlides: true,
-        //   speed: 1000,
-        //   breakpoints: {
-        //     0: {},
-        //     900: {},
-        //     1900: {},
-        //   },
-        //   effect: "creative",
-        //   creativeEffect: {
-        //     prev: {
-        //       translate: ["-150%", "10%", 0],
-        //     },
-        //     next: {
-        //       translate: ["150%", "-10%", 0],
-        //     },
-        //     limitProgress: 1,
-        //   },
-        //   on: {
-        //     slideChange: function (swiper) {
-        //       const active = this.activeIndex;
-        //       const nextIndex = this.activeIndex + 2;
-        //       $(".swiper-slide-para").removeClass("para-show");
-        //       $(".swiper-slide")
-        //         .eq(active)
-        //         .find(".swiper-slide-para")
-        //         .addClass("para-show");
-        //       const currentSlide = this.slides[active];
-        //       const currentAttr = currentSlide.getAttribute("data-name");
-        //       changeImg(currentAttr);
-        //     },
-        //   },
-        // });
 
         //第四cut
         let cut4ImgY;

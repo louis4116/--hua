@@ -27,6 +27,7 @@
 $bigTitleColor: #65534b; //大標
 $mediumTitleColor: #534741; //小標
 $contentColor: #4d4d4d; //內文
+$semitransColor: #736357; //淺色咖啡
 
 //字型
 $sans: "Noto Sans TC", sans-serif; //黑體
@@ -137,6 +138,13 @@ img {
 }
 .nav-icon {
   z-index: 99;
+  position: relative;
+  > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
 }
 .nav-hamb-icon {
   display: none;
