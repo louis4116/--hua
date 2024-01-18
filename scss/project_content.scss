@@ -29,6 +29,9 @@ body {
 .second-cut {
   position: relative;
   margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .second-cut-container {
   display: flex;
@@ -78,4 +81,13 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+//第3cut
+.third-cut {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

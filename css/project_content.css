@@ -263,6 +263,9 @@ body {
 .second-cut {
   position: relative;
   margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .second-cut-container {
@@ -319,4 +322,11 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+.third-cut {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }/*# sourceMappingURL=project_content.css.map */
