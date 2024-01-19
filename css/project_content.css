@@ -259,6 +259,11 @@ body {
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
 }
+@media all and (max-width: 500px) {
+  .first-cut-h1 {
+    display: none;
+  }
+}
 
 .second-cut {
   position: relative;
@@ -267,11 +272,23 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media all and (max-width: 500px) {
+  .second-cut {
+    margin-top: 8%;
+  }
+}
 
 .second-cut-container {
+  width: 80%;
+  height: 37vw;
   display: flex;
   justify-content: center;
-  height: 37vw;
+}
+@media all and (max-width: 500px) {
+  .second-cut-container {
+    height: auto;
+    flex-direction: column;
+  }
 }
 
 .second-cut-images {
@@ -280,11 +297,18 @@ body {
   position: relative;
   margin-right: 2%;
 }
-.second-cut-images .swiper-slide > img {
+.second-cut-images .swiper-slide > :nth-child(1) {
   height: 100%;
 }
 .second-cut-images > .swiper-button {
   position: absolute;
+}
+@media all and (max-width: 500px) {
+  .second-cut-images {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 3%;
+  }
 }
 
 .second-cut-col {
@@ -293,9 +317,22 @@ body {
   max-height: 100%;
   height: 100%;
 }
+.second-cut-col .swiper-slide {
+  cursor: pointer;
+}
+@media all and (max-width: 500px) {
+  .second-cut-col {
+    width: 100%;
+  }
+}
 
 .swiper-button {
   width: 2vw;
+}
+@media all and (max-width: 500px) {
+  .swiper-button {
+    width: 6vw;
+  }
 }
 
 .swiper-button-prev:after,
@@ -312,6 +349,7 @@ body {
   position: absolute;
   width: 8vw;
   animation: textRotate 10s linear infinite;
+  margin-top: -7%;
   filter: brightness(0.5);
 }
 
@@ -328,5 +366,282 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.third-cut-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  width: 80%;
+}
+
+.third-cut-title {
+  color: #65534b;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1vw;
+  font-weight: 500;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+@media all and (max-width: 500px) {
+  .third-cut-title {
+    font-size: 5.5vw;
+  }
+}
+
+.third-cut-para {
+  color: #4d4d4d;
+  font-family: "Microsoft JhengHei";
+  font-size: 0.8vw;
+  letter-spacing: 2px;
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 4%;
+}
+@media all and (max-width: 500px) {
+  .third-cut-para {
+    font-size: 4vw;
+    margin-bottom: 8%;
+  }
+}
+
+.third-cut-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+@media all and (max-width: 500px) {
+  .third-cut-bottom {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.third-cut-bottom-intr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 20vw;
+}
+@media all and (max-width: 500px) {
+  .third-cut-bottom-intr {
+    width: 100%;
+  }
+}
+
+.third-cut-bottom-intr-in {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 4%;
+}
+
+.third-cut-bottom-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4%;
+}
+.third-cut-bottom-content > :nth-child(1) {
+  color: #65534b;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1vw;
+  font-weight: 500;
+}
+.third-cut-bottom-content > :nth-child(2) {
+  color: #4d4d4d;
+  font-family: "Microsoft JhengHei";
+  font-size: 0.8vw;
+  margin-left: 8%;
+  font-weight: 500;
+}
+@media all and (max-width: 500px) {
+  .third-cut-bottom-content > :nth-child(1) {
+    font-size: 4.2vw;
+  }
+  .third-cut-bottom-content > :nth-child(2) {
+    font-size: 3.8vw;
+  }
+}
+
+.third-cut-bottom-line {
+  width: 100%;
+  height: 1px;
+  background-color: #65534b;
+}
+
+.fourth-cut {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.fourth-cut-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+@media all and (max-width: 500px) {
+  .fourth-cut-container {
+    margin-top: 1%;
+  }
+}
+
+.fourth-cut-title {
+  font-size: 1vw;
+  color: #65534b;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 500;
+}
+@media all and (max-width: 500px) {
+  .fourth-cut-title {
+    font-size: 5.5vw;
+  }
+}
+
+.fourth-cut-map {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 3%;
+}
+@media all and (max-width: 500px) {
+  .fourth-cut-map {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6%;
+  }
+}
+
+.fourth-cut-map-img {
+  width: 34vw;
+}
+@media all and (max-width: 500px) {
+  .fourth-cut-map-img {
+    width: 100%;
+  }
+}
+
+.fourth-cut-form {
+  width: 35vw;
+}
+@media all and (max-width: 500px) {
+  .fourth-cut-form {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3%;
+}
+@media all and (max-width: 500px) {
+  .form-item {
+    align-items: flex-end;
+  }
+}
+
+.form-line {
+  width: 100%;
+  height: 1px;
+  background-color: #736357;
+}
+@media all and (max-width: 500px) {
+  .form-line {
+    width: 77%;
+  }
+}
+
+input[type=text],
+textarea {
+  background-color: transparent;
+}
+
+.form-item-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3%;
+}
+.form-item-content > label {
+  color: #333333;
+  font-size: 0.8vw;
+  width: 10%;
+  gap: 50%;
+  display: flex;
+  font-weight: 500;
+  font-family: "Noto Serif TC", serif;
+}
+.form-item-content > input {
+  font-size: 0.8vw;
+  border: none;
+  background-color: transparent;
+  margin-left: 3%;
+  width: 80%;
+}
+.form-item-content > textarea {
+  font-size: 0.8vw;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  margin-top: 3%;
+  width: 100%;
+  height: 2vw;
+}
+@media all and (max-width: 500px) {
+  .form-item-content {
+    margin-bottom: 5%;
+  }
+  .form-item-content > label {
+    font-size: 4.2vw;
+    width: 22%;
+    line-height: 1;
+  }
+  .form-item-content > input {
+    font-size: 4.2vw;
+  }
+  .form-item-content > textarea {
+    font-size: 4.2vw;
+    height: 15vw;
+    margin-left: 3%;
+    margin-top: 0;
+    width: 80%;
+  }
+}
+
+.form-textarea {
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media all and (max-width: 500px) {
+  .form-textarea {
+    flex-direction: row;
+  }
+}
+
+.form-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 6%;
+}
+.form-button > button {
+  border: none;
+  background-color: #736357;
+  color: white;
+  padding: 1vw 12vw;
+  border-radius: 5px;
+  font-size: 3.8vw;
 }/*# sourceMappingURL=project_content.css.map */

@@ -337,9 +337,9 @@ body {
   font-size: 6vw;
   font-weight: 400;
   font-family: "Cormorant Infant", serif;
-  white-space: nowrap;
   line-height: 0.9;
   margin-bottom: 2vw;
+  width: 36vw;
 }
 
 .cut-2-main-left-small-title {
@@ -556,7 +556,6 @@ body {
 }
 
 .swiper-slide-prev {
-  opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 
@@ -565,7 +564,6 @@ body {
 }
 
 .swiper-slide-next {
-  opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 
@@ -654,6 +652,9 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 10%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .swiper-page-line {

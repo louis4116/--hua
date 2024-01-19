@@ -91,9 +91,9 @@ body {
   font-size: 6vw;
   font-weight: 400;
   font-family: $cor;
-  white-space: nowrap;
   line-height: 0.9;
   margin-bottom: 2vw;
+  width: 36vw;
 }
 .cut-2-main-left-small-title {
   display: flex;
@@ -275,14 +275,14 @@ body {
   }
 }
 .swiper-slide-prev {
-  opacity: 1 !important;
+  // opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 .swiper-slide-active {
   opacity: 1 !important;
 }
 .swiper-slide-next {
-  opacity: 1 !important;
+  // opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 .swiper-creative .swiper-slide {
@@ -362,6 +362,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 10%;
+  user-select: none;
 }
 .swiper-page-line {
   width: 1px;
