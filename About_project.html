@@ -67,7 +67,7 @@
                 alt="more-spot"
               />
               <p>更多內容</p>
-              <div class="more-arrow"></div>
+              <a href="" class="more-arrow"></a>
             </div>
           </div>
           <div class="cut-2-main-right">
@@ -138,9 +138,9 @@
                 </div>
                 <div class="swiper-page">
                   <div class="swiper-page-top">
-                    <span class="swiper-page-top-active">01</span
-                    ><span class="swiper-page-top-inactive second">02</span
-                    ><span class="swiper-page-top-inactive">03</span>
+                    <!-- <span class="swiper-page-top-inactive">01</span
+                    ><span class="swiper-page-top-inactive">02</span
+                    ><span class="swiper-page-top-inactive">03</span> -->
                   </div>
                   <div class="swiper-page-bottom">
                     <div
@@ -355,6 +355,25 @@
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             },
+            pagination: {
+              el: ".swiper-page-top",
+              type: "custom",
+              renderCustom: function (swiper, current, total) {
+                let page = "";
+                let currentHalf;
+                let totalhalf = total / 2;
+                for (let i = 1; i <= totalhalf; i++) {
+                  currentHalf = current;
+                  if (current > 3) currentHalf = current - totalhalf;
+                  if (i === currentHalf) {
+                    page += `<span class="swiper-page-top-active">0${i}</span>`;
+                  } else {
+                    page += `<span class="swiper-page-top-inactive">0${i}</span>`;
+                  }
+                }
+                return page;
+              },
+            },
             slidesPerView: 1.25,
             spaceBetween: 50,
             centeredSlides: true,
@@ -385,7 +404,13 @@
               limitProgress: 1,
             },
             on: {
-              slideChange: function (swiper) {
+              init: function (swiper) {
+                const active = this.activeIndex;
+                const currentSlide = this.slides[active];
+                const currentAttr = currentSlide.getAttribute("data-name");
+                changeContent(currentAttr, "init");
+              },
+              slideChangeTransitionEnd: function (swiper) {
                 const active = this.activeIndex;
                 const currentSlide = this.slides[active];
                 const currentAttr = currentSlide.getAttribute("data-name");
@@ -394,17 +419,41 @@
             },
           });
         }
-        function changeContent(current) {
+        function changeContent(current, init) {
           if (!current) return;
           const findName = hotProject.filter((item) => item.sTitle === current);
           const homeImgObg = findName.reduce((acc, cur) => {
             acc = cur;
             return acc;
           }, {});
-          $(".cut-2-main-left-h1").text(homeImgObg?.title);
-          $(".cut-2-main-left-small-title>h3").text(homeImgObg?.sTitle);
-          $(".cut-2-main-left-small-title>span").text(homeImgObg?.place);
-          $(".main-left-p").text(homeImgObg?.para);
+          if (init) {
+            $(".cut-2-main-left-h1").text(homeImgObg?.title);
+            $(".cut-2-main-left-small-title")
+              .children("h3")
+              .text(homeImgObg?.sTitle);
+            $(".cut-2-main-left-small-title")
+              .children("span")
+              .text(homeImgObg?.place);
+            $(".main-left-p").text(homeImgObg?.para);
+            $(".more-arrow").attr("href", homeImgObg?.more);
+          } else {
+            $(".cut-2-main-left")
+              .fadeOut(function () {
+                $(this).children(".cut-2-main-left-h1").text(homeImgObg?.title);
+                $(this)
+                  .children(".cut-2-main-left-small-title")
+                  .children("h3")
+                  .text(homeImgObg?.sTitle);
+                $(this)
+                  .children(".cut-2-main-left-small-title")
+                  .children("span")
+                  .text(homeImgObg?.place);
+                $(this).children(".main-left-p").text(homeImgObg?.para);
+                console.log(homeImgObg?.more);
+                $(this).children(".more-arrow").attr("href", homeImgObg?.more);
+              })
+              .fadeIn();
+          }
         }
       });
     </script>

@@ -33,13 +33,7 @@
     <main id="home-main">
       <section class="home-cut-1">
         <div class="home-cut-1-video">
-          <video
-            autoplay
-            loop
-            muted
-            playsinline
-            src="./img/home/Logo Animation_B.mp4"
-          ></video>
+          <video autoplay loop muted playsinline src="./video/B.mp4"></video>
         </div>
         <div class="home-cut-1-para">
           <h1>HOME FROM HEART</h1>
@@ -905,8 +899,6 @@
           let startTimestamp = null;
           const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
-            console.log("startTimestamp " + startTimestamp);
-            console.log("timestamp " + timestamp);
             const progress = Math.min(
               (timestamp - startTimestamp) / duration,
               1
@@ -1320,7 +1312,6 @@
           });
         }
       });
-      window.scroll(0, 0);
     </script>
   </body>
 </html>

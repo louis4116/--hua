@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css");
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
 *,
 ::after,
 ::before {
@@ -541,7 +541,6 @@ body {
   height: auto;
   position: relative;
   transition: all 2s ease-in-out;
-  opacity: 0 !important;
 }
 .swiper-slide > .swiper-img > a {
   pointer-events: none;
@@ -556,6 +555,7 @@ body {
 }
 
 .swiper-slide-prev {
+  opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 
@@ -564,6 +564,7 @@ body {
 }
 
 .swiper-slide-next {
+  opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 

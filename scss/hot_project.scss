@@ -261,7 +261,6 @@ body {
   height: auto;
   position: relative;
   transition: all 2s ease-in-out;
-  opacity: 0 !important;
   > .swiper-img {
     > a {
       pointer-events: none;
@@ -275,14 +274,14 @@ body {
   }
 }
 .swiper-slide-prev {
-  // opacity: 1 !important;
+  opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 .swiper-slide-active {
   opacity: 1 !important;
 }
 .swiper-slide-next {
-  // opacity: 1 !important;
+  opacity: 1 !important;
   transition: all 2s ease-in-out;
 }
 .swiper-creative .swiper-slide {
