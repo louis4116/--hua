@@ -77,7 +77,7 @@ $(window).on("load", function () {
       trigger: ".home-cut-2-fixed-container",
       toggleActions: "play none none reverse",
       start: "top top",
-      end: "bottom+=350% bottom",
+      end: "bottom+=500% bottom",
       pin: true,
       scrub: 0.2,
     },
@@ -132,13 +132,13 @@ $(window).on("load", function () {
           let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3)); //四捨五入至第三位
           let scaleRes = 0.9 + scaleprogress;
           let img;
-          if (scaleRes >= 4.5) {
+          if (scaleRes >= 5) {
             img = img5;
-          } else if (scaleRes >= 4 && scaleRes < 4.5) {
+          } else if (scaleRes >= 4 && scaleRes < 5) {
             img = img2;
-          } else if (scaleRes >= 3.25 && scaleRes < 4) {
+          } else if (scaleRes >= 3 && scaleRes < 4) {
             img = img3;
-          } else if (scaleRes >= 2.5 && scaleRes < 3.25) {
+          } else if (scaleRes >= 2 && scaleRes < 3) {
             img = img4;
           } else {
             img = img1;
