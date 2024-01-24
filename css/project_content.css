@@ -61,7 +61,6 @@ img {
 #footer span {
   color: white;
   font-family: "Microsoft JhengHei";
-  color: white;
   text-decoration: none;
   pointer-events: none;
 }
@@ -261,7 +260,7 @@ body {
 }
 @media all and (max-width: 500px) {
   .first-cut-h1 {
-    display: none;
+    font-size: 10vw;
   }
 }
 

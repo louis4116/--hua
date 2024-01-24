@@ -961,17 +961,9 @@
           lastScrollTop = st;
         });
         const navHeight = $("#nav").outerHeight();
-        const navList = $(".nav-list");
         $(".cut-4-to-top").css("top", `${navHeight}px`);
         if (window.innerWidth <= 500) {
-          $(".nav-hamb-icon").on("click", function (e) {
-            e.preventDefault();
-            $(".nav-list-ul").slideToggle(500);
-          });
           $(".cut-4-pin-right").remove();
-          $(".nav-list-ul>div").css("margin-top", -navHeight);
-        } else {
-          $(".ph").remove();
         }
 
         //補足圖片數量👇

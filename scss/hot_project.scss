@@ -132,11 +132,13 @@ body {
   color: #4d4d4d;
   font-family: $micro;
   font-size: 0.8vw;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1.25vw;
+  width: 63%;
+  line-height: 2;
   @include mobile {
+    width: 100%;
     font-size: 3vw;
-    line-height: 2;
     margin-bottom: 4vw;
   }
 }
@@ -173,7 +175,7 @@ body {
     font-family: $micro;
     font-size: 0.8vw;
     margin-left: 0.4vw;
-    font-weight: 600;
+    font-weight: 500;
   }
   @include mobile {
     margin-right: 0;
@@ -243,6 +245,10 @@ body {
   }
 }
 //輪播
+.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0.1;
+}
 .cut-2-main-right {
   overflow: hidden;
   width: 70vw;
@@ -396,6 +402,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  cursor: pointer;
   > span {
     color: $bigTitleColor;
     font-size: 1vw;
@@ -420,7 +427,7 @@ body {
   margin-bottom: 10%;
 }
 .cut-2-phone-item {
-  width: 70%;
+  width: 75%;
   margin-top: 8%;
 }
 .cut-2-phone-h1 {
@@ -440,4 +447,8 @@ body {
   @include mobile {
     margin-top: 13%;
   }
+}
+.cut-2-phone-item-img {
+  overflow: hidden;
+  border-radius: 190px 181px 0 0;
 }

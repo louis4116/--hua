@@ -14,7 +14,13 @@
     <main id="project-main">
       <section class="first-cut">
         <div class="first-cut-img-container">
-          <img src="./img/熱銷建案/首頁背景-pc.webp" alt="首頁背景-pc" />
+          <picture>
+            <source
+              srcset="./img/熱銷建案/首頁背景-phone.webp"
+              media="(max-width:500px)"
+            />
+            <img src="./img/熱銷建案/首頁背景-pc.webp" alt="首頁背景-pc" />
+          </picture>
         </div>
       </section>
       <section class="second-cut">
@@ -163,7 +169,7 @@
           </div>
           <div class="cut-2-main-phone">
             <h1 class="cut-2-phone-h1">HOME FROM HEART</h1>
-            <div class="cut-2-phone-item">
+            <div class="cut-2-phone-item" id="phone-item-1">
               <div class="cut-2-phone-item-img">
                 <img
                   class="phone-item-img-big"
@@ -212,11 +218,14 @@
                     alt="more-spot"
                   />
                   <p>更多內容</p>
-                  <div class="more-arrow"></div>
+                  <a
+                    href="./About_project_content.html?id=1"
+                    class="more-arrow"
+                  ></a>
                 </div>
               </div>
             </div>
-            <div class="cut-2-phone-item">
+            <div class="cut-2-phone-item" id="phone-item-2">
               <div class="cut-2-phone-item-img">
                 <img
                   class="phone-item-img-big"
@@ -265,11 +274,14 @@
                     alt="more-spot"
                   />
                   <p>更多內容</p>
-                  <div class="more-arrow"></div>
+                  <a
+                    href="About_project_content.html?id=2"
+                    class="more-arrow"
+                  ></a>
                 </div>
               </div>
             </div>
-            <div class="cut-2-phone-item">
+            <div class="cut-2-phone-item" id="phone-item-3">
               <div class="cut-2-phone-item-img">
                 <img
                   class="phone-item-img-big"
@@ -318,7 +330,10 @@
                     alt="more-spot"
                   />
                   <p>更多內容</p>
-                  <div class="more-arrow"></div>
+                  <a
+                    href="About_project_content.html?id=3"
+                    class="more-arrow"
+                  ></a>
                 </div>
               </div>
             </div>
@@ -339,21 +354,26 @@
     <script src="./js/ScrollToPlugin.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/ScrollSmoother.min.js"></script>
+    <script src="./js/SplitText.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/hot-carousel.js"></script>
     <script>
       $(window).on("load", function () {
+        gsap.registerPlugin(ScrollTrigger);
         let mySwiper;
+
         if (window.innerWidth <= 500) {
           $(".cut-2-main-left").remove();
           $(".cut-2-main-right").remove();
         } else {
           $(".cut-2-main-phone").remove();
+          //輪播設定
           mySwiper = new Swiper(".cut-2-carousel-swiper", {
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
+              disabledClass: ".swiper-button-disabled",
             },
             pagination: {
               el: ".swiper-page-top",
@@ -384,10 +404,6 @@
                 slidesPerView: 1.25,
                 spaceBetween: 50,
               },
-
-              1800: {
-                spaceBetween: 50,
-              },
             },
             effect: "creative",
             creativeEffect: {
@@ -405,28 +421,72 @@
             },
             on: {
               init: function (swiper) {
+                //初始
                 const active = this.activeIndex;
                 const currentSlide = this.slides[active];
                 const currentAttr = currentSlide.getAttribute("data-name");
                 changeContent(currentAttr, "init");
               },
-              slideChangeTransitionEnd: function (swiper) {
+              transitionEnd: function (swiper) {
+                //滑動結束
                 const active = this.activeIndex;
                 const currentSlide = this.slides[active];
                 const currentAttr = currentSlide.getAttribute("data-name");
-                changeContent(currentAttr);
+
+                $(".swiper-button").addClass("swiper-button-disabled");
+
+                let cut2Tl = gsap.timeline();
+
+                cut2Tl
+                  .to(".cut-2-main-left-small-title", {
+                    opacity: 0,
+                    x: 50,
+                    duration: 0.5,
+                  })
+                  .to(
+                    ".main-left-p",
+                    {
+                      opacity: 0,
+                      x: 50,
+                      duration: 0.5,
+                    },
+                    "<+0.1"
+                  )
+                  .to(
+                    ".cut-2-main-left-button",
+                    {
+                      opacity: 0,
+                      x: 50,
+                      duration: 0.5,
+                    },
+                    "<+0.1"
+                  )
+                  .to(
+                    ".more",
+                    {
+                      opacity: 0,
+                      x: 50,
+                      duration: 0.5,
+                      onComplete: () => {
+                        changeContent(currentAttr, "end");
+                        cut2Tl.kill();
+                      },
+                    },
+                    "<+0.1"
+                  );
               },
             },
           });
         }
-        function changeContent(current, init) {
+        //改變內容物
+        function changeContent(current, dur) {
           if (!current) return;
           const findName = hotProject.filter((item) => item.sTitle === current);
           const homeImgObg = findName.reduce((acc, cur) => {
             acc = cur;
             return acc;
           }, {});
-          if (init) {
+          if (dur === "init") {
             $(".cut-2-main-left-h1").text(homeImgObg?.title);
             $(".cut-2-main-left-small-title")
               .children("h3")
@@ -436,24 +496,229 @@
               .text(homeImgObg?.place);
             $(".main-left-p").text(homeImgObg?.para);
             $(".more-arrow").attr("href", homeImgObg?.more);
-          } else {
-            $(".cut-2-main-left")
-              .fadeOut(function () {
-                $(this).children(".cut-2-main-left-h1").text(homeImgObg?.title);
-                $(this)
-                  .children(".cut-2-main-left-small-title")
-                  .children("h3")
-                  .text(homeImgObg?.sTitle);
-                $(this)
-                  .children(".cut-2-main-left-small-title")
-                  .children("span")
-                  .text(homeImgObg?.place);
-                $(this).children(".main-left-p").text(homeImgObg?.para);
-                console.log(homeImgObg?.more);
-                $(this).children(".more-arrow").attr("href", homeImgObg?.more);
+          } else if (dur === "end") {
+            const cut2Left = $(".cut-2-main-left");
+            cut2Left
+              .children(".cut-2-main-left-small-title")
+              .children("h3")
+              .text(homeImgObg?.sTitle);
+            cut2Left
+              .children(".cut-2-main-left-small-title")
+              .children("span")
+              .text(homeImgObg?.place);
+            cut2Left.children(".main-left-p").text(homeImgObg?.para);
+            cut2Left
+              .children(".more")
+              .children(".more-arrow")
+              .attr("href", homeImgObg?.more);
+
+            let cut2TlS = gsap.timeline({ delay: 0.25 });
+            cut2TlS
+              .to(".cut-2-main-left-small-title", {
+                opacity: 1,
+                x: 0,
+                duration: 0.5,
               })
-              .fadeIn();
+              .to(
+                ".main-left-p",
+                {
+                  opacity: 1,
+                  x: 0,
+                  duration: 0.5,
+                },
+                "<+0.1"
+              )
+              .to(
+                ".cut-2-main-left-button",
+                {
+                  opacity: 1,
+                  x: 0,
+                  duration: 0.5,
+                },
+
+                "<+0.1"
+              )
+              .to(
+                ".more",
+                {
+                  opacity: 1,
+                  x: 0,
+                  duration: 0.5,
+                  onComplete: () => {
+                    $(".swiper-button").removeClass("swiper-button-disabled");
+                    cut2TlS.kill();
+                  },
+                },
+                "<+0.1"
+              );
           }
+        }
+
+        //第2cut的PC版
+        let cut2Text = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".second-cut",
+            toggleActions: "play none none none",
+            start: "75% bottom",
+            once: true,
+          },
+        });
+
+        let cut2Split = new SplitText(".cut-2-main-left-h1", { type: "chars" });
+        cut2Text.from(cut2Split.chars, {
+          opacity: 0,
+          stagger: 0.15,
+          y: 50,
+          duration: 1.5,
+        });
+
+        if (window.innerWidth > 500) {
+          cut2Text.add(
+            gsap.from(".cut-2-main-right,.cut-2-main-left", {
+              scrollTrigger: {
+                trigger: ".second-cut",
+                toggleActions: "play none none none",
+                start: "75% bottom",
+              },
+              opacity: 0,
+              y: 75,
+              duration: 1.5,
+            }),
+            "<+0.75"
+          );
+        }
+
+        let cut2start = "25% bottom";
+        if (window.innerWidth <= 500) cut2start = "10% bottom";
+        let titleTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".second-cut",
+            toggleActions: "play none none none",
+            start: cut2start,
+            once: true,
+          },
+        });
+        titleTl
+          .from(".cut-2-base", {
+            ease: "linear",
+            filter: "blur(10px)",
+            opacity: "1",
+            duration: "1.75",
+          })
+          .from(
+            ".cut-2-title-content>h3",
+            {
+              ease: "linear",
+              opacity: 0,
+              y: "40%",
+              duration: "1.25",
+            },
+            "<+1.25"
+          )
+          .from(
+            ".cut-2-title-content>h4",
+            {
+              ease: "linear",
+              opacity: 0,
+              y: "40%",
+              duration: "1.25",
+            },
+            "<+0.5"
+          );
+
+        //手機版
+        if (window.innerWidth <= 500) {
+          let cut1Splitext = new SplitText(".cut-2-phone-h1", {
+            type: "chars",
+          });
+          titleTl.add(
+            gsap.from(cut1Splitext.chars, {
+              opacity: 0,
+              filter: "blur(10px)",
+              y: "-40",
+              stagger: 0.15,
+              duration: 0.8,
+            }),
+            "<-0.1"
+          );
+
+          //第一個
+          gsap.from("#phone-item-1 .phone-item-img-big", {
+            scrollTrigger: {
+              trigger: "#phone-item-1",
+              toggleActions: "restart pause resume pause",
+              start: "top bottom",
+              end: "40% center",
+              scrub: 3,
+            },
+            scale: 1.3,
+          });
+
+          gsap.from(
+            "#phone-item-1 .cut-2-main-left-small-title,#phone-item-1 .main-left-p,#phone-item-1 .cut-2-main-left-button,#phone-item-1 .more",
+            {
+              scrollTrigger: {
+                trigger: "#phone-item-1",
+                toggleActions: "play none none none",
+                start: "40% center",
+                once: true,
+              },
+              opacity: 0,
+              stagger: 0.1,
+              duration: 2,
+            }
+          );
+
+          //第二個
+          gsap.from("#phone-item-2 .phone-item-img-big", {
+            scrollTrigger: {
+              trigger: "#phone-item-2",
+              toggleActions: "restart pause resume pause",
+              start: "top bottom",
+              end: "40% center",
+              scrub: 3,
+            },
+            scale: 1.3,
+          });
+          gsap.from(
+            "#phone-item-1 .cut-2-main-left-small-title,#phone-item-2 .main-left-p,#phone-item-2 .cut-2-main-left-button,#phone-item-2 .more",
+            {
+              scrollTrigger: {
+                trigger: "#phone-item-2",
+                toggleActions: "play none none none",
+                start: "40% center",
+                once: true,
+              },
+              opacity: 0,
+              stagger: 0.1,
+              duration: 2,
+            }
+          );
+          //第三個
+          gsap.from("#phone-item-3 .phone-item-img-big", {
+            scrollTrigger: {
+              trigger: "#phone-item-3",
+              toggleActions: "restart pause resume pause",
+              start: "top bottom",
+              end: "40% center",
+              scrub: 3,
+            },
+            scale: 1.3,
+          });
+          gsap.from(
+            "#phone-item-1 .cut-2-main-left-small-title,#phone-item-3 .main-left-p,#phone-item-3 .cut-2-main-left-button,#phone-item-3 .more",
+            {
+              scrollTrigger: {
+                trigger: "#phone-item-3",
+                toggleActions: "play none none none",
+                start: "40% center",
+                once: true,
+              },
+              opacity: 0,
+              stagger: 0.1,
+              duration: 2,
+            }
+          );
         }
       });
     </script>

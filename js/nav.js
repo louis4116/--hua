@@ -31,4 +31,14 @@ $(document).ready(function () {
 </div>`;
 
   nav.append(src);
+  const navHeight = $("#nav").outerHeight();
+  if (window.innerWidth <= 500) {
+    $(".nav-hamb-icon").on("click", function (e) {
+      e.preventDefault();
+      $(".nav-list-ul").slideToggle(500);
+    });
+    $(".nav-list-ul>div").css("margin-top", -navHeight);
+  } else {
+    $(".ph").remove();
+  }
 });

@@ -83,8 +83,8 @@ img {
   span {
     color: white;
     font-family: $micro;
-    color: white;
     text-decoration: none;
+
     pointer-events: none;
   }
   @include laptop {

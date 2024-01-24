@@ -61,7 +61,6 @@ img {
 #footer span {
   color: white;
   font-family: "Microsoft JhengHei";
-  color: white;
   text-decoration: none;
   pointer-events: none;
 }
@@ -382,13 +381,15 @@ body {
   color: #4d4d4d;
   font-family: "Microsoft JhengHei";
   font-size: 0.8vw;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1.25vw;
+  width: 63%;
+  line-height: 2;
 }
 @media all and (max-width: 500px) {
   .main-left-p {
+    width: 100%;
     font-size: 3vw;
-    line-height: 2;
     margin-bottom: 4vw;
   }
 }
@@ -433,7 +434,7 @@ body {
   font-family: "Microsoft JhengHei";
   font-size: 0.8vw;
   margin-left: 0.4vw;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media all and (max-width: 500px) {
   .connect-button {
@@ -518,6 +519,11 @@ body {
     width: 4vw;
     padding: 3vw;
   }
+}
+
+.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0.1;
 }
 
 .cut-2-main-right {
@@ -692,6 +698,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  cursor: pointer;
 }
 .swiper-button-prev > span,
 .swiper-button-next > span {
@@ -718,7 +725,7 @@ body {
 }
 
 .cut-2-phone-item {
-  width: 70%;
+  width: 75%;
   margin-top: 8%;
 }
 
@@ -742,4 +749,9 @@ body {
   .cut-2-phone-item-content {
     margin-top: 13%;
   }
+}
+
+.cut-2-phone-item-img {
+  overflow: hidden;
+  border-radius: 190px 181px 0 0;
 }/*# sourceMappingURL=hot_project.css.map */
