@@ -64,7 +64,7 @@ img {
   text-decoration: none;
   pointer-events: none;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   #footer {
     margin-top: 5%;
   }
@@ -425,7 +425,7 @@ body {
 .third-cut-title {
   color: #65534b;
   font-family: "Noto Serif TC", serif;
-  font-size: 1vw;
+  font-size: 1.2vw;
   font-weight: 500;
   margin-top: 5%;
   margin-bottom: 2%;
@@ -439,9 +439,9 @@ body {
 .third-cut-para {
   color: #4d4d4d;
   font-family: "Microsoft JhengHei";
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2;
   margin-bottom: 4%;
 }
@@ -502,7 +502,7 @@ body {
 .third-cut-bottom-content > :nth-child(2) {
   color: #4d4d4d;
   font-family: "Microsoft JhengHei";
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   margin-left: 8%;
   font-weight: 400;
 }
@@ -542,7 +542,7 @@ body {
 }
 
 .fourth-cut-title {
-  font-size: 1vw;
+  font-size: 1.2vw;
   color: #65534b;
   font-family: "Noto Serif TC", serif;
   font-weight: 500;

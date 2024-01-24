@@ -64,7 +64,7 @@ img {
   text-decoration: none;
   pointer-events: none;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   #footer {
     margin-top: 5%;
   }
@@ -361,6 +361,15 @@ body {
   font-family: "Microsoft JhengHei";
   letter-spacing: 1px;
   margin-left: 0.8vw;
+  font-weight: 500;
+}
+@media all and (max-width: 1600px) {
+  .cut-2-main-left-small-title > h3 {
+    font-size: 1.4vw;
+  }
+  .cut-2-main-left-small-title > span {
+    font-size: 1.1vw;
+  }
 }
 @media all and (max-width: 500px) {
   .cut-2-main-left-small-title {
@@ -385,6 +394,12 @@ body {
   margin-bottom: 1.25vw;
   width: 63%;
   line-height: 2;
+}
+@media all and (max-width: 1600px) {
+  .main-left-p {
+    font-size: 1.1vw;
+    width: 90%;
+  }
 }
 @media all and (max-width: 500px) {
   .main-left-p {
@@ -414,6 +429,11 @@ body {
   background-color: #65534b;
   opacity: 0.5;
 }
+@media all and (max-width: 1600px) {
+  .cut-2-left-line {
+    height: 1.4vw;
+  }
+}
 @media all and (max-width: 500px) {
   .cut-2-left-line {
     height: 3.8vw;
@@ -426,7 +446,7 @@ body {
   justify-content: center;
   border: 1px solid #65534b;
   border-radius: 30px;
-  padding: 5px 12px;
+  padding: 5px 10px;
   margin-right: 0.8vw;
 }
 .connect-button > span {
@@ -435,6 +455,14 @@ body {
   font-size: 0.8vw;
   margin-left: 0.4vw;
   font-weight: 400;
+}
+@media all and (max-width: 1600px) {
+  .connect-button {
+    padding: 5px 10px;
+  }
+  .connect-button > span {
+    font-size: 1vw;
+  }
 }
 @media all and (max-width: 500px) {
   .connect-button {
@@ -448,7 +476,7 @@ body {
 }
 
 .connect > img {
-  width: 0.75vw;
+  width: 0.8vw;
 }
 @media all and (max-width: 500px) {
   .connect > img {
@@ -459,6 +487,11 @@ body {
 .fb > img {
   width: 0.39vw;
 }
+@media all and (max-width: 1600px) {
+  .fb > img {
+    width: 0.45vw;
+  }
+}
 @media all and (max-width: 500px) {
   .fb > img {
     width: 1.6vw;
@@ -467,6 +500,11 @@ body {
 
 .mail > img {
   width: 0.9vw;
+}
+@media all and (max-width: 1600px) {
+  .mail > img {
+    width: 1vw;
+  }
 }
 @media all and (max-width: 500px) {
   .mail > img {
@@ -485,6 +523,11 @@ body {
   font-family: "Microsoft JhengHei";
   margin-right: 0.5vw;
   line-height: 1;
+}
+@media all and (max-width: 1600px) {
+  .more > p {
+    font-size: 1vw;
+  }
 }
 @media all and (max-width: 500px) {
   .more > p {

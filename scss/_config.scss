@@ -6,7 +6,7 @@
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"); //swiper css
 
 @mixin laptop() {
-  @media all and (max-width: 1500px) {
+  @media all and (max-width: 1600px) {
     @content;
   }
 }

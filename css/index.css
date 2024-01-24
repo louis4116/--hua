@@ -64,7 +64,7 @@ img {
   text-decoration: none;
   pointer-events: none;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   #footer {
     margin-top: 5%;
   }
@@ -343,7 +343,7 @@ body {
   min-width: 100%;
   min-height: 100%;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .home-cut-1-video video {
     height: 113vh;
     -o-object-fit: cover;
@@ -429,7 +429,7 @@ body {
   overflow: hidden;
   margin-top: -7%;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .home-cut-2 {
     margin-top: -9%;
   }
@@ -613,7 +613,7 @@ body {
   height: 35vw;
   margin-top: 8%;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .home-cut-2-fixed-first-squre-wrapper {
     margin-top: 14%;
   }
@@ -735,7 +735,7 @@ canvas {
   margin-bottom: 0%;
   padding-top: 2.5%;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .home-cut-3 {
     margin-top: 1.5%;
     margin-bottom: 5%;
@@ -814,7 +814,7 @@ canvas {
   position: relative;
   width: 28vw;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .cut-3-carousel-swiper {
     width: 30vw;
   }
@@ -924,7 +924,7 @@ canvas {
   opacity: 0;
   filter: brightness(0.5);
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .text-rotate {
     margin-top: -25%;
   }
@@ -1047,7 +1047,7 @@ canvas {
 .swiper-button-next::after {
   content: "";
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .swiper-button-prev,
   .swiper-button-next {
     width: 2vw;
@@ -1071,7 +1071,7 @@ canvas {
   background-image: url("../img/home/輪播左箭頭.png");
   left: 176%;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .swiper-button-prev {
     left: 170%;
   }
@@ -1086,7 +1086,7 @@ canvas {
   background-image: url("../img/home/輪播右箭頭.png");
   right: -107%;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .swiper-button-next {
     right: -100%;
   }
@@ -1152,7 +1152,7 @@ canvas {
   cursor: pointer;
   text-decoration: none;
 }
-@media all and (max-width: 1500px) {
+@media all and (max-width: 1600px) {
   .cut-4-to-top {
     width: 2vw;
   }
