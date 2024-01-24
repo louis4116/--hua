@@ -226,14 +226,14 @@ body {
     color: $bigTitleColor;
     font-family: $serif;
     font-size: 1vw;
-    font-weight: 500;
+    font-weight: 400;
   }
   > :nth-child(2) {
     color: $contentColor;
     font-family: $micro;
     font-size: 0.8vw;
     margin-left: 8%;
-    font-weight: 500;
+    font-weight: 400;
   }
   @include mobile {
     > :nth-child(1) {

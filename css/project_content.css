@@ -497,14 +497,14 @@ body {
   color: #65534b;
   font-family: "Noto Serif TC", serif;
   font-size: 1vw;
-  font-weight: 500;
+  font-weight: 400;
 }
 .third-cut-bottom-content > :nth-child(2) {
   color: #4d4d4d;
   font-family: "Microsoft JhengHei";
   font-size: 0.8vw;
   margin-left: 8%;
-  font-weight: 500;
+  font-weight: 400;
 }
 @media all and (max-width: 500px) {
   .third-cut-bottom-content > :nth-child(1) {

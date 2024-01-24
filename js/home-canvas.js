@@ -77,7 +77,7 @@ $(window).on("load", function () {
       trigger: ".home-cut-2-fixed-container",
       toggleActions: "play none none reverse",
       start: "top top",
-      end: "bottom+=250% bottom",
+      end: "bottom+=350% bottom",
       pin: true,
       scrub: 0.2,
     },
