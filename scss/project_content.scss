@@ -183,7 +183,7 @@ body {
   line-height: 2;
   margin-bottom: 4%;
   @include mobile {
-    font-size: 4vw;
+    font-size: 3.75vw;
     margin-bottom: 8%;
   }
 }
@@ -240,7 +240,7 @@ body {
       font-size: 4.2vw;
     }
     > :nth-child(2) {
-      font-size: 3.8vw;
+      font-size: 4vw;
     }
   }
 }
