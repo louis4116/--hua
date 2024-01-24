@@ -73,7 +73,7 @@
                 alt="more-spot"
               />
               <p>更多內容</p>
-              <a href="" class="more-arrow"></a>
+              <a href="javascript:;" class="more-arrow"></a>
             </div>
           </div>
           <div class="cut-2-main-right">
@@ -81,7 +81,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide" data-name="品世界">
                   <div class="swiper-img href-item">
-                    <a href="javascript:;"></a>
+                    <a href="javascript:;" class="href-link"></a>
                     <img src="./img/熱銷建案/輪播-大-2.png" alt="品世界" />
                   </div>
                   <img
@@ -92,6 +92,7 @@
                 </div>
                 <div class="swiper-slide" data-name="心世界">
                   <div class="swiper-img href-item">
+                    <a href="javascript:;" class="href-link"></a>
                     <img src="./img/熱銷建案/輪播-大-1.png" alt="心世界" />
                   </div>
                   <img
@@ -103,6 +104,7 @@
 
                 <div class="swiper-slide" data-name="閱世界">
                   <div class="swiper-img href-item">
+                    <a href="javascript:;" class="href-link"></a>
                     <img src="./img/熱銷建案/輪播-大-3.png" alt="閱世界" />
                   </div>
                   <img
@@ -113,6 +115,7 @@
                 </div>
                 <div class="swiper-slide" data-name="品世界">
                   <div class="swiper-img href-item">
+                    <a href="javascript:;" class="href-link"></a>
                     <img src="./img/熱銷建案/輪播-大-2.png" alt="品世界" />
                   </div>
                   <img
@@ -123,6 +126,7 @@
                 </div>
                 <div class="swiper-slide" data-name="心世界">
                   <div class="swiper-img href-item">
+                    <a href="javascript:;" class="href-link"></a>
                     <img src="./img/熱銷建案/輪播-大-1.png" alt="心世界" />
                   </div>
                   <img
@@ -134,6 +138,7 @@
 
                 <div class="swiper-slide" data-name="閱世界">
                   <div class="swiper-img href-item">
+                    <a href="javascript:;" class="href-link"></a>
                     <img src="./img/熱銷建案/輪播-大-3.png" alt="閱世界" />
                   </div>
                   <img
@@ -143,11 +148,7 @@
                   />
                 </div>
                 <div class="swiper-page">
-                  <div class="swiper-page-top">
-                    <!-- <span class="swiper-page-top-inactive">01</span
-                    ><span class="swiper-page-top-inactive">02</span
-                    ><span class="swiper-page-top-inactive">03</span> -->
-                  </div>
+                  <div class="swiper-page-top"></div>
                   <div class="swiper-page-bottom">
                     <div
                       class="swiper-page-bottom-left swiper-button swiper-button-prev"
@@ -171,11 +172,14 @@
             <h1 class="cut-2-phone-h1">HOME FROM HEART</h1>
             <div class="cut-2-phone-item" id="phone-item-1">
               <div class="cut-2-phone-item-img">
-                <img
-                  class="phone-item-img-big"
-                  src="./img/熱銷建案/輪播-大-2.png"
-                  alt="品世界"
-                />
+                <a href="About_project_content.html?id=1" class="href-link"></a>
+                <div class="phone-item-img-big-container">
+                  <img
+                    class="phone-item-img-big"
+                    src="./img/熱銷建案/輪播-大-2.png"
+                    alt="品世界"
+                  />
+                </div>
                 <img
                   class="text-rotate"
                   src="./img/熱銷建案/熱銷文字轉圈.svg"
@@ -219,7 +223,7 @@
                   />
                   <p>更多內容</p>
                   <a
-                    href="./About_project_content.html?id=1"
+                    href="About_project_content.html?id=1"
                     class="more-arrow"
                   ></a>
                 </div>
@@ -227,11 +231,14 @@
             </div>
             <div class="cut-2-phone-item" id="phone-item-2">
               <div class="cut-2-phone-item-img">
-                <img
-                  class="phone-item-img-big"
-                  src="./img/熱銷建案/輪播-大-1.png"
-                  alt="心世界"
-                />
+                <a href="About_project_content.html?id=2" class="href-link"></a>
+                <div class="phone-item-img-big-container">
+                  <img
+                    class="phone-item-img-big"
+                    src="./img/熱銷建案/輪播-大-1.png"
+                    alt="心世界"
+                  />
+                </div>
                 <img
                   class="text-rotate"
                   src="./img/熱銷建案/熱銷文字轉圈.svg"
@@ -283,11 +290,14 @@
             </div>
             <div class="cut-2-phone-item" id="phone-item-3">
               <div class="cut-2-phone-item-img">
-                <img
-                  class="phone-item-img-big"
-                  src="./img/熱銷建案/輪播-大-3.png"
-                  alt="閱世界"
-                />
+                <a href="About_project_content.html?id=3" class="href-link"></a>
+                <div class="phone-item-img-big-container">
+                  <img
+                    class="phone-item-img-big"
+                    src="./img/熱銷建案/輪播-大-3.png"
+                    alt="閱世界"
+                  />
+                </div>
                 <img
                   class="text-rotate"
                   src="./img/熱銷建案/熱銷文字轉圈.svg"
@@ -441,14 +451,14 @@
                   .to(".cut-2-main-left-small-title", {
                     opacity: 0,
                     x: 50,
-                    duration: 0.5,
+                    duration: 0.3,
                   })
                   .to(
                     ".main-left-p",
                     {
                       opacity: 0,
                       x: 50,
-                      duration: 0.5,
+                      duration: 0.3,
                     },
                     "<+0.1"
                   )
@@ -457,7 +467,7 @@
                     {
                       opacity: 0,
                       x: 50,
-                      duration: 0.5,
+                      duration: 0.3,
                     },
                     "<+0.1"
                   )
@@ -466,13 +476,13 @@
                     {
                       opacity: 0,
                       x: 50,
-                      duration: 0.5,
+                      duration: 0.3,
                       onComplete: () => {
                         changeContent(currentAttr, "end");
                         cut2Tl.kill();
                       },
                     },
-                    "<+0.1"
+                    "<"
                   );
               },
             },
@@ -496,6 +506,7 @@
               .text(homeImgObg?.place);
             $(".main-left-p").text(homeImgObg?.para);
             $(".more-arrow").attr("href", homeImgObg?.more);
+            $(".swiper-slide-active .href-link").attr("href", homeImgObg?.more);
           } else if (dur === "end") {
             const cut2Left = $(".cut-2-main-left");
             cut2Left
@@ -511,20 +522,20 @@
               .children(".more")
               .children(".more-arrow")
               .attr("href", homeImgObg?.more);
-
-            let cut2TlS = gsap.timeline({ delay: 0.25 });
+            $(".swiper-slide-active .href-link").attr("href", homeImgObg?.more);
+            let cut2TlS = gsap.timeline();
             cut2TlS
               .to(".cut-2-main-left-small-title", {
                 opacity: 1,
                 x: 0,
-                duration: 0.5,
+                duration: 0.3,
               })
               .to(
                 ".main-left-p",
                 {
                   opacity: 1,
                   x: 0,
-                  duration: 0.5,
+                  duration: 0.3,
                 },
                 "<+0.1"
               )
@@ -533,7 +544,7 @@
                 {
                   opacity: 1,
                   x: 0,
-                  duration: 0.5,
+                  duration: 0.3,
                 },
 
                 "<+0.1"
@@ -543,7 +554,7 @@
                 {
                   opacity: 1,
                   x: 0,
-                  duration: 0.5,
+                  duration: 0.3,
                   onComplete: () => {
                     $(".swiper-button").removeClass("swiper-button-disabled");
                     cut2TlS.kill();
@@ -559,7 +570,7 @@
           scrollTrigger: {
             trigger: ".second-cut",
             toggleActions: "play none none none",
-            start: "75% bottom",
+            start: "50% bottom",
             once: true,
           },
         });
@@ -575,11 +586,6 @@
         if (window.innerWidth > 500) {
           cut2Text.add(
             gsap.from(".cut-2-main-right,.cut-2-main-left", {
-              scrollTrigger: {
-                trigger: ".second-cut",
-                toggleActions: "play none none none",
-                start: "75% bottom",
-              },
               opacity: 0,
               y: 75,
               duration: 1.5,

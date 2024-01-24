@@ -166,7 +166,7 @@ body {
 .third-cut-title {
   color: $bigTitleColor;
   font-family: $serif;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-weight: 500;
   margin-top: 5%;
   margin-bottom: 2%;
@@ -177,7 +177,7 @@ body {
 .third-cut-para {
   color: $contentColor;
   font-family: $micro;
-  font-size: 0.9vw;
+  font-size: 1vw;
   letter-spacing: 2px;
   font-weight: 400;
   line-height: 2;
@@ -225,13 +225,13 @@ body {
   > :nth-child(1) {
     color: $bigTitleColor;
     font-family: $serif;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: 400;
   }
   > :nth-child(2) {
     color: $contentColor;
     font-family: $micro;
-    font-size: 0.9vw;
+    font-size: 1vw;
     margin-left: 8%;
     font-weight: 400;
   }
@@ -268,7 +268,7 @@ body {
   }
 }
 .fourth-cut-title {
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   color: $bigTitleColor;
   font-family: $serif;
   font-weight: 500;
@@ -334,7 +334,7 @@ input:-webkit-autofill:focus {
 
   > label {
     color: #333333;
-    font-size: 0.8vw;
+    font-size: 1vw;
     width: 10%;
     gap: 50%;
     display: flex;
@@ -342,14 +342,14 @@ input:-webkit-autofill:focus {
     font-family: $serif;
   }
   > input {
-    font-size: 0.8vw;
+    font-size: 1vw;
     border: none;
     background-color: transparent;
     margin-left: 3%;
     width: 80%;
   }
   > textarea {
-    font-size: 0.8vw;
+    font-size: 1vw;
     border: none;
     background-color: transparent;
     resize: none;
