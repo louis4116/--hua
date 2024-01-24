@@ -87,21 +87,21 @@
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>基地面積</span>
-                  <span class="unit">813.62坪</span>
+                  <span class="unit content">813.62坪</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>基地座向</span>
-                  <span class="seat">座北朝南</span>
+                  <span class="seat content">座北朝南</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>坐落區域</span>
-                  <span class="located">三陽重陽重劃區</span>
+                  <span class="located content">三陽重陽重劃區</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
@@ -110,21 +110,21 @@
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>基地位置</span>
-                  <span class="address">新北市三重區集賢路155號</span>
+                  <span class="address content">新北市三重區集賢路155號</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>使用分區</span>
-                  <span class="section">住宅區</span>
+                  <span class="section content">住宅區</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>格局規劃</span>
-                  <span class="pattern">2-3房</span>
+                  <span class="pattern content">2-3房</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
@@ -133,21 +133,21 @@
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>建築構造</span>
-                  <span class="structure">RC構造</span>
+                  <span class="structure content">RC構造</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>樓層規劃</span>
-                  <span class="floor">地下4層/地上14樓</span>
+                  <span class="floor content">地下4層/地上14樓</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
               <div class="third-cut-bottom-intr-in">
                 <div class="third-cut-bottom-content">
                   <span>戶數規劃</span>
-                  <span class="household">110戶</span>
+                  <span class="household content">110戶</span>
                 </div>
                 <div class="third-cut-bottom-line"></div>
               </div>
@@ -233,11 +233,12 @@
         $(".first-cut-h1").text(projectObj?.main);
 
         //置換內容☝️
+
+        //輪播
         const sliderThumbs = new Swiper(".second-cut-col", {
           direction: "vertical",
           slidesPerView: 3,
           spaceBetween: 12,
-
           breakpoints: {
             0: {
               direction: "horizontal",
@@ -260,6 +261,52 @@
             slideThumbActiveClass: "thumbs-active",
           },
         });
+
+        //gsap動畫
+        gsap.registerPlugin(ScrollTrigger);
+        let cut3Tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".third-cut",
+            toggleActions: "play none none none",
+            start: "center bottom",
+            once: true,
+          },
+        });
+        if (window.innerWidth <= 500) {
+          cut3Tl
+            .from(".third-cut-para", {
+              opacity: 0,
+              filter: "blur(10px)",
+              duration: 1.5,
+            })
+            .from(
+              ".content",
+              {
+                x: 60,
+                opacity: 0,
+                stagger: 0.3,
+                duration: 2,
+              },
+              "<+0.5"
+            );
+        } else {
+          cut3Tl
+            .from(".third-cut-para", {
+              y: 75,
+              opacity: 0,
+              duration: 1.5,
+            })
+            .from(
+              ".content",
+              {
+                x: 60,
+                opacity: 0,
+                stagger: 0.3,
+                duration: 2,
+              },
+              "<+0.5"
+            );
+        }
       };
     </script>
   </body>
