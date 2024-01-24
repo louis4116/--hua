@@ -1,0 +1,405 @@
+@import "_config";
+
+body {
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+//第一cut
+.first-cut {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first-cut-img-container {
+  width: 100%;
+}
+.first-cut-h1 {
+  position: absolute;
+  font-size: 3vw;
+  color: white;
+  font-family: $serif;
+  font-weight: 500;
+  @include mobile {
+    display: none;
+  }
+}
+
+//第二cut
+.second-cut {
+  position: relative;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile {
+    margin-top: 8%;
+  }
+}
+.second-cut-container {
+  width: 80%;
+  height: 37vw;
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    height: auto;
+    flex-direction: column;
+  }
+}
+.second-cut-images {
+  width: 60vw;
+  overflow: hidden;
+  position: relative;
+  margin-right: 2%;
+  .swiper-slide > :nth-child(1) {
+    height: 100%;
+  }
+  > .swiper-button {
+    position: absolute;
+  }
+  @include mobile {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 3%;
+  }
+}
+.swiper-button-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.second-cut-col {
+  position: relative;
+  width: 18vw;
+  overflow: hidden;
+  .swiper-slide {
+    cursor: pointer;
+    opacity: 0.4;
+    > img {
+      border-radius: 20px;
+    }
+  }
+  .thumbs-active {
+    opacity: 1;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+.swiper-button {
+  width: 2vw;
+  @include mobile {
+    width: 6vw;
+  }
+}
+
+.swiper-button-next {
+  transform-origin: left center;
+  transform: rotate(90deg);
+  left: 50%;
+  top: 91%;
+  @include mobile {
+    top: 50%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+    transform-origin: unset;
+    margin-top: 0 !important;
+  }
+}
+.swiper-button-prev {
+  left: 50%;
+  top: 2%;
+  transform: rotate(90deg);
+  transform-origin: left center;
+  @include mobile {
+    top: 50%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    transform-origin: unset;
+    margin-top: 0 !important;
+  }
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: unset;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: unset;
+}
+.text-rotate {
+  position: absolute;
+  width: 8vw;
+  animation: textRotate 10s linear infinite;
+  margin-top: -7%;
+  filter: brightness(0.5);
+}
+@keyframes textRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+//第3cut
+.third-cut {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.third-cut-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+}
+.third-cut-title {
+  color: $bigTitleColor;
+  font-family: $serif;
+  font-size: 1vw;
+  font-weight: 500;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  @include mobile {
+    font-size: 5.5vw;
+  }
+}
+.third-cut-para {
+  color: $contentColor;
+  font-family: $micro;
+  font-size: 0.8vw;
+  letter-spacing: 2px;
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 4%;
+  @include mobile {
+    font-size: 4vw;
+    margin-bottom: 8%;
+  }
+}
+
+.third-cut-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @include mobile {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.third-cut-bottom-intr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 20vw;
+  @include mobile {
+    width: 100%;
+  }
+}
+.third-cut-bottom-intr-in {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 4%;
+}
+.third-cut-bottom-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4%;
+  > :nth-child(1) {
+    color: $bigTitleColor;
+    font-family: $serif;
+    font-size: 1vw;
+    font-weight: 500;
+  }
+  > :nth-child(2) {
+    color: $contentColor;
+    font-family: $micro;
+    font-size: 0.8vw;
+    margin-left: 8%;
+    font-weight: 500;
+  }
+  @include mobile {
+    > :nth-child(1) {
+      font-size: 4.2vw;
+    }
+    > :nth-child(2) {
+      font-size: 3.8vw;
+    }
+  }
+}
+.third-cut-bottom-line {
+  width: 100%;
+  height: 1px;
+  background-color: $bigTitleColor;
+}
+
+//第4cut
+.fourth-cut {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.fourth-cut-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+  @include mobile {
+    margin-top: 1%;
+  }
+}
+.fourth-cut-title {
+  font-size: 1vw;
+  color: $bigTitleColor;
+  font-family: $serif;
+  font-weight: 500;
+  @include mobile {
+    font-size: 5.5vw;
+  }
+}
+.fourth-cut-map {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 3%;
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6%;
+  }
+}
+.fourth-cut-map-img {
+  width: 34vw;
+  @include mobile {
+    width: 100%;
+  }
+}
+.fourth-cut-form {
+  width: 35vw;
+  @include mobile {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+.form-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3%;
+  @include mobile {
+    align-items: flex-end;
+  }
+}
+.form-line {
+  width: 100%;
+  height: 1px;
+  background-color: $semitransColor;
+  @include mobile {
+    width: 77%;
+  }
+}
+input[type="text"],
+textarea {
+  background-color: transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
+}
+.form-item-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3%;
+
+  > label {
+    color: #333333;
+    font-size: 0.8vw;
+    width: 10%;
+    gap: 50%;
+    display: flex;
+    font-weight: 500;
+    font-family: $serif;
+  }
+  > input {
+    font-size: 0.8vw;
+    border: none;
+    background-color: transparent;
+    margin-left: 3%;
+    width: 80%;
+  }
+  > textarea {
+    font-size: 0.8vw;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    margin-top: 1%;
+    width: 100%;
+    height: 3vw;
+  }
+  @include mobile {
+    margin-bottom: 5%;
+    > label {
+      font-size: 4.2vw;
+      width: 22%;
+      line-height: 1;
+    }
+    > input {
+      font-size: 4.2vw;
+    }
+    > textarea {
+      font-size: 4.2vw;
+      height: 15vw;
+      margin-left: 3%;
+      margin-top: 0;
+      width: 80%;
+    }
+  }
+}
+.form-textarea {
+  flex-direction: column;
+  align-items: flex-start;
+  @include mobile {
+    flex-direction: row;
+  }
+}
+.form-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 6%;
+  > button {
+    border: none;
+    background-color: $semitransColor;
+    color: white;
+    padding: 0.4vw 6vw;
+    border-radius: 5px;
+    font-size: 0.8vw;
+    cursor: pointer;
+  }
+  @include mobile {
+    > button {
+      padding: 1vw 12vw;
+      font-size: 3.8vw;
+    }
+  }
+}
