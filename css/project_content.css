@@ -59,7 +59,13 @@ img {
   margin-top: 5%;
 }
 #footer span {
-  color: white;
+  color: #fff;
+  font-family: "Microsoft JhengHei";
+  text-decoration: none;
+  pointer-events: none;
+}
+#footer a {
+  color: #fff;
   font-family: "Microsoft JhengHei";
   text-decoration: none;
   pointer-events: none;

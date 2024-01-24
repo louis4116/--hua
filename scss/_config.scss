@@ -81,10 +81,15 @@ img {
   font-weight: 300;
   margin-top: 5%;
   span {
-    color: white;
+    color: #fff;
     font-family: $micro;
     text-decoration: none;
-
+    pointer-events: none;
+  }
+  a {
+    color: #fff;
+    font-family: $micro;
+    text-decoration: none;
     pointer-events: none;
   }
   @include laptop {

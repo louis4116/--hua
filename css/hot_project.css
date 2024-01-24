@@ -59,7 +59,13 @@ img {
   margin-top: 5%;
 }
 #footer span {
-  color: white;
+  color: #fff;
+  font-family: "Microsoft JhengHei";
+  text-decoration: none;
+  pointer-events: none;
+}
+#footer a {
+  color: #fff;
   font-family: "Microsoft JhengHei";
   text-decoration: none;
   pointer-events: none;
@@ -632,8 +638,8 @@ body {
 
 .text-rotate {
   position: absolute;
-  margin-top: -22%;
-  left: -13%;
+  margin-top: -19%;
+  left: -12%;
   width: 8vw;
   animation: textRotate 10s linear infinite;
   filter: brightness(0.5);
