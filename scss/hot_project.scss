@@ -52,7 +52,7 @@ body {
       font-size: 6vw;
     }
     > h4 {
-      font-size: 3.75vw;
+      font-size: $contentSize;
       font-weight: 600;
       margin-top: 0;
     }
@@ -133,7 +133,7 @@ body {
       line-height: 1;
     }
     span {
-      font-size: 3.75vw;
+      font-size: $contentSize;
       margin-left: 2vw;
     }
   }
@@ -152,7 +152,7 @@ body {
   }
   @include mobile {
     width: 100%;
-    font-size: 3.75vw;
+    font-size: $contentSize;
     margin-bottom: 4vw;
   }
 }
@@ -204,7 +204,7 @@ body {
     margin-right: 0;
     padding: 1% 2%;
     > span {
-      font-size: 3.75vw;
+      font-size: $contentSize;
       margin-left: 1.4vw;
     }
   }
@@ -251,7 +251,7 @@ body {
   }
   @include mobile {
     > p {
-      font-size: 3.75vw;
+      font-size: $contentSize;
       margin-right: 2vw;
     }
   }

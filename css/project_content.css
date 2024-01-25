@@ -561,7 +561,7 @@ body {
 
 .fourth-cut-map {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   margin-top: 3%;
 }
@@ -574,16 +574,19 @@ body {
 }
 
 .fourth-cut-map-img {
-  width: 34vw;
+  width: 47%;
 }
 @media all and (max-width: 500px) {
   .fourth-cut-map-img {
     width: 100%;
   }
 }
+.fourth-cut-map-img > iframe {
+  width: 100%;
+}
 
 .fourth-cut-form {
-  width: 35vw;
+  width: 47%;
 }
 @media all and (max-width: 500px) {
   .fourth-cut-form {
@@ -597,10 +600,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 3%;
+  margin-bottom: 3%;
 }
 @media all and (max-width: 500px) {
   .form-item {
+    margin-top: 3%;
+    margin-bottom: 0%;
     align-items: flex-end;
   }
 }

@@ -296,7 +296,7 @@ body {
     font-size: 6vw;
   }
   .content > h4 {
-    font-size: 3.75vw;
+    font-size: "3.75vw";
     font-weight: 600;
     margin-top: 0;
   }
@@ -388,7 +388,7 @@ body {
     line-height: 1;
   }
   .cut-2-main-left-small-title span {
-    font-size: 3.75vw;
+    font-size: "3.75vw";
     margin-left: 2vw;
   }
 }
@@ -411,7 +411,7 @@ body {
 @media all and (max-width: 500px) {
   .main-left-p {
     width: 100%;
-    font-size: 3.75vw;
+    font-size: "3.75vw";
     margin-bottom: 4vw;
   }
 }
@@ -477,7 +477,7 @@ body {
     padding: 1% 2%;
   }
   .connect-button > span {
-    font-size: 3.75vw;
+    font-size: "3.75vw";
     margin-left: 1.4vw;
   }
 }
@@ -538,7 +538,7 @@ body {
 }
 @media all and (max-width: 500px) {
   .more > p {
-    font-size: 3.75vw;
+    font-size: "3.75vw";
     margin-right: 2vw;
   }
 }
