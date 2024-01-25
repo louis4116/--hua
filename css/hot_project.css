@@ -474,7 +474,7 @@ body {
 @media all and (max-width: 500px) {
   .connect-button {
     margin-right: 0;
-    padding: 5px 10px;
+    padding: 1% 2%;
   }
   .connect-button > span {
     font-size: 3.75vw;
@@ -501,7 +501,7 @@ body {
 }
 @media all and (max-width: 500px) {
   .fb > img {
-    width: 1.6vw;
+    width: 1.8vw;
   }
 }
 
@@ -644,6 +644,7 @@ body {
   width: 8vw;
   animation: textRotate 10s linear infinite;
   filter: brightness(0.5);
+  z-index: 5;
 }
 @media all and (max-width: 500px) {
   .text-rotate {
@@ -815,4 +816,12 @@ body {
   overflow: hidden;
   border-radius: 190px 181px 0 0;
   position: relative;
+  z-index: 1;
+}
+
+.frame {
+  position: absolute;
+  top: -3%;
+  right: -3%;
+  z-index: 0;
 }/*# sourceMappingURL=hot_project.css.map */
