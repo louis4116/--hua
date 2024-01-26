@@ -232,7 +232,7 @@ body {
 }
 .drops-5 {
   right: 24%;
-  top: 15%;
+  top: 12%;
   width: 7vw;
   @include mobile {
     right: 12vw;
@@ -882,6 +882,10 @@ canvas {
 .home-cut-5 {
   position: relative;
   width: 100%;
+  padding-top: 2.5%;
+  @include mobile {
+    padding-top: 0%;
+  }
 }
 
 .cut-5-news-card-container {

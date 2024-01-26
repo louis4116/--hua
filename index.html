@@ -929,13 +929,13 @@
           )
           .add(
             gsap.delayedCall(0, function () {
-              animateValue(preloadNum, 2024, 1992, 1200);
+              animateValue(preloadNum, 2024, 1992, 1000);
             })
           )
           .to(
             ".preload_number-container",
             { height: "0vh", y: "-30vw", duration: "2" },
-            "<+2"
+            "<+1.25"
           )
           .to("body", { overflow: "auto" }, "<+1.5")
           .to(

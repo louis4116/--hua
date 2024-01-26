@@ -57,7 +57,7 @@ img {
   padding-top: 1vw;
   padding-bottom: 1vw;
   font-weight: 300;
-  margin-top: 5%;
+  margin-top: 8%;
 }
 #footer span {
   color: #fff;
@@ -500,7 +500,7 @@ body {
 
 .drops-5 {
   right: 24%;
-  top: 15%;
+  top: 12%;
   width: 7vw;
 }
 @media all and (max-width: 768px) {
@@ -1230,6 +1230,12 @@ canvas {
 .home-cut-5 {
   position: relative;
   width: 100%;
+  padding-top: 2.5%;
+}
+@media all and (max-width: 768px) {
+  .home-cut-5 {
+    padding-top: 0%;
+  }
 }
 
 .cut-5-news-card-container {
