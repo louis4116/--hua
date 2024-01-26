@@ -4,7 +4,7 @@ const navItem = [
     url: "javascript:;",
   },
   { name: "熱銷建案", url: "About_project.html" },
-  { name: "經典作品", url: "javascript:;" },
+  { name: "經典作品", url: "About_classic.html" },
   { name: "最新消息", url: "javascript:;" },
   { name: "聯絡我們", url: "javascript:;" },
 ];

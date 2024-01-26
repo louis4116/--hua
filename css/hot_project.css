@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
 *,
@@ -30,7 +31,7 @@ img {
 .pc {
   display: block;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .pc {
     display: none;
   }
@@ -39,7 +40,7 @@ img {
 .ph {
   display: none;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .ph {
     display: block;
   }
@@ -75,7 +76,7 @@ img {
     margin-top: 5%;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   #footer {
     flex-direction: column;
     font-size: 3vw;
@@ -107,7 +108,7 @@ img {
   flex-wrap: wrap;
   padding: 1vw 3vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   #nav {
     background-image: none;
     padding: 4vw;
@@ -135,7 +136,7 @@ img {
   display: none;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .nav-hamb-icon {
     width: 5vw;
     height: 5vw;
@@ -157,7 +158,7 @@ img {
   display: flex;
   align-items: center;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .nav-list {
     width: 100%;
   }
@@ -209,7 +210,7 @@ img {
   bottom: 15%;
   right: 0;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .nav-list-ul li:nth-child(1)::after,
   .nav-list-ul li:nth-child(2)::after,
   .nav-list-ul li:nth-child(3)::after,
@@ -218,7 +219,7 @@ img {
     width: 0px;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .nav-list-ul {
     display: none;
     flex-direction: column;
@@ -259,7 +260,7 @@ body {
   color: #65534b;
   margin-top: 4vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .title {
     margin-top: 5%;
   }
@@ -271,7 +272,7 @@ body {
   opacity: 0.1;
   font-weight: 400;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .base {
     font-size: 14vw;
   }
@@ -291,12 +292,12 @@ body {
   margin-top: 0.5vw;
   font-family: "Noto Serif TC", serif;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .content > h3 {
     font-size: 6vw;
   }
   .content > h4 {
-    font-size: "3.75vw";
+    font-size: 3.75vw;
     font-weight: 600;
     margin-top: 0;
   }
@@ -305,7 +306,7 @@ body {
 .cut-2-main {
   display: flex;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .cut-2-main {
     justify-content: center;
     align-items: center;
@@ -324,7 +325,7 @@ body {
   padding-left: 5%;
   position: relative;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .cut-2-main-left {
     display: none;
   }
@@ -377,7 +378,7 @@ body {
     font-size: 1.1vw;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .cut-2-main-left-small-title {
     margin-bottom: 2vw;
   }
@@ -388,7 +389,7 @@ body {
     line-height: 1;
   }
   .cut-2-main-left-small-title span {
-    font-size: "3.75vw";
+    font-size: 3.75vw;
     margin-left: 2vw;
   }
 }
@@ -408,10 +409,10 @@ body {
     width: 90%;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .main-left-p {
     width: 100%;
-    font-size: "3.75vw";
+    font-size: 3.75vw;
     margin-bottom: 4vw;
   }
 }
@@ -422,7 +423,7 @@ body {
   justify-content: center;
   margin-bottom: 2vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .cut-2-main-left-button {
     margin-bottom: 5vw;
     width: 100%;
@@ -441,7 +442,7 @@ body {
     height: 1.4vw;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .cut-2-left-line {
     height: 5vw;
   }
@@ -471,13 +472,13 @@ body {
     font-size: 1vw;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .connect-button {
     margin-right: 0;
     padding: 1% 2%;
   }
   .connect-button > span {
-    font-size: "3.75vw";
+    font-size: 3.75vw;
     margin-left: 1.4vw;
   }
 }
@@ -485,7 +486,7 @@ body {
 .connect > img {
   width: 0.8vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .connect > img {
     width: 3vw;
   }
@@ -499,7 +500,7 @@ body {
     width: 0.45vw;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .fb > img {
     width: 1.8vw;
   }
@@ -513,7 +514,7 @@ body {
     width: 1vw;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .mail > img {
     width: 3vw;
   }
@@ -536,9 +537,9 @@ body {
     font-size: 1vw;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .more > p {
-    font-size: "3.75vw";
+    font-size: 3.75vw;
     margin-right: 2vw;
   }
 }
@@ -547,7 +548,7 @@ body {
   width: 0.4vw;
   margin-right: 0.5vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .more-spot {
     width: 2.5vw;
     margin-right: 2vw;
@@ -564,7 +565,7 @@ body {
   width: 2vw;
   padding: 1vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .more-arrow {
     width: 4vw;
     padding: 3vw;
@@ -585,7 +586,7 @@ body {
   position: relative;
   width: 55%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .cut-2-carousel-swiper {
     display: none;
   }
@@ -601,7 +602,7 @@ body {
 .swiper-slide > .swiper-img > .href-link {
   width: 100%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .swiper-slide {
     display: flex;
     flex-direction: column;
@@ -646,7 +647,7 @@ body {
   filter: brightness(0.5);
   z-index: 5;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .text-rotate {
     margin-top: -20%;
     left: -13%;
@@ -657,7 +658,7 @@ body {
 .phone-item-img-big {
   display: none;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .phone-item-img-big {
     display: block;
     position: relative;
@@ -796,7 +797,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .cut-2-phone-item-content {
     margin-top: 13%;
   }

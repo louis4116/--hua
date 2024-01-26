@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700&display=swap"); //明體
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap"); //英文字型
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700&display=swap"); //日期
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap"); //Roboto
 @import url("https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"); //swiper css
 
@@ -18,7 +19,7 @@
 }
 
 @mixin mobile() {
-  @media all and (max-width: 500px) {
+  @media all and (max-width: 768px) {
     @content;
   }
 }
@@ -36,9 +37,10 @@ $cor: "Cormorant Infant", serif; //英文字型
 $jost: "Jost", sans-serif; //日期
 $micro: "Microsoft JhengHei"; //微軟正黑體
 $nuo: "Nuosu SIL", sans-serif; //數字字型
+$rob: "Roboto", sans-serif; //大日期字型
 
 //字型大小
-$contentSize: "3.75vw"; //內文
+$contentSize: 3.75vw; //內文
 
 *,
 ::after,

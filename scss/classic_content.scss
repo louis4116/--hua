@@ -197,6 +197,7 @@ body {
   @include mobile {
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 10%;
   }
 }
 
@@ -205,7 +206,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  width: 20vw;
+  width: 22vw;
   @include mobile {
     width: 100%;
   }
@@ -249,163 +250,4 @@ body {
   width: 100%;
   height: 1px;
   background-color: $bigTitleColor;
-}
-
-//第4cut
-.fourth-cut {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.fourth-cut-container {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 5%;
-  @include mobile {
-    margin-top: 1%;
-  }
-}
-.fourth-cut-title {
-  font-size: 1.4vw;
-  color: $bigTitleColor;
-  font-family: $serif;
-  font-weight: 500;
-  @include mobile {
-    font-size: 5.5vw;
-  }
-}
-.fourth-cut-map {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 3%;
-  @include mobile {
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 6%;
-  }
-}
-.fourth-cut-map-img {
-  width: 47%;
-  @include mobile {
-    width: 100%;
-  }
-  > iframe {
-    width: 100%;
-  }
-}
-.fourth-cut-form {
-  width: 47%;
-  @include mobile {
-    width: 100%;
-    margin-top: 5%;
-  }
-}
-.form-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 3%;
-  @include mobile {
-    margin-top: 3%;
-    margin-bottom: 0%;
-    align-items: flex-end;
-  }
-}
-.form-line {
-  width: 100%;
-  height: 1px;
-  background-color: $semitransColor;
-  @include mobile {
-    width: 77%;
-  }
-}
-input[type="text"],
-textarea {
-  background-color: transparent;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-  transition: background-color 0s 600000s, color 0s 600000s;
-}
-.form-item-content {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 3%;
-
-  > label {
-    color: #333333;
-    font-size: 1vw;
-    width: 10%;
-    gap: 50%;
-    display: flex;
-    font-weight: 500;
-    font-family: $serif;
-  }
-  > input {
-    font-size: 1vw;
-    border: none;
-    background-color: transparent;
-    margin-left: 3%;
-    width: 80%;
-  }
-  > textarea {
-    font-size: 1vw;
-    border: none;
-    background-color: transparent;
-    resize: none;
-    margin-top: 1%;
-    width: 100%;
-    height: 3vw;
-  }
-  @include mobile {
-    margin-bottom: 5%;
-    > label {
-      font-size: 4.2vw;
-      width: 22%;
-      line-height: 1;
-    }
-    > input {
-      font-size: 4.2vw;
-    }
-    > textarea {
-      font-size: 4.2vw;
-      height: 15vw;
-      margin-left: 3%;
-      margin-top: 0;
-      width: 80%;
-    }
-  }
-}
-.form-textarea {
-  flex-direction: column;
-  align-items: flex-start;
-  @include mobile {
-    flex-direction: row;
-  }
-}
-.form-button {
-  width: 100%;
-  text-align: center;
-  margin-top: 6%;
-  > button {
-    border: none;
-    background-color: $semitransColor;
-    color: white;
-    padding: 0.4vw 6vw;
-    border-radius: 5px;
-    font-size: 0.8vw;
-    cursor: pointer;
-  }
-  @include mobile {
-    > button {
-      padding: 1vw 12vw;
-      font-size: 3.8vw;
-    }
-  }
 }
