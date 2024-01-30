@@ -374,6 +374,12 @@
     <script>
       $(window).on("load", function () {
         gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".first-cut-img-container", {
+          scale: 1.2,
+          duration: 2,
+        });
+
         let mySwiper;
 
         if (window.innerWidth <= 500) {
@@ -383,6 +389,10 @@
           $(".cut-2-main-phone").remove();
           //輪播設定
           mySwiper = new Swiper(".cut-2-carousel-swiper", {
+            autoplay: {
+              delay: 6000,
+            },
+            speed: 600,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -440,8 +450,8 @@
                 const currentAttr = currentSlide.getAttribute("data-name");
                 changeContent(currentAttr, "init");
               },
-              transitionEnd: function (swiper) {
-                //滑動結束
+              slideChangeTransitionStart: function (swiper) {
+                swiper.isLocked = false;
                 const active = this.activeIndex;
                 const currentSlide = this.slides[active];
                 const currentAttr = currentSlide.getAttribute("data-name");
@@ -487,6 +497,12 @@
                     },
                     "<"
                   );
+              },
+              slideChangeTransitionEnd: function (swiper) {
+                swiper.isLocked = true;
+              },
+              transitionEnd: function (swiper) {
+                //滑動結束
               },
             },
           });
@@ -600,7 +616,6 @@
         }
 
         let cut2start = "25% bottom";
-        console.log(window.innerWidth);
         if (window.innerWidth <= 500) cut2start = "10% bottom";
         let titleTl = gsap.timeline({
           scrollTrigger: {

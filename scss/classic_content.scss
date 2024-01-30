@@ -251,3 +251,38 @@ body {
   height: 1px;
   background-color: $bigTitleColor;
 }
+//上一頁
+.previous {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $semitransColor;
+  padding: 0.75vw 2vw;
+  border-radius: 30px;
+  gap: 0.5vw;
+  width: 11vw;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+  > p {
+    font-size: 1vw;
+    font-family: $micro;
+    letter-spacing: 3px;
+    color: white;
+  }
+  > img {
+    width: 1vw;
+  }
+  @include mobile {
+    width: 38vw;
+    padding: 2vw 6vw;
+    margin-bottom: 10%;
+    > p {
+      font-size: 4vw;
+    }
+    > img {
+      width: 4vw;
+    }
+  }
+}

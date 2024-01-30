@@ -8,6 +8,15 @@ body {
 .classic-main {
   overflow: hidden;
 }
+
+.first-cut {
+  clip-path: ellipse(82% 56% at 50% 44%);
+  overflow: hidden;
+  @include mobile {
+    clip-path: ellipse(140% 55% at 50% 45%);
+  }
+}
+
 //第二cut
 .second-cut {
   margin-top: 2%;
@@ -187,6 +196,7 @@ body {
 .item-img {
   position: relative;
   width: 14vw;
+  z-index: 15;
   @include mobile {
     width: 36vw;
   }

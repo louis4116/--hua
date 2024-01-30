@@ -1,0 +1,228 @@
+@import "_config";
+body {
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+//第1cut
+.first-cut {
+  clip-path: ellipse(82% 56% at 50% 44%);
+  overflow: hidden;
+  @include mobile {
+    clip-path: ellipse(140% 55% at 50% 45%);
+  }
+}
+
+//第2cut
+.second-cut {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include mobile {
+    margin-bottom: 15%;
+  }
+}
+.title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
+  color: $bigTitleColor;
+  margin-top: 4vw;
+  @include mobile {
+    margin-top: 5%;
+  }
+}
+
+.base {
+  font-family: $cor;
+  font-size: 9vw;
+  opacity: 0.1;
+  font-weight: 400;
+  @include mobile {
+    font-size: 14vw;
+  }
+}
+.content {
+  position: absolute;
+  text-align: center;
+  > h3 {
+    font-weight: 600;
+    font-size: 2.25vw;
+    font-family: $cor;
+  }
+  > h4 {
+    font-size: 1.25vw;
+    margin-top: 0.5vw;
+    font-family: $serif;
+  }
+  @include mobile {
+    > h3 {
+      font-size: 6vw;
+    }
+    > h4 {
+      font-size: $contentSize;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+}
+
+.second-cut-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include mobile {
+    margin-top: 1%;
+  }
+}
+.second-cut-title {
+  font-size: 1.4vw;
+  color: $bigTitleColor;
+  font-family: $serif;
+  font-weight: 500;
+  @include mobile {
+    font-size: 5.5vw;
+  }
+}
+.second-cut-map {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 3%;
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 6%;
+  }
+}
+.second-cut-map-img {
+  width: 47%;
+  @include mobile {
+    width: 100%;
+    height: 60vw;
+  }
+  > iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+.second-cut-form {
+  width: 47%;
+  @include mobile {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+.form-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3%;
+  @include mobile {
+    margin-top: 3%;
+    margin-bottom: 0%;
+    align-items: flex-end;
+  }
+}
+.form-line {
+  width: 100%;
+  height: 1px;
+  background-color: $semitransColor;
+  @include mobile {
+    width: 77%;
+  }
+}
+input[type="text"],
+textarea {
+  background-color: transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
+}
+.form-item-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3%;
+
+  > label {
+    color: #333333;
+    font-size: 1vw;
+    width: 10%;
+    gap: 50%;
+    display: flex;
+    font-weight: 500;
+    font-family: $serif;
+  }
+  > input {
+    font-size: 1vw;
+    border: none;
+    background-color: transparent;
+    margin-left: 3%;
+    width: 80%;
+  }
+  > textarea {
+    font-size: 1vw;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    margin-top: 1%;
+    width: 100%;
+    height: 3vw;
+  }
+  @include mobile {
+    margin-bottom: 5%;
+    > label {
+      font-size: 4.2vw;
+      width: 22%;
+      line-height: 1;
+    }
+    > input {
+      font-size: 4.2vw;
+    }
+    > textarea {
+      font-size: 4.2vw;
+      height: 15vw;
+      margin-left: 3%;
+      margin-top: 0;
+      width: 80%;
+    }
+  }
+}
+.form-textarea {
+  flex-direction: column;
+  align-items: flex-start;
+  @include mobile {
+    flex-direction: row;
+  }
+}
+.form-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 6%;
+  > button {
+    border: none;
+    background-color: $semitransColor;
+    color: white;
+    padding: 0.4vw 6vw;
+    border-radius: 5px;
+    font-size: 0.8vw;
+    cursor: pointer;
+  }
+  @include mobile {
+    > button {
+      padding: 1vw 12vw;
+      font-size: 3.8vw;
+    }
+  }
+}

@@ -77,7 +77,7 @@ $(window).on("load", function () {
       trigger: ".home-cut-2-fixed-container",
       toggleActions: "play none none reverse",
       start: "top top",
-      end: "bottom+=500% bottom",
+      end: "bottom+=650% bottom",
       pin: true,
       scrub: 0.2,
     },
@@ -88,7 +88,7 @@ $(window).on("load", function () {
     scrollTrigger: {
       trigger: ".home-cut-3",
       toggleActions: "play none none reverse",
-      start: "-50% bottom",
+      start: "top bottom",
       end: "bottom bottom",
       scrub: 0.2,
     },
@@ -129,16 +129,16 @@ $(window).on("load", function () {
       .to(".home-cut-2-fixed-first-squre-wrapper", {
         onUpdate: function () {
           let progress = this.progress();
-          let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3)); //四捨五入至第三位
+          let scaleprogress = Number(Math.abs((0.9 - 8) * progress).toFixed(3)); //四捨五入至第三位
           let scaleRes = 0.9 + scaleprogress;
           let img;
-          if (scaleRes >= 4.5) {
+          if (scaleRes >= 5) {
             img = img5;
-          } else if (scaleRes >= 3.5 && scaleRes < 4.5) {
+          } else if (scaleRes >= 3.25 && scaleRes < 4.25) {
             img = img2;
-          } else if (scaleRes >= 2.5 && scaleRes < 3.5) {
+          } else if (scaleRes >= 2.25 && scaleRes < 3.25) {
             img = img3;
-          } else if (scaleRes >= 1.5 && scaleRes < 2.5) {
+          } else if (scaleRes >= 1.25 && scaleRes < 2.25) {
             img = img4;
           } else {
             img = img1;
@@ -149,7 +149,7 @@ $(window).on("load", function () {
       });
 
     cut2PicBigger.to(".yo", { y: "20%", scale: "1.5", ease: "linear" });
-    cut2MaskSmall.add(cut2PicBigger, "<-0.5");
+    cut2MaskSmall.add(cut2PicBigger, "<+0.5");
   } else {
     //第一次繪圖
     backImage.onload = function () {
@@ -182,32 +182,36 @@ $(window).on("load", function () {
         scale: "0.9",
         rotation: 50,
       })
-      .to(".fixed-squre", {
-        onUpdate: function () {
-          let progress = this.progress();
-          let scaleprogress = Number(Math.abs((0.9 - 6) * progress).toFixed(3)); //四捨五入至第三位
-          let scaleRes = 0.9 + scaleprogress;
-          let img;
-          if (scaleRes >= 5) {
-            img = img5;
-          } else if (scaleRes >= 4.25 && scaleRes < 5) {
-            img = img6;
-          } else if (scaleRes >= 3.25 && scaleRes < 4.25) {
-            img = img3;
-          } else if (scaleRes >= 2.5 && scaleRes < 3.25) {
-            img = img4;
-          } else if (scaleRes >= 1.5 && scaleRes < 2.5) {
-            img = img2;
-          } else {
-            img = img1;
-          }
-          drawMask(scaleRes, 5, img);
+      .to(
+        ".fixed-squre",
+        {
+          onUpdate: function () {
+            let progress = this.progress();
+            let scaleprogress = Number(
+              Math.abs((0.9 - 7) * progress).toFixed(3)
+            ); //四捨五入至第三位
+            let scaleRes = 0.9 + scaleprogress;
+            let img;
+            if (scaleRes >= 4.25) {
+              img = img5;
+            } else if (scaleRes >= 3.25 && scaleRes < 4.25) {
+              img = img6;
+            } else if (scaleRes >= 2.25 && scaleRes < 3.25) {
+              img = img4;
+            } else if (scaleRes >= 1.25 && scaleRes < 2.25) {
+              img = img2;
+            } else {
+              img = img1;
+            }
+            drawMask(scaleRes, 5, img);
+          },
+          scale: "7",
         },
-        scale: "4",
-      });
+        "<+0.5"
+      );
 
     cut2PicBigger.to(".yo", { y: "20%", scale: "1.5", ease: "linear" });
-    cut2MaskSmall.add(cut2PicBigger, "<-0.5");
+    cut2MaskSmall.add(cut2PicBigger, "<+0.5");
   }
 
   function drawMask(scaleRes, angle, img) {

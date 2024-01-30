@@ -1,0 +1,233 @@
+@import "_config";
+body {
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+//第一cut
+.first-cut {
+  clip-path: ellipse(82% 56% at 50% 44%);
+  overflow: hidden;
+  @include mobile {
+    clip-path: ellipse(140% 55% at 50% 45%);
+  }
+}
+
+//第二cut
+.second-cut {
+  margin-top: 2%;
+}
+.title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
+  color: $bigTitleColor;
+  margin-top: 4vw;
+  @include mobile {
+    margin-top: 5%;
+  }
+}
+
+.base {
+  font-family: $cor;
+  font-size: 9vw;
+  opacity: 0.1;
+  font-weight: 400;
+  @include mobile {
+    font-size: 14vw;
+  }
+}
+.content {
+  position: absolute;
+  text-align: center;
+  > h3 {
+    font-weight: 600;
+    font-size: 2.25vw;
+    font-family: $cor;
+  }
+  > h4 {
+    font-size: 1.25vw;
+    margin-top: 0.5vw;
+    font-family: $serif;
+  }
+  @include mobile {
+    > h3 {
+      font-size: 6vw;
+    }
+    > h4 {
+      font-size: $contentSize;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+}
+.home-cut-2 {
+  position: relative;
+  width: 100%;
+  padding-top: 2.5%;
+  @include mobile {
+    padding-top: 0%;
+  }
+}
+
+.cut-2-news-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+  gap: 5vw 0;
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 0;
+    margin-bottom: 20%;
+  }
+}
+.cut-2-margin {
+  margin: 0 auto;
+}
+
+.cut-2-news-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 27vw;
+  @include mobile {
+    width: 95%;
+    margin: 3% auto;
+  }
+}
+.cut-2-news-card-img {
+  position: relative;
+  > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+}
+.text-rotate {
+  position: absolute;
+  margin-top: -14%;
+  left: -10%;
+  width: 6.5vw;
+
+  animation: textRotate 10s linear infinite;
+  filter: brightness(0.5);
+  //   @include laptop {
+  //     margin-top: -25%;
+  //   }
+  @include mobile {
+    display: none;
+  }
+}
+@keyframes textRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.cut-2-news-card-contents {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.cut-2-news-card-date {
+  text-align: center;
+  font-size: 0.8vw;
+  font-family: $jost;
+  font-weight: 400;
+  color: $semitransColor;
+  margin-top: 5%;
+  @include mobile {
+    font-size: 3.25vw;
+  }
+}
+.cut-2-news-card-title {
+  text-align: center;
+  font-size: 1.25vw;
+  font-family: $serif;
+  font-weight: 500;
+  color: $bigTitleColor;
+  margin-top: 1%;
+  @include mobile {
+    font-size: 5vw;
+  }
+}
+.cut-2-news-card-para {
+  color: $contentColor;
+  font-family: $micro;
+  font-weight: 400;
+  font-size: 0.9vw;
+  margin-top: 3%;
+  line-height: 2;
+  letter-spacing: 2px;
+  @include mobile {
+    font-size: $contentSize;
+  }
+}
+.cut-2-news-card-more {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 1s;
+}
+.cut-2-news-card-more-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0.4vw;
+  cursor: pointer;
+  margin-top: 3%;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $semitransColor;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: 0.5s ease;
+  }
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  > p {
+    font-weight: 500;
+    font-size: 0.8vw;
+    font-family: $jost;
+    color: $semitransColor;
+  }
+  > img {
+    width: 0.8vw;
+  }
+  > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  @include mobile {
+    &::after {
+      transform: scaleX(1);
+    }
+    gap: 1.4vw;
+    > p {
+      font-size: 3.5vw;
+    }
+    > img {
+      width: 3.5vw;
+    }
+  }
+}

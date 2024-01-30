@@ -7,6 +7,11 @@
     <title>經典作品</title>
   </head>
   <body>
+    <!-- <div class="loading-page">
+      <div class="box">
+        <div class="loading-progress"></div>
+      </div>
+    </div> -->
     <nav id="nav"></nav>
     <main class="classic-main">
       <section class="first-cut">
@@ -795,6 +800,10 @@
     <script>
       window.onload = () => {
         gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".first-cut-img-container", {
+          scale: 1.2,
+          duration: 2,
+        });
         let i = 0;
         $(".cut-2-item").each(function () {
           $(this).attr("id", `cut-item-${i}`);

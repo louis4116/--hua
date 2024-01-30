@@ -1,0 +1,173 @@
+@import "_config";
+
+body {
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+.big-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.big-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  padding-top: 7%;
+  > h3 {
+    text-align: center;
+    font-size: 0.8vw;
+    font-family: $jost;
+    font-weight: 400;
+    color: $semitransColor;
+    margin-top: 5%;
+  }
+  > h1 {
+    text-align: center;
+    font-size: 1.75vw;
+    font-family: $serif;
+    font-weight: 500;
+    color: $bigTitleColor;
+    margin-top: 1%;
+    letter-spacing: 1px;
+  }
+  > .line {
+    width: 100%;
+    height: 1px;
+    background-color: $contentColor;
+    margin-top: 2%;
+  }
+  @include mobile {
+    padding-top: 17%;
+    > h3 {
+      font-size: 5vw;
+      letter-spacing: 3px;
+    }
+    > h1 {
+      font-size: 4.75vw;
+      display: flex;
+      flex-direction: column;
+    }
+    > .line {
+      margin-top: 4%;
+    }
+  }
+}
+
+.news-para {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4%;
+  > div {
+    width: 90%;
+  }
+  @include mobile {
+    margin-top: 6%;
+    > div {
+      width: 90%;
+    }
+  }
+}
+.news-para-img {
+  img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+}
+.news-para-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 3%;
+  p {
+    width: 100%;
+    font-size: 0.8vw;
+    color: #333333;
+    text-align: start;
+    line-height: 3;
+    letter-spacing: 2px;
+  }
+  .para-middle {
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  @include mobile {
+    margin-top: 7%;
+    p {
+      font-size: 3.75vw;
+      line-height: 2;
+    }
+    .para-middle {
+      margin-top: 7%;
+      margin-bottom: 7%;
+    }
+  }
+}
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 3%;
+  @include mobile {
+    justify-content: space-between;
+    margin-top: 7%;
+    margin-bottom: 15%;
+  }
+}
+.more-first {
+  display: flex;
+  align-items: center;
+  > h5 {
+    font-size: 0.8vw;
+    font-family: $micro;
+    color: $semitransColor;
+    letter-spacing: 3px;
+  }
+  @include mobile {
+    > h5 {
+      font-size: 3.75vw;
+    }
+  }
+}
+.more-icon {
+  margin-left: 2rem;
+}
+
+.previous {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $semitransColor;
+  padding: 0.75vw 2vw;
+  border-radius: 30px;
+  gap: 0.5vw;
+  margin-left: 2%;
+  cursor: pointer;
+  > p {
+    font-size: 1vw;
+    font-family: $micro;
+    letter-spacing: 3px;
+    color: white;
+  }
+  > img {
+    width: 1vw;
+  }
+  @include mobile {
+    padding: 2vw 6vw;
+    > p {
+      font-size: 4vw;
+    }
+    > img {
+      width: 4vw;
+    }
+  }
+}

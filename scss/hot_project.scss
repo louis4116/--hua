@@ -6,6 +6,13 @@ body {
   background-size: 100%;
 }
 //第一cut
+.first-cut {
+  clip-path: ellipse(82% 56% at 50% 44%);
+  overflow: hidden;
+  @include mobile {
+    clip-path: ellipse(140% 55% at 50% 45%);
+  }
+}
 
 //第二cut
 .second-cut {
@@ -319,6 +326,7 @@ body {
 }
 .swiper-slide-active {
   opacity: 1 !important;
+  transition: all 2s ease-in-out;
 }
 .swiper-slide-next {
   opacity: 1 !important;

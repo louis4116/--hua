@@ -31,7 +31,7 @@ img {
 .pc {
   display: block;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .pc {
     display: none;
   }
@@ -40,7 +40,7 @@ img {
 .ph {
   display: none;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .ph {
     display: block;
   }
@@ -76,7 +76,7 @@ img {
     margin-top: 5%;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   #footer {
     flex-direction: column;
     font-size: 3vw;
@@ -108,7 +108,7 @@ img {
   flex-wrap: wrap;
   padding: 1vw 3vw;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   #nav {
     background-image: none;
     padding: 4vw;
@@ -136,7 +136,7 @@ img {
   display: none;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .nav-hamb-icon {
     width: 5vw;
     height: 5vw;
@@ -158,7 +158,7 @@ img {
   display: flex;
   align-items: center;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .nav-list {
     width: 100%;
   }
@@ -210,7 +210,7 @@ img {
   bottom: 15%;
   right: 0;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .nav-list-ul li:nth-child(1)::after,
   .nav-list-ul li:nth-child(2)::after,
   .nav-list-ul li:nth-child(3)::after,
@@ -219,7 +219,7 @@ img {
     width: 0px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .nav-list-ul {
     display: none;
     flex-direction: column;
@@ -240,10 +240,46 @@ img {
   }
 }
 
+.loading-page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/home/首頁-bg.jpg");
+  background-repeat: repeat;
+  background-size: 100%;
+  transition: opacity 0.6s;
+  pointer-events: none;
+}
+
+.box {
+  background-color: #4d4d4d;
+  width: 5vw;
+  height: 5vw;
+}
+
 body {
   background-image: url("../img/home/首頁-bg.jpg");
   background-repeat: repeat;
   background-size: 100%;
+}
+
+.first-cut {
+  -webkit-clip-path: ellipse(82% 56% at 50% 44%);
+          clip-path: ellipse(82% 56% at 50% 44%);
+  overflow: hidden;
+}
+@media all and (max-width: 500px) {
+  .first-cut {
+    -webkit-clip-path: ellipse(140% 55% at 50% 45%);
+            clip-path: ellipse(140% 55% at 50% 45%);
+  }
 }
 
 .second-cut {
@@ -260,7 +296,7 @@ body {
   color: #65534b;
   margin-top: 4vw;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .title {
     margin-top: 5%;
   }
@@ -272,7 +308,7 @@ body {
   opacity: 0.1;
   font-weight: 400;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .base {
     font-size: 14vw;
   }
@@ -292,7 +328,7 @@ body {
   margin-top: 0.5vw;
   font-family: "Noto Serif TC", serif;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .content > h3 {
     font-size: 6vw;
   }
@@ -306,7 +342,7 @@ body {
 .cut-2-main {
   display: flex;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .cut-2-main {
     justify-content: center;
     align-items: center;
@@ -325,7 +361,7 @@ body {
   padding-left: 5%;
   position: relative;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .cut-2-main-left {
     display: none;
   }
@@ -378,7 +414,7 @@ body {
     font-size: 1.1vw;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .cut-2-main-left-small-title {
     margin-bottom: 2vw;
   }
@@ -409,7 +445,7 @@ body {
     width: 90%;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .main-left-p {
     width: 100%;
     font-size: 3.75vw;
@@ -423,7 +459,7 @@ body {
   justify-content: center;
   margin-bottom: 2vw;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .cut-2-main-left-button {
     margin-bottom: 5vw;
     width: 100%;
@@ -442,7 +478,7 @@ body {
     height: 1.4vw;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .cut-2-left-line {
     height: 5vw;
   }
@@ -472,7 +508,7 @@ body {
     font-size: 1vw;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .connect-button {
     margin-right: 0;
     padding: 1% 2%;
@@ -486,7 +522,7 @@ body {
 .connect > img {
   width: 0.8vw;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .connect > img {
     width: 3vw;
   }
@@ -500,7 +536,7 @@ body {
     width: 0.45vw;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .fb > img {
     width: 1.8vw;
   }
@@ -514,7 +550,7 @@ body {
     width: 1vw;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .mail > img {
     width: 3vw;
   }
@@ -537,7 +573,7 @@ body {
     font-size: 1vw;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .more > p {
     font-size: 3.75vw;
     margin-right: 2vw;
@@ -548,7 +584,7 @@ body {
   width: 0.4vw;
   margin-right: 0.5vw;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .more-spot {
     width: 2.5vw;
     margin-right: 2vw;
@@ -565,7 +601,7 @@ body {
   width: 2vw;
   padding: 1vw;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .more-arrow {
     width: 4vw;
     padding: 3vw;
@@ -586,7 +622,7 @@ body {
   position: relative;
   width: 55%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .cut-2-carousel-swiper {
     display: none;
   }
@@ -602,7 +638,7 @@ body {
 .swiper-slide > .swiper-img > .href-link {
   width: 100%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .swiper-slide {
     display: flex;
     flex-direction: column;
@@ -618,6 +654,7 @@ body {
 
 .swiper-slide-active {
   opacity: 1 !important;
+  transition: all 2s ease-in-out;
 }
 
 .swiper-slide-next {
@@ -647,7 +684,7 @@ body {
   filter: brightness(0.5);
   z-index: 5;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .text-rotate {
     margin-top: -20%;
     left: -13%;
@@ -658,7 +695,7 @@ body {
 .phone-item-img-big {
   display: none;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .phone-item-img-big {
     display: block;
     position: relative;
@@ -797,7 +834,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
   .cut-2-phone-item-content {
     margin-top: 13%;
   }

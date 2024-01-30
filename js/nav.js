@@ -5,8 +5,8 @@ const navItem = [
   },
   { name: "熱銷建案", url: "About_project.html" },
   { name: "經典作品", url: "About_classic.html" },
-  { name: "最新消息", url: "javascript:;" },
-  { name: "聯絡我們", url: "javascript:;" },
+  { name: "最新消息", url: "About_news.html" },
+  { name: "聯絡我們", url: "About_contact.html" },
 ];
 $(document).ready(function () {
   const nav = $("#nav");

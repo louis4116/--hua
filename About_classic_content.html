@@ -157,6 +157,10 @@
           </div>
         </div>
       </section>
+      <div class="previous">
+        <p>回上一頁</p>
+        <img src="./img/最新消息/箭頭.svg" alt="更多-箭頭" />
+      </div>
     </main>
     <footer id="footer">
       <span>Copyright © 2023樺輝建設股份有限公司版權所有　</span>
@@ -171,6 +175,9 @@
     <script src="./js/project-content.js"></script>
     <script>
       window.onload = () => {
+        $(".previous").on("click", function () {
+          window.location.href = "About_classic.html";
+        });
         const href = new URL(location.href);
         const id = href.searchParams.get("id");
         const findedId = project.filter((item) => item.id === id);

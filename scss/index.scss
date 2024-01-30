@@ -232,7 +232,7 @@ body {
 }
 .drops-5 {
   right: 24%;
-  top: 12%;
+  top: 10%;
   width: 7vw;
   @include mobile {
     right: 12vw;
@@ -908,9 +908,7 @@ canvas {
     margin-top: 6%;
   }
 }
-.cut-5-news-card-img {
-  // cursor: url("../img/home/home-1-cursor.svg") 64 64, auto;
-}
+
 .cut-5-news-card-contents {
   display: flex;
   justify-content: center;
