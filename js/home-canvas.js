@@ -42,8 +42,8 @@ $(window).on("load", function () {
   let img6 = new Image();
 
   if (windowWidth > 500) {
-    backImage.src = "./img/home/旋轉背景圖.jpg";
-    img1.src = "./img/home/旋轉背景圖.webp";
+    backImage.src = "./img/home/big0-1.jpg";
+    img1.src = "./img/home/big0-2.webp";
     img2.src = "./img/home/big01.webp";
     img3.src = "./img/home/big02.webp";
     img4.src = "./img/home/big03.webp";

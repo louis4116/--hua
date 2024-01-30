@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 86.8 54.56">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="86.8" height="54.56"/>
+    </clipPath>
+  </defs>
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <g class="cls-3">
+      <g>
+        <polygon class="cls-1" points="33.58 8.4 33.58 18.72 22.75 29.18 12.11 29.16 33.58 8.4"/>
+        <polygon class="cls-1" points="12.11 29.16 33.35 50.4 33.35 39.78 22.73 29.16 12.11 29.16"/>
+        <polygon class="cls-1" points="33.35 39.78 43.89 29.18 54.36 29.24 33.35 50.4 33.35 39.78"/>
+        <polygon class="cls-1" points="43.89 29.18 43.89 18.78 54.36 29.24 43.89 29.18"/>
+        <path class="cls-1" d="M43.89,18.78s-10.85,10.35-10.35,10.35,10.34.05,10.34.05v-10.39Z"/>
+        <polygon class="cls-1" points="33.48 29.12 38.71 34.35 43.89 29.18 33.48 29.12"/>
+        <polygon class="cls-1" points="54.71 8.4 54.71 18.78 65.2 29.27 75.7 29.27 54.71 8.4"/>
+        <polygon class="cls-1" points="65.2 29.27 54.84 39.81 54.71 50.38 75.7 29.27 65.2 29.27"/>
+        <polygon class="cls-1" points="54.84 39.81 49.35 34.4 44 39.75 54.71 50.38 54.84 39.81"/>
+      </g>
+    </g>
+  </g>
+</svg>

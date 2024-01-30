@@ -7,6 +7,15 @@
     <title>熱銷建案</title>
   </head>
   <body>
+    <div class="loading-page">
+      <div class="box">
+        <div class="box-img"><img src="./img/logo01.svg" alt="logo01" /></div>
+        <div class="box-para">
+          <div class="loading-progress">0</div>
+          <span>%</span>
+        </div>
+      </div>
+    </div>
     <nav id="nav"></nav>
     <main class="project-content-main">
       <section class="first-cut">
@@ -233,7 +242,22 @@
     <script src="./js/nav.js"></script>
     <script src="./js/project-content.js"></script>
     <script>
+      function loading(tag) {
+        let number = $(tag).html();
+        let parse = parseInt(number);
+
+        let test;
+        let timeRun = setInterval(() => {
+          test = parse++;
+          $(tag).text(test);
+          if (test == 99) clearInterval(timeRun);
+        }, 50);
+      }
+      loading(".loading-progress");
       window.onload = () => {
+        gsap.to(".loading-page", {
+          opacity: 0,
+        });
         $(".previous").on("click", function () {
           window.location.href = "About_project.html";
         });

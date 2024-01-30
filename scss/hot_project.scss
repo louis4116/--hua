@@ -67,6 +67,7 @@ body {
 }
 .cut-2-main {
   display: flex;
+  overflow: hidden;
   @include mobile {
     justify-content: center;
     align-items: center;
