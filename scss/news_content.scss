@@ -91,7 +91,7 @@ body {
   margin-top: 3%;
   p {
     width: 100%;
-    font-size: 0.8vw;
+    font-size: 1vw;
     color: #333333;
     text-align: start;
     line-height: 3;
@@ -104,7 +104,7 @@ body {
   @include mobile {
     margin-top: 7%;
     p {
-      font-size: 3.75vw;
+      font-size: $contentSize;
       line-height: 2;
     }
     .para-middle {
@@ -135,7 +135,7 @@ body {
   }
   @include mobile {
     > h5 {
-      font-size: 3.75vw;
+      font-size: $contentSize;
     }
   }
 }
