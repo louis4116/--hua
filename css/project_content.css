@@ -602,6 +602,7 @@ body {
   font-size: 0.9vw;
   margin-left: 8%;
   font-weight: 400;
+  letter-spacing: 2px;
 }
 @media all and (max-width: 500px) {
   .third-cut-bottom-content > :nth-child(1) {

@@ -155,7 +155,6 @@ body {
   width: 63%;
   line-height: 2;
   @include laptop {
-    font-size: 1.1vw;
     width: 90%;
   }
   @include mobile {

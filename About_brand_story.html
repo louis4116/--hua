@@ -3,7 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/brand_story.css" />
     <title>品牌故事</title>
   </head>
-  <body></body>
+  <body>
+    <!-- <div class="loading-page">
+      <div class="box">
+        <div class="box-img"><img src="./img/logo01.svg" alt="logo01" /></div>
+        <div class="box-para">
+          <div class="loading-progress">0</div>
+          <span>%</span>
+        </div>
+      </div>
+    </div> -->
+    <nav id="nav"></nav>
+    <main class="brand_story-main">
+      <section class="first-cut">
+        <div class="first-cut-img-container">
+          <picture>
+            <source
+              srcset="./img/brand_story/brand_story-bg-phone.webp"
+              media="(max-width:500px)"
+            />
+            <img
+              src="./img/brand_story/brand_story-bg.webp"
+              alt="首頁背景-pc"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="second-cut">
+        <div class="cut-2-title title">
+          <h1 class="cut-2-base base">BRAND</h1>
+          <div class="cut-2-title-content content">
+            <h3>BRAND</h3>
+            <h4>品牌故事</h4>
+          </div>
+        </div>
+        <div class="brand-nav">
+          <h4>品牌故事</h4>
+          <div class="brand-nav-line"></div>
+          <h4>品牌理念</h4>
+          <div class="brand-nav-line"></div>
+          <h4>精鑄工藝</h4>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <span>Copyright © 2023樺輝建設股份有限公司版權所有　</span>
+      <span>地址：台北市內湖區民權東路六段123巷28號10樓　</span>
+      <span>TEL： 02-27928078</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script>
+      // function loading(tag) {
+      //   let number = $(tag).html();
+      //   let parse = parseInt(number);
+
+      //   let test;
+      //   let timeRun = setInterval(() => {
+      //     test = parse++;
+      //     $(tag).text(test);
+      //     if (test == 99) clearInterval(timeRun);
+      //   }, 50);
+      // }
+      // loading(".loading-progress");
+      window.onload = () => {
+        // gsap.to(".loading-page", {
+        //   opacity: 0,
+        // });
+      };
+    </script>
+  </body>
 </html>

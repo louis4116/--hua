@@ -893,13 +893,10 @@
         //標題文字動畫
         let cut2start = "25% bottom";
         let cut2trigger = ".cut-2-title";
-        console.log(window.innerWidth);
         if (window.innerWidth <= 500) {
           cut2start = "5% bottom";
           cut2trigger = ".second-cut";
-          console.log("yes");
         }
-        console.log(cut2start);
         let titleTl = gsap.timeline({
           scrollTrigger: {
             trigger: cut2trigger,
