@@ -567,7 +567,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-left: 7%;
-  width: 34%;
+  width: 40%;
   letter-spacing: 1px;
 }
 .item-para > :nth-child(2) {
@@ -576,7 +576,7 @@ body {
 .item-para > p {
   font-family: "Microsoft JhengHei";
   color: #4d4d4d;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   display: flex;
   align-items: center;
   line-height: 2;
@@ -640,7 +640,7 @@ body {
   color: #736357;
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
-  font-size: 1vw;
+  font-size: 1.25vw;
   margin-left: 7%;
 }
 @media all and (max-width: 500px) {

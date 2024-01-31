@@ -285,7 +285,7 @@ body {
       display: flex;
       align-items: center;
       flex-direction: column;
-      font-size: $contentSize;
+      font-size: $contentSizePH;
       line-height: 2;
       margin-bottom: 0;
     }
@@ -507,7 +507,7 @@ canvas {
       font-size: 6vw;
     }
     > h4 {
-      font-size: $contentSize;
+      font-size: $contentSizePH;
       font-weight: 600;
       margin-top: 0;
     }
@@ -682,7 +682,7 @@ canvas {
   @include mobile {
     margin-left: 2vw;
     > p {
-      font-size: $contentSize;
+      font-size: $contentSizePH;
     }
   }
 }
@@ -869,15 +869,6 @@ canvas {
   }
 }
 
-.top-button {
-  // position: absolute;
-  // width: 50px;
-  // height: 50px;
-  // background-color: red;
-  // border-radius: 50%;
-  // color: white;
-  // top: 10%;
-}
 //第五cut
 .home-cut-5 {
   position: relative;
@@ -945,7 +936,7 @@ canvas {
   line-height: 2;
   letter-spacing: 2px;
   @include mobile {
-    font-size: $contentSize;
+    font-size: $contentSizePH;
   }
 }
 .cut-5-news-card-more {

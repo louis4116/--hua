@@ -323,7 +323,7 @@ body {
 }
 .big-title-container > h1 {
   text-align: center;
-  font-size: 1.75vw;
+  font-size: 1.25vw;
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
   color: #65534b;
@@ -390,10 +390,10 @@ body {
 }
 .news-para-content p {
   width: 100%;
-  font-size: 1vw;
+  font-size: 0.9vw;
   color: #333333;
   text-align: start;
-  line-height: 3;
+  line-height: 2;
   letter-spacing: 2px;
 }
 .news-para-content .para-middle {

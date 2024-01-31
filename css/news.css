@@ -313,6 +313,7 @@ body {
 
 .second-cut {
   margin-top: 2%;
+  overflow: hidden;
 }
 
 .title {

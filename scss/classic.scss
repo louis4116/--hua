@@ -68,7 +68,7 @@ body {
       font-size: 6vw;
     }
     > h4 {
-      font-size: $contentSize;
+      font-size: $contentSizePH;
       font-weight: 600;
       margin-top: 0;
     }
@@ -225,7 +225,7 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-left: 7%;
-  width: 34%;
+  width: 40%;
   letter-spacing: 1px;
   > :nth-child(2) {
     margin-top: 4%;
@@ -233,7 +233,7 @@ body {
   > p {
     font-family: $micro;
     color: $contentColor;
-    font-size: 0.8vw;
+    font-size: $contentSize;
     display: flex;
     align-items: center;
     line-height: 2;
@@ -246,7 +246,7 @@ body {
       margin-top: 0%;
     }
     > p {
-      font-size: $contentSize;
+      font-size: $contentSizePH;
       width: 85%;
     }
     > :nth-child(3) {
@@ -288,7 +288,7 @@ body {
   color: $semitransColor;
   font-family: $serif;
   font-weight: 500;
-  font-size: 1vw;
+  font-size: $mainTitle;
   margin-left: 7%;
   @include mobile {
     font-size: 4.5vw;
@@ -303,7 +303,7 @@ body {
   margin-left: 3%;
   margin-right: 3%;
   @include mobile {
-    height: $contentSize;
+    height: $contentSizePH;
     margin-left: 2.75%;
     margin-right: 2.75%;
   }

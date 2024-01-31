@@ -28,7 +28,7 @@ body {
   }
   > h1 {
     text-align: center;
-    font-size: 1.75vw;
+    font-size: $mainTitle;
     font-family: $serif;
     font-weight: 500;
     color: $bigTitleColor;
@@ -91,10 +91,10 @@ body {
   margin-top: 3%;
   p {
     width: 100%;
-    font-size: 1vw;
+    font-size: $contentSize;
     color: #333333;
     text-align: start;
-    line-height: 3;
+    line-height: 2;
     letter-spacing: 2px;
   }
   .para-middle {
@@ -104,7 +104,7 @@ body {
   @include mobile {
     margin-top: 7%;
     p {
-      font-size: $contentSize;
+      font-size: $contentSizePH;
       line-height: 2;
     }
     .para-middle {
@@ -135,7 +135,7 @@ body {
   }
   @include mobile {
     > h5 {
-      font-size: $contentSize;
+      font-size: $contentSizePH;
     }
   }
 }

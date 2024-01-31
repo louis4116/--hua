@@ -212,7 +212,7 @@ body {
 .third-cut-para {
   color: $contentColor;
   font-family: $micro;
-  font-size: 1vw;
+  font-size: $contentSize;
   letter-spacing: 2px;
   font-weight: 400;
   line-height: 2;
@@ -266,7 +266,7 @@ body {
   > :nth-child(2) {
     color: $contentColor;
     font-family: $micro;
-    font-size: 1vw;
+    font-size: $contentSize;
     margin-left: 8%;
     font-weight: 400;
   }

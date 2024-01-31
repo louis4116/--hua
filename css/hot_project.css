@@ -422,7 +422,7 @@ body {
 }
 .cut-2-main-left-small-title > h3 {
   color: #65534b;
-  font-size: 1vw;
+  font-size: 1.25vw;
   font-family: "Noto Serif TC", serif;
   font-weight: 600;
   margin-left: 0.5vw;
@@ -463,7 +463,7 @@ body {
 .main-left-p {
   color: #4d4d4d;
   font-family: "Microsoft JhengHei";
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   font-weight: 400;
   margin-bottom: 1.25vw;
   width: 63%;
@@ -526,7 +526,7 @@ body {
 .connect-button > span {
   color: #65534b;
   font-family: "Microsoft JhengHei";
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   margin-left: 0.4vw;
   font-weight: 400;
 }
@@ -593,7 +593,7 @@ body {
 }
 .more > p {
   color: #65534b;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   font-family: "Microsoft JhengHei";
   margin-right: 0.5vw;
   line-height: 1;

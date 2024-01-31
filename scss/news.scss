@@ -17,6 +17,7 @@ body {
 //第二cut
 .second-cut {
   margin-top: 2%;
+  overflow: hidden;
 }
 .title {
   position: relative;
@@ -59,7 +60,7 @@ body {
       font-size: 6vw;
     }
     > h4 {
-      font-size: $contentSize;
+      font-size: $contentSizePH;
       font-weight: 600;
       margin-top: 0;
     }
@@ -169,7 +170,7 @@ body {
   line-height: 2;
   letter-spacing: 2px;
   @include mobile {
-    font-size: $contentSize;
+    font-size: $contentSizePH;
   }
 }
 .cut-2-news-card-more {

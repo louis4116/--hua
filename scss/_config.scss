@@ -39,8 +39,12 @@ $micro: "Microsoft JhengHei"; //微軟正黑體
 $nuo: "Nuosu SIL", sans-serif; //數字字型
 $rob: "Roboto", sans-serif; //大日期字型
 
-//字型大小
-$contentSize: 3.75vw; //內文
+//字型大小 電腦版
+$mainTitle: 1.25vw; //主標
+$contentSize: 0.9vw; //內文
+
+//字型大小 手機版
+$contentSizePH: 3.75vw; //內文
 
 *,
 ::after,
