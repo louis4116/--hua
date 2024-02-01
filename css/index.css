@@ -416,7 +416,7 @@ body {
             clip-path: ellipse(140% 55% at 50% 45%);
   }
   .home-cut-1-video video {
-    height: 100vh;
+    height: 80vh;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -453,8 +453,12 @@ body {
   font-size: 0.9vw;
 }
 @media all and (max-width: 500px) {
+  .home-cut-1-para {
+    top: 73%;
+  }
   .home-cut-1-para > h1 {
     font-size: 7.5vw;
+    display: none;
   }
   .home-cut-1-para > h2 {
     font-size: 6.5vw;

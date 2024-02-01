@@ -392,12 +392,14 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-.swiper-page-top-active {
+.swiper-page-top-active,
+.swiper-pagination-bullet-active {
   font-size: 2.5vw;
   color: $bigTitleColor;
   font-family: $cor;
 }
-.swiper-page-top-inactive {
+.swiper-page-top-inactive,
+.swiper-pagination-bullet {
   font-size: 1.5vw;
   color: #948175;
   font-family: $cor;

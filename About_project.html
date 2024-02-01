@@ -144,7 +144,6 @@
                     alt="文字轉圈"
                   />
                 </div>
-
                 <div class="swiper-slide" data-name="閱世界">
                   <div class="swiper-img href-item">
                     <a href="javascript:;" class="href-link"></a>
@@ -412,9 +411,9 @@
           $(".cut-2-main-phone").remove();
           //輪播設定
           mySwiper = new Swiper(".cut-2-carousel-swiper", {
-            // autoplay: {
-            //   delay: 6000,
-            // },
+            autoplay: {
+              delay: 6000,
+            },
             speed: 600,
             navigation: {
               nextEl: ".swiper-button-next",
@@ -432,16 +431,14 @@
                   currentHalf = current;
                   if (current > 3) currentHalf = current - totalhalf;
                   if (i === currentHalf) {
-                    page += `<span class="swiper-page-top-active">0${i}</span>`;
+                    page += `<span class="swiper-page-top-active custom">0${i}</span>`;
                   } else {
-                    page += `<span class="swiper-page-top-inactive">0${i}</span>`;
+                    page += `<span class="swiper-page-top-inactive custom">0${i}</span>`;
                   }
                 }
                 return page;
               },
             },
-            slidesPerView: 1.25,
-            spaceBetween: 50,
             centeredSlides: true,
             loop: true,
             allowTouchMove: false,
@@ -523,6 +520,7 @@
               },
               slideChangeTransitionEnd: function (swiper) {
                 swiper.isLocked = true;
+                // swiper.slideToLoop(this.realIndex, 500, true);
               },
               transitionEnd: function (swiper) {
                 //滑動結束

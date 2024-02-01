@@ -587,7 +587,6 @@ body {
   align-items: baseline;
   overflow: hidden;
   margin-bottom: 1%;
-  animation: firstXmove 40s linear infinite;
 }
 
 @keyframes firstXmove {
@@ -607,8 +606,6 @@ body {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  transform: translateX(-200%);
-  animation: secondXmove 10s linear infinite;
 }
 
 @keyframes secondXmove {
