@@ -596,7 +596,7 @@ body {
 .third-cut-bottom-content > :nth-child(1) {
   color: #65534b;
   font-family: "Noto Serif TC", serif;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 400;
 }
 .third-cut-bottom-content > :nth-child(2) {
@@ -801,7 +801,7 @@ input:-webkit-autofill:focus {
   color: white;
   padding: 0.4vw 6vw;
   border-radius: 5px;
-  font-size: 0.8vw;
+  font-size: 1vw;
   cursor: pointer;
 }
 @media all and (max-width: 500px) {

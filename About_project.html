@@ -411,10 +411,10 @@
           $(".cut-2-main-phone").remove();
           //輪播設定
           mySwiper = new Swiper(".cut-2-carousel-swiper", {
-            autoplay: {
-              delay: 6000,
-            },
-            speed: 600,
+            // autoplay: {
+            //   delay: 6000,
+            // },
+            speed: 1000,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -436,6 +436,7 @@
                     page += `<span class="swiper-page-top-inactive custom">0${i}</span>`;
                   }
                 }
+
                 return page;
               },
             },
@@ -528,6 +529,9 @@
             },
           });
         }
+        $(".swiper-page-top").on("click", ".custom", function () {
+          console.log("test");
+        });
         //改變內容物
         function changeContent(current, dur) {
           if (!current) return;

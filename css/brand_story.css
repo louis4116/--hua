@@ -304,8 +304,8 @@ body {
 }
 
 .first-cut {
-  -webkit-clip-path: ellipse(82% 56% at 50% 44%);
-          clip-path: ellipse(82% 56% at 50% 44%);
+  -webkit-clip-path: ellipse(61% 81% at 50% 19%);
+          clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
 }
 @media all and (max-width: 500px) {
@@ -315,6 +315,21 @@ body {
   }
 }
 
+.first-cut-img-container img {
+  animation: zoom 15s linear infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .second-cut {
   margin-top: 2%;
   display: flex;
@@ -577,7 +592,7 @@ body {
   width: 100%;
   margin-top: 7%;
 }
-.fifth-cut-para-rel-bottom img {
+.fifth-cut-para-rel-bottom .pic {
   margin-left: 1%;
   margin-right: 1%;
 }
@@ -587,6 +602,7 @@ body {
   align-items: baseline;
   overflow: hidden;
   margin-bottom: 1%;
+  width: 200%;
 }
 
 @keyframes firstXmove {
@@ -605,15 +621,15 @@ body {
 .fifth-cut-para-rel-bottom-second-in {
   display: flex;
   align-items: flex-start;
-  width: 100%;
+  width: 200%;
 }
 
 @keyframes secondXmove {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(-101.5%);
   }
   100% {
-    transform: translateX(-50.5%);
+    transform: translateX(0%);
   }
 }
 #footer {

@@ -300,8 +300,8 @@ body {
 }
 
 .first-cut {
-  -webkit-clip-path: ellipse(82% 56% at 50% 44%);
-          clip-path: ellipse(82% 56% at 50% 44%);
+  -webkit-clip-path: ellipse(61% 81% at 50% 19%);
+          clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
 }
 @media all and (max-width: 500px) {
@@ -311,6 +311,21 @@ body {
   }
 }
 
+.first-cut-img-container img {
+  animation: zoom 15s linear infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .second-cut {
   margin-top: 2%;
 }
@@ -662,7 +677,7 @@ body {
   margin-bottom: 13%;
   height: auto;
   position: relative;
-  transition: all 2s ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 .swiper-slide > .swiper-img > .href-link {
   width: 100%;
@@ -678,17 +693,17 @@ body {
 
 .swiper-slide-prev {
   opacity: 1 !important;
-  transition: all 2s ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .swiper-slide-active {
   opacity: 1 !important;
-  transition: all 2s ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .swiper-slide-next {
   opacity: 1 !important;
-  transition: all 2s ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 .swiper-creative .swiper-slide {

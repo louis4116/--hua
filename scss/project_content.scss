@@ -265,7 +265,7 @@ body {
   > :nth-child(1) {
     color: $bigTitleColor;
     font-family: $serif;
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: 400;
   }
   > :nth-child(2) {
@@ -440,7 +440,7 @@ input:-webkit-autofill:focus {
     color: white;
     padding: 0.4vw 6vw;
     border-radius: 5px;
-    font-size: 0.8vw;
+    font-size: 1vw;
     cursor: pointer;
   }
   @include mobile {
