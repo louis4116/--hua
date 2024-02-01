@@ -310,8 +310,8 @@ body {
 }
 @media all and (max-width: 500px) {
   .first-cut {
-    -webkit-clip-path: ellipse(140% 55% at 50% 45%);
-            clip-path: ellipse(140% 55% at 50% 45%);
+    -webkit-clip-path: ellipse(117% 55% at 50% 44%);
+            clip-path: ellipse(117% 55% at 50% 44%);
   }
 }
 

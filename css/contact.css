@@ -306,8 +306,8 @@ body {
 }
 @media all and (max-width: 500px) {
   .first-cut {
-    -webkit-clip-path: ellipse(140% 55% at 50% 45%);
-            clip-path: ellipse(140% 55% at 50% 45%);
+    -webkit-clip-path: ellipse(117% 55% at 50% 44%);
+            clip-path: ellipse(117% 55% at 50% 44%);
   }
 }
 
@@ -574,10 +574,11 @@ input:-webkit-autofill:focus {
   border: none;
   background-color: #736357;
   color: white;
-  padding: 0.4vw 6vw;
-  border-radius: 5px;
+  padding: 0.75vw 6vw;
+  border-radius: 30px;
   font-size: 1vw;
   cursor: pointer;
+  letter-spacing: 2px;
 }
 @media all and (max-width: 500px) {
   .form-button > button {
