@@ -679,6 +679,9 @@ body {
   position: relative;
   transition-timing-function: ease-in-out;
 }
+.swiper-slide a {
+  pointer-events: none;
+}
 .swiper-slide > .swiper-img > .href-link {
   width: 100%;
 }
@@ -695,15 +698,25 @@ body {
   opacity: 1 !important;
   transition-timing-function: ease-in-out;
 }
+.swiper-slide-prev a {
+  pointer-events: none;
+}
 
 .swiper-slide-active {
   opacity: 1 !important;
+  cursor: pointer;
   transition-timing-function: ease-in-out;
+}
+.swiper-slide-active a {
+  pointer-events: all !important;
 }
 
 .swiper-slide-next {
   opacity: 1 !important;
   transition-timing-function: ease-in-out;
+}
+.swiper-slide-next a {
+  pointer-events: none;
 }
 
 .swiper-creative .swiper-slide {

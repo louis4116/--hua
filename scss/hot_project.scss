@@ -325,6 +325,9 @@ body {
   height: auto;
   position: relative;
   transition-timing-function: ease-in-out;
+  a {
+    pointer-events: none;
+  }
   > .swiper-img {
     > .href-link {
       width: 100%;
@@ -340,14 +343,24 @@ body {
 .swiper-slide-prev {
   opacity: 1 !important;
   transition-timing-function: ease-in-out;
+  a {
+    pointer-events: none;
+  }
 }
 .swiper-slide-active {
   opacity: 1 !important;
+  cursor: pointer;
   transition-timing-function: ease-in-out;
+  a {
+    pointer-events: all !important;
+  }
 }
 .swiper-slide-next {
   opacity: 1 !important;
   transition-timing-function: ease-in-out;
+  a {
+    pointer-events: none;
+  }
 }
 .swiper-creative .swiper-slide {
   overflow: visible !important;
