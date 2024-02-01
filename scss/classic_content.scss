@@ -90,6 +90,12 @@ body {
   }
   @include mobile {
     width: 100%;
+    .swiper-slide {
+      cursor: pointer;
+      > img {
+        border-radius: 8px;
+      }
+    }
   }
 }
 .swiper-button {

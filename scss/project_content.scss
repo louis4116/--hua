@@ -124,6 +124,11 @@ body {
   }
   @include mobile {
     width: 100%;
+    .swiper-slide {
+      > img {
+        border-radius: 8px;
+      }
+    }
   }
 }
 .swiper-button {

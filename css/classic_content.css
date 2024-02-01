@@ -398,6 +398,12 @@ body {
   .second-cut-col {
     width: 100%;
   }
+  .second-cut-col .swiper-slide {
+    cursor: pointer;
+  }
+  .second-cut-col .swiper-slide > img {
+    border-radius: 8px;
+  }
 }
 
 .swiper-button {
