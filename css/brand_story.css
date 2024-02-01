@@ -90,6 +90,7 @@ img {
     line-height: 2;
     padding-top: 3vw;
     padding-bottom: 3vw;
+    margin-top: 15%;
   }
   #footer > :nth-child(1) {
     order: 3;

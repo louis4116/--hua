@@ -91,6 +91,7 @@ img {
     line-height: 2;
     padding-top: 3vw;
     padding-bottom: 3vw;
+    margin-top: 15%;
   }
   #footer > :nth-child(1) {
     order: 3;
@@ -871,7 +872,6 @@ img {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 10%;
 }
 
 .cut-2-phone-item {

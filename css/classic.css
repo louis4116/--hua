@@ -90,6 +90,7 @@ img {
     line-height: 2;
     padding-top: 3vw;
     padding-bottom: 3vw;
+    margin-top: 15%;
   }
   #footer > :nth-child(1) {
     order: 3;
@@ -337,12 +338,6 @@ img {
   justify-content: center;
   flex-direction: column;
 }
-@media all and (max-width: 500px) {
-  .second-cut {
-    margin-bottom: 15%;
-  }
-}
-
 .title {
   position: relative;
   width: 100%;
