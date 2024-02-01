@@ -432,6 +432,7 @@ body {
 }
 
 .second-cut-map-img {
+  position: relative;
   width: 47%;
 }
 @media all and (max-width: 500px) {
@@ -440,7 +441,17 @@ body {
     height: 60vw;
   }
 }
-.second-cut-map-img > iframe {
+.second-cut-map-img img {
+  width: 100%;
+  height: 100%;
+}
+.second-cut-map-img a {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.second-cut-map-img iframe {
   width: 100%;
   height: 100%;
 }
