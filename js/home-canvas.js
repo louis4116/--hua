@@ -33,7 +33,7 @@ $(window).on("load", function () {
 
   //遮罩圖片內設定
   const backImage = new Image();
-  backImage.src = "./img/home/旋轉背景圖.jpg";
+  backImage.src = "./img/home/big0-1.jpg";
   let img1 = new Image();
   let img2 = new Image();
   let img3 = new Image();
