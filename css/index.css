@@ -46,7 +46,15 @@ img {
   }
 }
 
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 #footer {
+  position: relative;
   width: 100%;
   background-color: #736357;
   display: flex;
@@ -275,7 +283,7 @@ img {
 
 @media all and (max-width: 500px) {
   .box-img {
-    width: 50vw;
+    width: 40vw;
   }
 }
 
@@ -289,14 +297,11 @@ img {
 }
 @media all and (max-width: 500px) {
   .box-para {
-    font-size: 10vw;
+    font-size: 8vw;
   }
 }
 
 body {
-  background-image: url("../img/home/首頁-bg.jpg");
-  background-repeat: repeat;
-  background-size: 100%;
   overflow: hidden;
   position: relative;
 }
