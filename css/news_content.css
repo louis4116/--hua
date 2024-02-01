@@ -289,7 +289,7 @@ img {
 }
 @media all and (max-width: 500px) {
   .box-para {
-    font-size: 17vw;
+    font-size: 10vw;
   }
 }
 
@@ -391,7 +391,7 @@ body {
 .news-para-content p {
   width: 100%;
   font-size: 0.9vw;
-  color: #333333;
+  color: #4d4d4d;
   text-align: start;
   line-height: 2;
   letter-spacing: 2px;
