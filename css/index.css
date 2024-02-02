@@ -1327,6 +1327,27 @@ canvas {
   }
 }
 
+.cut-5-news-card-img {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.cut-5-news-card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  transition: all 1s;
+}
+.cut-5-news-card-img:hover img {
+  transition: all 1s;
+  transform: scale(1.2);
+}
+.cut-5-news-card-img > a {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .cut-5-news-card-contents {
   display: flex;
   justify-content: center;
@@ -1415,6 +1436,12 @@ canvas {
 }
 .cut-5-news-card-more-container > img {
   width: 0.8vw;
+}
+.cut-5-news-card-more-container a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 @media all and (max-width: 500px) {
   .cut-5-news-card-more-container {

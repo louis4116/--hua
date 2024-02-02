@@ -285,16 +285,34 @@
   align-items: baseline;
   overflow: hidden;
   margin-bottom: 1%;
-  width: 236%;
-  transform: translateX(-50%);
-  animation: firstXmove 10s linear infinite;
+  width: 236vw;
 }
-@keyframes firstXmove {
-  0% {
-    transform: translateX(-50%);
+@media screen and (max-width: 2560px) {
+  .fifth-cut-para-rel-bottom-first {
+    transform: translateX(-103vw);
+    animation: firstXmove2560 10s linear infinite;
   }
-  100% {
-    transform: translateX(0%);
+}
+@media screen and (max-width: 2300px) {
+  .fifth-cut-para-rel-bottom-first {
+    transform: translateX(-118vw);
+    animation: firstXmove1920 10s linear infinite;
+  }
+}
+@keyframes firstXmove1920 {
+  from {
+    transform: translateX(-118vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+@keyframes firstXmove2560 {
+  from {
+    transform: translateX(-103vw);
+  }
+  to {
+    transform: translateX(0vw);
   }
 }
 .fifth-cut-para-rel-bottom-second {
@@ -304,19 +322,38 @@
 .fifth-cut-para-rel-bottom-second-in {
   display: flex;
   align-items: flex-start;
-  width: 236%;
+  width: 236vw;
   // transform: translateX(-200%);
   // animation: firstXmove 20s linear infinite;
-  animation: secondXmove 10s linear infinite;
 }
-@keyframes secondXmove {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+
 #footer {
   margin-top: 0;
+}
+@media screen and (max-width: 2560px) {
+  .fifth-cut-para-rel-bottom-second-in {
+    animation: secondXmove2560 10s linear infinite;
+  }
+}
+@media screen and (max-width: 2300px) {
+  .fifth-cut-para-rel-bottom-second-in {
+    animation: secondXmove1920 10s linear infinite;
+  }
+}
+
+@keyframes secondXmove1920 {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(-118vw);
+  }
+}
+@keyframes secondXmove2560 {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(-110vw);
+  }
 }

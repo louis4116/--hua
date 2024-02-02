@@ -834,6 +834,7 @@
                 <div class="cut-5-news-card-more-container">
                   <p>MORE</p>
                   <img src="./img/home/news-arrow.svg" alt="最新消息-箭頭" />
+                  <a href="./About_news_content.html"></a>
                 </div>
               </div>
             </div>
@@ -855,6 +856,7 @@
                 <div class="cut-5-news-card-more-container">
                   <p>MORE</p>
                   <img src="./img/home/news-arrow.svg" alt="最新消息-箭頭" />
+                  <a href="./About_news_content.html"></a>
                 </div>
               </div>
             </div>
@@ -874,6 +876,7 @@
                 <div class="cut-5-news-card-more-container">
                   <p>MORE</p>
                   <img src="./img/home/news-arrow.svg" alt="最新消息-箭頭" />
+                  <a href="./About_news_content.html"></a>
                 </div>
               </div>
             </div>
@@ -1290,6 +1293,7 @@
           });
         });
         //第五cut以及滑鼠的VIEW
+        const cut5ImgCon = $(".cut-5-news-card-img");
         const cut5Img = $(".cut-5-news-card-img>img");
         const cut4Pin = $(".cut-4-pin");
         function getMousePos(event) {
@@ -1328,6 +1332,9 @@
             }
           });
         }
+        cut5ImgCon.on("click", function () {
+          window.location = "About_news_content.html";
+        });
       });
     </script>
   </body>
