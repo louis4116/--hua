@@ -325,6 +325,9 @@
   top: 0;
   width: 100%;
   margin-top: 13%;
+  @media screen and (max-width: 500px) {
+    margin-top: 33%;
+  }
 }
 .fifth-cut-para-rel {
   position: relative;
@@ -359,11 +362,28 @@
   > :nth-child(2) {
     margin-top: 2%;
   }
+  @include mobile {
+    > img {
+      width: 20vw;
+    }
+    > h1 {
+      font-size: 6vw;
+    }
+    > h4 {
+      font-size: $contentSizePH;
+    }
+    > p {
+      font-size: $contentSizePH;
+    }
+  }
 }
 
 .fifth-cut-para-rel-bottom {
   width: 100%;
   margin-top: 5%;
+  @include mobile {
+    margin-top: 2%;
+  }
   .pic {
     margin-left: 0.25%;
     margin-right: 0.25%;
@@ -375,6 +395,12 @@
   overflow: hidden;
   margin-bottom: 1%;
   width: 236vw;
+  @include mobile {
+    width: 600%;
+    margin-bottom: 5%;
+    transform: translateX(-50%);
+    animation: firstXmovePH 40s linear infinite;
+  }
 }
 @media screen and (max-width: 2560px) {
   .fifth-cut-para-rel-bottom-first {
@@ -386,6 +412,14 @@
   .fifth-cut-para-rel-bottom-first {
     transform: translateX(-118vw);
     animation: firstXmove1920 40s linear infinite;
+  }
+}
+@keyframes firstXmovePH {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0vw);
   }
 }
 @keyframes firstXmove1920 {
@@ -412,6 +446,10 @@
   display: flex;
   align-items: flex-start;
   width: 236vw;
+  @include mobile {
+    width: 600%;
+    animation: secondXmovePH 40s linear infinite;
+  }
   // transform: translateX(-200%);
   // animation: firstXmove 20s linear infinite;
 }
@@ -430,6 +468,14 @@
   }
 }
 
+@keyframes secondXmovePH {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 @keyframes secondXmove1920 {
   from {
     transform: translateX(0vw);
