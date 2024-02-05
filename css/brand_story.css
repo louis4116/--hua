@@ -341,6 +341,7 @@ img {
 @media all and (max-width: 500px) {
   .second-cut {
     margin-bottom: 10%;
+    align-items: center;
   }
 }
 
@@ -417,6 +418,9 @@ img {
 }
 @media all and (max-width: 500px) {
   .brand-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
     margin-top: 3%;
   }
   .brand-nav > h4 {
@@ -426,8 +430,8 @@ img {
   }
   .brand-nav > .brand-nav-line {
     height: 3.75vw;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 9%;
+    margin-right: 9%;
   }
 }
 
@@ -648,8 +652,17 @@ img {
   left: 2%;
   top: -34%;
   width: 10.5vw;
+  animation: textRotate 10s linear infinite;
 }
 
+@keyframes textRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .brand_story-30 {
   width: 9vw;
 }
