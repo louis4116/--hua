@@ -1,4 +1,3 @@
-const windowWidth = window.innerWidth;
 $(window).on("load", function () {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
@@ -19,6 +18,7 @@ $(window).on("load", function () {
   const squreW2Phone = (squreW - squreW * 0.8) / 2;
   const squreH2Phone = (squreH - squreW * 0.8) / 2;
 
+  const windowWidth = window.innerWidth;
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   if (windowWidth >= 768) {
@@ -33,7 +33,7 @@ $(window).on("load", function () {
 
   //遮罩圖片內設定
   const backImage = new Image();
-  backImage.src = "./img/home/big0-1.jpg";
+  backImage.src = "./img/home/big0-2.webp";
   let img1 = new Image();
   let img2 = new Image();
   let img3 = new Image();
@@ -42,13 +42,12 @@ $(window).on("load", function () {
   let img6 = new Image();
 
   if (windowWidth > 500) {
-    backImage.src = "./img/home/big0-1.jpg";
-    img1.src = "./img/home/big0-2.webp";
-    img2.src = "./img/home/big01.webp";
-    img3.src = "./img/home/big02.webp";
-    img4.src = "./img/home/big03.webp";
-    img5.src = "./img/home/big04.webp";
-    img6.src = "./img/home/big05.webp";
+    backImage.src = "./img/home/big01.webp";
+    img1.src = "./img/home/big01.webp";
+    img2.src = "./img/home/big02.webp";
+    img3.src = "./img/home/big04.webp";
+    img4.src = "./img/home/big05.webp";
+    img5.src = "./img/home/big06.webp";
   } else {
     backImage.src = "./img/home/phone/ph_01.webp";
     img1.src = "./img/home/phone/ph_01.webp";
@@ -132,14 +131,14 @@ $(window).on("load", function () {
           let scaleprogress = Number(Math.abs((0.9 - 8) * progress).toFixed(3)); //四捨五入至第三位
           let scaleRes = 0.9 + scaleprogress;
           let img;
-          if (scaleRes >= 5) {
+          if (scaleRes >= 4.25) {
             img = img5;
           } else if (scaleRes >= 3.25 && scaleRes < 4.25) {
-            img = img2;
+            img = img4;
           } else if (scaleRes >= 2.25 && scaleRes < 3.25) {
             img = img3;
           } else if (scaleRes >= 1.25 && scaleRes < 2.25) {
-            img = img4;
+            img = img2;
           } else {
             img = img1;
           }
@@ -195,9 +194,9 @@ $(window).on("load", function () {
             if (scaleRes >= 4.25) {
               img = img5;
             } else if (scaleRes >= 3.25 && scaleRes < 4.25) {
-              img = img6;
-            } else if (scaleRes >= 2.25 && scaleRes < 3.25) {
               img = img4;
+            } else if (scaleRes >= 2.25 && scaleRes < 3.25) {
+              img = img3;
             } else if (scaleRes >= 1.25 && scaleRes < 2.25) {
               img = img2;
             } else {

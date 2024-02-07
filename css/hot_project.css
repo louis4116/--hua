@@ -53,6 +53,10 @@ img {
   z-index: -1;
 }
 
+.pause {
+  animation-play-state: paused;
+}
+
 #footer {
   position: relative;
   width: 100%;
@@ -922,5 +926,5 @@ img {
   position: absolute;
   top: -3%;
   right: -3%;
-  z-index: 0;
+  z-index: -1;
 }/*# sourceMappingURL=hot_project.css.map */

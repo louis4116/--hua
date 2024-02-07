@@ -82,6 +82,9 @@ img {
   height: 100%;
   z-index: -1;
 }
+.pause {
+  animation-play-state: paused;
+}
 #footer {
   position: relative;
   width: 100%;

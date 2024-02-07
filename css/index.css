@@ -53,6 +53,10 @@ img {
   z-index: -1;
 }
 
+.pause {
+  animation-play-state: paused;
+}
+
 #footer {
   position: relative;
   width: 100%;
@@ -920,6 +924,18 @@ canvas {
 
 .swiper-img {
   position: relative;
+}
+.swiper-img > .swiper-img-main {
+  border-radius: 260px 260px 0 0;
+  overflow: hidden;
+}
+.swiper-img > .img-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -2%;
+  left: 3%;
+  z-index: -1;
 }
 .swiper-img > a {
   position: absolute;

@@ -1,1 +1,582 @@
 @import "_config";
+
+.first-cut {
+  // clip-path: ellipse(82% 56% at 50% 44%);
+  clip-path: ellipse(61% 81% at 50% 19%);
+  overflow: hidden;
+  @include mobile {
+    clip-path: ellipse(117% 55% at 50% 44%);
+  }
+}
+.first-cut-img-container {
+  img {
+    animation: zoom 15s linear infinite;
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+//第二cut
+.second-cut {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include mobile {
+    margin-bottom: 10%;
+    align-items: center;
+  }
+}
+.title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
+  color: $bigTitleColor;
+  margin-top: 4vw;
+  @include mobile {
+    margin-top: 5%;
+  }
+}
+
+.base {
+  font-family: $cor;
+  font-size: 9vw;
+  opacity: 0.1;
+  font-weight: 400;
+  @include mobile {
+    font-size: 14vw;
+  }
+}
+.content {
+  position: absolute;
+  text-align: center;
+  > h3 {
+    font-weight: 600;
+    font-size: 2.25vw;
+    font-family: $cor;
+  }
+  > h4 {
+    font-size: 1.25vw;
+    margin-top: 0.5vw;
+    font-family: $serif;
+  }
+  @include mobile {
+    > h3 {
+      font-size: 6vw;
+    }
+    > h4 {
+      font-size: $contentSizePH;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+}
+
+.brand-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $bigTitleColor;
+  a {
+    color: $bigTitleColor;
+    font-family: $serif;
+    text-decoration: none;
+  }
+  h4 {
+    font-size: 1.25vw;
+    font-family: $serif;
+    line-height: 1;
+  }
+  > .brand-nav-line {
+    width: 1px;
+    height: 1.25vw;
+    background-color: $bigTitleColor;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  @include mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 3%;
+    h4 {
+      font-size: $contentSizePH;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    > .brand-nav-line {
+      height: 3.75vw;
+      margin-left: 9%;
+      margin-right: 9%;
+    }
+  }
+}
+
+//第三cut
+.third-cut {
+  margin-top: 5%;
+}
+
+.third-cut-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > h4 {
+    font-size: 1.25vw;
+    font-family: $serif;
+    color: $bigTitleColor;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+  @include mobile {
+    > h4 {
+      font-size: $contentSizePH;
+    }
+  }
+}
+.third-cut-circle {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+  @include mobile {
+    margin-top: 25%;
+  }
+}
+.third-cut-circle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background-color: #534741;
+  width: 17vw;
+  height: 17vw;
+  > img {
+    width: 4vw;
+    margin-bottom: 3%;
+  }
+  > h3 {
+    color: #ac9986;
+    font-family: $serif;
+    font-size: 1.75vw;
+    letter-spacing: 2px;
+  }
+  @include mobile {
+    width: 50vw;
+    height: 50vw;
+    > img {
+      width: 10vw;
+    }
+    > h3 {
+      font-size: $contentSizePH;
+    }
+  }
+}
+.outerCircle {
+  position: absolute;
+}
+.outerCircle-7-color {
+  width: 21vw;
+  @include mobile {
+    width: 60vw;
+  }
+}
+.svgbox {
+  position: absolute;
+  top: 0;
+  width: 21vw;
+  transform: scale(1.15);
+  //   > svg {
+  //     transform-origin: center;
+  //     transform: scale(1.15);
+  //   }
+  @include mobile {
+    width: 60vw;
+  }
+}
+#circle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  circle {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    transform: rotate(270deg);
+    transform-origin: center;
+  }
+}
+
+.dot-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.dot-in {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transform: scale(1.04) rotate(90deg);
+  @include mobile {
+    transform: rotate(90deg);
+  }
+}
+.dot {
+  width: 100%;
+  position: absolute;
+  > img {
+    width: 0.8vw;
+  }
+  @include mobile {
+    > img {
+      width: 1.5vw;
+    }
+  }
+}
+// .dot:nth-child(1) {
+//   transform: rotate(90deg);
+// }
+
+$max: 7;
+@for $i from 1 through $max {
+  .dot:nth-child(#{$i}) {
+    transform: rotate(#{(360 / $max * $i)}deg);
+  }
+  $delay: if($i==1, 0s, (2s * ($i - 1)));
+  // .para:nth-child(#{$i}) {
+  //   .para-img-item {
+  //     > img {
+  //       animation: zoomIn 14s ease-in-out infinite;
+  //       animation-delay: $delay;
+  //     }
+  //   }
+  // }
+  // @if $i==1 {
+  //   .para:nth-child(#{$i}) {
+  //     .para-img-item {
+  //       > img {
+  //         animation: zoomIn 14s ease-in-out infinite;
+  //         // animation-delay: 2s;
+  //       }
+  //     }
+  //   }
+  // } @else {
+  //   .para:nth-child(#{$i}) {
+  //     .para-img-item {
+  //       > img {
+  //         animation: zoomIn 14s ease-in-out infinite;
+  //         animation-delay: #{($i-1) * 2}s;
+  //         // animation-delay: #{($i + 1) * 2}s;
+  //         // animation-delay: 4s;
+  //       }
+  //     }
+  //   }
+  // }
+  @include mobile {
+    .dot:nth-child(#{$i}) {
+      transform: scale(1.025) rotate(#{(360 / $max * $i)}deg);
+    }
+    @if $i==7 {
+      .dot:nth-child(#{$i}) {
+        transform: scale(1.035) rotate(#{(360 / $max * $i)}deg);
+      }
+    } @else if $i==4 {
+      .dot:nth-child(#{$i}) {
+        transform: scale(1.01) rotate(#{(360 / $max * $i)}deg);
+      }
+    } @else if $i==3 {
+      .dot:nth-child(#{$i}) {
+        transform: scale(1.015) rotate(#{(360 / $max * $i)}deg);
+      }
+    }
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  7% {
+    transform: scale(1.2);
+  }
+  14% {
+    transform: scale(1);
+  }
+}
+.text-rotate-box {
+  position: absolute;
+  top: 0;
+  > img {
+    transform: scale(1.5);
+  }
+}
+
+.outer_dotted {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  > img {
+    transform: scale(1.9);
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.para-box {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  @include mobile {
+    display: none;
+  }
+}
+.para-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.para {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120%;
+  margin-left: 22%;
+}
+.para-img {
+  position: relative;
+}
+.para-img-bg {
+  width: 10vw;
+}
+.para-img-item {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  width: 8vw;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.para-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $bigTitleColor;
+  margin-left: 4%;
+  margin-bottom: 7%;
+  > h4 {
+    font-size: 1.25vw;
+    font-family: $serif;
+    white-space: nowrap;
+  }
+  > p {
+    font-size: $contentSize;
+    font-family: $micro;
+    color: $contentColor;
+    letter-spacing: 2px;
+  }
+}
+.para:nth-child(1) {
+  top: -78%;
+}
+.para:nth-child(2) {
+  top: -37%;
+  left: 93%;
+}
+.para:nth-child(3) {
+  left: 109%;
+  top: 51%;
+}
+.para:nth-child(4) {
+  bottom: -67%;
+  left: 59%;
+}
+.para:nth-child(5),
+.para:nth-child(6),
+.para:nth-child(7) {
+  flex-direction: row-reverse;
+  .para-text {
+    margin-left: 0;
+    margin-right: 4%;
+    h4 {
+      text-align: end;
+    }
+    p {
+      text-wrap: nowrap;
+      text-align: end;
+    }
+  }
+}
+.para:nth-child(5) {
+  bottom: -67%;
+  left: -130%;
+}
+.para:nth-child(6) {
+  right: 123%;
+  top: 51%;
+}
+.para:nth-child(7) {
+  top: -37%;
+  right: 102%;
+}
+
+//第三cut手機版
+.para-box-ph {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 23%;
+  padding-bottom: 20%;
+  overflow: hidden;
+}
+.para-ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.para-container-ph {
+  width: 90%;
+}
+.para-img-ph {
+  position: relative;
+}
+.para-img-bg-ph {
+  width: 35vw;
+}
+.para-img-item-ph {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  width: 30vw;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.para-text-ph {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $bigTitleColor;
+  margin-left: 4%;
+  > h4 {
+    font-size: $contentSizePH;
+    font-family: $serif;
+    white-space: nowrap;
+    margin-bottom: 4%;
+  }
+  > p {
+    font-size: $contentSizePH;
+    font-family: $micro;
+    color: $contentColor;
+    letter-spacing: 2px;
+  }
+}
+//輪播箭頭
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #736357;
+  background-position: center;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  padding: 2.5vw;
+  top: 75%;
+  &::after {
+    content: unset;
+  }
+}
+.swiper-button-next {
+  left: 50%;
+}
+.swiper-button-prev {
+  left: 36%;
+}
+//第四cut
+.fourth-cut {
+  margin-top: 22%;
+  @include mobile {
+    margin-top: 0%;
+  }
+}
+.fourth-cut-big-img {
+  img {
+    margin: 0 auto;
+    width: 85%;
+  }
+  @include mobile {
+    img {
+      width: 90%;
+    }
+  }
+}
+.fourth-cut-para {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4%;
+  > h3 {
+    font-family: $cor;
+    font-size: 2.25vw;
+    color: $bigTitleColor;
+  }
+  > h4 {
+    font-family: $serif;
+    font-size: 1.25vw;
+    color: $mediumTitleColor;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    letter-spacing: 2px;
+  }
+  > p {
+    font-family: $micro;
+    font-size: $contentSize;
+    color: $contentColor;
+    letter-spacing: 2px;
+    line-height: 2;
+  }
+  @include mobile {
+    > h3 {
+      font-size: 6vw;
+    }
+    > h4 {
+      font-size: $contentSizePH;
+      margin-bottom: 6%;
+    }
+    > p {
+      font-size: $contentSizePH;
+    }
+  }
+}
