@@ -266,36 +266,6 @@ $max: 7;
   .dot:nth-child(#{$i}) {
     transform: rotate(#{(360 / $max * $i)}deg);
   }
-  $delay: if($i==1, 0s, (2s * ($i - 1)));
-  // .para:nth-child(#{$i}) {
-  //   .para-img-item {
-  //     > img {
-  //       animation: zoomIn 14s ease-in-out infinite;
-  //       animation-delay: $delay;
-  //     }
-  //   }
-  // }
-  // @if $i==1 {
-  //   .para:nth-child(#{$i}) {
-  //     .para-img-item {
-  //       > img {
-  //         animation: zoomIn 14s ease-in-out infinite;
-  //         // animation-delay: 2s;
-  //       }
-  //     }
-  //   }
-  // } @else {
-  //   .para:nth-child(#{$i}) {
-  //     .para-img-item {
-  //       > img {
-  //         animation: zoomIn 14s ease-in-out infinite;
-  //         animation-delay: #{($i-1) * 2}s;
-  //         // animation-delay: #{($i + 1) * 2}s;
-  //         // animation-delay: 4s;
-  //       }
-  //     }
-  //   }
-  // }
   @include mobile {
     .dot:nth-child(#{$i}) {
       transform: scale(1.025) rotate(#{(360 / $max * $i)}deg);
