@@ -1,0 +1,163 @@
+@import "_config";
+
+.first-cut {
+  // clip-path: ellipse(82% 56% at 50% 44%);
+  clip-path: ellipse(61% 81% at 50% 19%);
+  overflow: hidden;
+  @include mobile {
+    clip-path: ellipse(117% 55% at 50% 44%);
+  }
+}
+.first-cut-img-container {
+  img {
+    animation: zoom 15s linear infinite;
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+//第二cut
+.second-cut {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include mobile {
+    margin-bottom: 10%;
+    align-items: center;
+  }
+}
+.title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 3px;
+  color: $bigTitleColor;
+  margin-top: 4vw;
+  @include mobile {
+    margin-top: 5%;
+  }
+}
+
+.base {
+  font-family: $cor;
+  font-size: 9vw;
+  opacity: 0.1;
+  font-weight: 400;
+  @include mobile {
+    font-size: 14vw;
+  }
+}
+.content {
+  position: absolute;
+  text-align: center;
+  > h3 {
+    font-weight: 600;
+    font-size: 2.25vw;
+    font-family: $cor;
+  }
+  > h4 {
+    font-size: 1.25vw;
+    margin-top: 0.5vw;
+    font-family: $serif;
+  }
+  @include mobile {
+    > h3 {
+      font-size: 6vw;
+    }
+    > h4 {
+      font-size: $contentSizePH;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
+}
+
+.brand-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $bigTitleColor;
+  a {
+    color: $bigTitleColor;
+    font-family: $serif;
+    text-decoration: none;
+  }
+  h4 {
+    font-size: 1.25vw;
+    font-family: $serif;
+    line-height: 1;
+  }
+  > .brand-nav-line {
+    width: 1px;
+    height: 1.25vw;
+    background-color: $bigTitleColor;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  @include mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 3%;
+    h4 {
+      font-size: $contentSizePH;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    > .brand-nav-line {
+      height: 3.75vw;
+      margin-left: 9%;
+      margin-right: 9%;
+    }
+  }
+}
+
+//第3cut
+.third-cut {
+  margin-top: 5%;
+  > h4 {
+    text-align: center;
+    font-size: 1.25vw;
+    font-family: $serif;
+    color: $bigTitleColor;
+    line-height: 1;
+    letter-spacing: 2px;
+    margin-bottom: 2%;
+  }
+  > p {
+    font-family: $micro;
+    color: $contentColor;
+    font-size: $contentSize;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  @include mobile {
+    > h4 {
+      font-size: $contentSizePH;
+    }
+  }
+}
+
+//第4cut
+.fourth-cut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-circle-container {
+  overflow: hidden;
+  width: 30vw;
+}

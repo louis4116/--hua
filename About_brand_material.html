@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/brand_material.css" />
+    <title>精鑄工藝</title>
+  </head>
+  <body>
+    <nav id="nav"></nav>
+    <main class="brand_material-main">
+      <div class="background"><img src="./img/home/首頁-bg.jpg" alt="" /></div>
+      <section class="first-cut">
+        <div class="first-cut-img-container">
+          <picture>
+            <source
+              srcset="./img/brand_story/brand_story-bg-phone.webp"
+              media="(max-width:500px)"
+            />
+            <img
+              src="./img/brand_story/brand_story-bg.webp"
+              alt="首頁背景-pc"
+            />
+          </picture>
+        </div>
+      </section>
+      <section class="second-cut">
+        <div class="cut-2-title title">
+          <h1 class="cut-2-base base">MATERIAL</h1>
+          <div class="cut-2-title-content content">
+            <h3>MATERIAL</h3>
+            <h4>精鑄工藝</h4>
+          </div>
+        </div>
+        <div class="brand-nav">
+          <a href="javascript:;"><h4>品牌故事</h4></a>
+          <div class="brand-nav-line"></div>
+          <a href="javascript:;"><h4>品牌理念</h4></a>
+          <div class="brand-nav-line"></div>
+          <a href="javascript:;"><h4>精鑄工藝</h4></a>
+        </div>
+      </section>
+      <section class="third-cut">
+        <h4 class="third-cut-title">匠心獨具　質感建築</h4>
+        <p>樺輝建設以究極精神，專注雕琢細節，追求建築每一寸的完美。</p>
+        <p>更精心嚴選優質的建材，為呈現出極致的品質與細緻，使建築注入生命。</p>
+      </section>
+      <section class="fourth-cut">
+        <div class="left-circle">
+          <div class="left-circle-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./img/brand_material/material-big-1.webp"
+                  alt="material-big-1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./img/brand_material/material-big-2.webp"
+                  alt="material-big-2"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./img/brand_material/material-big-3.webp"
+                  alt="material-big-3"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./img/brand_material/material-big-4.webp"
+                  alt="material-big-4"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./img/brand_material/material-big-5.webp"
+                  alt="material-big-5"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./img/brand_material/material-big-6.webp"
+                  alt="material-big-6"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./img/brand_material/material-big-7.webp"
+                  alt="material-big-7"
+                />
+              </div>
+            </div>
+            <div class="swiper-button-next">
+              <img
+                src="./img/brand_concept/right-arrow.png"
+                alt="right-arrow"
+              />
+            </div>
+            <div class="swiper-button-prev">
+              <img src="./img/brand_concept/left-arrow.png" alt="left-arrow" />
+            </div>
+          </div>
+        </div>
+        <div class="right-circle"></div>
+      </section>
+    </main>
+    <footer id="footer">
+      <span>Copyright © 2024樺輝建設股份有限公司版權所有　</span>
+      <span>地址：台北市內湖區民權東路六段123巷28號10樓　</span>
+      <span>TEL： 02-27928078</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+    <script src="./js/nav.js"></script>
+    <script>
+      // function loading(tag) {
+      //   let number = $(tag).html();
+      //   let parse = parseInt(number);
+
+      //   let test;
+      //   let timeRun = setInterval(() => {
+      //     test = parse++;
+      //     $(tag).text(test);
+      //     if (test == 99) clearInterval(timeRun);
+      //   }, 50);
+      // }
+      // loading(".loading-progress");
+      window.onload = () => {
+        // gsap.to(".loading-page", {
+        //   opacity: 0,
+        // });
+        const swiper = new Swiper(".left-circle-container", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          centeredSlides: true,
+          spaceBetween: 50,
+        });
+      };
+    </script>
+  </body>
+</html>
