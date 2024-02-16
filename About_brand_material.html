@@ -7,6 +7,15 @@
     <title>精鑄工藝</title>
   </head>
   <body>
+    <div class="loading-page">
+      <div class="box">
+        <div class="box-img"><img src="./img/logo01.svg" alt="logo01" /></div>
+        <div class="box-para">
+          <div class="loading-progress">0</div>
+          <span>%</span>
+        </div>
+      </div>
+    </div>
     <nav id="nav"></nav>
     <main class="brand_material-main">
       <div class="background"><img src="./img/home/首頁-bg.jpg" alt="" /></div>
@@ -377,22 +386,22 @@
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/nav.js"></script>
     <script>
-      // function loading(tag) {
-      //   let number = $(tag).html();
-      //   let parse = parseInt(number);
+      function loading(tag) {
+        let number = $(tag).html();
+        let parse = parseInt(number);
 
-      //   let test;
-      //   let timeRun = setInterval(() => {
-      //     test = parse++;
-      //     $(tag).text(test);
-      //     if (test == 99) clearInterval(timeRun);
-      //   }, 50);
-      // }
-      // loading(".loading-progress");
+        let test;
+        let timeRun = setInterval(() => {
+          test = parse++;
+          $(tag).text(test);
+          if (test == 99) clearInterval(timeRun);
+        }, 50);
+      }
+      loading(".loading-progress");
       window.onload = () => {
-        // gsap.to(".loading-page", {
-        //   opacity: 0,
-        // });
+        gsap.to(".loading-page", {
+          opacity: 0,
+        });
         const t = [
           { min: 1823, max: 1827, index: 1, progress: 0.125 },
           { min: 1648, max: 1652, index: 2, progress: 0.25 },
@@ -410,7 +419,10 @@
           slidesPerView: 1,
           effect: "fade",
           watchSlidesVisibility: true,
-          loop: true,
+          autoplay: {
+            delay: 6000,
+          },
+          speed: 1000,
         });
         const imgSwiper = new Swiper(".left-circle-container", {
           direction: "horizontal",
@@ -422,7 +434,6 @@
           spaceBetween: 50,
           effect: "fade",
           watchSlidesVisibility: true,
-          loop: true,
           on: {
             slideChangeTransitionStart: function (swiper) {
               let result = t.filter((item) => item.index === this.activeIndex);

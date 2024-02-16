@@ -7,7 +7,7 @@
     <title>品牌理念</title>
   </head>
   <body>
-    <!-- <div class="loading-page">
+    <div class="loading-page">
       <div class="box">
         <div class="box-img"><img src="./img/logo01.svg" alt="logo01" /></div>
         <div class="box-para">
@@ -15,7 +15,7 @@
           <span>%</span>
         </div>
       </div>
-    </div> -->
+    </div>
     <nav id="nav"></nav>
     <main class="brand_concept-main">
       <div class="background"><img src="./img/home/首頁-bg.jpg" alt="" /></div>
@@ -503,22 +503,22 @@
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/nav.js"></script>
     <script>
-      // function loading(tag) {
-      //   let number = $(tag).html();
-      //   let parse = parseInt(number);
+      function loading(tag) {
+        let number = $(tag).html();
+        let parse = parseInt(number);
 
-      //   let test;
-      //   let timeRun = setInterval(() => {
-      //     test = parse++;
-      //     $(tag).text(test);
-      //     if (test == 99) clearInterval(timeRun);
-      //   }, 50);
-      // }
-      // loading(".loading-progress");
+        let test;
+        let timeRun = setInterval(() => {
+          test = parse++;
+          $(tag).text(test);
+          if (test == 99) clearInterval(timeRun);
+        }, 50);
+      }
+      loading(".loading-progress");
       window.onload = () => {
-        // gsap.to(".loading-page", {
-        //   opacity: 0,
-        // });
+        gsap.to(".loading-page", {
+          opacity: 0,
+        });
         let stroke;
         let circleTl = gsap.timeline({
           repeat: -1,

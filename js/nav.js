@@ -1,7 +1,7 @@
 const navItem = [
   {
     name: "關於品牌",
-    url: "javascripts:;",
+    url: "About_brand_story.html",
   },
   { name: "熱銷建案", url: "About_project.html" },
   { name: "經典作品", url: "About_classic.html" },
