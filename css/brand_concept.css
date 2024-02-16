@@ -500,7 +500,7 @@ img {
 .innerCircle > h3 {
   color: #ac9986;
   font-family: "Noto Serif TC", serif;
-  font-size: 1.75vw;
+  font-size: 1.45vw;
   letter-spacing: 2px;
 }
 @media all and (max-width: 500px) {
@@ -752,6 +752,7 @@ img {
 .para-text > h4 {
   font-size: 1.25vw;
   font-family: "Noto Serif TC", serif;
+  font-weight: 500;
   white-space: nowrap;
 }
 .para-text > p {
@@ -867,6 +868,7 @@ img {
 .para-text-ph > h4 {
   font-size: 3.75vw;
   font-family: "Noto Serif TC", serif;
+  font-weight: 500;
   white-space: nowrap;
   margin-bottom: 4%;
 }
@@ -934,6 +936,7 @@ img {
 .fourth-cut-para > h4 {
   font-family: "Noto Serif TC", serif;
   font-size: 1.25vw;
+  font-weight: 500;
   color: #534741;
   margin-top: 2%;
   margin-bottom: 2%;

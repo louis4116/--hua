@@ -178,7 +178,7 @@
   > h3 {
     color: #ac9986;
     font-family: $serif;
-    font-size: 1.75vw;
+    font-size: 1.45vw;
     letter-spacing: 2px;
   }
   @include mobile {
@@ -367,6 +367,7 @@ $max: 7;
   > h4 {
     font-size: 1.25vw;
     font-family: $serif;
+    font-weight: 500;
     white-space: nowrap;
   }
   > p {
@@ -463,6 +464,7 @@ $max: 7;
   > h4 {
     font-size: $contentSizePH;
     font-family: $serif;
+    font-weight: 500;
     white-space: nowrap;
     margin-bottom: 4%;
   }
@@ -525,6 +527,7 @@ $max: 7;
   > h4 {
     font-family: $serif;
     font-size: 1.25vw;
+    font-weight: 500;
     color: $mediumTitleColor;
     margin-top: 2%;
     margin-bottom: 2%;

@@ -131,6 +131,7 @@
     text-align: center;
     font-size: 1.25vw;
     font-family: $serif;
+    font-weight: 500;
     color: $bigTitleColor;
     line-height: 1;
     letter-spacing: 2px;
@@ -355,7 +356,7 @@ $max: 8;
     font-size: 0.9vw;
     font-family: $micro;
     color: white;
-    line-height: 2.5;
+    line-height: 2;
     letter-spacing: 2px;
     padding-left: 5%;
   }
@@ -400,6 +401,7 @@ $max: 8;
     font-size: 1.25vw;
     margin-top: 4%;
     font-family: $serif;
+    font-weight: 500;
     color: $mediumTitleColor;
   }
   > p {
@@ -452,6 +454,7 @@ $max: 8;
   > h4 {
     font-size: 1.25vw;
     font-family: $serif;
+    font-weight: 500;
     color: $mediumTitleColor;
     margin-top: 5%;
     margin-bottom: 3%;

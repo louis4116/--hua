@@ -447,6 +447,7 @@ img {
   text-align: center;
   font-size: 1.25vw;
   font-family: "Noto Serif TC", serif;
+  font-weight: 500;
   color: #65534b;
   line-height: 1;
   letter-spacing: 2px;
@@ -734,7 +735,7 @@ img {
   font-size: 0.9vw;
   font-family: "Microsoft JhengHei";
   color: white;
-  line-height: 2.5;
+  line-height: 2;
   letter-spacing: 2px;
   padding-left: 5%;
 }
@@ -782,6 +783,7 @@ img {
   font-size: 1.25vw;
   margin-top: 4%;
   font-family: "Noto Serif TC", serif;
+  font-weight: 500;
   color: #534741;
 }
 .fifth-cut-title > p {
@@ -838,6 +840,7 @@ img {
 .fifth-cut-content-item > h4 {
   font-size: 1.25vw;
   font-family: "Noto Serif TC", serif;
+  font-weight: 500;
   color: #534741;
   margin-top: 5%;
   margin-bottom: 3%;
