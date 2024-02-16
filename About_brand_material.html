@@ -419,6 +419,7 @@
           slidesPerView: 1,
           effect: "fade",
           watchSlidesVisibility: true,
+          loop: true,
         });
         const imgSwiper = new Swiper(".left-circle-container", {
           direction: "horizontal",
@@ -430,6 +431,7 @@
           spaceBetween: 50,
           effect: "fade",
           watchSlidesVisibility: true,
+          loop: true,
           on: {
             slideChangeTransitionStart: function (swiper) {
               let result = t.filter((item) => item.index === this.activeIndex);
@@ -444,6 +446,7 @@
         if (window.innerWidth <= 500) {
           $("#circle-2").remove();
           $(".dot-container").remove();
+          textSwiper.autoplay.start();
         } else {
           circleTl.to("#circle-2 circle", {
             strokeDashoffset: 600,
