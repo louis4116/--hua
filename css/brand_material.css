@@ -511,6 +511,9 @@ img {
   .left-circle-container {
     width: 60vw;
   }
+  .left-circle-container .swiper-slide {
+    border-radius: 50%;
+  }
 }
 
 .svgbox {
@@ -741,14 +744,15 @@ img {
 }
 @media all and (max-width: 500px) {
   .right-circle-item .icon {
-    width: 8vw;
+    width: 10vw;
     margin-bottom: 3%;
   }
   .right-circle-item > h4 {
-    font-size: 3.25vw;
+    font-size: 4.6vw;
   }
   .right-circle-item > p {
-    font-size: 2.25vw;
+    font-size: 3.75vw;
+    padding: 0;
   }
 }
 
