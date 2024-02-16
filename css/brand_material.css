@@ -632,7 +632,7 @@ img {
 }
 
 .dot:nth-child(7) {
-  left: -0.2%;
+  left: -0.5%;
   top: 49%;
 }
 
@@ -736,6 +736,7 @@ img {
   color: white;
   line-height: 2.5;
   letter-spacing: 2px;
+  padding-left: 5%;
 }
 @media all and (max-width: 500px) {
   .right-circle-item .icon {
@@ -756,8 +757,7 @@ img {
 }
 @media all and (max-width: 500px) {
   .dot-circle {
-    transform: scale(1.5);
-    width: 100%;
+    width: 90vw;
   }
 }
 

@@ -266,7 +266,7 @@ $max: 8;
   display: none;
 }
 .dot:nth-child(7) {
-  left: -0.2%;
+  left: -0.5%;
   top: 49%;
 }
 .swiper-button-next,
@@ -339,6 +339,7 @@ $max: 8;
   //   height: 32vw;
   background-color: #736357;
   border-radius: 50%;
+
   .icon {
     margin-bottom: 7%;
   }
@@ -356,6 +357,7 @@ $max: 8;
     color: white;
     line-height: 2.5;
     letter-spacing: 2px;
+    padding-left: 5%;
   }
   @include mobile {
     .icon {
@@ -374,8 +376,7 @@ $max: 8;
   position: absolute;
   width: 36.1vw;
   @include mobile {
-    transform: scale(1.5);
-    width: 100%;
+    width: 90vw;
   }
 }
 

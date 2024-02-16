@@ -33,11 +33,11 @@
           </div>
         </div>
         <div class="brand-nav">
-          <a href="javascript:;"><h4>品牌故事</h4></a>
+          <a href="About_brand_story.html"><h4>品牌故事</h4></a>
           <div class="brand-nav-line"></div>
-          <a href="javascript:;"><h4>品牌理念</h4></a>
+          <a href="About_brand_concept.html"><h4>品牌理念</h4></a>
           <div class="brand-nav-line"></div>
-          <a href="javascript:;"><h4>精鑄工藝</h4></a>
+          <a href="About_brand_material.html"><h4>精鑄工藝</h4></a>
         </div>
       </section>
       <section class="third-cut">
@@ -428,6 +428,7 @@
               let result = t.filter((item) => item.index === this.activeIndex);
               let progress = result[0].progress;
               circleTl.progress(progress);
+              console.log(progress);
             },
           },
         });
