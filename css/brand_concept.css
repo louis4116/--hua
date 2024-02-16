@@ -452,6 +452,7 @@ img {
 .third-cut-title > h4 {
   font-size: 1.25vw;
   font-family: "Noto Serif TC", serif;
+  font-weight: 500;
   color: #65534b;
   line-height: 1;
   letter-spacing: 2px;
@@ -895,11 +896,11 @@ img {
 }
 
 .swiper-button-next {
-  left: 50%;
+  left: 54%;
 }
 
 .swiper-button-prev {
-  left: 36%;
+  left: 39%;
 }
 
 .fourth-cut {
