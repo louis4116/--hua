@@ -108,17 +108,17 @@
   @include mobile {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 85%;
     margin-top: 3%;
     h4 {
-      font-size: $contentSizePH;
+      font-size: 4vw;
       font-weight: 600;
       letter-spacing: 2px;
     }
     > .brand-nav-line {
       height: 3.75vw;
-      margin-left: 9%;
-      margin-right: 9%;
+      margin-left: 0%;
+      margin-right: 0%;
     }
   }
 }
@@ -141,7 +141,7 @@
   }
   @include mobile {
     > h4 {
-      font-size: $contentSizePH;
+      font-size: $brandTitle;
     }
   }
 }
@@ -462,7 +462,7 @@ $max: 7;
   color: $bigTitleColor;
   margin-left: 4%;
   > h4 {
-    font-size: $contentSizePH;
+    font-size: $brandTitle;
     font-family: $serif;
     font-weight: 500;
     white-space: nowrap;
@@ -545,7 +545,7 @@ $max: 7;
       font-size: 6vw;
     }
     > h4 {
-      font-size: $contentSizePH;
+      font-size: $brandTitle;
       margin-bottom: 6%;
     }
     > p {

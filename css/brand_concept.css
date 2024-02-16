@@ -425,18 +425,18 @@ img {
   .brand-nav {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 85%;
     margin-top: 3%;
   }
   .brand-nav h4 {
-    font-size: 3.75vw;
+    font-size: 4vw;
     font-weight: 600;
     letter-spacing: 2px;
   }
   .brand-nav > .brand-nav-line {
     height: 3.75vw;
-    margin-left: 9%;
-    margin-right: 9%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
@@ -458,7 +458,7 @@ img {
 }
 @media all and (max-width: 500px) {
   .third-cut-title > h4 {
-    font-size: 3.75vw;
+    font-size: 4.6vw;
   }
 }
 
@@ -866,7 +866,7 @@ img {
   margin-left: 4%;
 }
 .para-text-ph > h4 {
-  font-size: 3.75vw;
+  font-size: 4.6vw;
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
   white-space: nowrap;
@@ -954,7 +954,7 @@ img {
     font-size: 6vw;
   }
   .fourth-cut-para > h4 {
-    font-size: 3.75vw;
+    font-size: 4.6vw;
     margin-bottom: 6%;
   }
   .fourth-cut-para > p {

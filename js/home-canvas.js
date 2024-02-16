@@ -21,7 +21,7 @@ $(window).on("load", function () {
   const windowWidth = window.innerWidth;
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  if (windowWidth >= 768) {
+  if (windowWidth > 1024) {
     window.addEventListener("resize", function () {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
