@@ -951,7 +951,8 @@ img {
 }
 @media all and (max-width: 500px) {
   .fourth-cut-para > h3 {
-    font-size: 6vw;
+    font-size: 6.5vw;
+    line-height: 1.2;
   }
   .fourth-cut-para > h4 {
     font-size: 4.6vw;

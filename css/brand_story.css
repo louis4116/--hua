@@ -493,10 +493,10 @@ img {
   .title-ph {
     display: block;
     font-weight: 600;
-    font-size: 6vw;
+    font-size: 6.5vw;
     font-family: "Cormorant Infant", serif;
     color: #65534b;
-    line-height: 1.5;
+    line-height: 1.2;
   }
 }
 
@@ -637,8 +637,8 @@ img {
     margin-top: 5%;
   }
   .fourth-cut-para > h1 {
-    font-size: 6vw;
-    line-height: 1.5;
+    font-size: 6.5vw;
+    line-height: 1.2;
   }
   .fourth-cut-para > h4 {
     font-size: 4.6vw;
@@ -748,7 +748,8 @@ img {
     width: 20vw;
   }
   .fifth-cut-para-rel-top > h1 {
-    font-size: 6vw;
+    font-size: 6.5vw;
+    line-height: 1.2;
   }
   .fifth-cut-para-rel-top > h4 {
     font-size: 4.6vw;

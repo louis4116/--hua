@@ -542,7 +542,8 @@ $max: 7;
   }
   @include mobile {
     > h3 {
-      font-size: 6vw;
+      font-size: 6.5vw;
+      line-height: 1.2;
     }
     > h4 {
       font-size: $brandTitle;
