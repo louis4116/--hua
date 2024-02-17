@@ -424,9 +424,9 @@ body {
   .home-cut-1-video {
     -webkit-clip-path: ellipse(140% 55% at 50% 45%);
             clip-path: ellipse(140% 55% at 50% 45%);
+    height: 105vh;
   }
   .home-cut-1-video video {
-    height: 80vh;
     -o-object-fit: cover;
        object-fit: cover;
   }

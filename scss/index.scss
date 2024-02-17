@@ -114,8 +114,8 @@ body {
   }
   @include mobile {
     clip-path: ellipse(140% 55% at 50% 45%);
+    height: 105vh;
     video {
-      height: 80vh;
       object-fit: cover;
     }
   }
