@@ -464,7 +464,7 @@ body {
 }
 @media all and (max-width: 500px) {
   .home-cut-1-para {
-    top: 73%;
+    top: 62%;
   }
   .home-cut-1-para > h1 {
     font-size: 7.5vw;
