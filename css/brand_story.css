@@ -702,7 +702,7 @@ img {
   width: 100%;
   margin-top: 13%;
 }
-@media screen and (max-width: 500px) {
+@media all and (max-width: 500px) {
   .fifth-cut-para {
     margin-top: 33%;
   }
