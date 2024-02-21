@@ -143,6 +143,14 @@ img {
   height: 100%;
   top: 0;
 }
+.nav-icon img {
+  width: 10vw;
+}
+@media all and (max-width: 500px) {
+  .nav-icon img {
+    width: 100%;
+  }
+}
 
 .nav-hamb-icon {
   display: none;

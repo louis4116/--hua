@@ -142,15 +142,15 @@ body {
     font-family: $micro;
     font-weight: 200;
   }
-  > p:nth-child(3) {
+  .p-1 {
     font-size: 1.1vw;
     margin-bottom: 1%;
   }
-  > p:nth-child(4) {
+  .p-2 {
     font-size: 0.9vw;
   }
   @include mobile {
-    top: 62%;
+    top: 45%;
     > h1 {
       font-size: 7.5vw;
       display: none;
@@ -170,6 +170,9 @@ body {
 .home-cut-1-para-line {
   display: flex;
   align-items: center;
+  p {
+    font-size: 0.9vw;
+  }
   > span {
     width: 12%;
     margin-right: 2%;
@@ -180,7 +183,13 @@ body {
     }
   }
 }
-
+.opacity-0 {
+  // opacity: 0;
+  // user-select: none;
+}
+.clip-text {
+  overflow: hidden;
+}
 //第二部分
 .home-cut-2 {
   position: relative;

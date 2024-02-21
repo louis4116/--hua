@@ -13,14 +13,14 @@ const project = [
     floor: "地下4層/地上14樓",
     household: "110",
     bigPic: [
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
+      "../img/project-content/project-content-inner-big.webp",
+      "../img/project-content/project-content-inner-big.webp",
+      "../img/project-content/project-content-inner-big.webp",
     ],
     smallPic: [
-      "../img/熱銷建案-內頁/內頁-輪播-1_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-2_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-3_結果.webp",
+      "../img/project-content/project-content-inner-small-1.webp",
+      "../img/project-content/project-content-inner-small-2.webp",
+      "../img/project-content/project-content-inner-small-3.webp",
     ],
   },
   {
@@ -37,14 +37,14 @@ const project = [
     floor: "地下4層/地上14樓",
     household: "110",
     bigPic: [
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
+      "../img/project-content/project-content-inner-big.webp",
+      "../img/project-content/project-content-inner-big.webp",
+      "../img/project-content/project-content-inner-big.webp",
     ],
     smallPic: [
-      "../img/熱銷建案-內頁/內頁-輪播-1_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-2_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-3_結果.webp",
+      "../img/project-content/project-content-inner-small-1.webp",
+      "../img/project-content/project-content-inner-small-2.webp",
+      "../img/project-content/project-content-inner-small-3.webp",
     ],
   },
   {
@@ -61,14 +61,14 @@ const project = [
     floor: "地下4層/地上14樓",
     household: "110",
     bigPic: [
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-大_結果.webp",
+      "../img/project-content/project-content-inner-big.webp",
+      "../img/project-content/project-content-inner-big.webp",
+      "../img/project-content/project-content-inner-big.webp",
     ],
     smallPic: [
-      "../img/熱銷建案-內頁/內頁-輪播-1_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-2_結果.webp",
-      "../img/熱銷建案-內頁/內頁-輪播-3_結果.webp",
+      "../img/project-content/project-content-inner-small-1.webp",
+      "../img/project-content/project-content-inner-small-2.webp",
+      "../img/project-content/project-content-inner-small-3.webp",
     ],
   },
 ];

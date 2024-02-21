@@ -45,11 +45,17 @@
         <div class="home-cut-1-video">
           <video autoplay loop muted playsinline src="./video/B.mp4"></video>
         </div>
-        <div class="home-cut-1-para">
+        <div class="home-cut-1-para para-first">
           <h1>HOME FROM HEART</h1>
           <h2>繁樺座標•榮耀輝映</h2>
-          <p>最好的建築，是近觀微米之間的工藝。</p>
-          <p class="home-cut-1-para-line"><span></span>追求極致 給你最好</p>
+          <p class="p-1">最好的建築，是近觀微米之間的工藝。</p>
+          <p class="home-cut-1-para-line p-2"><span></span>追求極致 給你最好</p>
+        </div>
+        <div class="home-cut-1-para para-second">
+          <h1 class="opacity-0">HOME FROM HEART</h1>
+          <h2>輝煌耀眼•品味風範</h2>
+          <p class="p-1">匠心獨具 ，現代奢華精品美學。</p>
+          <p class="home-cut-1-para-line p-2"><span></span>唯有經典 超越經典</p>
         </div>
       </section>
       <section class="home-cut-2">
@@ -942,6 +948,8 @@
     <script src="./js/ScrollToPlugin.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/ScrollSmoother.min.js"></script>
+    <script src="./js/SplitText.min.js"></script>
+    <script src="./js/CSSRulePlugin.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/home-canvas.js"></script>
@@ -1005,6 +1013,184 @@
           )
           .to(".preload_number", { zIndex: "-1" }, "<");
         //起始跳數字動畫☝️
+
+        //第一cut文字動畫👇
+        const splitTitle = new SplitText(".para-first h1", {
+          linesClass: "clip-text",
+        });
+        const splitTitle2 = new SplitText(".para-second h1", {
+          linesClass: "clip-text",
+        });
+        const splitH2Title = new SplitText(".para-first h2", {
+          linesClass: "clip-text",
+        });
+        const splitH2Title2 = new SplitText(".para-second h2", {
+          linesClass: "clip-text",
+        });
+        const cut1TextTl = gsap.timeline({ repeat: -1 });
+        const oddTitle = splitTitle.chars.filter(
+          (item, index) => index % 2 === 0
+        );
+        const evenTitle = splitTitle.chars.filter(
+          (item, index) => index % 2 !== 0
+        );
+        const oddTitle2 = splitTitle2.chars.filter(
+          (item, index) => index % 2 === 0
+        );
+        const evenTitle2 = splitTitle2.chars.filter(
+          (item, index) => index % 2 !== 0
+        );
+
+        cut1TextTl
+          .fromTo(
+            oddTitle,
+            {
+              opacity: 0,
+              y: -50,
+              filter: "blur(10px)",
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 2,
+              ease: "power2",
+              filter: "blur(0px)",
+              stagger: {
+                each: 0.07,
+                from: "random",
+              },
+            },
+            "<-0.75"
+          )
+          .fromTo(
+            evenTitle,
+            {
+              autoAlpha: 0,
+              y: 50,
+              filter: "blur(10px)",
+            },
+            {
+              autoAlpha: 1,
+              y: 0,
+              duration: 2,
+              ease: "power2",
+              filter: "blur(0px)",
+              stagger: {
+                each: 0.07,
+                from: "random",
+              },
+            },
+            "<+0.5"
+          )
+          .from(
+            splitH2Title.chars,
+            {
+              autoAlpha: 0,
+              y: 50,
+              filter: "blur(10px)",
+              ease: "power2",
+              duration: 2,
+              stagger: {
+                each: 0.07,
+                from: "random",
+              },
+            },
+            "<+0.5"
+          )
+          .from(
+            ".para-first .p-1,.para-first .p-2",
+            {
+              autoAlpha: 0,
+              filter: "blur(10px)",
+              duration: 2,
+            },
+            "<+0.5"
+          )
+          .to(
+            ".para-first",
+            {
+              autoAlpha: 0,
+              filter: "blur(10px)",
+              duration: 3,
+            },
+            "<+10"
+          )
+          .fromTo(
+            oddTitle2,
+            {
+              opacity: 0,
+              y: -50,
+              filter: "blur(10px)",
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 2,
+              ease: "power2",
+              filter: "blur(0px)",
+              stagger: {
+                each: 0.07,
+                from: "random",
+              },
+            },
+            "<+0.75"
+          )
+          .fromTo(
+            evenTitle2,
+            {
+              opacity: 0,
+              y: 50,
+              filter: "blur(10px)",
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 2,
+              ease: "power2",
+              filter: "blur(0px)",
+              stagger: {
+                each: 0.07,
+                from: "random",
+              },
+            },
+            "<+0.5"
+          )
+          .from(
+            splitH2Title2.chars,
+            {
+              autoAlpha: 0,
+              y: 50,
+              filter: "blur(10px)",
+              ease: "power2",
+              duration: 2,
+              stagger: {
+                each: 0.07,
+                from: "random",
+              },
+            },
+            "<+0.5"
+          )
+          .from(
+            ".para-second .p-1,.para-second .p-2",
+            {
+              autoAlpha: 0,
+              filter: "blur(10px)",
+              duration: 2,
+            },
+            "<+0.5"
+          )
+          .to(
+            ".para-second",
+            {
+              autoAlpha: 0,
+              filter: "blur(10px)",
+              duration: 3,
+            },
+            "<+8"
+          );
+
+        preloaderTl.add(cut1TextTl, "<-0.5"); //開頭動畫接續第一cut文字動畫
+        //第一cut文字動畫☝️
         const navIcon = $(".nav-icon");
         const navIconH = navIcon.innerHeight();
 
@@ -1042,6 +1228,100 @@
           el.small = Array(lackAverage).fill(el.small).flat();
         });
         //補足圖片數量☝️
+
+        //第一cut文字動畫👇
+
+        // let splitTitle = new SplitText(".home-cut-1-para h1", {
+        //   linesClass: "clip-text",
+        // });
+        // const cut1TextTl = gsap.timeline({ repeat: -1 });
+        // const oddTitle = splitTitle.chars.filter(
+        //   (item, index) => index % 2 === 0
+        // );
+        // const evenTitle = splitTitle.chars.filter(
+        //   (item, index) => index % 2 !== 0
+        // );
+        // console.log(splitTitle.chars);
+        // gsap.fromTo(
+        //   oddTitle,
+        //   {
+        //     autoAlpha: 0,
+        //     y: -200,
+        //     filter: "blur(10px)",
+        //   },
+        //   {
+        //     autoAlpha: 1,
+        //     y: 0,
+        //     duration: 2,
+        //     ease: "power2",
+        //     filter: "blur(0px)",
+        //     repeat: -1,
+
+        //     stagger: {
+        //       each: 0.07,
+        //       from: "random",
+        //     },
+        //   }
+        // );
+        // gsap.fromTo(
+        //   evenTitle,
+        //   {
+        //     autoAlpha: 0,
+        //     y: 200,
+        //     filter: "blur(10px)",
+        //   },
+        //   {
+        //     autoAlpha: 1,
+        //     y: 0,
+        //     duration: 2,
+        //     ease: "power2",
+        //     filter: "blur(0px)",
+        //     repeat: -1,
+        //     repeatDelay: 10,
+        //     stagger: {
+        //       each: 0.07,
+        //       from: "random",
+        //     },
+        //   }
+        // );
+        // cut1TextTl
+        //   .from(".para-first h2,.para-first .p-1,.para-first .p-2", {
+        //     opacity: 0,
+        //     filter: "blur(10px)",
+        //     duration: 2,
+        //   })
+        //   .to(
+        //     ".para-first h2,.para-first .p-1,.para-first .p-2",
+        //     {
+        //       opacity: 0,
+        //       filter: "blur(10px)",
+        //       duration: 2,
+        //     },
+        //     "<+10"
+        //   )
+        //   .fromTo(
+        //     ".para-second h2,.para-second .p-1,.para-second .p-2",
+        //     {
+        //       opacity: 0,
+        //       filter: "blur(10px)",
+        //     },
+        //     {
+        //       opacity: 1,
+        //       filter: "blur(0px)",
+        //       duration: 2,
+        //     }
+        //   )
+        //   .to(
+        //     ".para-second h2,.para-second .p-1,.para-second .p-2",
+        //     {
+        //       opacity: 0,
+        //       filter: "blur(10px)",
+        //       duration: 2,
+        //     },
+        //     "<+10"
+        //   );
+
+        //第一cut文字動畫☝️
 
         //icon落下動畫👇
         gsap.to(".drops-1", {

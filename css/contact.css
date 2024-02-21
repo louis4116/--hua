@@ -143,6 +143,14 @@ img {
   height: 100%;
   top: 0;
 }
+.nav-icon img {
+  width: 10vw;
+}
+@media all and (max-width: 500px) {
+  .nav-icon img {
+    width: 100%;
+  }
+}
 
 .nav-hamb-icon {
   display: none;
@@ -515,7 +523,7 @@ input:-webkit-autofill:focus {
   width: 100%;
   margin-bottom: 3%;
 }
-.form-item-content > label {
+.form-item-content label {
   color: #333333;
   font-size: 1vw;
   width: 10%;
@@ -524,14 +532,15 @@ input:-webkit-autofill:focus {
   font-weight: 500;
   font-family: "Noto Serif TC", serif;
 }
-.form-item-content > input {
+.form-item-content input {
+  color: black;
   font-size: 1vw;
   border: none;
   background-color: transparent;
   margin-left: 3%;
   width: 80%;
 }
-.form-item-content > textarea {
+.form-item-content textarea {
   font-size: 1vw;
   border: none;
   background-color: transparent;
@@ -590,5 +599,19 @@ input:-webkit-autofill:focus {
   .form-button > button {
     padding: 1vw 12vw;
     font-size: 3.8vw;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.8vw;
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+  font-family: "Noto Serif TC", serif;
+}
+@media all and (max-width: 500px) {
+  .error {
+    font-size: 3vw;
   }
 }/*# sourceMappingURL=contact.css.map */

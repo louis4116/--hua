@@ -144,6 +144,14 @@ img {
   height: 100%;
   top: 0;
 }
+.nav-icon img {
+  width: 10vw;
+}
+@media all and (max-width: 500px) {
+  .nav-icon img {
+    width: 100%;
+  }
+}
 
 .nav-hamb-icon {
   display: none;
@@ -455,16 +463,16 @@ body {
   font-family: "Microsoft JhengHei";
   font-weight: 200;
 }
-.home-cut-1-para > p:nth-child(3) {
+.home-cut-1-para .p-1 {
   font-size: 1.1vw;
   margin-bottom: 1%;
 }
-.home-cut-1-para > p:nth-child(4) {
+.home-cut-1-para .p-2 {
   font-size: 0.9vw;
 }
 @media all and (max-width: 500px) {
   .home-cut-1-para {
-    top: 62%;
+    top: 45%;
   }
   .home-cut-1-para > h1 {
     font-size: 7.5vw;
@@ -486,6 +494,9 @@ body {
   display: flex;
   align-items: center;
 }
+.home-cut-1-para-line p {
+  font-size: 0.9vw;
+}
 .home-cut-1-para-line > span {
   width: 12%;
   margin-right: 2%;
@@ -496,6 +507,10 @@ body {
   .home-cut-1-para-line > span {
     margin-right: 5%;
   }
+}
+
+.clip-text {
+  overflow: hidden;
 }
 
 .home-cut-2 {

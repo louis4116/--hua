@@ -28,8 +28,7 @@ $(window).on("load", function () {
     });
   }
 
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(ScrollSmoother);
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
   //遮罩圖片內設定
   const backImage = new Image();

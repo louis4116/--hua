@@ -18,15 +18,21 @@
     </div>
     <nav id="nav"></nav>
     <main class="project-content-main">
-      <div class="background"><img src="./img/home/home-bg.jpg" alt="" /></div>
+      <div class="background">
+        <img src="./img/home/home-bg.jpg" alt="home-bg" />
+      </div>
       <section class="first-cut">
         <div class="first-cut-img-container">
           <picture>
             <source
               class="first-page-img-main"
-              srcset="./img/熱銷建案-內頁/內頁-banner-phone_結果.webp"
+              srcset="
+                ./img/project-content/project-content-inner-banner-phone.webp
+              "
               media="(max-width:500px)" />
-            <img src="./img/project/內頁背景-pc.webp" alt="內頁背景-pc"
+            <img
+              src="./img/project-content/project-content-inner-banner.webp"
+              alt="內頁背景-pc"
           /></picture>
         </div>
         <h1 class="first-cut-h1">品世界</h1>
@@ -37,20 +43,20 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide slider-image">
                 <img
-                  src="./img/熱銷建案-內頁/內頁-輪播-大_結果.webp"
+                  src="./img/project-content/project-content-inner-big.webp"
                   alt="內頁-輪播-1"
                 />
               </div>
               <div class="swiper-slide slider-image">
                 <img
-                  src="./img/熱銷建案-內頁/內頁-輪播-大_結果.webp"
+                  src="./img/project-content/project-content-inner-big.webp"
                   alt="內頁-輪播-2"
                 />
               </div>
 
               <div class="swiper-slide slider-image">
                 <img
-                  src="./img/熱銷建案-內頁/內頁-輪播-大_結果.webp"
+                  src="./img/project-content/project-content-inner-big.webp"
                   alt="內頁-輪播-3"
                 />
               </div>
@@ -60,28 +66,34 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide slider-image">
                 <img
-                  src="./img/熱銷建案-內頁/內頁-輪播-1_結果.webp"
+                  src="./img/project-content/project-content-inner-small-1.webp"
                   alt="內頁-輪播-1"
                 />
               </div>
               <div class="swiper-slide slider-image">
                 <img
-                  src="./img/熱銷建案-內頁/內頁-輪播-2_結果.webp"
+                  src="./img/project-content/project-content-inner-small-2.webp"
                   alt="內頁-輪播-2"
                 />
               </div>
               <div class="swiper-slide slider-image">
                 <img
-                  src="./img/熱銷建案-內頁/內頁-輪播-3_結果.webp"
+                  src="./img/project-content/project-content-inner-small-3.webp"
                   alt="內頁-輪播-3"
                 />
               </div>
             </div>
             <div class="swiper-button swiper-button-prev">
-              <img src="./img/熱銷建案-內頁/咖啡左箭頭.svg" alt="咖啡左箭頭" />
+              <img
+                src="./img/project-content/brown-left-arrow.svg"
+                alt="咖啡左箭頭"
+              />
             </div>
             <div class="swiper-button swiper-button-next">
-              <img src="./img/熱銷建案-內頁/咖啡右箭頭.svg" alt="咖啡右箭頭" />
+              <img
+                src="./img/project-content/brown-right-arrow.svg"
+                alt="咖啡右箭頭"
+              />
             </div>
           </div>
         </div>
@@ -185,11 +197,11 @@
               ></iframe>
             </div>
             <div class="fourth-cut-form">
-              <form action="javascript:;">
+              <form id="form-main" action="javascript:;" method="post">
                 <div class="form-item">
                   <div class="form-item-content">
                     <label for="name"><span>姓</span><span>名</span></label
-                    ><input id="name" type="text" autocomplete="new-name" />
+                    ><input id="name" type="text" name="name" />
                   </div>
                   <div class="form-line"></div>
                 </div>
@@ -198,7 +210,7 @@
                     <label for="phone">
                       <span>電</span>
                       <span>話</span> </label
-                    ><input id="phone" type="phone" autocomplete="new-phone" />
+                    ><input id="phone" type="phone" name="phone" />
                   </div>
                   <div class="form-line"></div>
                 </div>
@@ -207,7 +219,7 @@
                     <label for="email">
                       <span>信</span>
                       <span>箱</span> </label
-                    ><input id="email" type="email" autocomplete="new-email" />
+                    ><input id="email" type="email" name="email" />
                   </div>
                   <div class="form-line"></div>
                 </div>
@@ -216,11 +228,7 @@
                     <label for="comment">
                       <span>留</span>
                       <span>言</span> </label
-                    ><textarea
-                      id="comment"
-                      name="comment"
-                      autocomplete="new-comment"
-                    ></textarea>
+                    ><textarea id="comment" name="comment"></textarea>
                   </div>
                   <div class="form-line"></div>
                 </div>
@@ -238,6 +246,8 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
     <script src="./js/gsap.min.js"></script>
     <script src="./js/ScrollTrigger.min.js"></script>
     <script src="./js/nav.js"></script>
@@ -332,6 +342,45 @@
               "<+0.5"
             );
         }
+        //表單內容👇
+        $("#form-main").validate({
+          errorClass: "error",
+          rules: {
+            name: {
+              required: true,
+              maxlength: 12,
+            },
+            phone: {
+              required: true,
+              pattern:
+                /^09[0-9]{8}|(0)([0-9]{1})([-]?)([0-9]{8})|(0)([0-9]{1})([-]?)([0-4]{4})([-]?)([0-4]{4})$/,
+            },
+            comment: {
+              maxlength: 500,
+            },
+          },
+          messages: {
+            name: {
+              required: "必填",
+              maxlength: "請勿超過12個字元",
+            },
+            phone: {
+              required: "必填",
+              pattern: "請輸入正確的電話號碼",
+            },
+            email: "請輸入正確的電子信箱",
+            comment: {
+              maxlength: "請勿超過500個字元",
+            },
+          },
+          errorPlacement: function (err, el) {
+            el.parent(".form-item-content").after(err);
+          },
+          submitHandler: function (form) {
+            return false;
+          },
+        });
+        //表單內容☝️
       };
     </script>
   </body>

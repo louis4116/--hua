@@ -12,7 +12,7 @@ $(document).ready(function () {
   const nav = $("#nav");
   let src = "";
   src += `<div class="nav-icon">
-    <img src="./img/home/樺輝icon.png" alt="樺輝icon" />
+    <img src="./img/hua-logo.svg" alt="樺輝icon" />
     <a href="index.html"></a>
   </div>`;
   src += ` <button class="nav-hamb-icon">

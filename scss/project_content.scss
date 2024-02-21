@@ -394,7 +394,7 @@ input:-webkit-autofill:focus {
   width: 100%;
   margin-bottom: 3%;
 
-  > label {
+  label {
     color: #333333;
     font-size: 1vw;
     width: 10%;
@@ -403,14 +403,15 @@ input:-webkit-autofill:focus {
     font-weight: 500;
     font-family: $serif;
   }
-  > input {
+  input {
+    color: black;
     font-size: 1vw;
     border: none;
     background-color: transparent;
     margin-left: 3%;
     width: 80%;
   }
-  > textarea {
+  textarea {
     font-size: 1vw;
     border: none;
     background-color: transparent;
@@ -421,15 +422,15 @@ input:-webkit-autofill:focus {
   }
   @include mobile {
     margin-bottom: 5%;
-    > label {
+    label {
       font-size: 4.2vw;
       width: 22%;
       line-height: 1;
     }
-    > input {
+    input {
       font-size: 4.2vw;
     }
-    > textarea {
+    textarea {
       font-size: 4.2vw;
       height: 15vw;
       margin-left: 3%;
@@ -438,6 +439,20 @@ input:-webkit-autofill:focus {
     }
   }
 }
+
+//表單錯誤訊息
+.error {
+  color: red;
+  font-size: 0.8vw;
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+  font-family: "Noto Serif TC", serif;
+  @include mobile {
+    font-size: 3vw;
+  }
+}
+
 .form-textarea {
   flex-direction: column;
   align-items: flex-start;
