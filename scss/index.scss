@@ -769,7 +769,7 @@ canvas {
   }
 }
 .swiper-button-prev {
-  background-image: url("../img/home/輪播左箭頭.png");
+  background-image: url("../img/home/left-arrow.png");
   left: 176%;
   @include laptop {
     left: 170%;
@@ -779,7 +779,7 @@ canvas {
   }
 }
 .swiper-button-next {
-  background-image: url("../img/home/輪播右箭頭.png");
+  background-image: url("../img/home/right-arrow.png");
   right: -107%;
   @include laptop {
     right: -100%;

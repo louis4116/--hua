@@ -66,13 +66,13 @@
           <img src="./img/home/blur-icon-2.png" alt="模糊icon-2" />
         </div>
         <div class="drops drops-3">
-          <img src="./img/home/2號.png" alt="2" />
+          <img src="./img/home/no2.png" alt="2" />
         </div>
         <div class="drops drops-4">
-          <img src="./img/home/3號.png" alt="3" />
+          <img src="./img/home/no3.png" alt="3" />
         </div>
         <div class="drops drops-5">
-          <img src="./img/home/4號.png" alt="4" />
+          <img src="./img/home/no4.png" alt="4" />
         </div>
         <div class="home-cut-2-para">
           <div class="home-cut-2-para-img">
@@ -956,9 +956,9 @@
     <script src="./js/home-carsoul.js"></script>
     <script src="./js/loading.js"></script>
     <script>
-      // $(window).resize(function () {
-      //   location.reload();
-      // });
+      $(window).resize(function () {
+        location.reload();
+      });
 
       $(window).on("load", function () {
         //起始跳數字動畫👇
@@ -1228,100 +1228,6 @@
           el.small = Array(lackAverage).fill(el.small).flat();
         });
         //補足圖片數量☝️
-
-        //第一cut文字動畫👇
-
-        // let splitTitle = new SplitText(".home-cut-1-para h1", {
-        //   linesClass: "clip-text",
-        // });
-        // const cut1TextTl = gsap.timeline({ repeat: -1 });
-        // const oddTitle = splitTitle.chars.filter(
-        //   (item, index) => index % 2 === 0
-        // );
-        // const evenTitle = splitTitle.chars.filter(
-        //   (item, index) => index % 2 !== 0
-        // );
-        // console.log(splitTitle.chars);
-        // gsap.fromTo(
-        //   oddTitle,
-        //   {
-        //     autoAlpha: 0,
-        //     y: -200,
-        //     filter: "blur(10px)",
-        //   },
-        //   {
-        //     autoAlpha: 1,
-        //     y: 0,
-        //     duration: 2,
-        //     ease: "power2",
-        //     filter: "blur(0px)",
-        //     repeat: -1,
-
-        //     stagger: {
-        //       each: 0.07,
-        //       from: "random",
-        //     },
-        //   }
-        // );
-        // gsap.fromTo(
-        //   evenTitle,
-        //   {
-        //     autoAlpha: 0,
-        //     y: 200,
-        //     filter: "blur(10px)",
-        //   },
-        //   {
-        //     autoAlpha: 1,
-        //     y: 0,
-        //     duration: 2,
-        //     ease: "power2",
-        //     filter: "blur(0px)",
-        //     repeat: -1,
-        //     repeatDelay: 10,
-        //     stagger: {
-        //       each: 0.07,
-        //       from: "random",
-        //     },
-        //   }
-        // );
-        // cut1TextTl
-        //   .from(".para-first h2,.para-first .p-1,.para-first .p-2", {
-        //     opacity: 0,
-        //     filter: "blur(10px)",
-        //     duration: 2,
-        //   })
-        //   .to(
-        //     ".para-first h2,.para-first .p-1,.para-first .p-2",
-        //     {
-        //       opacity: 0,
-        //       filter: "blur(10px)",
-        //       duration: 2,
-        //     },
-        //     "<+10"
-        //   )
-        //   .fromTo(
-        //     ".para-second h2,.para-second .p-1,.para-second .p-2",
-        //     {
-        //       opacity: 0,
-        //       filter: "blur(10px)",
-        //     },
-        //     {
-        //       opacity: 1,
-        //       filter: "blur(0px)",
-        //       duration: 2,
-        //     }
-        //   )
-        //   .to(
-        //     ".para-second h2,.para-second .p-1,.para-second .p-2",
-        //     {
-        //       opacity: 0,
-        //       filter: "blur(10px)",
-        //       duration: 2,
-        //     },
-        //     "<+10"
-        //   );
-
-        //第一cut文字動畫☝️
 
         //icon落下動畫👇
         gsap.to(".drops-1", {

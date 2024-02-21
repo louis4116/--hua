@@ -393,9 +393,11 @@ img {
   overflow: hidden;
   position: relative;
   margin-right: 2%;
+  border-radius: 20px;
 }
 .second-cut-images .swiper-slide > :nth-child(1) {
   height: 100%;
+  border-radius: 20px;
 }
 .second-cut-images > .swiper-button {
   position: absolute;
@@ -422,6 +424,7 @@ img {
   overflow: hidden;
 }
 .second-cut-col .swiper-slide {
+  border-radius: 20px;
   cursor: pointer;
   opacity: 0.4;
 }

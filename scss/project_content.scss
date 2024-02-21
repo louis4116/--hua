@@ -104,8 +104,10 @@
   overflow: hidden;
   position: relative;
   margin-right: 2%;
+  border-radius: 20px;
   .swiper-slide > :nth-child(1) {
     height: 100%;
+    border-radius: 20px;
   }
   > .swiper-button {
     position: absolute;
@@ -128,6 +130,7 @@
   width: 18vw;
   overflow: hidden;
   .swiper-slide {
+    border-radius: 20px;
     cursor: pointer;
     opacity: 0.4;
     > img {
