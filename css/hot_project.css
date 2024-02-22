@@ -550,8 +550,14 @@ img {
   border-radius: 30px;
   padding: 5px 10px;
   margin-right: 0.8vw;
+  cursor: pointer;
 }
-.connect-button > span {
+.connect-button a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.connect-button span {
   color: #65534b;
   font-family: "Microsoft JhengHei";
   font-size: 0.9vw;
@@ -562,7 +568,7 @@ img {
   .connect-button {
     padding: 5px 10px;
   }
-  .connect-button > span {
+  .connect-button span {
     font-size: 1vw;
   }
 }
@@ -571,45 +577,45 @@ img {
     margin-right: 0;
     padding: 1% 2%;
   }
-  .connect-button > span {
+  .connect-button span {
     font-size: 3.75vw;
     margin-left: 1.4vw;
   }
 }
 
-.connect > img {
+.connect img {
   width: 0.8vw;
 }
 @media all and (max-width: 500px) {
-  .connect > img {
+  .connect img {
     width: 3vw;
   }
 }
 
-.fb > img {
+.fb img {
   width: 0.39vw;
 }
 @media all and (max-width: 1600px) {
-  .fb > img {
+  .fb img {
     width: 0.45vw;
   }
 }
 @media all and (max-width: 500px) {
-  .fb > img {
+  .fb img {
     width: 1.8vw;
   }
 }
 
-.mail > img {
+.mail img {
   width: 0.9vw;
 }
 @media all and (max-width: 1600px) {
-  .mail > img {
+  .mail img {
     width: 1vw;
   }
 }
 @media all and (max-width: 500px) {
-  .mail > img {
+  .mail img {
     width: 3vw;
   }
 }
@@ -706,6 +712,11 @@ img {
     align-items: center;
     margin-top: 5%;
   }
+}
+
+.swiper-img-pc {
+  overflow: hidden;
+  border-radius: 260px 260px 0 0;
 }
 
 .swiper-slide-prev {

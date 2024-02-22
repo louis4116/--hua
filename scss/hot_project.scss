@@ -206,7 +206,13 @@
   border-radius: 30px;
   padding: 5px 10px;
   margin-right: 0.8vw;
-  > span {
+  cursor: pointer;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  span {
     color: $bigTitleColor;
     font-family: $micro;
     font-size: $contentSize;
@@ -215,26 +221,26 @@
   }
   @include laptop {
     padding: 5px 10px;
-    > span {
+    span {
       font-size: 1vw;
     }
   }
   @include mobile {
     margin-right: 0;
     padding: 1% 2%;
-    > span {
+    span {
       font-size: $contentSizePH;
       margin-left: 1.4vw;
     }
   }
 }
-.connect > img {
+.connect img {
   width: 0.8vw;
   @include mobile {
     width: 3vw;
   }
 }
-.fb > img {
+.fb img {
   width: 0.39vw;
   @include laptop {
     width: 0.45vw;
@@ -243,7 +249,7 @@
     width: 1.8vw;
   }
 }
-.mail > img {
+.mail img {
   width: 0.9vw;
   @include laptop {
     width: 1vw;
@@ -334,6 +340,10 @@
     align-items: center;
     margin-top: 5%;
   }
+}
+.swiper-img-pc {
+  overflow: hidden;
+  border-radius: 260px 260px 0 0;
 }
 .swiper-slide-prev {
   opacity: 1 !important;
