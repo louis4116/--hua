@@ -30,7 +30,7 @@ img {
 .pc {
   display: block;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .pc {
     display: none;
   }
@@ -39,7 +39,7 @@ img {
 .ph {
   display: none;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .ph {
     display: block;
   }
@@ -87,7 +87,7 @@ img {
     margin-top: 5%;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   #footer {
     flex-direction: column;
     font-size: 3vw;
@@ -120,7 +120,7 @@ img {
   flex-wrap: wrap;
   padding: 1vw 3vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   #nav {
     background-image: none;
     padding: 4vw;
@@ -146,7 +146,7 @@ img {
 .nav-icon img {
   width: 10vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-icon img {
     width: 100%;
   }
@@ -156,7 +156,7 @@ img {
   display: none;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-hamb-icon {
     width: 5vw;
     height: 5vw;
@@ -178,7 +178,7 @@ img {
   display: flex;
   align-items: center;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-list {
     width: 100%;
   }
@@ -230,7 +230,7 @@ img {
   bottom: 15%;
   right: 0;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-list-ul li:nth-child(1)::after,
   .nav-list-ul li:nth-child(2)::after,
   .nav-list-ul li:nth-child(3)::after,
@@ -239,7 +239,7 @@ img {
     width: 0px;
   }
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-list-ul {
     display: none;
     flex-direction: column;
@@ -287,13 +287,13 @@ img {
   width: 5vw;
   position: relative;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .box {
     width: 100%;
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .box-img {
     width: 40vw;
   }
@@ -307,7 +307,7 @@ img {
   letter-spacing: 2px;
   color: #aa9784;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .box-para {
     font-size: 8vw;
   }

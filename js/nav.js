@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   nav.append(src);
   const navHeight = $("#nav").outerHeight();
-  if (window.innerWidth <= 500) {
+  if (window.innerWidth <= 1024) {
     $(".nav-hamb-icon").on("click", function (e) {
       e.preventDefault();
       $(".nav-list-ul").slideToggle(500);

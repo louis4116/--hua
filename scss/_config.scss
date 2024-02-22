@@ -67,13 +67,13 @@ img {
 }
 .pc {
   display: block;
-  @include mobile {
+  @include tablet {
     display: none;
   }
 }
 .ph {
   display: none;
-  @include mobile {
+  @include tablet {
     display: block;
   }
 }
@@ -120,7 +120,7 @@ img {
   @include laptop {
     margin-top: 5%;
   }
-  @include mobile {
+  @include tablet {
     flex-direction: column;
     font-size: 3vw;
     line-height: 2;
@@ -157,7 +157,7 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1vw 3vw;
-  @include mobile {
+  @include tablet {
     background-image: none;
     padding: 4vw;
     padding-right: 7vw;
@@ -180,7 +180,7 @@ img {
   img {
     width: 10vw;
   }
-  @include mobile {
+  @include tablet {
     img {
       width: 100%;
     }
@@ -189,7 +189,7 @@ img {
 .nav-hamb-icon {
   display: none;
 }
-@include mobile {
+@include tablet {
   .nav-hamb-icon {
     width: 5vw;
     height: 5vw;
@@ -210,7 +210,7 @@ img {
 .nav-list {
   display: flex;
   align-items: center;
-  @include mobile {
+  @include tablet {
     width: 100%;
   }
 }
@@ -255,14 +255,14 @@ img {
       bottom: 15%;
       right: 0;
     }
-    @include mobile {
+    @include tablet {
       &::after {
         content: "";
         width: 0px;
       }
     }
   }
-  @include mobile {
+  @include tablet {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -309,12 +309,12 @@ img {
   flex-direction: column;
   width: 5vw;
   position: relative;
-  @include mobile {
+  @include tablet {
     width: 100%;
   }
 }
 .box-img {
-  @include mobile {
+  @include tablet {
     width: 40vw;
   }
 }
@@ -325,7 +325,7 @@ img {
   font-size: 2.25vw;
   letter-spacing: 2px;
   color: #aa9784;
-  @include mobile {
+  @include tablet {
     font-size: 8vw;
   }
 }

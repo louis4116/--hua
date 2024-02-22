@@ -73,7 +73,7 @@ body {
     z-index: 1000;
     margin-top: 1%;
   }
-  @include mobile {
+  @include tablet {
     .preload_number-bottom {
       font-size: 3.25vw;
       margin-left: 2vw;
@@ -112,7 +112,7 @@ body {
       object-fit: cover;
     }
   }
-  @include mobile {
+  @include tablet {
     clip-path: ellipse(140% 55% at 50% 45%);
     height: 105vh;
     video {
@@ -149,7 +149,7 @@ body {
   .p-2 {
     font-size: 0.9vw;
   }
-  @include mobile {
+  @include tablet {
     top: 45%;
     > h1 {
       font-size: 7.5vw;
@@ -178,7 +178,7 @@ body {
     margin-right: 2%;
     background-color: white;
     height: 1px;
-    @include mobile {
+    @include tablet {
       margin-right: 5%;
     }
   }
@@ -205,7 +205,7 @@ body {
   top: -5%;
   width: 30vw;
   z-index: 1;
-  @include mobile {
+  @include tablet {
     top: -12vw;
     width: 31vw;
   }
@@ -214,7 +214,7 @@ body {
   left: -10%;
   top: 7%;
   width: 25vw;
-  @include mobile {
+  @include tablet {
     left: -8vw;
     top: 80vw;
     width: 28vw;
@@ -223,7 +223,7 @@ body {
 .drops-3 {
   left: 15%;
   top: 6%;
-  @include mobile {
+  @include tablet {
     left: 22vw;
     top: 104vw;
     width: 16vw;
@@ -233,7 +233,7 @@ body {
   right: 12%;
   top: 0.5%;
   width: 10vw;
-  @include mobile {
+  @include tablet {
     right: 12vw;
     top: 0vw;
     width: 14vw;
@@ -243,7 +243,7 @@ body {
   right: 24%;
   top: 10%;
   width: 7vw;
-  @include mobile {
+  @include tablet {
     right: 12vw;
     top: 103vw;
     width: 20vw;
@@ -282,7 +282,7 @@ body {
   > :nth-child(4) {
     margin-bottom: 2%;
   }
-  @include mobile {
+  @include tablet {
     > h1 {
       font-size: 6.5vw;
     }
@@ -308,7 +308,7 @@ body {
 }
 .home-cut-2-para-img {
   width: 10vw;
-  @include mobile {
+  @include tablet {
     width: 20vw;
   }
 }
@@ -316,7 +316,7 @@ body {
 .home-cut-2-fixed-container {
   position: relative;
 
-  @include mobile {
+  @include tablet {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,7 +327,7 @@ body {
   position: relative;
   overflow: hidden;
 
-  @include mobile {
+  @include tablet {
     overflow: unset;
   }
 }
@@ -354,7 +354,7 @@ body {
   @include laptop {
     margin-top: 14%;
   }
-  @include mobile {
+  @include tablet {
     width: 100%;
     height: 100vh;
     margin-top: 0%;
@@ -371,7 +371,7 @@ body {
   position: relative;
   width: 35vw;
   height: 35vw;
-  @include mobile {
+  @include tablet {
     width: 60vw;
     height: 60vw;
   }
@@ -386,7 +386,7 @@ body {
     font-size: 3.7vw;
     letter-spacing: 2px;
   }
-  @include mobile {
+  @include tablet {
     p {
       font-size: 6.5vw;
     }
@@ -424,7 +424,7 @@ body {
   bottom: 0;
   transform-origin: top left;
 }
-@include mobile {
+@include tablet {
   .n-1 {
     transform: translateY(-6.5vw);
   }
@@ -444,7 +444,7 @@ canvas {
   min-width: 100%;
   // height: 100vh;
   pointer-events: none;
-  @include mobile {
+  @include tablet {
     // height: auto;
     transform: translateZ(0);
   }
@@ -468,7 +468,7 @@ canvas {
     padding-top: 5%;
     height: 100vh;
   }
-  @include mobile {
+  @include tablet {
     height: auto;
     padding-top: 10%;
     padding-bottom: 3%;
@@ -484,7 +484,7 @@ canvas {
   justify-content: center;
   letter-spacing: 3px;
   color: $bigTitleColor;
-  @include mobile {
+  @include tablet {
     margin-top: 5%;
   }
 }
@@ -494,7 +494,7 @@ canvas {
   font-size: 9vw;
   opacity: 0.1;
   font-weight: 400;
-  @include mobile {
+  @include tablet {
     font-size: 14vw;
   }
 }
@@ -511,7 +511,7 @@ canvas {
     margin-top: 0.5vw;
     font-family: $serif;
   }
-  @include mobile {
+  @include tablet {
     > h3 {
       font-size: 6vw;
     }
@@ -533,7 +533,7 @@ canvas {
   @include laptop {
     width: 30vw;
   }
-  @include mobile {
+  @include tablet {
     width: 75%;
   }
 }
@@ -553,7 +553,7 @@ canvas {
       pointer-events: none;
     }
   }
-  @include mobile {
+  @include tablet {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -596,7 +596,7 @@ canvas {
     .text-rotate {
       opacity: 1;
     }
-    @include mobile {
+    @include tablet {
       transform: translateY(0%) !important;
     }
   }
@@ -604,7 +604,7 @@ canvas {
     opacity: 1 !important;
     transform: translateY(-22%) !important;
     transition: all 1s;
-    @include mobile {
+    @include tablet {
       transform: translateY(0%) !important;
     }
     > .swiper-img {
@@ -625,7 +625,7 @@ canvas {
     opacity: 1 !important;
     transform: translateY(-28%) !important;
     transition: all 1s;
-    @include mobile {
+    @include tablet {
       transform: translateY(0%) !important;
     }
     .text-rotate {
@@ -645,7 +645,7 @@ canvas {
   @include laptop {
     margin-top: -25%;
   }
-  @include mobile {
+  @include tablet {
     margin-top: 117%;
     left: -9%;
     width: 22vw;
@@ -683,7 +683,7 @@ canvas {
     line-height: 0.8;
     color: $bigTitleColor;
   }
-  @include mobile {
+  @include tablet {
     > h1 {
       font-size: 6.5vw;
     }
@@ -699,7 +699,7 @@ canvas {
     line-height: 2;
     letter-spacing: 1.5px;
   }
-  @include mobile {
+  @include tablet {
     margin-left: 2vw;
     > p {
       font-size: $contentSizePH;
@@ -730,7 +730,7 @@ canvas {
   > :nth-child(3) {
     margin-left: 2%;
   }
-  @include mobile {
+  @include tablet {
     > .swiper-slide-para-content-title {
       font-size: 5vw;
     }
@@ -759,7 +759,7 @@ canvas {
     padding: 6%;
     background-size: 50%;
   }
-  @include mobile {
+  @include tablet {
     width: 7vw;
     height: 7vw;
     padding: 3%;
@@ -774,7 +774,7 @@ canvas {
   @include laptop {
     left: 170%;
   }
-  @include mobile {
+  @include tablet {
     left: 75%;
   }
 }
@@ -784,7 +784,7 @@ canvas {
   @include laptop {
     right: -100%;
   }
-  @include mobile {
+  @include tablet {
     right: 2%;
   }
 }
@@ -792,7 +792,7 @@ canvas {
 .home-cut-4 {
   position: relative;
   margin-top: 1%;
-  @include mobile {
+  @include tablet {
     margin-top: 10%;
   }
 }
@@ -806,7 +806,7 @@ canvas {
   overflow: hidden;
   cursor: none;
   margin-top: -5.5%;
-  @include mobile {
+  @include tablet {
     margin-top: -14.5%;
   }
 }
@@ -837,7 +837,7 @@ canvas {
   @include laptop {
     width: 2vw;
   }
-  @include mobile {
+  @include tablet {
     width: 6.5vw;
     height: 11vw;
   }
@@ -851,7 +851,7 @@ canvas {
     padding-top: 10%;
   }
 
-  @include mobile {
+  @include tablet {
     > :nth-child(1) {
       padding-top: 10%;
     }
@@ -869,21 +869,21 @@ canvas {
   width: 106%;
   > :nth-child(1) ~ .cut-4-pin-img {
     padding-top: 10%;
-    @include mobile {
+    @include tablet {
       padding-top: 10%;
     }
   }
 }
 .cut-4-pin-left {
   transform: translateY(-70vw);
-  @include mobile {
+  @include tablet {
     transform: translateY(-40%);
     margin-left: 1%;
   }
 }
 .cut-4-pin-right {
   transform: translateY(-70vw);
-  @include mobile {
+  @include tablet {
     display: none;
     transform: translateY(-40%);
   }
@@ -894,7 +894,7 @@ canvas {
   position: relative;
   width: 100%;
   padding-top: 2.5%;
-  @include mobile {
+  @include tablet {
     padding-top: 0%;
   }
 }
@@ -903,7 +903,7 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  @include mobile {
+  @include tablet {
     flex-direction: column;
   }
 }
@@ -915,7 +915,7 @@ canvas {
   width: 27vw;
   margin-right: 2%;
   margin-left: 2%;
-  @include mobile {
+  @include tablet {
     width: 90%;
     margin-top: 6%;
   }
@@ -958,7 +958,7 @@ canvas {
   font-weight: 400;
   color: $semitransColor;
   margin-top: 5%;
-  @include mobile {
+  @include tablet {
     font-size: 3.25vw;
   }
 }
@@ -969,7 +969,7 @@ canvas {
   font-weight: 500;
   color: $bigTitleColor;
   margin-top: 1%;
-  @include mobile {
+  @include tablet {
     font-size: 5vw;
   }
 }
@@ -981,7 +981,7 @@ canvas {
   margin-top: 3%;
   line-height: 2;
   letter-spacing: 2px;
-  @include mobile {
+  @include tablet {
     font-size: $contentSizePH;
   }
 }
@@ -1032,7 +1032,7 @@ canvas {
     height: 100%;
     top: 0;
   }
-  @include mobile {
+  @include tablet {
     &::after {
       transform: scaleX(1);
     }

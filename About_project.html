@@ -60,19 +60,25 @@
             </p>
             <div class="cut-2-main-left-button">
               <div class="connect-button connect">
-                <img
-                  src="./img/project/connect-icon.svg"
-                  alt="connect-icon"
-                /><span>建案連結</span>
+                <a href="javascript:;">
+                  <img
+                    src="./img/project/connect-icon.svg"
+                    alt="connect-icon"
+                  /><span>建案連結</span></a
+                >
               </div>
               <div class="connect-button fb">
-                <img src="./img/project/fb-icon.svg" alt="fb-icon" /><span
-                  >粉絲專頁</span
+                <a href="javascript:;">
+                  <img src="./img/project/fb-icon.svg" alt="fb-icon" /><span
+                    >粉絲專頁</span
+                  ></a
                 >
               </div>
               <div class="connect-button mail">
-                <img src="./img/project/mail-icon.svg" alt="mail-icon" /><span
-                  >預約鑑賞</span
+                <a href="javascript:;">
+                  <img src="./img/project/mail-icon.svg" alt="mail-icon" /><span
+                    >預約鑑賞</span
+                  ></a
                 >
               </div>
             </div>
@@ -92,7 +98,9 @@
                 <div class="swiper-slide" data-name="品世界">
                   <div class="swiper-img href-item">
                     <a href="javascript:;" class="href-link"></a>
-                    <img src="./img/project/pin.webp" alt="品世界" />
+                    <div class="swiper-img-pc">
+                      <img src="./img/project/pin.webp" alt="品世界" />
+                    </div>
                     <img
                       class="frame"
                       src="./img/project/border.png"
@@ -108,7 +116,9 @@
                 <div class="swiper-slide" data-name="心世界">
                   <div class="swiper-img href-item">
                     <a href="javascript:;" class="href-link"></a>
-                    <img src="./img/project/heart.webp" alt="心世界" />
+                    <div class="swiper-img-pc">
+                      <img src="./img/project/heart.webp" alt="心世界" />
+                    </div>
                     <img
                       class="frame"
                       src="./img/project/border.png"
@@ -125,7 +135,9 @@
                 <div class="swiper-slide" data-name="閱世界">
                   <div class="swiper-img href-item">
                     <a href="javascript:;" class="href-link"></a>
-                    <img src="./img/project/read.webp" alt="閱世界" />
+                    <div class="swiper-img-pc">
+                      <img src="./img/project/read.webp" alt="閱世界" />
+                    </div>
                     <img
                       class="frame"
                       src="./img/project/border.png"
@@ -141,7 +153,9 @@
                 <div class="swiper-slide" data-name="品世界">
                   <div class="swiper-img href-item">
                     <a href="javascript:;" class="href-link"></a>
-                    <img src="./img/project/pin.webp" alt="品世界" />
+                    <div class="swiper-img-pc">
+                      <img src="./img/project/pin.webp" alt="品世界" />
+                    </div>
                     <img
                       class="frame"
                       src="./img/project/border.png"
@@ -157,7 +171,9 @@
                 <div class="swiper-slide" data-name="心世界">
                   <div class="swiper-img href-item">
                     <a href="javascript:;" class="href-link"></a>
-                    <img src="./img/project/heart.webp" alt="心世界" />
+                    <div class="swiper-img-pc">
+                      <img src="./img/project/heart.webp" alt="心世界" />
+                    </div>
                     <img
                       class="frame"
                       src="./img/project/border.png"
@@ -173,7 +189,9 @@
                 <div class="swiper-slide" data-name="閱世界">
                   <div class="swiper-img href-item">
                     <a href="javascript:;" class="href-link"></a>
-                    <img src="./img/project/read.webp" alt="閱世界" />
+                    <div class="swiper-img-pc">
+                      <img src="./img/project/read.webp" alt="閱世界" />
+                    </div>
                     <img
                       class="frame"
                       src="./img/project/border.png"
@@ -238,21 +256,27 @@
                 </p>
                 <div class="cut-2-main-left-button">
                   <div class="connect-button connect">
-                    <img
-                      src="./img/project/connect-icon.svg"
-                      alt="connect-icon"
-                    /><span>建案連結</span>
+                    <a href="javascript:;">
+                      <img
+                        src="./img/project/connect-icon.svg"
+                        alt="connect-icon"
+                      /><span>建案連結</span></a
+                    >
                   </div>
                   <div class="connect-button fb">
-                    <img src="./img/project/fb-icon.svg" alt="fb-icon" /><span
-                      >粉絲專頁</span
+                    <a href="javascript:;">
+                      <img src="./img/project/fb-icon.svg" alt="fb-icon" /><span
+                        >粉絲專頁</span
+                      ></a
                     >
                   </div>
                   <div class="connect-button mail">
-                    <img
-                      src="./img/project/mail-icon.svg"
-                      alt="mail-icon"
-                    /><span>預約鑑賞</span>
+                    <a href="javascript:;">
+                      <img
+                        src="./img/project/mail-icon.svg"
+                        alt="mail-icon"
+                      /><span>預約鑑賞</span></a
+                    >
                   </div>
                 </div>
                 <div class="more">
@@ -428,9 +452,9 @@
           $(".cut-2-main-phone").remove();
           //輪播設定
           mySwiper = new Swiper(".cut-2-carousel-swiper", {
-            autoplay: {
-              delay: 6000,
-            },
+            // autoplay: {
+            //   delay: 6000,
+            // },
             speed: 1000,
             navigation: {
               nextEl: ".swiper-button-next",
@@ -555,6 +579,7 @@
             acc = cur;
             return acc;
           }, {});
+          console.log(homeImgObg);
           if (dur === "init") {
             //初始
             $(".cut-2-main-left-h1").text(homeImgObg?.title);
@@ -567,6 +592,9 @@
             $(".main-left-p").text(homeImgObg?.para);
             $(".more-arrow").attr("href", homeImgObg?.more);
             $(".swiper-slide-active .href-link").attr("href", homeImgObg?.more);
+            $(".connect> a").attr("href", homeImgObg?.connect);
+            $(".fb >a").attr("href", homeImgObg?.fb);
+            $(".mail >a").attr("href", homeImgObg?.mail);
           } else if (dur === "end") {
             //輪播翻完一頁後
             const cut2Left = $(".cut-2-main-left");
@@ -584,6 +612,10 @@
               .children(".more-arrow")
               .attr("href", homeImgObg?.more);
             $(".swiper-slide-active .href-link").attr("href", homeImgObg?.more);
+            $(".connect >a").attr("href", homeImgObg?.connect);
+            $(".fb >a").attr("href", homeImgObg?.fb);
+            $(".mail> a").attr("href", homeImgObg?.mail);
+            console.log(homeImgObg?.fb);
             let cut2TlS = gsap.timeline();
             cut2TlS
               .to(".cut-2-main-left-small-title", {

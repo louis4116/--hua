@@ -956,10 +956,6 @@
     <script src="./js/home-carsoul.js"></script>
     <script src="./js/loading.js"></script>
     <script>
-      // $(window).resize(function () {
-      //   location.reload();
-      // });
-
       $(window).on("load", function () {
         //起始跳數字動畫👇
         const preloadNum = document.querySelector(".preload_number-number");
@@ -1208,7 +1204,7 @@
         });
         const navHeight = $("#nav").outerHeight();
         $(".cut-4-to-top").css("top", `${navHeight}px`);
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           $(".cut-4-pin-right").remove();
         }
 
@@ -1228,100 +1224,6 @@
           el.small = Array(lackAverage).fill(el.small).flat();
         });
         //補足圖片數量☝️
-
-        //第一cut文字動畫👇
-
-        // let splitTitle = new SplitText(".home-cut-1-para h1", {
-        //   linesClass: "clip-text",
-        // });
-        // const cut1TextTl = gsap.timeline({ repeat: -1 });
-        // const oddTitle = splitTitle.chars.filter(
-        //   (item, index) => index % 2 === 0
-        // );
-        // const evenTitle = splitTitle.chars.filter(
-        //   (item, index) => index % 2 !== 0
-        // );
-        // console.log(splitTitle.chars);
-        // gsap.fromTo(
-        //   oddTitle,
-        //   {
-        //     autoAlpha: 0,
-        //     y: -200,
-        //     filter: "blur(10px)",
-        //   },
-        //   {
-        //     autoAlpha: 1,
-        //     y: 0,
-        //     duration: 2,
-        //     ease: "power2",
-        //     filter: "blur(0px)",
-        //     repeat: -1,
-
-        //     stagger: {
-        //       each: 0.07,
-        //       from: "random",
-        //     },
-        //   }
-        // );
-        // gsap.fromTo(
-        //   evenTitle,
-        //   {
-        //     autoAlpha: 0,
-        //     y: 200,
-        //     filter: "blur(10px)",
-        //   },
-        //   {
-        //     autoAlpha: 1,
-        //     y: 0,
-        //     duration: 2,
-        //     ease: "power2",
-        //     filter: "blur(0px)",
-        //     repeat: -1,
-        //     repeatDelay: 10,
-        //     stagger: {
-        //       each: 0.07,
-        //       from: "random",
-        //     },
-        //   }
-        // );
-        // cut1TextTl
-        //   .from(".para-first h2,.para-first .p-1,.para-first .p-2", {
-        //     opacity: 0,
-        //     filter: "blur(10px)",
-        //     duration: 2,
-        //   })
-        //   .to(
-        //     ".para-first h2,.para-first .p-1,.para-first .p-2",
-        //     {
-        //       opacity: 0,
-        //       filter: "blur(10px)",
-        //       duration: 2,
-        //     },
-        //     "<+10"
-        //   )
-        //   .fromTo(
-        //     ".para-second h2,.para-second .p-1,.para-second .p-2",
-        //     {
-        //       opacity: 0,
-        //       filter: "blur(10px)",
-        //     },
-        //     {
-        //       opacity: 1,
-        //       filter: "blur(0px)",
-        //       duration: 2,
-        //     }
-        //   )
-        //   .to(
-        //     ".para-second h2,.para-second .p-1,.para-second .p-2",
-        //     {
-        //       opacity: 0,
-        //       filter: "blur(10px)",
-        //       duration: 2,
-        //     },
-        //     "<+10"
-        //   );
-
-        //第一cut文字動畫☝️
 
         //icon落下動畫👇
         gsap.to(".drops-1", {
@@ -1460,9 +1362,9 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
-          autoplay: {
-            delay: 6000,
-          },
+          // autoplay: {
+          //   delay: 6000,
+          // },
           slidesPerView: 1.25,
           spaceBetween: 50,
           loop: true,
@@ -1515,7 +1417,7 @@
           const carsoulFancy = $(".cut-4-fancybox-pic");
           const carsoulSmall = $(".cut-4-pin-img-small");
           //數量最大只到18
-          if (window.innerWidth <= 500) {
+          if (window.innerWidth <= 1024) {
             //手機板
             for (let i = 0; i < 18; i++) {
               if (i <= 8) {
@@ -1547,7 +1449,7 @@
         //第四cut
         let cut4ImgY;
         let cut4imgStart;
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           // cut4ImgY = "translateY(48%)";
           cut4ImgY = "42%";
           cut4imgStart = "top top";
@@ -1616,7 +1518,7 @@
           $(".cut-5-news-card-img").css("cursor", "none");
           gsap.to(".view", { x: x - 40, y: y - 40, duration: 0.1 });
         }
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           $(".view").remove();
         } else {
           cut5Img.on(" mousemove", function (event) {
