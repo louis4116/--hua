@@ -5,8 +5,9 @@
   // clip-path: ellipse(82% 56% at 50% 44%);
   clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
-  @include mobile {
+  @include tablet {
     clip-path: ellipse(117% 55% at 50% 44%);
+    height: 90vh;
   }
 }
 .first-cut-img-container {
@@ -39,7 +40,7 @@
   letter-spacing: 3px;
   color: $bigTitleColor;
   margin-top: 4vw;
-  @include mobile {
+  @include tablet {
     margin-top: 5%;
   }
 }
@@ -49,6 +50,9 @@
   font-size: 9vw;
   opacity: 0.1;
   font-weight: 400;
+  @include tablet {
+    font-size: 12vw;
+  }
   @include mobile {
     font-size: 14vw;
   }
@@ -66,6 +70,16 @@
     margin-top: 0.5vw;
     font-family: $serif;
   }
+  @include tablet {
+    > h3 {
+      font-size: 5vw;
+    }
+    > h4 {
+      font-size: $contentSizeTb;
+      font-weight: 600;
+      margin-top: 0;
+    }
+  }
   @include mobile {
     > h3 {
       font-size: 6vw;
@@ -81,7 +95,7 @@
   position: relative;
   width: 100%;
   padding-top: 2.5%;
-  @include mobile {
+  @include tablet {
     padding-top: 0%;
   }
 }
@@ -93,7 +107,7 @@
   padding-left: 4%;
   padding-right: 4%;
   gap: 5vw 0;
-  @include mobile {
+  @include tablet {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 0;
   }
@@ -107,7 +121,11 @@
   justify-content: center;
   flex-direction: column;
   width: 27vw;
-  @include mobile {
+  @include tablet {
+    width: 80%;
+    margin: 3% auto;
+  }
+  @include tablet {
     width: 95%;
     margin: 3% auto;
   }
@@ -144,7 +162,7 @@
   //   @include laptop {
   //     margin-top: -25%;
   //   }
-  @include mobile {
+  @include tablet {
     display: none;
   }
 }
@@ -168,6 +186,9 @@
   font-weight: 400;
   color: $semitransColor;
   margin-top: 5%;
+  @include tablet {
+    font-size: 2.25vw;
+  }
   @include mobile {
     font-size: 3.25vw;
   }
@@ -179,6 +200,9 @@
   font-weight: 500;
   color: $bigTitleColor;
   margin-top: 1%;
+  @include tablet {
+    font-size: 4vw;
+  }
   @include mobile {
     font-size: 5vw;
   }
@@ -191,6 +215,9 @@
   margin-top: 3%;
   line-height: 2;
   letter-spacing: 2px;
+  @include tablet {
+    font-size: $contentSizeTb;
+  }
   @include mobile {
     font-size: $contentSizePH;
   }
@@ -241,7 +268,7 @@
     width: 100%;
     height: 100%;
   }
-  @include mobile {
+  @include tablet {
     &::after {
       transform: scaleX(1);
     }
@@ -251,6 +278,18 @@
     }
     > img {
       width: 3.5vw;
+    }
+  }
+  @include tablet {
+    &::after {
+      transform: scaleX(1);
+    }
+    gap: 1.4vw;
+    > p {
+      font-size: 2.5vw;
+    }
+    > img {
+      width: 2.5vw;
     }
   }
 }

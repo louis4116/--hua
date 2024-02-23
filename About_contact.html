@@ -24,7 +24,7 @@
           <picture>
             <source
               srcset="./img/contact/contact-bg-phone.webp"
-              media="(max-width:500px)"
+              media="(max-width:1024px)"
             />
             <img src="./img/contact/contact-bg.webp" alt="首頁背景-pc" />
           </picture>
@@ -44,7 +44,7 @@
               <picture>
                 <source
                   srcset="./img/contact/contact-map-ph.png"
-                  media="(max-width:500px)"
+                  media="(max-width:1024px)"
                 />
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7227.87537782179!2d121.592755!3d25.070101!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442adb605fbd075%3A0x7790205bc30ca586!2z5qi66Lyd5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1707108050551!5m2!1szh-TW!2stw"
@@ -117,42 +117,49 @@
           scale: 1.2,
           duration: 2,
         });
-        $("#form-main").validate({
-          errorClass: "error",
-          rules: {
-            name: {
-              required: true,
-              maxlength: 12,
+        $("#form-main")
+          .submit(function (e) {
+            e.preventDefault();
+          })
+          .validate({
+            errorClass: "error",
+            rules: {
+              name: {
+                required: true,
+                maxlength: 12,
+              },
+              phone: {
+                required: true,
+                pattern:
+                  /^09[0-9]{8}|(0)([0-9]{1})([-]?)([0-9]{8})|(0)([0-9]{1})([-]?)([0-4]{4})([-]?)([0-4]{4})$/,
+              },
+              comment: {
+                maxlength: 500,
+              },
             },
-            phone: {
-              required: true,
-              pattern:
-                /^09[0-9]{8}|(0)([0-9]{1})([-]?)([0-9]{8})|(0)([0-9]{1})([-]?)([0-4]{4})([-]?)([0-4]{4})$/,
+            messages: {
+              name: {
+                required: "必填",
+                maxlength: "請勿超過12個字元",
+              },
+              phone: {
+                required: "必填",
+                pattern: "請輸入正確的電話號碼",
+              },
+              email: "請輸入正確的電子信箱",
+              comment: {
+                maxlength: "請勿超過500個字元",
+              },
             },
-            comment: {
-              maxlength: 500,
+            errorPlacement: function (err, el) {
+              el.parent(".form-item-content").after(err);
             },
-          },
-          messages: {
-            name: {
-              required: "必填",
-              maxlength: "請勿超過12個字元",
+            submitHandler: function (form) {
+              return false;
             },
-            phone: {
-              required: "必填",
-              pattern: "請輸入正確的電話號碼",
-            },
-            email: "請輸入正確的電子信箱",
-            comment: {
-              maxlength: "請勿超過500個字元",
-            },
-          },
-          errorPlacement: function (err, el) {
-            el.parent(".form-item-content").after(err);
-          },
-          submitHandler: function (form) {
-            return false;
-          },
+          });
+        $("#form-main input[name='phone']").on("keyup", function () {
+          $(this).valid();
         });
         //表單內容☝️
       });

@@ -24,7 +24,7 @@
           <picture>
             <source
               srcset="./img/brand_story/brand_story-bg-phone.webp"
-              media="(max-width:500px)"
+              media="(max-width:1024px)"
             />
             <img
               src="./img/brand_story/brand_story-bg.webp"
@@ -459,37 +459,41 @@
       </section>
       <section class="fourth-cut">
         <div class="fourth-cut-big-img">
-          <picture>
-            <source
-              srcset="./img/brand_concept/concept-small.webp"
-              media="(max-width:500px)"
-            />
-            <img
-              src="./img/brand_concept/concept-bigger.webp"
-              alt="concept-bigger"
-            />
-          </picture>
+          <div class="fourth-cut-big-img-in">
+            <picture>
+              <source
+                srcset="./img/brand_concept/concept-small.webp"
+                media="(max-width:1024px)"
+              />
+              <img
+                src="./img/brand_concept/concept-bigger.webp"
+                alt="concept-bigger"
+              />
+            </picture>
+          </div>
         </div>
         <div class="fourth-cut-para">
           <h3>THE ONE AND ONLY</h3>
           <h4>獨創豪宅血統 躍升精品指標</h4>
-          <p class="pc">
-            在這個以速度换取利益，以量定價格的時代樺輝建設願意成為背道而馳，
-          </p>
-          <p class="pc">
-            與眾不同堅持數年磨一劍，謙遜藏鋒不妥協，發掘每一塊沃土最深層的
-          </p>
-          <p class="pc">
-            文化底蘊，創造家與建築間的美好關係，成就生活的最高價值，並將每一
-          </p>
-          <p class="pc">位住戶的信任，放在心上最柔軟的地方。</p>
-          <p class="ph">在這個以速度换取利益，</p>
-          <p class="ph">以量定價格的時代樺輝建設願意成為背道而馳，</p>
-          <p class="ph">與眾不同堅持數年磨一劍，謙遜藏鋒不妥協，</p>
-          <p class="ph">發掘每一塊沃土最深層的文化底蘊，</p>
-          <p class="ph">創造家與建築間的美好關係，</p>
-          <p class="ph">成就生活的最高價值，並將每一位住戶的信任，</p>
-          <p class="ph">放在心上最柔軟的地方。</p>
+          <div class="fourth-cut-para-p">
+            <p class="pc">
+              在這個以速度换取利益，以量定價格的時代樺輝建設願意成為背道而馳，
+            </p>
+            <p class="pc">
+              與眾不同堅持數年磨一劍，謙遜藏鋒不妥協，發掘每一塊沃土最深層的
+            </p>
+            <p class="pc">
+              文化底蘊，創造家與建築間的美好關係，成就生活的最高價值，並將每一
+            </p>
+            <p class="pc">位住戶的信任，放在心上最柔軟的地方。</p>
+            <p class="ph">在這個以速度换取利益，</p>
+            <p class="ph">以量定價格的時代樺輝建設願意成為背道而馳，</p>
+            <p class="ph">與眾不同堅持數年磨一劍，謙遜藏鋒不妥協，</p>
+            <p class="ph">發掘每一塊沃土最深層的文化底蘊，</p>
+            <p class="ph">創造家與建築間的美好關係，</p>
+            <p class="ph">成就生活的最高價值，並將每一位住戶的信任，</p>
+            <p class="ph">放在心上最柔軟的地方。</p>
+          </div>
         </div>
       </section>
     </main>
@@ -511,7 +515,7 @@
           repeat: -1,
         });
 
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           const t = [
             { min: 1799, max: 1801, index: 1, progress: 0.143 },
             { min: 1599, max: 1601, index: 2, progress: 0.286 },

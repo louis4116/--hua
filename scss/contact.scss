@@ -5,8 +5,9 @@
   // clip-path: ellipse(82% 56% at 50% 44%);
   clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
-  @include mobile {
+  @include tablet {
     clip-path: ellipse(117% 55% at 50% 44%);
+    height: 90vh;
   }
 }
 .first-cut-img-container {
@@ -32,7 +33,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  @include mobile {
+  @include tablet {
     margin-bottom: 15%;
   }
 }
@@ -45,7 +46,7 @@
   letter-spacing: 3px;
   color: $bigTitleColor;
   margin-top: 4vw;
-  @include mobile {
+  @include tablet {
     margin-top: 5%;
   }
 }
@@ -55,6 +56,9 @@
   font-size: 9vw;
   opacity: 0.1;
   font-weight: 400;
+  @include tablet {
+    font-size: 12vw;
+  }
   @include mobile {
     font-size: 14vw;
   }
@@ -71,6 +75,16 @@
     font-size: 1.25vw;
     margin-top: 0.5vw;
     font-family: $serif;
+  }
+  @include tablet {
+    > h3 {
+      font-size: 5vw;
+    }
+    > h4 {
+      font-size: $contentSizeTb;
+      font-weight: 600;
+      margin-top: 0;
+    }
   }
   @include mobile {
     > h3 {
@@ -90,7 +104,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  @include mobile {
+  @include tablet {
     margin-top: 1%;
   }
 }
@@ -99,6 +113,9 @@
   color: $bigTitleColor;
   font-family: $serif;
   font-weight: 500;
+  @include tablet {
+    font-size: 4.5vw;
+  }
   @include mobile {
     font-size: 5.5vw;
   }
@@ -108,7 +125,7 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 3%;
-  @include mobile {
+  @include tablet {
     flex-direction: column;
     justify-content: center;
     margin-top: 6%;
@@ -117,7 +134,7 @@
 .second-cut-map-img {
   position: relative;
   width: 47%;
-  @include mobile {
+  @include tablet {
     width: 100%;
     height: 60vw;
   }
@@ -138,7 +155,7 @@
 }
 .second-cut-form {
   width: 47%;
-  @include mobile {
+  @include tablet {
     width: 100%;
     margin-top: 5%;
   }
@@ -149,7 +166,7 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 3%;
-  @include mobile {
+  @include tablet {
     margin-top: 3%;
     margin-bottom: 0%;
     align-items: flex-end;
@@ -159,7 +176,7 @@
   width: 100%;
   height: 1px;
   background-color: $semitransColor;
-  @include mobile {
+  @include tablet {
     width: 77%;
   }
 }
@@ -203,6 +220,24 @@ input:-webkit-autofill:focus {
     width: 100%;
     height: 3vw;
   }
+  @include tablet {
+    margin-bottom: 5%;
+    > label {
+      font-size: 3.2vw;
+      width: 22%;
+      line-height: 1;
+    }
+    > input {
+      font-size: 3.2vw;
+    }
+    > textarea {
+      font-size: 3.2vw;
+      height: 15vw;
+      margin-left: 3%;
+      margin-top: 0;
+      width: 80%;
+    }
+  }
   @include mobile {
     margin-bottom: 5%;
     > label {
@@ -225,7 +260,7 @@ input:-webkit-autofill:focus {
 .form-textarea {
   flex-direction: column;
   align-items: flex-start;
-  @include mobile {
+  @include tablet {
     flex-direction: row;
   }
 }
@@ -243,6 +278,12 @@ input:-webkit-autofill:focus {
     cursor: pointer;
     letter-spacing: 2px;
   }
+  @include tablet {
+    > button {
+      padding: 1vw 10vw;
+      font-size: 2.8vw;
+    }
+  }
   @include mobile {
     > button {
       padding: 1vw 12vw;
@@ -257,6 +298,9 @@ input:-webkit-autofill:focus {
   display: flex;
   font-weight: 500;
   font-family: "Noto Serif TC", serif;
+  @include tablet {
+    font-size: 2vw;
+  }
   @include mobile {
     font-size: 3vw;
   }

@@ -27,7 +27,7 @@
           <picture>
             <source
               srcset="./img/project/bg-phone.webp"
-              media="(max-width:500px)"
+              media="(max-width:1024px)"
             />
             <img src="./img/project/bg-pc.webp" alt="首頁背景-pc" />
           </picture>
@@ -445,7 +445,7 @@
 
         let mySwiper;
 
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           $(".cut-2-main-left").remove();
           $(".cut-2-main-right").remove();
         } else {
@@ -676,7 +676,7 @@
           duration: 1.5,
         });
 
-        if (window.innerWidth > 500) {
+        if (window.innerWidth > 1024) {
           cut2Text.add(
             gsap.from(".cut-2-main-right,.cut-2-main-left", {
               opacity: 0,
@@ -688,7 +688,7 @@
         }
 
         let cut2start = "25% bottom";
-        if (window.innerWidth <= 500) cut2start = "10% bottom";
+        if (window.innerWidth <= 1024) cut2start = "10% bottom";
         let titleTl = gsap.timeline({
           scrollTrigger: {
             trigger: ".second-cut",
@@ -726,7 +726,7 @@
           );
 
         //手機版
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           let cut1Splitext = new SplitText(".cut-2-phone-h1", {
             type: "chars",
           });
