@@ -27,10 +27,15 @@ img {
   width: 100%;
 }
 
+input,
+textarea {
+  font-family: "Microsoft JhengHei";
+}
+
 .pc {
   display: block;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .pc {
     display: none;
   }
@@ -39,7 +44,7 @@ img {
 .ph {
   display: none;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .ph {
     display: block;
   }
@@ -87,6 +92,25 @@ img {
     margin-top: 5%;
   }
 }
+@media all and (max-width: 1024px) {
+  #footer {
+    flex-direction: column;
+    font-size: 2vw;
+    line-height: 2;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-top: 15%;
+  }
+  #footer > :nth-child(1) {
+    order: 3;
+  }
+  #footer > :nth-child(2) {
+    order: 2;
+  }
+  #footer > :nth-child(3) {
+    order: 1;
+  }
+}
 @media all and (max-width: 500px) {
   #footer {
     flex-direction: column;
@@ -120,7 +144,7 @@ img {
   flex-wrap: wrap;
   padding: 1vw 3vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   #nav {
     background-image: none;
     padding: 4vw;
@@ -130,6 +154,18 @@ img {
   }
   #nav .nav-icon {
     width: 30vw;
+  }
+}
+@media all and (max-width: 1024px) {
+  #nav {
+    background-image: none;
+    padding: 2vw;
+    padding-right: 6vw;
+    padding-left: 6vw;
+    background-color: #534741;
+  }
+  #nav .nav-icon {
+    width: 15vw;
   }
 }
 
@@ -146,7 +182,7 @@ img {
 .nav-icon img {
   width: 10vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-icon img {
     width: 100%;
   }
@@ -156,6 +192,24 @@ img {
   display: none;
 }
 
+@media all and (max-width: 1024px) {
+  .nav-hamb-icon {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+    pointer-events: auto;
+  }
+  .nav-hamb-icon > span {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
+}
 @media all and (max-width: 500px) {
   .nav-hamb-icon {
     width: 5vw;
@@ -178,7 +232,7 @@ img {
   display: flex;
   align-items: center;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-list {
     width: 100%;
   }
@@ -230,13 +284,33 @@ img {
   bottom: 15%;
   right: 0;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-list-ul li:nth-child(1)::after,
   .nav-list-ul li:nth-child(2)::after,
   .nav-list-ul li:nth-child(3)::after,
   .nav-list-ul li:nth-child(4)::after {
     content: "";
     width: 0px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .nav-list-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+  }
+  .nav-list-ul li {
+    font-size: 3vw;
+    padding: 2.5rem;
+  }
+  .nav-list-ul > div {
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
   }
 }
 @media all and (max-width: 500px) {
@@ -287,12 +361,17 @@ img {
   width: 5vw;
   position: relative;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .box {
     width: 100%;
   }
 }
 
+@media all and (max-width: 1024px) {
+  .box-img {
+    width: 25vw;
+  }
+}
 @media all and (max-width: 500px) {
   .box-img {
     width: 40vw;
@@ -306,6 +385,11 @@ img {
   font-size: 2.25vw;
   letter-spacing: 2px;
   color: #aa9784;
+}
+@media all and (max-width: 1024px) {
+  .box-para {
+    font-size: 6vw;
+  }
 }
 @media all and (max-width: 500px) {
   .box-para {
@@ -350,6 +434,24 @@ img {
   background-color: #4d4d4d;
   margin-top: 2%;
 }
+@media all and (max-width: 1024px) {
+  .big-title-container {
+    width: 85%;
+    padding-top: 17%;
+  }
+  .big-title-container > h3 {
+    font-size: 4vw;
+    letter-spacing: 3px;
+  }
+  .big-title-container > h1 {
+    font-size: 3.75vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .big-title-container > .line {
+    margin-top: 4%;
+  }
+}
 @media all and (max-width: 500px) {
   .big-title-container {
     width: 92%;
@@ -378,6 +480,14 @@ img {
 }
 .news-para > div {
   width: 90%;
+}
+@media all and (max-width: 1024px) {
+  .news-para {
+    margin-top: 6%;
+  }
+  .news-para > div {
+    width: 85%;
+  }
 }
 @media all and (max-width: 500px) {
   .news-para {
@@ -415,6 +525,19 @@ img {
   margin-top: 2%;
   margin-bottom: 2%;
 }
+@media all and (max-width: 1024px) {
+  .news-para-content {
+    margin-top: 7%;
+  }
+  .news-para-content p {
+    font-size: 2.75vw;
+    line-height: 2;
+  }
+  .news-para-content .para-middle {
+    margin-top: 7%;
+    margin-bottom: 7%;
+  }
+}
 @media all and (max-width: 500px) {
   .news-para-content {
     margin-top: 7%;
@@ -435,7 +558,7 @@ img {
   justify-content: flex-start;
   margin-top: 3%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .more {
     justify-content: space-between;
     margin-top: 7%;
@@ -452,6 +575,11 @@ img {
   font-family: "Microsoft JhengHei";
   color: #736357;
   letter-spacing: 3px;
+}
+@media all and (max-width: 1024px) {
+  .more-first > h5 {
+    font-size: 2.75vw;
+  }
 }
 @media all and (max-width: 500px) {
   .more-first > h5 {
@@ -482,6 +610,17 @@ img {
 }
 .previous > img {
   width: 1vw;
+}
+@media all and (max-width: 1024px) {
+  .previous {
+    padding: 2vw 6vw;
+  }
+  .previous > p {
+    font-size: 3vw;
+  }
+  .previous > img {
+    width: 3vw;
+  }
 }
 @media all and (max-width: 500px) {
   .previous {

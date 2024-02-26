@@ -24,7 +24,7 @@
           <picture>
             <source
               srcset="./img/classic/classic-bg-phone.webp"
-              media="(max-width:500px)"
+              media="(max-width:1024px)"
             />
             <img src="./img/classic/classic-bg.webp" alt="首頁背景-pc" />
           </picture>
@@ -814,7 +814,7 @@
           $(this).attr("id", `cut-item-${i}`);
           i++;
         });
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           $(".line-1").attr("src", "./img/classic/left-tall-phone.png");
           $(".line-2").attr("src", "./img/classic/right-tall-phone.png");
           $(".year-bottom>img").remove();
@@ -880,7 +880,7 @@
         //標題文字動畫
         let cut2start = "25% bottom";
         let cut2trigger = ".cut-2-title";
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           cut2start = "5% bottom";
           cut2trigger = ".second-cut";
         }

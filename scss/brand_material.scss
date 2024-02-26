@@ -4,8 +4,9 @@
   // clip-path: ellipse(82% 56% at 50% 44%);
   clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
-  @include mobile {
+  @include tablet {
     clip-path: ellipse(117% 55% at 50% 44%);
+    height: 90vh;
   }
 }
 .first-cut-img-container {
@@ -31,7 +32,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include mobile {
+  @include tablet {
     margin-bottom: 10%;
     align-items: center;
   }
@@ -45,7 +46,7 @@
   letter-spacing: 3px;
   color: $bigTitleColor;
   margin-top: 4vw;
-  @include mobile {
+  @include tablet {
     margin-top: 5%;
   }
 }
@@ -55,6 +56,9 @@
   font-size: 9vw;
   opacity: 0.1;
   font-weight: 400;
+  @include tablet {
+    font-size: 12vw;
+  }
   @include mobile {
     font-size: 14vw;
   }
@@ -71,6 +75,16 @@
     font-size: 1.25vw;
     margin-top: 0.5vw;
     font-family: $serif;
+  }
+  @include tablet {
+    > h3 {
+      font-size: 5vw;
+    }
+    > h4 {
+      font-size: $contentSizeTb;
+      font-weight: 600;
+      margin-top: 0;
+    }
   }
   @include mobile {
     > h3 {
@@ -105,6 +119,22 @@
     background-color: $bigTitleColor;
     margin-left: 2%;
     margin-right: 2%;
+  }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 3%;
+    h4 {
+      font-size: 3vw;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    > .brand-nav-line {
+      height: 2.75vw;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
   }
   @include mobile {
     display: flex;
@@ -145,6 +175,14 @@
     letter-spacing: 2px;
     text-align: center;
   }
+  @include tablet {
+    > h4 {
+      font-size: $brandTitleTb;
+    }
+    > p {
+      font-size: $contentSizeTb;
+    }
+  }
   @include mobile {
     > h4 {
       font-size: $brandTitle;
@@ -163,14 +201,14 @@
   justify-content: center;
   margin-top: 4%;
 
-  @include mobile {
+  @include tablet {
     margin-top: 13%;
     flex-direction: column;
   }
 }
 .left-circle {
   position: relative;
-  @include mobile {
+  @include tablet {
     margin-bottom: -15%;
   }
 }
@@ -185,6 +223,12 @@
     overflow: hidden;
     > img {
       transform: scale(1.1);
+    }
+  }
+  @include tablet {
+    width: 50vw;
+    .swiper-slide {
+      border-radius: 50%;
     }
   }
   @include mobile {
@@ -204,7 +248,7 @@
   //     transform-origin: center;
   //     transform: scale(1.15);
   //   }
-  @include mobile {
+  @include tablet {
     width: 60vw;
     display: none;
   }
@@ -239,7 +283,7 @@
   align-items: center;
   justify-content: flex-start;
   transform: scale(1.02) rotate(90deg);
-  @include mobile {
+  @include tablet {
     transform: rotate(90deg);
   }
 }
@@ -249,7 +293,7 @@
   > img {
     width: 0.5vw;
   }
-  @include mobile {
+  @include tablet {
     > img {
       width: 1.5vw;
     }
@@ -286,6 +330,12 @@ $max: 8;
   &::after {
     content: unset;
   }
+  @include tablet {
+    top: 33%;
+    width: 10vw;
+    height: 10vw;
+    padding: 2vw;
+  }
   @include mobile {
     top: 38%;
     width: 10vw;
@@ -295,13 +345,13 @@ $max: 8;
 }
 .swiper-button-next {
   left: 91%;
-  @include mobile {
+  @include tablet {
     left: 83%;
   }
 }
 .swiper-button-prev {
   left: 85%;
-  @include mobile {
+  @include tablet {
     left: 5%;
   }
 }
@@ -315,7 +365,7 @@ $max: 8;
   border-radius: 50%;
   position: relative;
   margin-left: -3.5%;
-  @include mobile {
+  @include tablet {
     margin-left: 0%;
   }
 }
@@ -328,6 +378,10 @@ $max: 8;
   > .swiper-wrapper {
     display: flex;
     align-items: center;
+  }
+  @include tablet {
+    width: 80vw;
+    height: 80vw;
   }
   @include mobile {
     width: 90vw;
@@ -348,14 +402,14 @@ $max: 8;
   .icon {
     margin-bottom: 7%;
   }
-  > h4 {
+  h4 {
     color: #ac9986;
     font-family: $serif;
     font-size: $mainTitle;
     text-align: center;
     line-height: 2.5;
   }
-  > p {
+  p {
     text-align: center;
     font-size: 0.9vw;
     font-family: $micro;
@@ -363,6 +417,20 @@ $max: 8;
     line-height: 2;
     letter-spacing: 2px;
     padding-left: 5%;
+    text-align: center;
+  }
+  @include tablet {
+    .icon {
+      width: 10vw;
+      margin-bottom: 3%;
+    }
+    > h4 {
+      font-size: $brandTitleTb;
+    }
+    > p {
+      font-size: $contentSizeTb;
+      padding: 0;
+    }
   }
   @include mobile {
     .icon {
@@ -381,7 +449,7 @@ $max: 8;
 .dot-circle {
   position: absolute;
   width: 36.1vw;
-  @include mobile {
+  @include tablet {
     width: 90vw;
     display: none;
   }
@@ -418,6 +486,22 @@ $max: 8;
     line-height: 2;
     letter-spacing: 2px;
   }
+  @include tablet {
+    > h3 {
+      font-size: 5vw;
+    }
+    > h4 {
+      font-size: $brandTitleTb;
+      margin-top: 0%;
+    }
+    > p {
+      font-size: $contentSizeTb;
+      margin-top: 0%;
+    }
+    > .top {
+      margin-top: 4%;
+    }
+  }
   @include mobile {
     > h3 {
       font-size: 6vw;
@@ -440,7 +524,7 @@ $max: 8;
   grid-template-columns: repeat(3, 1fr);
   gap: 8% 0px;
   margin-top: 2%;
-  @include mobile {
+  @include tablet {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
     gap: 0px;
@@ -452,12 +536,12 @@ $max: 8;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  > .fifth-cut-content-item-img {
+  .fifth-cut-content-item-img {
     height: 6vw;
     display: flex;
     align-items: center;
   }
-  > h4 {
+  h4 {
     font-size: 1.25vw;
     font-family: $serif;
     font-weight: 500;
@@ -465,24 +549,40 @@ $max: 8;
     margin-top: 5%;
     margin-bottom: 3%;
   }
-  > p {
+  p {
     font-family: $micro;
     color: $contentColor;
     font-size: $contentSize;
     line-height: 2;
     letter-spacing: 2px;
+    text-align: center;
+  }
+  @include tablet {
+    width: 90%;
+    margin: 13% auto;
+    margin-bottom: 0%;
+    .fifth-cut-content-item-img {
+      height: auto;
+    }
+    h4 {
+      font-size: $brandTitleTb;
+    }
+    p {
+      font-size: $contentSizeTb;
+      letter-spacing: 2px;
+    }
   }
   @include mobile {
     width: 90%;
     margin: 13% auto;
     margin-bottom: 0%;
-    > .fifth-cut-content-item-img {
+    .fifth-cut-content-item-img {
       height: auto;
     }
-    > h4 {
+    h4 {
       font-size: $brandTitle;
     }
-    > p {
+    p {
       font-size: $contentSizePH;
       letter-spacing: 2px;
     }

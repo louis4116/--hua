@@ -29,7 +29,7 @@
               srcset="
                 ./img/project-content/project-content-inner-banner-phone.webp
               "
-              media="(max-width:500px)" />
+              media="(max-width:1024px)" />
             <img
               src="./img/project-content/project-content-inner-banner.webp"
               alt="內頁背景-pc"
@@ -197,7 +197,7 @@
               ></iframe>
             </div>
             <div class="fourth-cut-form">
-              <form id="form-main" action="javascript:;" method="post">
+              <form id="form-main" method="post">
                 <div class="form-item">
                   <div class="form-item-content">
                     <label for="name"><span>姓</span><span>名</span></label
@@ -277,7 +277,7 @@
             0: {
               direction: "horizontal",
             },
-            501: {
+            1025: {
               direction: "vertical",
             },
           },
@@ -307,7 +307,7 @@
             once: true,
           },
         });
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           cut3Tl
             .from(".third-cut-para", {
               opacity: 0,
@@ -343,42 +343,54 @@
             );
         }
         //表單內容👇
-        $("#form-main").validate({
-          errorClass: "error",
-          rules: {
-            name: {
-              required: true,
-              maxlength: 12,
+        $("#form-main")
+          .submit(function (e) {
+            e.preventDefault();
+          })
+          .validate({
+            errorClass: "error",
+            rules: {
+              name: {
+                required: true,
+                maxlength: 12,
+              },
+              phone: {
+                required: true,
+                pattern:
+                  /^(09[0-9]{8}|(0)([0-9]{1})([-]?)([0-9]{8})|(0)([0-9]{1})([-]?)([0-4]{4})([-]?)([0-4]{4}))$/,
+              },
+              comment: {
+                maxlength: 500,
+              },
             },
-            phone: {
-              required: true,
-              pattern:
-                /^09[0-9]{8}|(0)([0-9]{1})([-]?)([0-9]{8})|(0)([0-9]{1})([-]?)([0-4]{4})([-]?)([0-4]{4})$/,
+            messages: {
+              name: {
+                maxlength: "請勿超過12個字元",
+                required: "必填",
+              },
+              phone: {
+                pattern: "請輸入正確的電話號碼",
+                required: "必填",
+              },
+              email: "請輸入正確的電子信箱",
+              comment: {
+                maxlength: "請勿超過500個字元",
+              },
             },
-            comment: {
-              maxlength: 500,
+
+            errorPlacement: function (err, el) {
+              el.parent(".form-item-content").after(err);
             },
-          },
-          messages: {
-            name: {
-              required: "必填",
-              maxlength: "請勿超過12個字元",
+            submitHandler: function (form) {
+              if ($("#form-main").valid()) {
+                // form.submit();
+              } else {
+                console.log("錯誤");
+              }
             },
-            phone: {
-              required: "必填",
-              pattern: "請輸入正確的電話號碼",
-            },
-            email: "請輸入正確的電子信箱",
-            comment: {
-              maxlength: "請勿超過500個字元",
-            },
-          },
-          errorPlacement: function (err, el) {
-            el.parent(".form-item-content").after(err);
-          },
-          submitHandler: function (form) {
-            return false;
-          },
+          });
+        $("#form-main input[name='phone']").on("keyup", function () {
+          $(this).valid();
         });
         //表單內容☝️
       };

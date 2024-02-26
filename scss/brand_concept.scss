@@ -4,8 +4,9 @@
   // clip-path: ellipse(82% 56% at 50% 44%);
   clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
-  @include mobile {
+  @include tablet {
     clip-path: ellipse(117% 55% at 50% 44%);
+    height: 90vh;
   }
 }
 .first-cut-img-container {
@@ -30,7 +31,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include mobile {
+  @include tablet {
     margin-bottom: 10%;
     align-items: center;
   }
@@ -44,7 +45,7 @@
   letter-spacing: 3px;
   color: $bigTitleColor;
   margin-top: 4vw;
-  @include mobile {
+  @include tablet {
     margin-top: 5%;
   }
 }
@@ -54,7 +55,7 @@
   font-size: 9vw;
   opacity: 0.1;
   font-weight: 400;
-  @include mobile {
+  @include tablet {
     font-size: 14vw;
   }
 }
@@ -70,6 +71,16 @@
     font-size: 1.25vw;
     margin-top: 0.5vw;
     font-family: $serif;
+  }
+  @include tablet {
+    > h3 {
+      font-size: 5vw;
+    }
+    > h4 {
+      font-size: $contentSizeTb;
+      font-weight: 600;
+      margin-top: 0;
+    }
   }
   @include mobile {
     > h3 {
@@ -104,6 +115,22 @@
     background-color: $bigTitleColor;
     margin-left: 2%;
     margin-right: 2%;
+  }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 3%;
+    h4 {
+      font-size: 3vw;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    > .brand-nav-line {
+      height: 2.75vw;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
   }
   @include mobile {
     display: flex;
@@ -140,6 +167,11 @@
     line-height: 1;
     letter-spacing: 2px;
   }
+  @include tablet {
+    > h4 {
+      font-size: $brandTitleTb;
+    }
+  }
   @include mobile {
     > h4 {
       font-size: $brandTitle;
@@ -153,7 +185,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 20%;
-  @include mobile {
+  @include tablet {
     margin-top: 25%;
   }
 }
@@ -182,6 +214,16 @@
     font-size: 1.45vw;
     letter-spacing: 2px;
   }
+  @include tablet {
+    width: 50vw;
+    height: 50vw;
+    > img {
+      width: 10vw;
+    }
+    > h3 {
+      font-size: $contentSizeTb;
+    }
+  }
   @include mobile {
     width: 50vw;
     height: 50vw;
@@ -198,7 +240,7 @@
 }
 .outerCircle-7-color {
   width: 21vw;
-  @include mobile {
+  @include tablet {
     width: 60vw;
   }
 }
@@ -211,7 +253,7 @@
   //     transform-origin: center;
   //     transform: scale(1.15);
   //   }
-  @include mobile {
+  @include tablet {
     width: 60vw;
   }
 }
@@ -242,7 +284,7 @@
   align-items: center;
   justify-content: flex-start;
   transform: scale(1.04) rotate(90deg);
-  @include mobile {
+  @include tablet {
     transform: rotate(90deg);
   }
 }
@@ -252,7 +294,7 @@
   > img {
     width: 0.8vw;
   }
-  @include mobile {
+  @include tablet {
     > img {
       width: 1.5vw;
     }
@@ -267,7 +309,7 @@ $max: 7;
   .dot:nth-child(#{$i}) {
     transform: rotate(#{(360 / $max * $i)}deg);
   }
-  @include mobile {
+  @include tablet {
     .dot:nth-child(#{$i}) {
       transform: scale(1.025) rotate(#{(360 / $max * $i)}deg);
     }
@@ -315,7 +357,7 @@ $max: 7;
   > img {
     transform: scale(1.9);
   }
-  @include mobile {
+  @include tablet {
     display: none;
   }
 }
@@ -325,7 +367,7 @@ $max: 7;
   top: 0;
   width: 100%;
   height: 100%;
-  @include mobile {
+  @include tablet {
     display: none;
   }
 }
@@ -439,7 +481,12 @@ $max: 7;
   overflow: hidden;
 }
 .para-container-ph {
-  width: 90%;
+  @include tablet {
+    width: 85%;
+  }
+  @include mobile {
+    width: 90%;
+  }
 }
 .para-img-ph {
   position: relative;
@@ -462,18 +509,35 @@ $max: 7;
   flex-direction: column;
   color: $bigTitleColor;
   margin-left: 4%;
-  > h4 {
-    font-size: $brandTitle;
-    font-family: $serif;
-    font-weight: 500;
-    white-space: nowrap;
-    margin-bottom: 4%;
+  @include tablet {
+    > h4 {
+      font-size: $brandTitleTb;
+      font-family: $serif;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-bottom: 4%;
+    }
+    > p {
+      font-size: $contentSizeTb;
+      font-family: $micro;
+      color: $contentColor;
+      letter-spacing: 2px;
+    }
   }
-  > p {
-    font-size: $contentSizePH;
-    font-family: $micro;
-    color: $contentColor;
-    letter-spacing: 2px;
+  @include mobile {
+    > h4 {
+      font-size: $brandTitle;
+      font-family: $serif;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-bottom: 4%;
+    }
+    > p {
+      font-size: $contentSizePH;
+      font-family: $micro;
+      color: $contentColor;
+      letter-spacing: 2px;
+    }
   }
 }
 //輪播箭頭
@@ -482,12 +546,23 @@ $max: 7;
   background-color: #736357;
   background-position: center;
   border-radius: 50%;
-  width: 10vw;
-  height: 10vw;
   padding: 2.5vw;
   top: 75%;
   &::after {
     content: unset;
+  }
+  @include tablet {
+    background-color: #736357;
+    background-position: center;
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
+    padding: 2.5vw;
+    top: 75%;
+  }
+  @include mobile {
+    width: 10vw;
+    height: 10vw;
   }
 }
 .swiper-button-next {
@@ -499,18 +574,20 @@ $max: 7;
 //第四cut
 .fourth-cut {
   margin-top: 22%;
-  @include mobile {
+  @include tablet {
     margin-top: 0%;
   }
 }
-.fourth-cut-big-img {
+.fourth-cut-big-img-in {
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
   img {
-    margin: 0 auto;
-    width: 85%;
   }
-  @include mobile {
+  @include tablet {
+    width: 90%;
     img {
-      width: 90%;
     }
   }
 }
@@ -534,12 +611,33 @@ $max: 7;
     margin-bottom: 2%;
     letter-spacing: 2px;
   }
-  > p {
-    font-family: $micro;
-    font-size: $contentSize;
-    color: $contentColor;
-    letter-spacing: 2px;
-    line-height: 2;
+  .fourth-cut-para-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      font-family: $micro;
+      font-size: $contentSize;
+      color: $contentColor;
+      letter-spacing: 2px;
+      line-height: 2;
+    }
+  }
+  @include tablet {
+    > h3 {
+      font-size: 5.5vw;
+      line-height: 1.2;
+    }
+    > h4 {
+      font-size: $brandTitleTb;
+      margin-bottom: 6%;
+    }
+    .fourth-cut-para-p {
+      p {
+        font-size: $contentSizeTb;
+      }
+    }
   }
   @include mobile {
     > h3 {
@@ -550,7 +648,7 @@ $max: 7;
       font-size: $brandTitle;
       margin-bottom: 6%;
     }
-    > p {
+    p {
       font-size: $contentSizePH;
     }
   }

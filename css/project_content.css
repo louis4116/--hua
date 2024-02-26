@@ -27,10 +27,15 @@ img {
   width: 100%;
 }
 
+input,
+textarea {
+  font-family: "Microsoft JhengHei";
+}
+
 .pc {
   display: block;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .pc {
     display: none;
   }
@@ -39,7 +44,7 @@ img {
 .ph {
   display: none;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .ph {
     display: block;
   }
@@ -87,6 +92,25 @@ img {
     margin-top: 5%;
   }
 }
+@media all and (max-width: 1024px) {
+  #footer {
+    flex-direction: column;
+    font-size: 2vw;
+    line-height: 2;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin-top: 15%;
+  }
+  #footer > :nth-child(1) {
+    order: 3;
+  }
+  #footer > :nth-child(2) {
+    order: 2;
+  }
+  #footer > :nth-child(3) {
+    order: 1;
+  }
+}
 @media all and (max-width: 500px) {
   #footer {
     flex-direction: column;
@@ -120,7 +144,7 @@ img {
   flex-wrap: wrap;
   padding: 1vw 3vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   #nav {
     background-image: none;
     padding: 4vw;
@@ -130,6 +154,18 @@ img {
   }
   #nav .nav-icon {
     width: 30vw;
+  }
+}
+@media all and (max-width: 1024px) {
+  #nav {
+    background-image: none;
+    padding: 2vw;
+    padding-right: 6vw;
+    padding-left: 6vw;
+    background-color: #534741;
+  }
+  #nav .nav-icon {
+    width: 15vw;
   }
 }
 
@@ -146,7 +182,7 @@ img {
 .nav-icon img {
   width: 10vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-icon img {
     width: 100%;
   }
@@ -156,6 +192,24 @@ img {
   display: none;
 }
 
+@media all and (max-width: 1024px) {
+  .nav-hamb-icon {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: none;
+    background-color: transparent;
+    pointer-events: auto;
+  }
+  .nav-hamb-icon > span {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
+}
 @media all and (max-width: 500px) {
   .nav-hamb-icon {
     width: 5vw;
@@ -178,7 +232,7 @@ img {
   display: flex;
   align-items: center;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-list {
     width: 100%;
   }
@@ -230,13 +284,33 @@ img {
   bottom: 15%;
   right: 0;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .nav-list-ul li:nth-child(1)::after,
   .nav-list-ul li:nth-child(2)::after,
   .nav-list-ul li:nth-child(3)::after,
   .nav-list-ul li:nth-child(4)::after {
     content: "";
     width: 0px;
+  }
+}
+@media all and (max-width: 1024px) {
+  .nav-list-ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+  }
+  .nav-list-ul li {
+    font-size: 3vw;
+    padding: 2.5rem;
+  }
+  .nav-list-ul > div {
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
   }
 }
 @media all and (max-width: 500px) {
@@ -287,12 +361,17 @@ img {
   width: 5vw;
   position: relative;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .box {
     width: 100%;
   }
 }
 
+@media all and (max-width: 1024px) {
+  .box-img {
+    width: 25vw;
+  }
+}
 @media all and (max-width: 500px) {
   .box-img {
     width: 40vw;
@@ -306,6 +385,11 @@ img {
   font-size: 2.25vw;
   letter-spacing: 2px;
   color: #aa9784;
+}
+@media all and (max-width: 1024px) {
+  .box-para {
+    font-size: 6vw;
+  }
 }
 @media all and (max-width: 500px) {
   .box-para {
@@ -323,10 +407,11 @@ img {
           clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .first-cut {
     -webkit-clip-path: ellipse(117% 55% at 50% 44%);
             clip-path: ellipse(117% 55% at 50% 44%);
+    height: 90vh;
   }
 }
 
@@ -345,7 +430,12 @@ img {
   font-weight: 500;
   text-shadow: 2px 2px 5px black;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
+  .first-cut-h1 {
+    font-size: 8vw;
+  }
+}
+@media all and (max-width: 1024px) {
   .first-cut-h1 {
     font-size: 10vw;
   }
@@ -385,6 +475,18 @@ img {
 .previous > img {
   width: 1vw;
 }
+@media all and (max-width: 1024px) {
+  .previous {
+    padding: 2vw 6vw;
+    width: 34vw;
+  }
+  .previous > p {
+    font-size: 3vw;
+  }
+  .previous > img {
+    width: 3vw;
+  }
+}
 @media all and (max-width: 500px) {
   .previous {
     padding: 2vw 6vw;
@@ -405,7 +507,7 @@ img {
   align-items: center;
   justify-content: center;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .second-cut {
     margin-top: 8%;
   }
@@ -417,7 +519,7 @@ img {
   display: flex;
   justify-content: center;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .second-cut-container {
     height: auto;
     flex-direction: column;
@@ -429,16 +531,14 @@ img {
   overflow: hidden;
   position: relative;
   margin-right: 2%;
-  border-radius: 20px;
 }
 .second-cut-images .swiper-slide > :nth-child(1) {
   height: 100%;
-  border-radius: 20px;
 }
 .second-cut-images > .swiper-button {
   position: absolute;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .second-cut-images {
     width: 100%;
     margin-right: 0%;
@@ -460,7 +560,6 @@ img {
   overflow: hidden;
 }
 .second-cut-col .swiper-slide {
-  border-radius: 20px;
   cursor: pointer;
   opacity: 0.4;
 }
@@ -470,7 +569,7 @@ img {
 .second-cut-col .thumbs-active {
   opacity: 1;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .second-cut-col {
     width: 100%;
   }
@@ -482,7 +581,7 @@ img {
 .swiper-button {
   width: 2vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .swiper-button {
     width: 6vw;
   }
@@ -494,7 +593,7 @@ img {
   left: 50%;
   top: 91%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .swiper-button-next {
     top: 50%;
     left: 93%;
@@ -510,7 +609,7 @@ img {
   transform: rotate(90deg);
   transform-origin: left center;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .swiper-button-prev {
     top: 50%;
     left: 7%;
@@ -570,6 +669,11 @@ img {
   margin-top: 5%;
   margin-bottom: 2%;
 }
+@media all and (max-width: 1024px) {
+  .third-cut-title {
+    font-size: 4.5vw;
+  }
+}
 @media all and (max-width: 500px) {
   .third-cut-title {
     font-size: 5.5vw;
@@ -585,10 +689,16 @@ img {
   line-height: 2;
   margin-bottom: 4%;
 }
+@media all and (max-width: 1024px) {
+  .third-cut-para {
+    font-size: 2.75vw;
+    margin-bottom: 8%;
+  }
+}
 @media all and (max-width: 500px) {
   .third-cut-para {
-    font-size: 3.75vw;
     margin-bottom: 8%;
+    font-size: 3.75vw;
   }
 }
 
@@ -598,7 +708,7 @@ img {
   justify-content: space-between;
   width: 100%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .third-cut-bottom {
     justify-content: center;
     flex-direction: column;
@@ -612,7 +722,7 @@ img {
   flex-direction: column;
   width: 20vw;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .third-cut-bottom-intr {
     width: 100%;
   }
@@ -647,6 +757,14 @@ img {
   font-weight: 400;
   letter-spacing: 2px;
 }
+@media all and (max-width: 1024px) {
+  .third-cut-bottom-content > :nth-child(1) {
+    font-size: 3.2vw;
+  }
+  .third-cut-bottom-content > :nth-child(2) {
+    font-size: 3vw;
+  }
+}
 @media all and (max-width: 500px) {
   .third-cut-bottom-content > :nth-child(1) {
     font-size: 4.2vw;
@@ -675,7 +793,7 @@ img {
   justify-content: center;
   flex-direction: column;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .fourth-cut-container {
     margin-top: 1%;
   }
@@ -686,6 +804,11 @@ img {
   color: #65534b;
   font-family: "Noto Serif TC", serif;
   font-weight: 500;
+}
+@media all and (max-width: 1024px) {
+  .fourth-cut-title {
+    font-size: 4.5vw;
+  }
 }
 @media all and (max-width: 500px) {
   .fourth-cut-title {
@@ -699,7 +822,7 @@ img {
   width: 100%;
   margin-top: 3%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .fourth-cut-map {
     flex-direction: column;
     justify-content: center;
@@ -710,7 +833,7 @@ img {
 .fourth-cut-map-img {
   width: 47%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .fourth-cut-map-img {
     width: 100%;
     height: 60vw;
@@ -724,7 +847,7 @@ img {
 .fourth-cut-form {
   width: 47%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .fourth-cut-form {
     width: 100%;
     margin-top: 5%;
@@ -738,7 +861,7 @@ img {
   flex-direction: column;
   margin-bottom: 3%;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .form-item {
     margin-top: 3%;
     margin-bottom: 0%;
@@ -751,7 +874,7 @@ img {
   height: 1px;
   background-color: #736357;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .form-line {
     width: 77%;
   }
@@ -800,6 +923,26 @@ input:-webkit-autofill:focus {
   width: 100%;
   height: 3vw;
 }
+@media all and (max-width: 1024px) {
+  .form-item-content {
+    margin-bottom: 5%;
+  }
+  .form-item-content label {
+    font-size: 3.2vw;
+    width: 22%;
+    line-height: 1;
+  }
+  .form-item-content input {
+    font-size: 3.2vw;
+  }
+  .form-item-content textarea {
+    font-size: 3.2vw;
+    height: 15vw;
+    margin-left: 3%;
+    margin-top: 0;
+    width: 80%;
+  }
+}
 @media all and (max-width: 500px) {
   .form-item-content {
     margin-bottom: 5%;
@@ -829,6 +972,11 @@ input:-webkit-autofill:focus {
   font-weight: 500;
   font-family: "Noto Serif TC", serif;
 }
+@media all and (max-width: 1024px) {
+  .error {
+    font-size: 2vw;
+  }
+}
 @media all and (max-width: 500px) {
   .error {
     font-size: 3vw;
@@ -839,7 +987,7 @@ input:-webkit-autofill:focus {
   flex-direction: column;
   align-items: flex-start;
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .form-textarea {
     flex-direction: row;
   }
@@ -859,6 +1007,12 @@ input:-webkit-autofill:focus {
   font-size: 1vw;
   cursor: pointer;
   letter-spacing: 2px;
+}
+@media all and (max-width: 1024px) {
+  .form-button > button {
+    padding: 1.5vw 10vw;
+    font-size: 2.8vw;
+  }
 }
 @media all and (max-width: 500px) {
   .form-button > button {

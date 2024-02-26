@@ -9,8 +9,9 @@
   justify-content: center;
   clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
-  @include mobile {
+  @include tablet {
     clip-path: ellipse(117% 55% at 50% 44%);
+    height: 90vh;
   }
 }
 .first-cut-img-container {
@@ -26,6 +27,9 @@
   font-family: $serif;
   font-weight: 500;
   text-shadow: 2px 2px 5px black;
+  @include tablet {
+    font-size: 8vw;
+  }
   @include mobile {
     font-size: 10vw;
   }
@@ -50,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include mobile {
+  @include tablet {
     margin-top: 8%;
   }
 }
@@ -59,7 +63,7 @@
   height: 37vw;
   display: flex;
   justify-content: center;
-  @include mobile {
+  @include tablet {
     height: auto;
     flex-direction: column;
   }
@@ -69,15 +73,13 @@
   overflow: hidden;
   position: relative;
   margin-right: 2%;
-  border-radius: 20px;
   .swiper-slide > :nth-child(1) {
     height: 100%;
-    border-radius: 20px;
   }
   > .swiper-button {
     position: absolute;
   }
-  @include mobile {
+  @include tablet {
     width: 100%;
     margin-right: 0%;
     margin-bottom: 3%;
@@ -95,7 +97,6 @@
   width: 18vw;
   overflow: hidden;
   .swiper-slide {
-    border-radius: 20px;
     cursor: pointer;
     opacity: 0.4;
     > img {
@@ -105,7 +106,7 @@
   .thumbs-active {
     opacity: 1;
   }
-  @include mobile {
+  @include tablet {
     width: 100%;
     .swiper-slide {
       cursor: pointer;
@@ -117,7 +118,7 @@
 }
 .swiper-button {
   width: 2vw;
-  @include mobile {
+  @include tablet {
     width: 6vw;
   }
 }
@@ -127,7 +128,7 @@
   transform: rotate(90deg);
   left: 50%;
   top: 91%;
-  @include mobile {
+  @include tablet {
     top: 50%;
     left: 93%;
     transform: translate(-50%, -50%);
@@ -140,7 +141,7 @@
   top: 2%;
   transform: rotate(90deg);
   transform-origin: left center;
-  @include mobile {
+  @include tablet {
     top: 50%;
     left: 7%;
     transform: translate(-50%, -50%);
@@ -194,6 +195,9 @@
   font-weight: 500;
   margin-top: 5%;
   margin-bottom: 2%;
+  @include tablet {
+    font-size: 4.5vw;
+  }
   @include mobile {
     font-size: 5.5vw;
   }
@@ -206,6 +210,10 @@
   font-weight: 400;
   line-height: 2;
   margin-bottom: 4%;
+  @include tablet {
+    font-size: 2.75vw;
+    margin-bottom: 8%;
+  }
   @include mobile {
     font-size: 3.75vw;
     margin-bottom: 8%;
@@ -217,7 +225,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  @include mobile {
+  @include tablet {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 10%;
@@ -230,7 +238,7 @@
   justify-content: space-between;
   flex-direction: column;
   width: 22vw;
-  @include mobile {
+  @include tablet {
     width: 100%;
   }
 }
@@ -259,6 +267,14 @@
     font-size: 1vw;
     margin-left: 8%;
     font-weight: 400;
+  }
+  @include tablet {
+    > :nth-child(1) {
+      font-size: 3.2vw;
+    }
+    > :nth-child(2) {
+      font-size: 3vw;
+    }
   }
   @include mobile {
     > :nth-child(1) {
@@ -296,6 +312,17 @@
   }
   > img {
     width: 1vw;
+  }
+  @include tablet {
+    width: 30vw;
+    padding: 2vw 6vw;
+    margin-bottom: 0%;
+    > p {
+      font-size: 3vw;
+    }
+    > img {
+      width: 3vw;
+    }
   }
   @include mobile {
     width: 38vw;

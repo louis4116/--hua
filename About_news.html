@@ -24,7 +24,7 @@
           <picture>
             <source
               srcset="./img/news/news-bg-phone.webp"
-              media="(max-width:500px)"
+              media="(max-width:1024px)"
             />
             <img src="./img/news/news-bg.webp" alt="首頁背景-pc" />
           </picture>
@@ -238,7 +238,7 @@
           scale: 1.2,
           duration: 2,
         });
-        if (window.innerWidth <= 500) {
+        if (window.innerWidth <= 1024) {
           let i = 0;
           $(".cut-2-margin").each(function (index) {
             $(this).attr("id", `cut-2-margin-${i}`);

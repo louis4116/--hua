@@ -8,8 +8,9 @@
   // clip-path: ellipse(82% 56% at 50% 44%);
   clip-path: ellipse(61% 81% at 50% 19%);
   overflow: hidden;
-  @include mobile {
+  @include tablet {
     clip-path: ellipse(117% 55% at 50% 44%);
+    height: 90vh;
   }
 }
 .first-cut-img-container {
@@ -34,7 +35,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include mobile {
+  @include tablet {
     margin-bottom: 10%;
     align-items: center;
   }
@@ -48,7 +49,7 @@
   letter-spacing: 3px;
   color: $bigTitleColor;
   margin-top: 4vw;
-  @include mobile {
+  @include tablet {
     margin-top: 5%;
   }
 }
@@ -58,6 +59,9 @@
   font-size: 9vw;
   opacity: 0.1;
   font-weight: 400;
+  @include tablet {
+    font-size: 12vw;
+  }
   @include mobile {
     font-size: 14vw;
   }
@@ -74,6 +78,16 @@
     font-size: 1.25vw;
     margin-top: 0.5vw;
     font-family: $serif;
+  }
+  @include tablet {
+    > h3 {
+      font-size: 5vw;
+    }
+    > h4 {
+      font-size: $contentSizeTb;
+      font-weight: 600;
+      margin-top: 0;
+    }
   }
   @include mobile {
     > h3 {
@@ -109,6 +123,22 @@
     margin-left: 2%;
     margin-right: 2%;
   }
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin-top: 3%;
+    h4 {
+      font-size: 3vw;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    > .brand-nav-line {
+      height: 2.75vw;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+  }
   @include mobile {
     display: flex;
     justify-content: space-between;
@@ -135,7 +165,7 @@
   justify-content: flex-end;
   padding-left: 20%;
   margin-top: 10%;
-  @include mobile {
+  @include tablet {
     padding-left: 0;
     flex-direction: column;
     align-items: center;
@@ -159,7 +189,7 @@
   }
 }
 .third-cut-content-middle {
-  @include mobile {
+  @include tablet {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,6 +197,14 @@
 }
 .title-ph {
   display: none;
+  @include tablet {
+    display: block;
+    font-weight: 600;
+    font-size: 5.5vw;
+    font-family: $cor;
+    color: $bigTitleColor;
+    line-height: 1.2;
+  }
   @include mobile {
     display: block;
     font-weight: 600;
@@ -194,6 +232,21 @@
     color: $contentColor;
     letter-spacing: 2px;
   }
+  @include tablet {
+    width: 85%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 5%;
+    > h4 {
+      font-size: $brandTitleTb;
+      color: $mediumTitleColor;
+      margin-bottom: 2%;
+    }
+    > p {
+      font-size: $contentSizeTb;
+      color: $contentColor;
+    }
+  }
   @include mobile {
     width: 90%;
     padding-right: 0;
@@ -215,6 +268,10 @@
   position: relative;
   width: 23vw;
   border-radius: 30px;
+  @include tablet {
+    width: 85%;
+    overflow: hidden;
+  }
   @include mobile {
     width: 90%;
     overflow: hidden;
@@ -228,7 +285,7 @@
   top: -45%;
   left: -39%;
   z-index: -1;
-  @include mobile {
+  @include tablet {
     display: none;
     width: 0%;
     height: 0%;
@@ -236,7 +293,7 @@
 }
 .third-cut-content-right {
   width: 28vw;
-  @include mobile {
+  @include tablet {
     display: none;
   }
 }
@@ -247,7 +304,7 @@
   align-items: center;
   justify-content: space-evenly;
   margin-top: 10%;
-  @include mobile {
+  @include tablet {
     justify-content: center;
     flex-direction: column;
     margin-top: 0%;
@@ -261,6 +318,9 @@
   > img {
     border-radius: 14px;
   }
+  @include tablet {
+    width: 85%;
+  }
   @include mobile {
     width: 90%;
   }
@@ -271,13 +331,13 @@
   justify-content: flex-start;
   flex-direction: column;
   width: 35vw;
-  > h1 {
+  h1 {
     font-weight: 600;
     font-size: 2.25vw;
     font-family: $cor;
     color: $bigTitleColor;
   }
-  > h4 {
+  h4 {
     font-size: $mainTitle;
     font-family: $serif;
     color: $mediumTitleColor;
@@ -285,26 +345,46 @@
     margin-top: 4%;
     margin-bottom: 4%;
   }
-  > p {
+
+  p {
     font-size: $contentSize;
     font-family: $micro;
     color: $contentColor;
     letter-spacing: 2px;
     line-height: 2;
   }
+
+  @include tablet {
+    width: 85%;
+    margin-top: 5%;
+    h1 {
+      font-size: 5.5vw;
+      line-height: 1.2;
+    }
+    h4 {
+      font-size: $brandTitleTb;
+      margin-top: 2%;
+      margin-bottom: 2%;
+    }
+
+    p {
+      font-size: $contentSizeTb;
+    }
+  }
   @include mobile {
     width: 90%;
     margin-top: 5%;
-    > h1 {
+    h1 {
       font-size: 6.5vw;
       line-height: 1.2;
     }
-    > h4 {
+    h4 {
       font-size: $brandTitle;
       margin-top: 2%;
       margin-bottom: 2%;
     }
-    > p {
+
+    p {
       font-size: $contentSizePH;
     }
   }
@@ -314,7 +394,7 @@
   position: absolute;
   right: 19%;
   margin-top: -6%;
-  @include mobile {
+  @include tablet {
     display: none;
   }
 }
@@ -353,7 +433,7 @@
   top: 0;
   width: 100%;
   margin-top: 13%;
-  @include mobile {
+  @include tablet {
     margin-top: 33%;
   }
 }
@@ -391,6 +471,21 @@
   > :nth-child(2) {
     margin-top: 2%;
   }
+  @include tablet {
+    > img {
+      width: 20vw;
+    }
+    > h1 {
+      font-size: 5.5vw;
+      line-height: 1.2;
+    }
+    > h4 {
+      font-size: $brandTitleTb;
+    }
+    > p {
+      font-size: $contentSizeTb;
+    }
+  }
   @include mobile {
     > img {
       width: 20vw;
@@ -411,7 +506,7 @@
 .fifth-cut-para-rel-bottom {
   width: 100%;
   margin-top: 5%;
-  @include mobile {
+  @include tablet {
     margin-top: 5%;
   }
   .pic {
@@ -437,7 +532,7 @@
   overflow: hidden;
   margin-bottom: 1%;
   width: 236vw;
-  @include mobile {
+  @include tablet {
     width: 600%;
     margin-bottom: 5%;
     transform: translateX(-50%);
@@ -487,7 +582,7 @@
   display: flex;
   align-items: flex-start;
   width: 236vw;
-  @include mobile {
+  @include tablet {
     width: 600%;
     animation: secondXmovePH 40s linear infinite;
   }
