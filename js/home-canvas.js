@@ -262,11 +262,10 @@ $(window).on("load", function () {
         },
         "<+3"
       );
-
     animateSecond.to(".yo", {
       scale: "1.75",
       ease: "linear",
-      duration: 20,
+      duration: 19,
     });
     animateFirst.add(animateSecond, "<+2");
   }
