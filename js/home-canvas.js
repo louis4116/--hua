@@ -20,7 +20,7 @@ $(window).on("load", function () {
 
   const windowWidth = window.innerWidth;
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight + 200;
+  canvas.height = window.innerHeight;
   if (window.innerWidth <= 1024) {
     // let resizeTimer;
     // window.addEventListener(
