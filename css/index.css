@@ -398,7 +398,6 @@ textarea {
 }
 
 body {
-  overflow: hidden;
   position: relative;
 }
 
@@ -734,7 +733,6 @@ body {
   flex-direction: column;
   letter-spacing: 1px;
   padding-top: 20%;
-  padding-bottom: 12%;
 }
 .home-cut-2-para > h1 {
   color: #65534b;

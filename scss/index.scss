@@ -3,7 +3,7 @@ body {
   // background-image: url("../img/home/首頁-bg.jpg");
   // background-repeat: repeat;
   // background-size: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
 }
 
@@ -298,7 +298,6 @@ body {
   flex-direction: column;
   letter-spacing: 1px;
   padding-top: 20%;
-  padding-bottom: 12%;
   > h1 {
     color: $bigTitleColor;
     font-family: $cor;
