@@ -20,8 +20,21 @@ $(window).on("load", function () {
 
   const windowWidth = window.innerWidth;
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
+  canvas.height = window.innerHeight + 200;
+  if (window.innerWidth <= 1024) {
+    // let resizeTimer;
+    // window.addEventListener(
+    //   "resize",
+    //   (e) => {
+    //     if (resizeTimer) clearTimeout(resizeTimer); // 判斷是否已發生 resize
+    //     resizeTimer = setTimeout(() => {
+    //       canvas.height = window.innerHeight;
+    //     }, 100);
+    //   },
+    //   false
+    // );
+    canvas.height = window.innerHeight + 200;
+  }
   //各標準下的不同值
   let w, h, drawObj, scale, time, path, dev, endPro;
 
@@ -36,7 +49,7 @@ $(window).on("load", function () {
       height: squreH * h,
     };
     path = -3.5;
-    scale = 4.5;
+    scale = 1.5;
     dev = "mb";
     endPro = 4.5;
   } else if (windowWidth > 500 && windowWidth <= 1024) {
@@ -50,7 +63,7 @@ $(window).on("load", function () {
       height: squreH * h,
     };
     path = -3.5;
-    scale = 4.5;
+    scale = 1.5;
     dev = "mb";
     endPro = 4.5;
   } else {
@@ -71,7 +84,9 @@ $(window).on("load", function () {
   }
 
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-
+  // ScrollTrigger.config({
+  //   ignoreMobileResize: true,
+  // });
   //遮罩圖片內設定
   const backImage = new Image();
   backImage.src = "./img/home/big0-2.webp";
@@ -107,16 +122,30 @@ $(window).on("load", function () {
   }
 
   //遮罩主要動畫
-  const cut2MaskSmall = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".home-cut-2-fixed-container",
-      toggleActions: "play none none reverse",
-      start: "top top",
-      end: "bottom+=350% bottom",
-      pin: true,
-      scrub: 0.2,
-    },
-  });
+  let cut2MaskSmall;
+  if (window.innerWidth <= 1024) {
+    cut2MaskSmall = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".home-cut-2-fixed-container",
+        toggleActions: "play none none reverse",
+        start: "top top",
+        end: "bottom+=100%",
+        pin: true,
+        scrub: 0.2,
+      },
+    });
+  } else {
+    cut2MaskSmall = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".home-cut-2-fixed-container",
+        toggleActions: "play none none reverse",
+        start: "top top",
+        end: "bottom+=250%",
+        pin: true,
+        scrub: 0.2,
+      },
+    });
+  }
 
   //canvas放大
   const cut2PicBigger = gsap.timeline({

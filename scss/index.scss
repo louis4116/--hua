@@ -385,9 +385,18 @@ body {
     width: 20vw;
   }
 }
-
+.home-cut-2-test {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include tablet {
+    margin-top: 30vw;
+  }
+}
 .home-cut-2-fixed-container {
   position: relative;
+  width: 100%;
+  height: 100%;
 
   @include tablet {
     display: flex;
@@ -399,6 +408,8 @@ body {
 .home-cut-2-fixed-first {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 
   @include tablet {
     overflow: unset;
@@ -406,7 +417,6 @@ body {
 }
 .yo {
   width: 100%;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -514,12 +524,14 @@ body {
 canvas {
   top: 0;
   left: 0;
-  min-width: 100%;
+  // min-width: 100%;
   // height: 100vh;
   pointer-events: none;
   @include tablet {
     // height: auto;
     transform: translateZ(0);
+    z-index: 100;
+    position: relative;
   }
 }
 

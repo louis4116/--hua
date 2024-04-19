@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0,minimum-scale=1"
+      content="width=device-width, initial-scale=1,minimum-scale=1"
     />
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>樺輝建設</title>
   </head>
   <body>
-    <div class="loading-page">
+    <!-- <div class="loading-page">
       <div class="box">
         <div class="box-img"><img src="./img/logo01.svg" alt="logo01" /></div>
         <div class="box-para">
@@ -19,8 +19,8 @@
           <span>%</span>
         </div>
       </div>
-    </div>
-    <div class="preload_number">
+    </div> -->
+    <!-- <div class="preload_number">
       <div class="preload_number-container">
         <img
           class="preload_number-img"
@@ -37,7 +37,7 @@
           alt="預覽背景框"
         />
       </div>
-    </div>
+    </div> -->
     <nav id="nav"></nav>
     <main id="home-main">
       <div class="background"><img src="./img/home/home-bg.jpg" alt="" /></div>
@@ -85,37 +85,43 @@
             在這追求速度換取利潤的時代，<br />樺輝建設秉持「數年磨一劍」的信念，注重每個細節的要求及優質的選材，<br />以細膩的精工和堅定的決心，不斷提升品質，絕不妥協。
           </p>
         </div>
-        <div class="home-cut-2-fixed-container">
-          <div class="home-cut-2-fixed-first">
-            <div class="home-cut-2-fixed-first-squre">
-              <div class="yo">
-                <canvas id="canvas"></canvas>
-              </div>
-              <div class="home-cut-2-fixed-first-squre-wrapper z6">
-                <div class="home-cut-2-fixed-first-squre-1 fixed-squre">
-                  <div class="home-cut-2-fixed-first-squre-text n-1">
-                    <p class="loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
-                  </div>
-                  <div class="home-cut-2-fixed-first-squre-text n-2">
-                    <p class="loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
+        <div class="home-cut-2-test">
+          <div class="home-cut-2-fixed-container">
+            <div class="home-cut-2-fixed-first">
+              <div class="home-cut-2-fixed-first-squre">
+                <div class="yo">
+                  <canvas id="canvas"></canvas>
+                </div>
+                <div class="home-cut-2-fixed-first-squre-wrapper z3">
+                  <div class="home-cut-2-fixed-first-squre-1 fixed-squre">
+                    <div class="home-cut-2-fixed-first-squre-text n-1">
+                      <p class="loopText">
+                        HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION
+                        CO.,LTD
+                      </p>
+                    </div>
+                    <div class="home-cut-2-fixed-first-squre-text n-2">
+                      <p class="loopText">
+                        HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION
+                        CO.,LTD
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="home-cut-2-fixed-first-squre-wrapper z0">
-                <div class="home-cut-2-fixed-first-squre-2 fixed-squre">
-                  <div class="home-cut-2-fixed-first-squre-text n-3">
-                    <p class="loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
-                  </div>
-                  <div class="home-cut-2-fixed-first-squre-text n-4">
-                    <p class="n-4-p loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
+                <div class="home-cut-2-fixed-first-squre-wrapper z0">
+                  <div class="home-cut-2-fixed-first-squre-2 fixed-squre">
+                    <div class="home-cut-2-fixed-first-squre-text n-3">
+                      <p class="loopText">
+                        HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION
+                        CO.,LTD
+                      </p>
+                    </div>
+                    <div class="home-cut-2-fixed-first-squre-text n-4">
+                      <p class="n-4-p loopText">
+                        HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION
+                        CO.,LTD
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -950,236 +956,243 @@
     <script src="./js/home-carsoul.js"></script>
     <script src="./js/loading.js"></script>
     <script>
+      $(document).ready(function () {
+        if (window.innerWidth <= 1024) {
+          $(".pc").remove();
+        } else {
+          $(".ph").remove();
+        }
+      });
       $(window).on("load", function () {
         //起始跳數字動畫👇
-        const preloadNum = document.querySelector(".preload_number-number");
-        function animateValue(obj, end, start, duration) {
-          let startTimestamp = null;
-          const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min(
-              (timestamp - startTimestamp) / duration,
-              1
-            );
-            obj.innerHTML = Math.floor(-progress * (start - end) + start);
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            }
-          };
+        // const preloadNum = document.querySelector(".preload_number-number");
+        // function animateValue(obj, end, start, duration) {
+        //   let startTimestamp = null;
+        //   const step = (timestamp) => {
+        //     if (!startTimestamp) startTimestamp = timestamp;
+        //     const progress = Math.min(
+        //       (timestamp - startTimestamp) / duration,
+        //       1
+        //     );
+        //     obj.innerHTML = Math.floor(-progress * (start - end) + start);
+        //     if (progress < 1) {
+        //       window.requestAnimationFrame(step);
+        //     }
+        //   };
 
-          window.requestAnimationFrame(step);
-        }
-        let preloaderTl = gsap.timeline();
-        preloaderTl
-          .to(".preload_number-number>span", {
-            y: 0,
-            opacity: 1,
-            duration: 1.25,
-            stagger: 0.18,
-          })
-          .to(
-            ".preload_number-bottom",
-            {
-              opacity: 1,
-              duration: 1.5,
-            },
-            "<+0.5"
-          )
-          .add(
-            gsap.delayedCall(0, function () {
-              animateValue(preloadNum, 2024, 1992, 1000);
-            })
-          )
-          .to(
-            ".preload_number-container",
-            { height: "0vh", y: "-30vw", duration: "2" },
-            "<+1.25"
-          )
-          .to("body", { overflow: "auto" }, "<+1.5")
-          .to(
-            ".preload_number-container",
-            { opacity: 0, duration: "1.5" },
-            "<-1.25"
-          )
-          .to(".preload_number", { zIndex: "-1" }, "<");
+        //   window.requestAnimationFrame(step);
+        // }
+        // let preloaderTl = gsap.timeline();
+        // preloaderTl
+        //   .to(".preload_number-number>span", {
+        //     y: 0,
+        //     opacity: 1,
+        //     duration: 1.25,
+        //     stagger: 0.18,
+        //   })
+        //   .to(
+        //     ".preload_number-bottom",
+        //     {
+        //       opacity: 1,
+        //       duration: 1.5,
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .add(
+        //     gsap.delayedCall(0, function () {
+        //       animateValue(preloadNum, 2024, 1992, 1000);
+        //     })
+        //   )
+        //   .to(
+        //     ".preload_number-container",
+        //     { height: "0vh", y: "-30vw", duration: "2" },
+        //     "<+1.25"
+        //   )
+        //   .to("body", { overflow: "auto" }, "<+1.5")
+        //   .to(
+        //     ".preload_number-container",
+        //     { opacity: 0, duration: "1.5" },
+        //     "<-1.25"
+        //   )
+        //   .to(".preload_number", { zIndex: "-1" }, "<");
         //起始跳數字動畫☝️
 
         //第一cut文字動畫👇
-        const splitTitle = new SplitText(".para-first h1", {
-          linesClass: "clip-text",
-        });
-        const splitTitle2 = new SplitText(".para-second h1", {
-          linesClass: "clip-text",
-        });
-        const splitH2Title = new SplitText(".para-first h2", {
-          linesClass: "clip-text",
-        });
-        const splitH2Title2 = new SplitText(".para-second h2", {
-          linesClass: "clip-text",
-        });
-        const cut1TextTl = gsap.timeline({ repeat: -1 });
-        const oddTitle = splitTitle.chars.filter(
-          (item, index) => index % 2 === 0
-        );
-        const evenTitle = splitTitle.chars.filter(
-          (item, index) => index % 2 !== 0
-        );
-        const oddTitle2 = splitTitle2.chars.filter(
-          (item, index) => index % 2 === 0
-        );
-        const evenTitle2 = splitTitle2.chars.filter(
-          (item, index) => index % 2 !== 0
-        );
+        // const splitTitle = new SplitText(".para-first h1", {
+        //   linesClass: "clip-text",
+        // });
+        // const splitTitle2 = new SplitText(".para-second h1", {
+        //   linesClass: "clip-text",
+        // });
+        // const splitH2Title = new SplitText(".para-first h2", {
+        //   linesClass: "clip-text",
+        // });
+        // const splitH2Title2 = new SplitText(".para-second h2", {
+        //   linesClass: "clip-text",
+        // });
+        // const cut1TextTl = gsap.timeline({ repeat: -1 });
+        // const oddTitle = splitTitle.chars.filter(
+        //   (item, index) => index % 2 === 0
+        // );
+        // const evenTitle = splitTitle.chars.filter(
+        //   (item, index) => index % 2 !== 0
+        // );
+        // const oddTitle2 = splitTitle2.chars.filter(
+        //   (item, index) => index % 2 === 0
+        // );
+        // const evenTitle2 = splitTitle2.chars.filter(
+        //   (item, index) => index % 2 !== 0
+        // );
 
-        cut1TextTl
-          .fromTo(
-            oddTitle,
-            {
-              opacity: 0,
-              y: -50,
-              filter: "blur(10px)",
-            },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 2,
-              ease: "power2",
-              filter: "blur(0px)",
-              stagger: {
-                each: 0.07,
-                from: "random",
-              },
-            },
-            "<-0.75"
-          )
-          .fromTo(
-            evenTitle,
-            {
-              autoAlpha: 0,
-              y: 50,
-              filter: "blur(10px)",
-            },
-            {
-              autoAlpha: 1,
-              y: 0,
-              duration: 2,
-              ease: "power2",
-              filter: "blur(0px)",
-              stagger: {
-                each: 0.07,
-                from: "random",
-              },
-            },
-            "<+0.5"
-          )
-          .from(
-            splitH2Title.chars,
-            {
-              autoAlpha: 0,
-              y: 50,
-              filter: "blur(10px)",
-              ease: "power2",
-              duration: 2,
-              stagger: {
-                each: 0.07,
-                from: "random",
-              },
-            },
-            "<+0.5"
-          )
-          .from(
-            ".para-first .p-1,.para-first .p-2",
-            {
-              autoAlpha: 0,
-              filter: "blur(10px)",
-              duration: 2,
-            },
-            "<+0.5"
-          )
-          .to(
-            ".para-first",
-            {
-              autoAlpha: 0,
-              filter: "blur(10px)",
-              duration: 3,
-            },
-            "<+10"
-          )
-          .fromTo(
-            oddTitle2,
-            {
-              opacity: 0,
-              y: -50,
-              filter: "blur(10px)",
-            },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 2,
-              ease: "power2",
-              filter: "blur(0px)",
-              stagger: {
-                each: 0.07,
-                from: "random",
-              },
-            },
-            "<+0.75"
-          )
-          .fromTo(
-            evenTitle2,
-            {
-              opacity: 0,
-              y: 50,
-              filter: "blur(10px)",
-            },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 2,
-              ease: "power2",
-              filter: "blur(0px)",
-              stagger: {
-                each: 0.07,
-                from: "random",
-              },
-            },
-            "<+0.5"
-          )
-          .from(
-            splitH2Title2.chars,
-            {
-              autoAlpha: 0,
-              y: 50,
-              filter: "blur(10px)",
-              ease: "power2",
-              duration: 2,
-              stagger: {
-                each: 0.07,
-                from: "random",
-              },
-            },
-            "<+0.5"
-          )
-          .from(
-            ".para-second .p-1,.para-second .p-2",
-            {
-              autoAlpha: 0,
-              filter: "blur(10px)",
-              duration: 2,
-            },
-            "<+0.5"
-          )
-          .to(
-            ".para-second",
-            {
-              autoAlpha: 0,
-              filter: "blur(10px)",
-              duration: 3,
-            },
-            "<+8"
-          );
+        // cut1TextTl
+        //   .fromTo(
+        //     oddTitle,
+        //     {
+        //       opacity: 0,
+        //       y: -50,
+        //       filter: "blur(10px)",
+        //     },
+        //     {
+        //       opacity: 1,
+        //       y: 0,
+        //       duration: 2,
+        //       ease: "power2",
+        //       filter: "blur(0px)",
+        //       stagger: {
+        //         each: 0.07,
+        //         from: "random",
+        //       },
+        //     },
+        //     "<-0.75"
+        //   )
+        //   .fromTo(
+        //     evenTitle,
+        //     {
+        //       autoAlpha: 0,
+        //       y: 50,
+        //       filter: "blur(10px)",
+        //     },
+        //     {
+        //       autoAlpha: 1,
+        //       y: 0,
+        //       duration: 2,
+        //       ease: "power2",
+        //       filter: "blur(0px)",
+        //       stagger: {
+        //         each: 0.07,
+        //         from: "random",
+        //       },
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .from(
+        //     splitH2Title.chars,
+        //     {
+        //       autoAlpha: 0,
+        //       y: 50,
+        //       filter: "blur(10px)",
+        //       ease: "power2",
+        //       duration: 2,
+        //       stagger: {
+        //         each: 0.07,
+        //         from: "random",
+        //       },
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .from(
+        //     ".para-first .p-1,.para-first .p-2",
+        //     {
+        //       autoAlpha: 0,
+        //       filter: "blur(10px)",
+        //       duration: 2,
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .to(
+        //     ".para-first",
+        //     {
+        //       autoAlpha: 0,
+        //       filter: "blur(10px)",
+        //       duration: 3,
+        //     },
+        //     "<+10"
+        //   )
+        //   .fromTo(
+        //     oddTitle2,
+        //     {
+        //       opacity: 0,
+        //       y: -50,
+        //       filter: "blur(10px)",
+        //     },
+        //     {
+        //       opacity: 1,
+        //       y: 0,
+        //       duration: 2,
+        //       ease: "power2",
+        //       filter: "blur(0px)",
+        //       stagger: {
+        //         each: 0.07,
+        //         from: "random",
+        //       },
+        //     },
+        //     "<+0.75"
+        //   )
+        //   .fromTo(
+        //     evenTitle2,
+        //     {
+        //       opacity: 0,
+        //       y: 50,
+        //       filter: "blur(10px)",
+        //     },
+        //     {
+        //       opacity: 1,
+        //       y: 0,
+        //       duration: 2,
+        //       ease: "power2",
+        //       filter: "blur(0px)",
+        //       stagger: {
+        //         each: 0.07,
+        //         from: "random",
+        //       },
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .from(
+        //     splitH2Title2.chars,
+        //     {
+        //       autoAlpha: 0,
+        //       y: 50,
+        //       filter: "blur(10px)",
+        //       ease: "power2",
+        //       duration: 2,
+        //       stagger: {
+        //         each: 0.07,
+        //         from: "random",
+        //       },
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .from(
+        //     ".para-second .p-1,.para-second .p-2",
+        //     {
+        //       autoAlpha: 0,
+        //       filter: "blur(10px)",
+        //       duration: 2,
+        //     },
+        //     "<+0.5"
+        //   )
+        //   .to(
+        //     ".para-second",
+        //     {
+        //       autoAlpha: 0,
+        //       filter: "blur(10px)",
+        //       duration: 3,
+        //     },
+        //     "<+8"
+        //   );
 
-        preloaderTl.add(cut1TextTl, "<-0.5"); //開頭動畫接續第一cut文字動畫
+        // preloaderTl.add(cut1TextTl, "<-0.5"); //開頭動畫接續第一cut文字動畫
         //第一cut文字動畫☝️
         const navIcon = $(".nav-icon");
         const navIconH = navIcon.innerHeight();
