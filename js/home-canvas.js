@@ -270,7 +270,7 @@ $(window).on("load", function () {
         },
         scale: "0.9",
         rotation: 50,
-        duration: 15,
+        duration: 25,
       })
       .to(wrapper, {
         onUpdate: function () {
@@ -294,14 +294,14 @@ $(window).on("load", function () {
           drawMask(scaleRes, 5, img, w, h, endPro);
         },
         scale: s,
-        duration: windowWidth <= 1024 ? 40 : 50,
+        duration: windowWidth <= 1024 ? 40 : 40,
       })
       .to(
         ".yo",
         {
           scale: "1.5",
           ease: "linear",
-          duration: windowWidth <= 1024 ? 40 : 60,
+          duration: windowWidth <= 1024 ? 40 : 40,
         },
         time
       );
