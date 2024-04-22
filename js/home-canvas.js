@@ -22,18 +22,8 @@ $(window).on("load", function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   if (window.innerWidth <= 1024) {
-    // let resizeTimer;
-    // window.addEventListener(
-    //   "resize",
-    //   (e) => {
-    //     if (resizeTimer) clearTimeout(resizeTimer); // 判斷是否已發生 resize
-    //     resizeTimer = setTimeout(() => {
-    //       canvas.height = window.innerHeight;
-    //     }, 100);
-    //   },
-    //   false
-    // );
-    canvas.height = window.innerHeight + (window.innerWidth / 100) * 12;
+    canvas.height = window.innerHeight + (window.innerHeight / 100) * 20;
+    console.log((window.innerHeight / 100) * 20);
   }
   //各標準下的不同值
   let w, h, drawObj, scale, time, path, dev, endPro;
@@ -86,9 +76,7 @@ $(window).on("load", function () {
   }
 
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
-  // ScrollTrigger.config({
-  //   ignoreMobileResize: true,
-  // });
+
   //遮罩圖片內設定
   const backImage = new Image();
   backImage.src = "./img/home/big0-2.webp";
