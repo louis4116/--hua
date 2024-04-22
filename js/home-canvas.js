@@ -301,7 +301,7 @@ $(window).on("load", function () {
         {
           scale: "1.5",
           ease: "linear",
-          duration: windowWidth <= 1024 ? 25 : 60,
+          duration: windowWidth <= 1024 ? 40 : 60,
         },
         time
       );
