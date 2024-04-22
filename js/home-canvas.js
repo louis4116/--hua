@@ -306,14 +306,14 @@ $(window).on("load", function () {
           drawMask(scaleRes, 5, img, w, h, endPro);
         },
         scale: s,
-        duration: 25,
+        duration: windowWidth <= 1024 ? 25 : 50,
       })
       .to(
         ".yo",
         {
           scale: "1.5",
           ease: "linear",
-          duration: 25,
+          duration: windowWidth <= 1024 ? 25 : 40,
         },
         time
       );

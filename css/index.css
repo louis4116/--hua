@@ -1586,7 +1586,7 @@ canvas {
 }
 
 .cut-4-pin-left {
-  transform: translateY(-70vw);
+  transform: translateY(-67vw);
 }
 @media all and (max-width: 1024px) {
   .cut-4-pin-left {
@@ -1596,7 +1596,7 @@ canvas {
 }
 
 .cut-4-pin-right {
-  transform: translateY(-70vw);
+  transform: translateY(-67vw);
 }
 @media all and (max-width: 1024px) {
   .cut-4-pin-right {

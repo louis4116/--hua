@@ -1038,14 +1038,14 @@ canvas {
   }
 }
 .cut-4-pin-left {
-  transform: translateY(-70vw);
+  transform: translateY(-67vw);
   @include tablet {
     transform: translateY(-40%);
     margin-left: 1%;
   }
 }
 .cut-4-pin-right {
-  transform: translateY(-70vw);
+  transform: translateY(-67vw);
   @include tablet {
     display: none;
     transform: translateY(-40%);
