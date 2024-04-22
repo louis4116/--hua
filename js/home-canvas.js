@@ -294,7 +294,7 @@ $(window).on("load", function () {
           drawMask(scaleRes, 5, img, w, h, endPro);
         },
         scale: s,
-        duration: windowWidth <= 1024 ? 25 : 50,
+        duration: windowWidth <= 1024 ? 40 : 50,
       })
       .to(
         ".yo",
