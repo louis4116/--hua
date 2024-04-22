@@ -80,7 +80,7 @@ $(window).on("load", function () {
     };
     scale = 5.5;
     path = -2.5;
-    time = "<+4";
+    time = "<";
     dev = "pc";
     endPro = 3.5;
   }
