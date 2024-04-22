@@ -228,35 +228,6 @@ $(window).on("load", function () {
         ease: "linear",
         duration: 3,
       });
-
-      // if (el.yFr) {
-      //   animateFirst.fromTo(
-      //     wrapper,
-      //     {
-      //       y: el.yFr,
-      //     },
-      //     {
-      //       onUpdate: function () {
-      //         let progress = this.progress();
-      //         drawMask(1, 0, img1, w, h, progress + el.pro);
-      //         console.log("progress " + progress);
-      //       },
-      //       y: el.yTo,
-      //       ease: "linear",
-      //       duration: 7,
-      //     }
-      //   );
-      // } else {
-      //   animateFirst.to(wrapper, {
-      //     onUpdate: function () {
-      //       let progress = this.progress();
-      //       drawMask(1, 0, img1, w, h, progress + el.pro);
-      //     },
-      //     y: el.yTo,
-      //     ease: "linear",
-      //     duration: 7,
-      //   });
-      // }
     });
 
     animateFirst
