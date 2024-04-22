@@ -109,6 +109,7 @@ body {
   }
 }
 //主要內容開始
+
 .home-cut-1 {
   position: relative;
   z-index: 5;
@@ -396,13 +397,14 @@ body {
 .home-cut-2-fixed-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 5800px;
 
   @include tablet {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 5800px;
   }
 }
 .home-cut-2-fixed-first {
@@ -541,12 +543,20 @@ canvas {
   width: 100%;
   overflow: hidden;
   height: 110vh;
-  // padding-bottom: 3%;
-  // margin-top: 2.5%;
-  // margin-bottom: 0%;
   padding-bottom: 3%;
   margin-bottom: 0%;
   padding-top: 2.5%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/home/home-bg.jpg");
+    pointer-events: none;
+    z-index: 1;
+  }
   @include laptop {
     margin-top: 1.5%;
     margin-bottom: 5%;
@@ -560,6 +570,9 @@ canvas {
     margin-bottom: 0%;
     margin-top: 0%;
   }
+}
+.cut-3-title {
+  z-index: 2;
 }
 .title {
   position: relative;
@@ -628,6 +641,7 @@ canvas {
 .cut-3-carousel-swiper {
   position: relative;
   width: 28vw;
+  z-index: 2;
   @include laptop {
     width: 30vw;
   }

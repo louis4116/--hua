@@ -33,7 +33,7 @@ $(window).on("load", function () {
     //   },
     //   false
     // );
-    canvas.height = window.innerHeight + 200;
+    canvas.height = window.innerHeight + (window.innerWidth / 100) * 12;
   }
   //各標準下的不同值
   let w, h, drawObj, scale, time, path, dev, endPro;
@@ -49,9 +49,10 @@ $(window).on("load", function () {
       height: squreH * h,
     };
     path = -3.5;
-    scale = 1.5;
+    scale = 5.5;
     dev = "mb";
     endPro = 4.5;
+    time = "<";
   } else if (windowWidth > 500 && windowWidth <= 1024) {
     w = 0.8;
     h = 0.5;
@@ -63,9 +64,10 @@ $(window).on("load", function () {
       height: squreH * h,
     };
     path = -3.5;
-    scale = 1.5;
+    scale = 5.5;
     dev = "mb";
     endPro = 4.5;
+    time = "<";
   } else {
     w = 0.6;
     h = 0.6;
@@ -76,9 +78,9 @@ $(window).on("load", function () {
       width: squreW * w,
       height: squreH * h,
     };
-    scale = 7;
+    scale = 5.5;
     path = -2.5;
-    time = "<+0.5";
+    time = "<+4";
     dev = "pc";
     endPro = 3.5;
   }
@@ -129,8 +131,9 @@ $(window).on("load", function () {
         trigger: ".home-cut-2-fixed-container",
         toggleActions: "play none none reverse",
         start: "top top",
-        end: "bottom+=100%",
+        end: "bottom top",
         pin: true,
+        pinSpacing: false,
         scrub: 0.2,
       },
     });
@@ -140,8 +143,9 @@ $(window).on("load", function () {
         trigger: ".home-cut-2-fixed-container",
         toggleActions: "play none none reverse",
         start: "top top",
-        end: "bottom+=250%",
+        end: "bottom top",
         pin: true,
+        pinSpacing: false,
         scrub: 0.2,
       },
     });
@@ -201,7 +205,7 @@ $(window).on("load", function () {
     let para;
     if (dev === "mb") {
       para = [
-        { yFr: "120vw", yTo: "95vw", pro: -0.5 },
+        { yTo: "95vw", pro: -0.5 },
         { yTo: "72.5vw", pro: 0.5 },
         { yTo: "47.5vw", pro: 1.5 },
         { yTo: "22.5vw", pro: 2.5 },
@@ -209,42 +213,62 @@ $(window).on("load", function () {
       ];
     } else {
       para = [
-        { yFr: "40vw", yTo: "30vw", pro: -0.5 },
+        { yTo: "30vw", pro: -0.5 },
         { yTo: "20vw", pro: 0.5 },
         { yTo: "10vw", pro: 1.5 },
         { yTo: "0vw", pro: 2.5 },
       ];
     }
-
+    if (window.innerWidth <= 1024) {
+      $(".home-cut-2-fixed-first-squre-wrapper").css(
+        "transform",
+        `translate(0px,120vw)`
+      );
+    } else {
+      $(".home-cut-2-fixed-first-squre-wrapper").css(
+        "transform",
+        `translate(0px,40vw)`
+      );
+    }
     para.forEach((el) => {
-      if (el.yFr) {
-        animateFirst.fromTo(
-          wrapper,
-          {
-            y: el.yFr,
-          },
-          {
-            onUpdate: function () {
-              let progress = this.progress();
-              drawMask(1, 0, img1, w, h, progress + el.pro);
-              console.log(el.yTo);
-            },
-            y: el.yTo,
-            ease: "linear",
-            duration: 7,
-          }
-        );
-      } else {
-        animateFirst.to(wrapper, {
-          onUpdate: function () {
-            let progress = this.progress();
-            drawMask(1, 0, img1, w, h, progress + el.pro);
-          },
-          y: el.yTo,
-          ease: "linear",
-          duration: 7,
-        });
-      }
+      animateFirst.to(wrapper, {
+        onUpdate: function () {
+          let progress = this.progress();
+          drawMask(1, 0, img1, w, h, progress + el.pro);
+        },
+        y: el.yTo,
+        ease: "linear",
+        duration: 3,
+      });
+
+      // if (el.yFr) {
+      //   animateFirst.fromTo(
+      //     wrapper,
+      //     {
+      //       y: el.yFr,
+      //     },
+      //     {
+      //       onUpdate: function () {
+      //         let progress = this.progress();
+      //         drawMask(1, 0, img1, w, h, progress + el.pro);
+      //         console.log("progress " + progress);
+      //       },
+      //       y: el.yTo,
+      //       ease: "linear",
+      //       duration: 7,
+      //     }
+      //   );
+      // } else {
+      //   animateFirst.to(wrapper, {
+      //     onUpdate: function () {
+      //       let progress = this.progress();
+      //       drawMask(1, 0, img1, w, h, progress + el.pro);
+      //     },
+      //     y: el.yTo,
+      //     ease: "linear",
+      //     duration: 7,
+      //   });
+      // }
     });
 
     animateFirst
@@ -258,12 +282,14 @@ $(window).on("load", function () {
         },
         scale: "0.9",
         rotation: 50,
-        duration: 25,
+        duration: 15,
       })
       .to(wrapper, {
         onUpdate: function () {
           let progress = this.progress();
-          let scaleprogress = Number(Math.abs((0.9 - 8) * progress).toFixed(3)); //四捨五入至第三位
+          let scaleprogress = Number(
+            Math.abs((0.9 - 10) * progress).toFixed(3)
+          ); //四捨五入至第三位
           let scaleRes = 0.9 + scaleprogress;
           let img;
           if (scaleRes >= 4.25) {
@@ -280,23 +306,23 @@ $(window).on("load", function () {
           drawMask(scaleRes, 5, img, w, h, endPro);
         },
         scale: s,
-        duration: 60,
+        duration: 25,
       })
       .to(
         ".yo",
         {
           scale: "1.5",
           ease: "linear",
-          duration: 50,
+          duration: 25,
         },
-        "<+3"
+        time
       );
-    animateSecond.to(".yo", {
-      scale: "1.75",
-      ease: "linear",
-      duration: 19,
-    });
-    animateFirst.add(animateSecond, "<+2");
+    // animateSecond.to(".yo", {
+    //   scale: "1.75",
+    //   ease: "linear",
+    //   duration: 19,
+    // });
+    // animateFirst.add(animateSecond, "<+1");
   }
 
   //固定後的繪製
