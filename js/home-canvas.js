@@ -22,8 +22,8 @@ $(window).on("load", function () {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   if (window.innerWidth <= 1024) {
-    canvas.height = window.innerHeight + (window.innerHeight / 100) * 30;
-    console.log((window.innerHeight / 100) * 30);
+    canvas.height = window.innerHeight + (window.innerHeight / 100) * 20;
+    console.log((window.innerHeight / 100) * 20);
   }
   //各標準下的不同值
   let w, h, drawObj, scale, time, path, dev, endPro;
