@@ -1245,6 +1245,7 @@
         const dropsValue = [
           {
             dev: "pc",
+            scrub: 3,
             content: [
               {
                 tag: ".drops-1",
@@ -1306,6 +1307,7 @@
           },
           {
             dev: "mb",
+            scrub: true,
             content: [
               {
                 tag: ".drops-1",
@@ -1374,6 +1376,7 @@
             dev = "pc";
           }
           const items = dropsItem.filter((item) => item.dev === dev);
+          const scrub = items[0].scrub;
           const content = items[0].content;
           for (let i = 0; i < content.length; i++) {
             gsap.to(content[i].tag, {
@@ -1381,7 +1384,7 @@
                 trigger: ".home-cut-2",
                 start: content[i].start,
                 end: content[i].end,
-                scrub: 3,
+                scrub: scrub,
                 markers: content[i].markers,
               },
               y: content[i].y,
