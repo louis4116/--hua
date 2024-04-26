@@ -8,6 +8,7 @@ const navItem = [
   { name: "最新消息", url: "About_news.html" },
   { name: "聯絡我們", url: "About_contact.html" },
 ];
+
 $(document).ready(function () {
   const nav = $("#nav");
   let src = "";

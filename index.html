@@ -1001,6 +1001,9 @@
             {
               opacity: 1,
               duration: 1.5,
+              onComplete: function () {
+                window.scrollTo(0, 0);
+              },
             },
             "<+0.5"
           )
@@ -1373,7 +1376,6 @@
           const items = dropsItem.filter((item) => item.dev === dev);
           const content = items[0].content;
           for (let i = 0; i < content.length; i++) {
-            console.log(content[i].tag);
             gsap.to(content[i].tag, {
               scrollTrigger: {
                 trigger: ".home-cut-2",

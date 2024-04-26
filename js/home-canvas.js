@@ -24,17 +24,6 @@ $(window).on("load", function () {
   let plusW = 0;
   let plusH = 0;
   if (window.innerWidth <= 1024) {
-    // let resizeTimer;
-    // window.addEventListener(
-    //   "resize",
-    //   (e) => {
-    //     if (resizeTimer) clearTimeout(resizeTimer); // 判斷是否已發生 resize
-    //     resizeTimer = setTimeout(() => {
-    //       canvas.height = window.innerHeight;
-    //     }, 500);
-    //   },
-    //   false
-    // );
     canvas.width = window.innerWidth + (window.innerWidth / 100) * 10;
     canvas.height = window.innerHeight + (window.innerHeight / 100) * 30;
     plusW = (window.innerWidth / 100) * 10;
@@ -206,23 +195,6 @@ $(window).on("load", function () {
 
   //gsap第二次繪製開始後的動畫
   function gsapAnimation(animateFirst, animateSecond, wrapper, s, dev, endPro) {
-    let para;
-    if (dev === "mb") {
-      para = [
-        { yTo: "45dvh", pro: -0.5 },
-        { yTo: "40dvh", pro: 0.5 },
-        { yTo: "47.5vw", pro: 1.5 },
-        { yTo: "22.5vw", pro: 2.5 },
-        { yTo: "0vw", pro: 3.5 },
-      ];
-    } else {
-      para = [
-        { yTo: "30vw", pro: -0.5 },
-        { yTo: "20vw", pro: 0.5 },
-        { yTo: "10vw", pro: 1.5 },
-        { yTo: "0vw", pro: 2.5 },
-      ];
-    }
     if (window.innerWidth <= 1024) {
       $(wrapper).css("transform", `translate(0px,67.5vh)`);
       animateFirst.to(wrapper, {
