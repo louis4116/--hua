@@ -63,16 +63,25 @@
           <img src="./img/home/blur-icon.png" alt="模糊icon" />
         </div>
         <div class="drops drops-2">
-          <img src="./img/home/blur-icon-2.png" alt="模糊icon-2" />
+          <img src="./img/home/no1.png" alt="" />
         </div>
         <div class="drops drops-3">
-          <img src="./img/home/no2.png" alt="2" />
+          <img src="./img/home/no6.webp" alt="2" />
         </div>
         <div class="drops drops-4">
           <img src="./img/home/no3.png" alt="3" />
         </div>
         <div class="drops drops-5">
           <img src="./img/home/no4.png" alt="4" />
+        </div>
+        <div class="drops drops-6">
+          <img src="./img/home/no2.png" alt="4" />
+        </div>
+        <div class="drops drops-7">
+          <img src="./img/home/no2.png" alt="7" />
+        </div>
+        <div class="drops drops-8">
+          <img src="./img/home/no2.png" alt="8" />
         </div>
         <div class="home-cut-2-para">
           <div class="home-cut-2-para-img">
@@ -92,33 +101,35 @@
               <div class="yo">
                 <canvas id="canvas"></canvas>
               </div>
-              <div class="home-cut-2-fixed-first-squre-wrapper z3">
-                <div class="home-cut-2-fixed-first-squre-1 fixed-squre">
-                  <div class="home-cut-2-fixed-first-squre-text n-1">
-                    <p class="loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
-                  </div>
-                  <div class="home-cut-2-fixed-first-squre-text n-2">
-                    <p class="loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </div>
+        <div class="fixed-text">
+          <div class="home-cut-2-fixed-first-squre-wrapper z3">
+            <div class="home-cut-2-fixed-first-squre-1 fixed-squre">
+              <div class="home-cut-2-fixed-first-squre-text n-1">
+                <p class="loopText">
+                  HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                </p>
               </div>
-              <div class="home-cut-2-fixed-first-squre-wrapper z0">
-                <div class="home-cut-2-fixed-first-squre-2 fixed-squre">
-                  <div class="home-cut-2-fixed-first-squre-text n-3">
-                    <p class="loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
-                  </div>
-                  <div class="home-cut-2-fixed-first-squre-text n-4">
-                    <p class="n-4-p loopText">
-                      HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
-                    </p>
-                  </div>
-                </div>
+              <div class="home-cut-2-fixed-first-squre-text n-2">
+                <p class="loopText">
+                  HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="home-cut-2-fixed-first-squre-wrapper z0">
+            <div class="home-cut-2-fixed-first-squre-2 fixed-squre">
+              <div class="home-cut-2-fixed-first-squre-text n-3">
+                <p class="loopText">
+                  HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                </p>
+              </div>
+              <div class="home-cut-2-fixed-first-squre-text n-4">
+                <p class="n-4-p loopText">
+                  HUA HUI CONSTRUCTION CO.,LTD HUA HUI CONSTRUCTION CO.,LTD
+                </p>
               </div>
             </div>
           </div>
@@ -1228,61 +1239,245 @@
         //補足圖片數量☝️
 
         //icon落下動畫👇
-        gsap.to(".drops-1", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
+        const dropsValue = [
+          {
+            dev: "pc",
+            content: [
+              {
+                tag: ".drops-1",
+                start: "top bottom",
+                end: "80% bottom",
+                y: "25vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-2",
+                start: "top bottom",
+                end: "80% bottom",
+                y: "25vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-3",
+                start: "20% bottom",
+                end: "50% bottom",
+                y: "25vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-4",
+                start: "top bottom",
+                end: "90% bottom",
+                y: "30vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-5",
+                start: "20% bottom",
+                end: "80% bottom",
+                y: "13vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-6",
+                start: "20% bottom",
+                end: "70% bottom",
+                y: "25vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-7",
+                start: "20% bottom",
+                end: "70% bottom",
+                y: "30vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-8",
+                start: "20% bottom",
+                end: "70% bottom",
+                y: "20vw",
+                markers: false,
+              },
+            ],
           },
-          y: "50vw",
-          ease: "linear",
-        });
-        gsap.to(".drops-2", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
+          {
+            dev: "mb",
+            content: [
+              {
+                tag: ".drops-1",
+                start: "top bottom",
+                end: "20% bottom",
+                y: "10vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-2",
+                start: "top bottom",
+                end: "30% bottom",
+                y: "30vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-3",
+                start: "20% bottom",
+                end: "60% bottom",
+                y: "120vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-4",
+                start: "top bottom",
+                end: "30% bottom",
+                y: "20vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-5",
+                start: "20% bottom",
+                end: "80% bottom",
+                y: "80vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-6",
+                start: "20% bottom",
+                end: "70% bottom",
+                y: "80vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-7",
+                start: "20% bottom",
+                end: "60% bottom",
+                y: "40vw",
+                markers: false,
+              },
+              {
+                tag: ".drops-8",
+                start: "20% bottom",
+                end: "70% bottom",
+                y: "20vw",
+                markers: false,
+              },
+            ],
           },
-          ease: "linear",
-          y: "15vw",
-        });
-        gsap.to(".drops-4", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          y: "30vw",
-          ease: "linear",
-        });
-        gsap.to(".drops-5", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          y: "15vw",
-          ease: "linear",
-        });
-        gsap.to(".drops-3", {
-          scrollTrigger: {
-            trigger: ".home-cut-2",
-            toggleActions: "play none none reverse",
-            start: "top bottom",
-            end: "center bottom",
-            scrub: 1,
-          },
-          y: "40vw",
-          ease: "linear",
-        });
+        ];
+        function dropsAnimation(dropsItem) {
+          let dev;
+          if (window.innerWidth <= 1024) {
+            dev = "mb";
+          } else {
+            dev = "pc";
+          }
+          const items = dropsItem.filter((item) => item.dev === dev);
+          const content = items[0].content;
+          for (let i = 0; i < content.length; i++) {
+            console.log(content[i].tag);
+            gsap.to(content[i].tag, {
+              scrollTrigger: {
+                trigger: ".home-cut-2",
+                start: content[i].start,
+                end: content[i].end,
+                scrub: 3,
+                markers: content[i].markers,
+              },
+              y: content[i].y,
+              ease: "linear",
+            });
+          }
+        }
+        dropsAnimation(dropsValue);
+
+        // gsap.from(".drops-1", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     toggleActions: "play none none reverse",
+        //     start: "top bottom",
+        //     end: "80% bottom",
+        //     scrub: true,
+        //   },
+        //   y: "-25vw",
+        //   ease: "linear",
+        // });
+        // gsap.to(".drops-2", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     toggleActions: "play none none reverse",
+        //     start: "20% bottom",
+        //     end: "80% bottom",
+        //     scrub: true,
+        //   },
+        //   ease: "linear",
+        //   y: "40vw",
+        // });
+        // gsap.to(".drops-3", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     toggleActions: "play none none reverse",
+        //     start: "30% bottom",
+        //     end: "50% bottom",
+        //     scrub: true,
+        //   },
+        //   y: "70vw",
+        //   ease: "linear",
+        // });
+        // gsap.from(".drops-4", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     toggleActions: "play none none reverse",
+        //     start: "20% bottom",
+        //     end: "90% bottom",
+        //     scrub: true,
+        //   },
+        //   y: "-30vw",
+        //   ease: "linear",
+        // });
+        // gsap.from(".drops-5", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     toggleActions: "play none none reverse",
+        //     start: "20% bottom",
+        //     end: "80% bottom",
+        //     scrub: true,
+        //   },
+        //   y: "-13vw",
+        //   ease: "linear",
+        // });
+
+        // gsap.from(".drops-6", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     toggleActions: "play none none reverse",
+        //     start: "20% bottom",
+        //     end: "70% bottom",
+        //     scrub: true,
+        //   },
+        //   y: "-15vw",
+        //   ease: "linear",
+        // });
+
+        // gsap.from(".drops-7", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     start: "20% bottom",
+        //     end: "70% bottom",
+        //     scrub: true,
+        //   },
+        //   y: "-30vw",
+        //   ease: "linear",
+        // });
+
+        // gsap.from(".drops-8", {
+        //   scrollTrigger: {
+        //     trigger: ".home-cut-2",
+        //     start: "20% bottom",
+        //     end: "70% bottom",
+        //     scrub: true,
+        //   },
+        //   y: "-20vw",
+        //   ease: "linear",
+        // });
 
         //icon落下動畫☝️
 

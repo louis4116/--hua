@@ -21,10 +21,26 @@ $(window).on("load", function () {
   const windowWidth = window.innerWidth;
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  let plusW = 0;
+  let plusH = 0;
   if (window.innerWidth <= 1024) {
-    canvas.height = window.innerHeight + (window.innerHeight / 100) * 20;
-    console.log((window.innerHeight / 100) * 20);
+    // let resizeTimer;
+    // window.addEventListener(
+    //   "resize",
+    //   (e) => {
+    //     if (resizeTimer) clearTimeout(resizeTimer); // 判斷是否已發生 resize
+    //     resizeTimer = setTimeout(() => {
+    //       canvas.height = window.innerHeight;
+    //     }, 500);
+    //   },
+    //   false
+    // );
+    canvas.width = window.innerWidth + (window.innerWidth / 100) * 10;
+    canvas.height = window.innerHeight + (window.innerHeight / 100) * 30;
+    plusW = (window.innerWidth / 100) * 10;
+    plusH = (window.innerHeight / 100) * 10;
   }
+
   //各標準下的不同值
   let w, h, drawObj, scale, time, path, dev, endPro;
 
@@ -33,30 +49,30 @@ $(window).on("load", function () {
     h = 0.8;
     drawObj = {
       ctx: ctx,
-      x: squreX + squreW2Phone,
-      y: squreFH / 2 - (squreH * h) / 2,
+      x: squreX + squreW2Phone + plusW,
+      y: squreFH / 2 - (squreH * h) / 2 + plusH,
       width: squreW * w,
       height: squreH * h,
     };
-    path = -3.5;
-    scale = 5.5;
+    path = -4;
+    scale = 6.5;
     dev = "mb";
-    endPro = 4.5;
+    endPro = 1;
     time = "<";
   } else if (windowWidth > 500 && windowWidth <= 1024) {
     w = 0.8;
     h = 0.5;
     drawObj = {
       ctx: ctx,
-      x: squreX + squreW2Phone,
-      y: squreFH / 2 - (squreH * h) / 2,
+      x: squreX + squreW2Phone + plusW,
+      y: squreFH / 2 - (squreH * h) / 2 + plusH,
       width: squreW * w,
       height: squreH * h,
     };
-    path = -3.5;
-    scale = 5.5;
+    path = -4;
+    scale = 6.5;
     dev = "mb";
-    endPro = 4.5;
+    endPro = 1;
     time = "<";
   } else {
     w = 0.6;
@@ -69,10 +85,10 @@ $(window).on("load", function () {
       height: squreH * h,
     };
     scale = 5.5;
-    path = -2.5;
+    path = -2;
     time = "<";
     dev = "pc";
-    endPro = 3.5;
+    endPro = 1;
   }
 
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
@@ -153,7 +169,7 @@ $(window).on("load", function () {
   gsapAnimation(
     cut2MaskSmall,
     cut2PicBigger,
-    ".home-cut-2-fixed-first-squre-wrapper",
+    ".fixed-squre",
     scale,
     dev,
     endPro
@@ -193,8 +209,8 @@ $(window).on("load", function () {
     let para;
     if (dev === "mb") {
       para = [
-        { yTo: "95vw", pro: -0.5 },
-        { yTo: "72.5vw", pro: 0.5 },
+        { yTo: "45dvh", pro: -0.5 },
+        { yTo: "40dvh", pro: 0.5 },
         { yTo: "47.5vw", pro: 1.5 },
         { yTo: "22.5vw", pro: 2.5 },
         { yTo: "0vw", pro: 3.5 },
@@ -208,27 +224,44 @@ $(window).on("load", function () {
       ];
     }
     if (window.innerWidth <= 1024) {
-      $(".home-cut-2-fixed-first-squre-wrapper").css(
-        "transform",
-        `translate(0px,120vw)`
-      );
-    } else {
-      $(".home-cut-2-fixed-first-squre-wrapper").css(
-        "transform",
-        `translate(0px,40vw)`
-      );
-    }
-    para.forEach((el) => {
+      $(wrapper).css("transform", `translate(0px,67.5vh)`);
       animateFirst.to(wrapper, {
         onUpdate: function () {
           let progress = this.progress();
-          drawMask(1, 0, img1, w, h, progress + el.pro);
+          let mappedValue = progress * 6 - 1;
+          drawMask(1, 0, img1, w, h, path + mappedValue);
         },
-        y: el.yTo,
+        y: "-0.5vh",
+        rotation: 25,
         ease: "linear",
-        duration: 3,
+        duration: 18,
       });
-    });
+    } else {
+      $(wrapper).css("transform", `translate(0px,95vh)`);
+      animateFirst.to(wrapper, {
+        onUpdate: function () {
+          let progress = this.progress();
+          let mappedValue = progress * 4 - 1;
+          console.log(path + mappedValue);
+          drawMask(1, 0, img1, w, h, path + mappedValue);
+        },
+        y: "0vh",
+        rotation: 25,
+        ease: "linear",
+        duration: 12,
+      });
+    }
+    // para.forEach((el) => {
+    //   animateFirst.to(wrapper, {
+    //     onUpdate: function () {
+    //       let progress = this.progress();
+    //       drawMask(1, 0, img1, w, h, progress + el.pro);
+    //     },
+    //     // y: el.yTo,
+    //     ease: "linear",
+    //     duration: 3,
+    //   });
+    // });
 
     animateFirst
       .to(wrapper, {
@@ -241,7 +274,7 @@ $(window).on("load", function () {
         },
         scale: "0.9",
         rotation: 50,
-        duration: 25,
+        duration: 12,
       })
       .to(wrapper, {
         onUpdate: function () {
@@ -265,14 +298,14 @@ $(window).on("load", function () {
           drawMask(scaleRes, 5, img, w, h, endPro);
         },
         scale: s,
-        duration: windowWidth <= 1024 ? 40 : 40,
+        duration: 40,
       })
       .to(
         ".yo",
         {
           scale: "1.5",
           ease: "linear",
-          duration: windowWidth <= 1024 ? 40 : 40,
+          duration: 40,
         },
         time
       );
@@ -291,15 +324,15 @@ $(window).on("load", function () {
     if (windowWidth <= 1024) {
       ctx.translate(squreX + squreW / 2, squreFH / 2); // 將旋轉中心設為正方形中心
     } else {
-      ctx.translate(pH + pL + squreW / 2, squreDis + squreH / 2); // 將旋轉中心設為正方形中心
+      ctx.translate(canvas.width / 2, canvas.height / 2); // 將旋轉中心設為正方形中心
     }
     ctx.rotate((angle * Math.PI) / 180);
     ctx.fillStyle = "rgb(193,175,155)"; //填色
 
     roundRect(
       ctx,
-      (-squreW * w * scaleRes) / 2,
-      (-squreH * h * scaleRes * (path + progress)) / 2,
+      (-squreW * w * scaleRes + plusW) / 2,
+      (-squreH * h * scaleRes * progress + plusH) / 2,
       squreW * w * scaleRes,
       squreH * h * scaleRes,
       20
