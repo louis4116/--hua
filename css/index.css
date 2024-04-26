@@ -706,11 +706,12 @@ body {
 }
 
 .drops-7 {
-  display: none;
+  top: 17%;
+  right: 4%;
+  width: 11vw;
 }
 @media all and (max-width: 1024px) {
   .drops-7 {
-    display: block;
     left: -23vw;
     top: 157vw;
     width: 41vw;

@@ -309,9 +309,10 @@ body {
 }
 
 .drops-7 {
-  display: none;
+  top: 17%;
+  right: 4%;
+  width: 11vw;
   @include tablet {
-    display: block;
     left: -23vw;
     top: 157vw;
     width: 41vw;
